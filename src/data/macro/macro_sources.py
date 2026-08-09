@@ -14,6 +14,10 @@ from datetime import datetime, timezone
 import requests
 from dotenv import load_dotenv
 
+from src.data.macro.macro_cache import (
+    save_macro_cache,
+    get_macro_cache,
+)
 
 # ======================================================
 # Configuration
@@ -419,10 +423,10 @@ def fetch_world_bank_indicator(
     )
 
     params = {
-        "format": "json",
-        "per_page": 10,
-        "mrnev": 10,
+    "format": "json",
+    "mrnev": 1,
     }
+    
 
     timeout_values = [
         15,
@@ -591,18 +595,12 @@ MONTH_NUMBER = {
 
 def fetch_india_inflation():
     """
-    Fetch latest available All-India CPI inflation
-    from the official MoSPI CPI dataset.
+    Fetch latest available All-India CPI inflation.
 
-    Configuration:
-    - Base year: 2024
-    - Series: Current
-    - Geography: All India
-    - Sector: Combined
-    - Measure: CPI (General)
-
-    MoSPI already publishes the inflation percentage,
-    so we use the official value directly.
+    Priority:
+    1. Official MoSPI CPI
+    2. Cached official MoSPI value
+    3. World Bank annual fallback
     """
 
     try:
@@ -621,12 +619,13 @@ def fetch_india_inflation():
         )
 
         if not data:
-            return None
+            raise ValueError(
+                "No MoSPI CPI data returned."
+            )
 
         candidates = []
 
         for record in data:
-
             if record.get("division") != "CPI (General)":
                 continue
 
@@ -644,9 +643,7 @@ def fetch_india_inflation():
             try:
                 value = float(inflation)
                 year_number = int(year)
-                month_number = MONTH_NUMBER.get(
-                    month
-                )
+                month_number = MONTH_NUMBER.get(month)
 
             except (ValueError, TypeError):
                 continue
@@ -660,14 +657,14 @@ def fetch_india_inflation():
                     "year": year_number,
                     "month": month,
                     "month_number": month_number,
-                    "index_value": record.get(
-                        "index"
-                    ),
+                    "index_value": record.get("index"),
                 }
             )
 
         if not candidates:
-            return None
+            raise ValueError(
+                "No valid CPI General records found."
+            )
 
         latest = max(
             candidates,
@@ -677,12 +674,7 @@ def fetch_india_inflation():
             ),
         )
 
-        observation_date = (
-            f"{latest['year']}-"
-            f"{latest['month_number']:02d}"
-        )
-
-        return {
+        result = {
             "name": "CPI Inflation",
             "value": round(
                 latest["value"],
@@ -691,16 +683,24 @@ def fetch_india_inflation():
             "unit": "percent",
             "frequency": "monthly",
             "observation_date": (
-                observation_date
+                f"{latest['year']}-"
+                f"{latest['month_number']:02d}"
             ),
             "month": latest["month"],
             "year": latest["year"],
-            "cpi_index": latest[
-                "index_value"
-            ],
+            "cpi_index": latest["index_value"],
             "source": "MoSPI CPI",
             "is_fallback": False,
+            "is_cached": False,
         }
+
+        save_macro_cache(
+            "IN",
+            "inflation",
+            result,
+        )
+
+        return result
 
     except Exception as error:
         print(
@@ -708,8 +708,16 @@ def fetch_india_inflation():
             f"{error}"
         )
 
-        return fetch_india_inflation_fallback()
+        cached = get_macro_cache(
+            "IN",
+            "inflation",
+        )
 
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return fetch_india_inflation_fallback()
 
 # ======================================================
 # India Unemployment - MoSPI PLFS
@@ -717,20 +725,12 @@ def fetch_india_inflation():
 
 def fetch_india_unemployment():
     """
-    Fetch latest available monthly unemployment rate
-    from the official MoSPI PLFS dataset.
+    Fetch latest available monthly unemployment rate.
 
-    Configuration:
-    - Indicator: Unemployment Rate
-    - Frequency: Monthly
-    - Calendar Year
-    - All India
-    - Person
-    - Age: 15 years and above
-    - Sector: Rural + Urban
-
-    Duplicate observations are removed before selecting
-    the latest available month.
+    Priority:
+    1. Official MoSPI PLFS
+    2. Cached official MoSPI value
+    3. World Bank annual fallback
     """
 
     try:
@@ -752,12 +752,13 @@ def fetch_india_unemployment():
         )
 
         if not data:
-            return None
+            raise ValueError(
+                "No MoSPI PLFS data returned."
+            )
 
         observations = {}
 
         for record in data:
-
             year = record.get("year")
             month = record.get("month")
             value = record.get("value")
@@ -771,9 +772,7 @@ def fetch_india_unemployment():
 
             try:
                 year_number = int(year)
-                month_number = MONTH_NUMBER.get(
-                    month
-                )
+                month_number = MONTH_NUMBER.get(month)
                 unemployment = float(value)
 
             except (ValueError, TypeError):
@@ -795,7 +794,9 @@ def fetch_india_unemployment():
             }
 
         if not observations:
-            return None
+            raise ValueError(
+                "No valid PLFS unemployment records found."
+            )
 
         latest_key = max(
             observations.keys()
@@ -805,12 +806,7 @@ def fetch_india_unemployment():
             latest_key
         ]
 
-        observation_date = (
-            f"{latest['year']}-"
-            f"{latest['month_number']:02d}"
-        )
-
-        return {
+        result = {
             "name": "Unemployment Rate",
             "value": round(
                 latest["value"],
@@ -819,7 +815,8 @@ def fetch_india_unemployment():
             "unit": "percent",
             "frequency": "monthly",
             "observation_date": (
-                observation_date
+                f"{latest['year']}-"
+                f"{latest['month_number']:02d}"
             ),
             "month": latest["month"],
             "year": latest["year"],
@@ -831,7 +828,16 @@ def fetch_india_unemployment():
             "geography": "All India",
             "source": "MoSPI PLFS",
             "is_fallback": False,
+            "is_cached": False,
         }
+
+        save_macro_cache(
+            "IN",
+            "unemployment",
+            result,
+        )
+
+        return result
 
     except Exception as error:
         print(
@@ -839,6 +845,603 @@ def fetch_india_unemployment():
             f"{error}"
         )
 
+        cached = get_macro_cache(
+            "IN",
+            "unemployment",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
         return (
             fetch_india_unemployment_fallback()
         )
+
+def fetch_india_policy_rate():
+    """
+    Fetch India's RBI policy repo rate.
+
+    Priority:
+    1. RBI official live source
+    2. Last successfully cached RBI observation
+    """
+
+    try:
+        raise RuntimeError(
+            "RBI live policy-rate retrieval not implemented yet."
+        )
+
+    except Exception as error:
+        print(
+            "RBI policy rate request unavailable: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "IN",
+            "policy_rate",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return None
+
+def fetch_india_gdp_growth():
+    """
+    Fetch India's GDP growth.
+
+    Priority:
+    1. MoSPI NAS official source
+    2. Cached official GDP observation
+    3. World Bank annual fallback
+    """
+
+    try:
+        # Official NAS retrieval will be implemented
+        # once the MoSPI NAS endpoint is stable.
+        raise RuntimeError(
+            "MoSPI NAS GDP retrieval currently unavailable."
+        )
+
+    except Exception as error:
+        print(
+            "India GDP official source unavailable: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "IN",
+            "gdp_growth",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return fetch_india_gdp_fallback()
+
+def fetch_india_macro_snapshot():
+    """
+    Fetch the latest available macroeconomic snapshot for India.
+
+    Each indicator independently uses its configured official source,
+    cache, and fallback strategy.
+    """
+
+    return {
+        "country": "India",
+        "market_code": "IN",
+        "inflation": fetch_india_inflation(),
+        "policy_rate": fetch_india_policy_rate(),
+        "gdp_growth": fetch_india_gdp_growth(),
+        "unemployment": fetch_india_unemployment(),
+        "retrieved_at_utc": datetime.now(timezone.utc).isoformat(),
+    }
+
+def fetch_singapore_inflation():
+    """
+    Fetch Singapore's latest monthly CPI inflation.
+
+    Source:
+    Singapore Department of Statistics (SingStat)
+
+    Table:
+    M213781 - Percent Change in CPI over the
+    corresponding period of the previous year.
+
+    Priority:
+    1. SingStat official API
+    2. Cached official SingStat value
+    """
+
+    try:
+        url = (
+            "https://tablebuilder.singstat.gov.sg/"
+            "api/table/tabledata/M213781"
+        )
+
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json",
+        }
+
+        response = requests.get(
+            url,
+            headers=headers,
+            timeout=20,
+        )
+
+        response.raise_for_status()
+
+        payload = response.json()
+
+        data = payload.get("Data", {})
+
+        rows = data.get("row", [])
+
+        # Find the overall CPI row
+        all_items_row = None
+
+        for row in rows:
+            if row.get("rowText") == "All Items":
+                all_items_row = row
+                break
+
+        if all_items_row is None:
+            raise ValueError(
+                "SingStat CPI 'All Items' row not found."
+            )
+
+        observations = []
+
+        for column in all_items_row.get(
+            "columns",
+            [],
+        ):
+            date_text = column.get("key")
+            raw_value = column.get("value")
+
+            if not date_text or raw_value in (
+                None,
+                "",
+                "na",
+                "NA",
+            ):
+                continue
+
+            try:
+                observation_date = (
+                    datetime.strptime(
+                        date_text,
+                        "%Y %b",
+                    )
+                )
+
+                value = float(raw_value)
+
+            except (ValueError, TypeError):
+                continue
+
+            observations.append(
+                {
+                    "date": observation_date,
+                    "date_text": date_text,
+                    "value": value,
+                }
+            )
+
+        if not observations:
+            raise ValueError(
+                "No valid Singapore CPI observations found."
+            )
+
+        latest = max(
+            observations,
+            key=lambda item: item["date"],
+        )
+
+        result = {
+            "name": "CPI Inflation",
+            "value": round(
+                latest["value"],
+                2,
+            ),
+            "unit": "percent",
+            "frequency": "monthly",
+            "observation_date": (
+                latest["date"].strftime(
+                    "%Y-%m"
+                )
+            ),
+            "month": (
+                latest["date"].strftime(
+                    "%B"
+                )
+            ),
+            "year": latest["date"].year,
+            "source": "Singapore Department of Statistics",
+            "resource_id": "M213781",
+            "data_last_updated": data.get(
+                "dataLastUpdated"
+            ),
+            "is_fallback": False,
+            "is_cached": False,
+        }
+
+        save_macro_cache(
+            "SG",
+            "inflation",
+            result,
+        )
+
+        return result
+
+    except Exception as error:
+        print(
+            "SingStat CPI request failed: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "SG",
+            "inflation",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return None
+
+def fetch_singapore_unemployment():
+    """
+    Fetch Singapore's latest seasonally adjusted
+    total unemployment rate.
+
+    Source:
+    Singapore Ministry of Manpower via SingStat
+
+    Table:
+    M182342 - Unemployment Rate (End Of Period),
+    Quarterly, Seasonally Adjusted.
+
+    Priority:
+    1. SingStat official API
+    2. Cached official value
+    """
+
+    try:
+        url = (
+            "https://tablebuilder.singstat.gov.sg/"
+            "api/table/tabledata/M182342"
+        )
+
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json",
+        }
+
+        response = requests.get(
+            url,
+            headers=headers,
+            timeout=20,
+        )
+
+        response.raise_for_status()
+
+        payload = response.json()
+        data = payload.get("Data", {})
+        rows = data.get("row", [])
+
+        target_row = None
+
+        for row in rows:
+            if row.get("rowText") == (
+                "Total Unemployment Rate, (SA)"
+            ):
+                target_row = row
+                break
+
+        if target_row is None:
+            raise ValueError(
+                "Singapore total unemployment row not found."
+            )
+
+        observations = []
+
+        for column in target_row.get(
+            "columns",
+            [],
+        ):
+            date_text = column.get("key")
+            raw_value = column.get("value")
+
+            if (
+                not date_text
+                or raw_value in (
+                    None,
+                    "",
+                    "na",
+                    "NA",
+                )
+            ):
+                continue
+
+            try:
+                value = float(raw_value)
+
+                cleaned_date = (
+                    date_text
+                    .replace(" ", "")
+                )
+
+                year = int(
+                    cleaned_date[:4]
+                )
+
+                quarter = int(
+                    cleaned_date[4]
+                )
+
+            except (
+                ValueError,
+                TypeError,
+                IndexError,
+            ):
+                continue
+
+            if quarter not in (
+                1,
+                2,
+                3,
+                4,
+            ):
+                continue
+
+            observations.append(
+                {
+                    "year": year,
+                    "quarter": quarter,
+                    "value": value,
+                }
+            )
+
+        if not observations:
+            raise ValueError(
+                "No valid Singapore unemployment observations found."
+            )
+
+        latest = max(
+            observations,
+            key=lambda item: (
+                item["year"],
+                item["quarter"],
+            ),
+        )
+
+        result = {
+            "name": "Unemployment Rate",
+            "value": round(
+                latest["value"],
+                2,
+            ),
+            "unit": "percent",
+            "frequency": "quarterly",
+            "observation_date": (
+                f"{latest['year']}-Q"
+                f"{latest['quarter']}"
+            ),
+            "year": latest["year"],
+            "quarter": latest["quarter"],
+            "adjustment": (
+                "Seasonally Adjusted"
+            ),
+            "population": "Total",
+            "source": (
+                "Singapore Ministry of Manpower"
+            ),
+            "resource_id": "M182342",
+            "data_last_updated": data.get(
+                "dataLastUpdated"
+            ),
+            "is_fallback": False,
+            "is_cached": False,
+        }
+
+        save_macro_cache(
+            "SG",
+            "unemployment",
+            result,
+        )
+
+        return result
+
+    except Exception as error:
+        print(
+            "Singapore unemployment request failed: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "SG",
+            "unemployment",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return None
+
+def fetch_singapore_gdp_growth():
+    """
+    Fetch Singapore's latest seasonally adjusted
+    quarter-on-quarter real GDP growth.
+
+    Source:
+    Singapore Department of Statistics via SingStat
+
+    Table:
+    M015902 - GDP in Chained (2015) Dollars,
+    Seasonally Adjusted, Quarter-on-Quarter Growth.
+
+    Priority:
+    1. SingStat official API
+    2. Cached official value
+    """
+
+    try:
+        url = (
+            "https://tablebuilder.singstat.gov.sg/"
+            "api/table/tabledata/M015902"
+        )
+
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json",
+        }
+
+        response = requests.get(
+            url,
+            headers=headers,
+            timeout=20,
+        )
+
+        response.raise_for_status()
+
+        payload = response.json()
+        data = payload.get("Data", {})
+        rows = data.get("row", [])
+
+        target_row = None
+
+        for row in rows:
+            row_text = (
+                row.get("rowText") or ""
+            ).strip().lower()
+
+            if (
+                "gdp" in row_text
+                and "chained" in row_text
+            ):
+                target_row = row
+                break
+
+        if target_row is None:
+            raise ValueError(
+                "Singapore GDP row not found."
+            )
+
+        observations = []
+
+        for column in target_row.get("columns", []):
+            date_text = column.get("key")
+            raw_value = column.get("value")
+
+            if (
+                not date_text
+                or raw_value in (
+                    None,
+                    "",
+                    "na",
+                    "NA",
+                )
+            ):
+                continue
+
+            try:
+                value = float(raw_value)
+
+                cleaned_date = date_text.replace(
+                    " ",
+                    "",
+                )
+
+                year = int(cleaned_date[:4])
+                quarter = int(cleaned_date[4])
+
+            except (
+                ValueError,
+                TypeError,
+                IndexError,
+            ):
+                continue
+
+            if quarter not in (1, 2, 3, 4):
+                continue
+
+            observations.append(
+                {
+                    "year": year,
+                    "quarter": quarter,
+                    "value": value,
+                }
+            )
+
+        if not observations:
+            raise ValueError(
+                "No valid Singapore GDP observations found."
+            )
+
+        latest = max(
+            observations,
+            key=lambda item: (
+                item["year"],
+                item["quarter"],
+            ),
+        )
+
+        result = {
+            "name": "Real GDP Growth",
+            "value": round(
+                latest["value"],
+                2,
+            ),
+            "unit": "percent",
+            "frequency": "quarterly",
+            "observation_date": (
+                f"{latest['year']}-Q"
+                f"{latest['quarter']}"
+            ),
+            "year": latest["year"],
+            "quarter": latest["quarter"],
+            "growth_type": "Quarter-on-Quarter",
+            "adjustment": "Seasonally Adjusted",
+            "source": (
+                "Singapore Department of Statistics"
+            ),
+            "resource_id": "M015902",
+            "data_last_updated": data.get(
+                "dataLastUpdated"
+            ),
+            "is_fallback": False,
+            "is_cached": False,
+        }
+
+        save_macro_cache(
+            "SG",
+            "gdp_growth",
+            result,
+        )
+
+        return result
+
+    except Exception as error:
+        print(
+            "Singapore GDP request failed: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "SG",
+            "gdp_growth",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return None
