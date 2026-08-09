@@ -1,0 +1,8 @@
+requests
+python-dotenv
+yfinance
+pandas
+numpy
+joblib
+scikit-learn
+mospi-esankhyiki
