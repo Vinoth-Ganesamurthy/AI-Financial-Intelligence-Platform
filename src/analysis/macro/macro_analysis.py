@@ -1732,3 +1732,166 @@ def analyze_macro_monetary_rate(
         "country": features["country"],
         "monetary_environment": interpretation,
     }
+
+# --------------------------------------------------
+# Combined Macroeconomic Score
+# --------------------------------------------------
+
+MACRO_SCORE_WEIGHTS = {
+    "inflation": 0.30,
+    "gdp_growth": 0.30,
+    "unemployment": 0.20,
+    "monetary_environment": 0.20,
+}
+
+
+def _normalize_component_score(score):
+    score_mapping = {
+        2: 1.0,
+        1: 1.0,
+        0: 0.0,
+        -1: -0.5,
+        -2: -1.0,
+    }
+
+    return score_mapping.get(score, 0.0)
+
+
+def _classify_combined_macro_score(score):
+    if score >= 0.50:
+        return "favourable", (
+            "Macroeconomic conditions are broadly supportive."
+        )
+
+    if score >= 0.15:
+        return "mildly_favourable", (
+            "Macroeconomic conditions are mildly supportive."
+        )
+
+    if score > -0.15:
+        return "neutral", (
+            "Macroeconomic conditions are broadly balanced."
+        )
+
+    if score > -0.50:
+        return "mildly_unfavourable", (
+            "Macroeconomic conditions present moderate headwinds."
+        )
+
+    return "unfavourable", (
+        "Macroeconomic conditions present significant headwinds."
+    )
+
+
+def build_combined_macro_analysis(stock_symbol: str):
+    features = build_macro_features(stock_symbol)
+
+    inflation = interpret_inflation(
+        features["market_code"],
+        features["inflation_rate"],
+    )
+
+    gdp_growth = interpret_gdp_growth(
+        features["market_code"],
+        features["gdp_growth_rate"],
+        features["gdp_is_fallback"],
+    )
+
+    unemployment = interpret_unemployment(
+        features["market_code"],
+        features["unemployment_rate"],
+    )
+
+    monetary_environment = interpret_monetary_rate(
+        features["market_code"],
+        features["monetary_rate"],
+        features["inflation_rate"],
+        features["monetary_rate_is_policy_rate"],
+    )
+
+    analyses = {
+        "inflation": inflation,
+        "gdp_growth": gdp_growth,
+        "unemployment": unemployment,
+        "monetary_environment": monetary_environment,
+    }
+
+    unavailable_statuses = {
+        "unavailable",
+        "unsupported_market",
+        "invalid_value",
+    }
+
+    component_scores = {}
+    weighted_total = 0.0
+    available_weight = 0.0
+    confidence_score = 0.0
+
+    for name, analysis in analyses.items():
+        weight = MACRO_SCORE_WEIGHTS[name]
+        status = analysis.get("status")
+        available = status not in unavailable_statuses
+        raw_score = analysis.get("score", 0)
+        normalized_score = _normalize_component_score(
+            raw_score
+        )
+
+        contribution = None
+        quality_factor = 0.0
+
+        if available:
+            contribution = normalized_score * weight
+            weighted_total += contribution
+            available_weight += weight
+            quality_factor = 1.0
+
+            if (
+                name == "gdp_growth"
+                and analysis.get("is_fallback", False)
+            ):
+                quality_factor = 0.6
+
+            confidence_score += weight * quality_factor
+
+        component_scores[name] = {
+            "status": status,
+            "raw_score": raw_score,
+            "normalized_score": normalized_score,
+            "weight": weight,
+            "is_available": available,
+            "weighted_contribution": (
+                round(contribution, 3)
+                if contribution is not None
+                else None
+            ),
+            "quality_factor": quality_factor,
+        }
+
+    if available_weight:
+        combined_score = weighted_total / available_weight
+    else:
+        combined_score = 0.0
+
+    combined_score = round(combined_score, 3)
+
+    classification, outlook = (
+        _classify_combined_macro_score(combined_score)
+    )
+
+    return {
+        "stock_symbol": features["stock_symbol"],
+        "market_code": features["market_code"],
+        "country": features["country"],
+        "combined_macro_score": combined_score,
+        "classification": classification,
+        "outlook": outlook,
+        "coverage_ratio": round(available_weight, 2),
+        "confidence_score": round(confidence_score, 2),
+        "component_scores": component_scores,
+        "analysis": analyses,
+        "methodology_note": (
+            "This score is an analytical investment-support "
+            "indicator, not an official forecast or direct "
+            "buy-or-sell recommendation."
+        ),
+    }
