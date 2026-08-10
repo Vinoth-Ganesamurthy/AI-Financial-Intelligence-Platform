@@ -6,3 +6,4 @@ numpy
 joblib
 scikit-learn
 mospi-esankhyiki
+curl-cffi

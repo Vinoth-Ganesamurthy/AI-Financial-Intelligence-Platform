@@ -7,12 +7,13 @@ Version 1:
 Returns normalized values together with
 the actual observation dates and source metadata.
 """
-
+import csv
+import io
 import os
 import re
 from datetime import datetime, timezone
 from html import unescape
-
+from curl_cffi import requests as browser_requests
 import requests
 from dotenv import load_dotenv
 
@@ -1775,6 +1776,899 @@ def fetch_singapore_macro_snapshot():
         "unemployment": (
             fetch_singapore_unemployment()
         ),
+        "retrieved_at_utc": (
+            datetime.now(
+                timezone.utc
+            ).isoformat()
+        ),
+    }
+
+# ======================================================
+# Australia Policy Rate - RBA
+# ======================================================
+
+RBA_MONEY_MARKET_CSV_URL = (
+    "https://www.rba.gov.au/"
+    "statistics/tables/csv/f1-data.csv"
+)
+
+
+def fetch_australia_policy_rate():
+    """
+    Fetch Australia's latest official cash rate target.
+
+    Source:
+    Reserve Bank of Australia Statistical Table F1.
+
+    Priority:
+    1. RBA official daily CSV
+    2. Cached official RBA value
+    """
+
+    try:
+        response = browser_requests.get(
+    RBA_MONEY_MARKET_CSV_URL,
+    impersonate="chrome",
+    headers={
+        "Accept": "text/csv",
+    },
+    timeout=20,
+    )
+
+        response.raise_for_status()
+
+        csv_text = response.content.decode(
+            "utf-8-sig"
+        )
+
+        rows = list(
+            csv.reader(
+                io.StringIO(csv_text)
+            )
+        )
+
+        publication_date = None
+        series_id = None
+        data_start_index = None
+
+        for index, row in enumerate(rows):
+            if not row:
+                continue
+
+            row_name = row[0].strip()
+
+            if (
+                row_name == "Publication date"
+                and len(row) > 1
+            ):
+                publication_date = row[1].strip()
+
+            elif (
+                row_name == "Series ID"
+                and len(row) > 1
+            ):
+                series_id = row[1].strip()
+                data_start_index = index + 1
+                break
+
+        if data_start_index is None:
+            raise ValueError(
+                "RBA F1 data section not found."
+            )
+
+        if series_id != "FIRMMCRTD":
+            raise ValueError(
+                "Unexpected RBA cash-rate series."
+            )
+
+        observations = []
+
+        for row in rows[data_start_index:]:
+            if len(row) < 2:
+                continue
+
+            raw_date = row[0].strip()
+            raw_value = row[1].strip()
+
+            if not raw_date or not raw_value:
+                continue
+
+            try:
+                observation_date = (
+                    datetime.strptime(
+                        raw_date,
+                        "%d-%b-%Y",
+                    )
+                )
+
+                value = float(raw_value)
+
+            except (ValueError, TypeError):
+                continue
+
+            observations.append(
+                {
+                    "date": observation_date,
+                    "value": value,
+                }
+            )
+
+        if not observations:
+            raise ValueError(
+                "No valid RBA cash-rate observations found."
+            )
+
+        latest = max(
+            observations,
+            key=lambda item: item["date"],
+        )
+
+        normalized_publication_date = None
+
+        if publication_date:
+            try:
+                normalized_publication_date = (
+                    datetime.strptime(
+                        publication_date,
+                        "%d-%b-%Y",
+                    ).strftime("%Y-%m-%d")
+                )
+
+            except ValueError:
+                normalized_publication_date = (
+                    publication_date
+                )
+
+        result = {
+            "name": "Cash Rate Target",
+            "value": round(
+                latest["value"],
+                2,
+            ),
+            "unit": "percent",
+            "frequency": "daily",
+            "observation_date": (
+                latest["date"].strftime(
+                    "%Y-%m-%d"
+                )
+            ),
+            "publication_date": (
+                normalized_publication_date
+            ),
+            "source": (
+                "Reserve Bank of Australia"
+            ),
+            "resource_id": "F1",
+            "series_id": series_id,
+            "is_policy_rate": True,
+            "is_fallback": False,
+            "is_cached": False,
+        }
+
+        save_macro_cache(
+            "AU",
+            "policy_rate",
+            result,
+        )
+
+        return result
+
+    except Exception as error:
+        print(
+            "RBA cash-rate request failed: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "AU",
+            "policy_rate",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return None
+
+# ======================================================
+# Australia Inflation - ABS
+# ======================================================
+
+ABS_CPI_RELEASE_URL = (
+    "https://www.abs.gov.au/statistics/economy/"
+    "price-indexes-and-inflation/"
+    "consumer-price-index-australia/latest-release"
+)
+
+ABS_CPI_TABLE_CAPTION = (
+    "All groups CPI, Australia, monthly "
+    "and annual movement (%)"
+)
+
+
+def fetch_australia_inflation():
+    """
+    Fetch Australia's latest monthly headline CPI inflation.
+
+    Priority:
+    1. Official ABS monthly CPI table
+    2. Cached official ABS value
+    """
+
+    try:
+        response = browser_requests.get(
+            ABS_CPI_RELEASE_URL,
+            impersonate="chrome",
+            headers={
+                "Accept": "text/html",
+            },
+            timeout=30,
+        )
+
+        response.raise_for_status()
+
+        page_html = response.text
+
+        caption_marker = (
+            f"<caption>{ABS_CPI_TABLE_CAPTION}"
+            "</caption>"
+        )
+
+        table_start = page_html.find(
+            caption_marker
+        )
+
+        if table_start < 0:
+            raise ValueError(
+                "ABS monthly CPI table not found."
+            )
+
+        table_end = page_html.find(
+            "</table>",
+            table_start,
+        )
+
+        if table_end < 0:
+            raise ValueError(
+                "ABS monthly CPI table is incomplete."
+            )
+
+        table_html = page_html[
+            table_start:table_end
+        ]
+
+        observations = []
+
+        rows = re.findall(
+            r"<tr[^>]*>(.*?)</tr>",
+            table_html,
+            flags=(
+                re.IGNORECASE
+                | re.DOTALL
+            ),
+        )
+
+        for row_html in rows:
+            date_match = re.search(
+                (
+                    r'<th[^>]*class="row-header"'
+                    r"[^>]*>(.*?)</th>"
+                ),
+                row_html,
+                flags=(
+                    re.IGNORECASE
+                    | re.DOTALL
+                ),
+            )
+
+            if date_match is None:
+                continue
+
+            cells = [
+                _clean_html_cell(cell)
+                for cell in re.findall(
+                    r"<td[^>]*>(.*?)</td>",
+                    row_html,
+                    flags=(
+                        re.IGNORECASE
+                        | re.DOTALL
+                    ),
+                )
+            ]
+
+            if len(cells) < 2:
+                continue
+
+            date_text = _clean_html_cell(
+                date_match.group(1)
+            )
+
+            monthly_change_text = cells[0]
+            annual_change_text = cells[1]
+
+            if not annual_change_text:
+                continue
+
+            try:
+                observation_date = (
+                    datetime.strptime(
+                        date_text,
+                        "%b-%y",
+                    )
+                )
+
+                monthly_change = float(
+                    monthly_change_text
+                )
+
+                annual_change = float(
+                    annual_change_text
+                )
+
+            except (ValueError, TypeError):
+                continue
+
+            observations.append(
+                {
+                    "date": observation_date,
+                    "monthly_change": (
+                        monthly_change
+                    ),
+                    "annual_change": (
+                        annual_change
+                    ),
+                }
+            )
+
+        if not observations:
+            raise ValueError(
+                "No valid ABS CPI observations found."
+            )
+
+        latest = max(
+            observations,
+            key=lambda item: item["date"],
+        )
+
+        result = {
+            "name": "CPI Inflation",
+            "value": round(
+                latest["annual_change"],
+                2,
+            ),
+            "monthly_change": round(
+                latest["monthly_change"],
+                2,
+            ),
+            "unit": "percent",
+            "frequency": "monthly",
+            "observation_date": (
+                latest["date"].strftime(
+                    "%Y-%m"
+                )
+            ),
+            "month": (
+                latest["date"].strftime(
+                    "%B"
+                )
+            ),
+            "year": latest["date"].year,
+            "measure": (
+                "All Groups CPI annual change"
+            ),
+            "geography": (
+                "Weighted average of eight "
+                "capital cities"
+            ),
+            "source": (
+                "Australian Bureau of Statistics"
+            ),
+            "resource_id": (
+                "Consumer Price Index, Australia"
+            ),
+            "is_fallback": False,
+            "is_cached": False,
+        }
+
+        save_macro_cache(
+            "AU",
+            "inflation",
+            result,
+        )
+
+        return result
+
+    except Exception as error:
+        print(
+            "ABS CPI request failed: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "AU",
+            "inflation",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return None
+
+# ======================================================
+# Australia Unemployment - ABS
+# ======================================================
+
+ABS_LABOUR_FORCE_RELEASE_URL = (
+    "https://www.abs.gov.au/statistics/labour/"
+    "employment-and-unemployment/"
+    "labour-force-australia/latest-release"
+)
+
+
+def fetch_australia_unemployment():
+    """
+    Fetch Australia's latest monthly seasonally
+    adjusted unemployment rate.
+
+    Priority:
+    1. Official ABS Labour Force table
+    2. Cached official ABS value
+    """
+
+    try:
+        response = browser_requests.get(
+            ABS_LABOUR_FORCE_RELEASE_URL,
+            impersonate="chrome",
+            headers={
+                "Accept": "text/html",
+            },
+            timeout=30,
+        )
+
+        response.raise_for_status()
+
+        page_html = response.text
+
+        caption_marker = (
+            "<caption>Unemployment rate</caption>"
+        )
+
+        table_start = page_html.find(
+            caption_marker
+        )
+
+        if table_start < 0:
+            raise ValueError(
+                "ABS unemployment table not found."
+            )
+
+        table_end = page_html.find(
+            "</table>",
+            table_start,
+        )
+
+        if table_end < 0:
+            raise ValueError(
+                "ABS unemployment table is incomplete."
+            )
+
+        table_html = page_html[
+            table_start:table_end
+        ]
+
+        observations = []
+
+        rows = re.findall(
+            r"<tr[^>]*>(.*?)</tr>",
+            table_html,
+            flags=(
+                re.IGNORECASE
+                | re.DOTALL
+            ),
+        )
+
+        for row_html in rows:
+            date_match = re.search(
+                (
+                    r'<th[^>]*class="row-header"'
+                    r"[^>]*>(.*?)</th>"
+                ),
+                row_html,
+                flags=(
+                    re.IGNORECASE
+                    | re.DOTALL
+                ),
+            )
+
+            if date_match is None:
+                continue
+
+            cells = [
+                _clean_html_cell(cell)
+                for cell in re.findall(
+                    r"<td[^>]*>(.*?)</td>",
+                    row_html,
+                    flags=(
+                        re.IGNORECASE
+                        | re.DOTALL
+                    ),
+                )
+            ]
+
+            if len(cells) < 2 or not cells[1]:
+                continue
+
+            try:
+                observation_date = (
+                    datetime.strptime(
+                        _clean_html_cell(
+                            date_match.group(1)
+                        ),
+                        "%b-%y",
+                    )
+                )
+
+                trend_rate = (
+                    float(cells[0])
+                    if cells[0]
+                    else None
+                )
+
+                unemployment_rate = float(
+                    cells[1]
+                )
+
+            except (ValueError, TypeError):
+                continue
+
+            observations.append(
+                {
+                    "date": observation_date,
+                    "trend_rate": trend_rate,
+                    "value": unemployment_rate,
+                }
+            )
+
+        if not observations:
+            raise ValueError(
+                "No valid ABS unemployment "
+                "observations found."
+            )
+
+        latest = max(
+            observations,
+            key=lambda item: item["date"],
+        )
+
+        result = {
+            "name": "Unemployment Rate",
+            "value": round(
+                latest["value"],
+                2,
+            ),
+            "trend_rate": (
+                round(
+                    latest["trend_rate"],
+                    2,
+                )
+                if latest["trend_rate"] is not None
+                else None
+            ),
+            "unit": "percent",
+            "frequency": "monthly",
+            "observation_date": (
+                latest["date"].strftime(
+                    "%Y-%m"
+                )
+            ),
+            "month": (
+                latest["date"].strftime(
+                    "%B"
+                )
+            ),
+            "year": latest["date"].year,
+            "adjustment": (
+                "Seasonally Adjusted"
+            ),
+            "population": "Total",
+            "geography": "Australia",
+            "source": (
+                "Australian Bureau of Statistics"
+            ),
+            "resource_id": (
+                "Labour Force, Australia"
+            ),
+            "is_fallback": False,
+            "is_cached": False,
+        }
+
+        save_macro_cache(
+            "AU",
+            "unemployment",
+            result,
+        )
+
+        return result
+
+    except Exception as error:
+        print(
+            "ABS unemployment request failed: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "AU",
+            "unemployment",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return None
+
+# ======================================================
+# Australia GDP Growth - ABS
+# ======================================================
+
+ABS_NATIONAL_ACCOUNTS_RELEASE_URL = (
+    "https://www.abs.gov.au/statistics/economy/"
+    "national-accounts/"
+    "australian-national-accounts-national-income-"
+    "expenditure-and-product/latest-release"
+)
+
+ABS_GDP_TABLE_CAPTION = (
+    "Gross domestic product, chain volume measures, "
+    "seasonally adjusted"
+)
+
+
+def fetch_australia_gdp_growth():
+    """
+    Fetch Australia's latest quarterly real GDP growth.
+
+    Priority:
+    1. Official ABS National Accounts table
+    2. Cached official ABS value
+    """
+
+    try:
+        response = browser_requests.get(
+            ABS_NATIONAL_ACCOUNTS_RELEASE_URL,
+            impersonate="chrome",
+            headers={
+                "Accept": "text/html",
+            },
+            timeout=30,
+        )
+
+        response.raise_for_status()
+
+        page_html = response.text
+
+        caption_marker = (
+            f"<caption>{ABS_GDP_TABLE_CAPTION}"
+            "</caption>"
+        )
+
+        table_start = page_html.find(
+            caption_marker
+        )
+
+        if table_start < 0:
+            raise ValueError(
+                "ABS real GDP table not found."
+            )
+
+        table_end = page_html.find(
+            "</table>",
+            table_start,
+        )
+
+        if table_end < 0:
+            raise ValueError(
+                "ABS real GDP table is incomplete."
+            )
+
+        table_html = page_html[
+            table_start:table_end
+        ]
+
+        observations = []
+
+        rows = re.findall(
+            r"<tr[^>]*>(.*?)</tr>",
+            table_html,
+            flags=(
+                re.IGNORECASE
+                | re.DOTALL
+            ),
+        )
+
+        for row_html in rows:
+            date_match = re.search(
+                (
+                    r'<th[^>]*class="row-header"'
+                    r"[^>]*>(.*?)</th>"
+                ),
+                row_html,
+                flags=(
+                    re.IGNORECASE
+                    | re.DOTALL
+                ),
+            )
+
+            if date_match is None:
+                continue
+
+            cells = [
+                _clean_html_cell(cell)
+                for cell in re.findall(
+                    r"<td[^>]*>(.*?)</td>",
+                    row_html,
+                    flags=(
+                        re.IGNORECASE
+                        | re.DOTALL
+                    ),
+                )
+            ]
+
+            if (
+                len(cells) < 2
+                or not cells[0]
+                or not cells[1]
+            ):
+                continue
+
+            try:
+                observation_date = (
+                    datetime.strptime(
+                        _clean_html_cell(
+                            date_match.group(1)
+                        ),
+                        "%b-%y",
+                    )
+                )
+
+                quarterly_growth = float(
+                    cells[0]
+                )
+
+                annual_growth = float(
+                    cells[1]
+                )
+
+            except (ValueError, TypeError):
+                continue
+
+            observations.append(
+                {
+                    "date": observation_date,
+                    "quarterly_growth": (
+                        quarterly_growth
+                    ),
+                    "annual_growth": (
+                        annual_growth
+                    ),
+                }
+            )
+
+        if not observations:
+            raise ValueError(
+                "No valid ABS real GDP "
+                "observations found."
+            )
+
+        latest = max(
+            observations,
+            key=lambda item: item["date"],
+        )
+
+        quarter = (
+            (latest["date"].month - 1)
+            // 3
+            + 1
+        )
+
+        result = {
+            "name": "Real GDP Growth",
+            "value": round(
+                latest["quarterly_growth"],
+                2,
+            ),
+            "annual_growth": round(
+                latest["annual_growth"],
+                2,
+            ),
+            "unit": "percent",
+            "frequency": "quarterly",
+            "observation_date": (
+                f"{latest['date'].year}-Q"
+                f"{quarter}"
+            ),
+            "year": latest["date"].year,
+            "quarter": quarter,
+            "growth_type": (
+                "Quarter-on-Quarter"
+            ),
+            "measure": (
+                "Chain Volume Measures"
+            ),
+            "adjustment": (
+                "Seasonally Adjusted"
+            ),
+            "geography": "Australia",
+            "source": (
+                "Australian Bureau of Statistics"
+            ),
+            "resource_id": (
+                "Australian National Accounts: "
+                "National Income, Expenditure "
+                "and Product"
+            ),
+            "is_fallback": False,
+            "is_cached": False,
+        }
+
+        save_macro_cache(
+            "AU",
+            "gdp_growth",
+            result,
+        )
+
+        return result
+
+    except Exception as error:
+        print(
+            "ABS GDP request failed: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "AU",
+            "gdp_growth",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return None
+
+# ======================================================
+# Australia Macro Snapshot
+# ======================================================
+
+def fetch_australia_macro_snapshot():
+    """
+    Fetch Australia's latest macroeconomic snapshot.
+
+    Each indicator independently uses its official
+    source and cached official-data fallback.
+    """
+
+    return {
+        "country": "Australia",
+        "market_code": "AU",
+
+        "inflation": (
+            fetch_australia_inflation()
+        ),
+
+        "policy_rate": (
+            fetch_australia_policy_rate()
+        ),
+
+        "gdp_growth": (
+            fetch_australia_gdp_growth()
+        ),
+
+        "unemployment": (
+            fetch_australia_unemployment()
+        ),
+
         "retrieved_at_utc": (
             datetime.now(
                 timezone.utc
