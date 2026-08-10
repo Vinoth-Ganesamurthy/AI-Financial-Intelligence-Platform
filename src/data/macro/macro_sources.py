@@ -9,7 +9,9 @@ the actual observation dates and source metadata.
 """
 
 import os
+import re
 from datetime import datetime, timezone
+from html import unescape
 
 import requests
 from dotenv import load_dotenv
@@ -1445,3 +1447,337 @@ def fetch_singapore_gdp_growth():
             return cached
 
         return None
+
+
+# ======================================================
+# Singapore Policy-Rate Proxy - MAS SORA
+# ======================================================
+
+MAS_DOMESTIC_INTEREST_RATES_URL = (
+    "https://eservices.mas.gov.sg/"
+    "statistics/dir/domesticinterestrates.aspx"
+)
+
+
+def _extract_hidden_form_value(
+    page_html,
+    field_name,
+):
+    """Extract one ASP.NET hidden form value."""
+
+    pattern = (
+        rf'name="{re.escape(field_name)}"'
+        rf'[^>]*value="([^"]*)"'
+    )
+
+    match = re.search(
+        pattern,
+        page_html,
+        flags=re.IGNORECASE,
+    )
+
+    if match is None:
+        raise ValueError(
+            f"MAS form field not found: {field_name}"
+        )
+
+    return unescape(match.group(1))
+
+
+def _clean_html_cell(cell_html):
+    """Convert one MAS table cell to plain text."""
+
+    text = re.sub(
+        r"<[^>]+>",
+        " ",
+        cell_html,
+    )
+
+    return " ".join(
+        unescape(text)
+        .replace("\xa0", " ")
+        .split()
+    )
+
+
+def _parse_mas_sora_observations(page_html):
+    """Parse SORA observations from the MAS result table."""
+
+    header_position = page_html.find(
+        "ContentPlaceHolder1_soraHeader"
+    )
+
+    if header_position < 0:
+        raise ValueError(
+            "MAS SORA result table not found."
+        )
+
+    sora_html = page_html[header_position:]
+    observations = []
+    current_year = None
+    current_month = None
+
+    rows = re.findall(
+        r"<tr[^>]*>(.*?)</tr>",
+        sora_html,
+        flags=(
+            re.IGNORECASE
+            | re.DOTALL
+        ),
+    )
+
+    for row_html in rows:
+        cells = [
+            _clean_html_cell(cell)
+            for cell in re.findall(
+                r"<td[^>]*>(.*?)</td>",
+                row_html,
+                flags=(
+                    re.IGNORECASE
+                    | re.DOTALL
+                ),
+            )
+        ]
+
+        if len(cells) < 5:
+            continue
+
+        if cells[0]:
+            try:
+                current_year = int(cells[0])
+            except ValueError:
+                continue
+
+        if cells[1]:
+            current_month = cells[1]
+
+        if (
+            current_year is None
+            or current_month is None
+            or not cells[2]
+            or not cells[4]
+        ):
+            continue
+
+        try:
+            value_date = datetime.strptime(
+                (
+                    f"{current_year} "
+                    f"{current_month} "
+                    f"{cells[2]}"
+                ),
+                "%Y %b %d",
+            )
+
+            publication_date = datetime.strptime(
+                cells[3],
+                "%d %b %Y",
+            )
+
+            value = float(cells[4])
+
+        except (ValueError, TypeError):
+            continue
+
+        observations.append(
+            {
+                "value_date": value_date,
+                "publication_date": publication_date,
+                "value": value,
+            }
+        )
+
+    return observations
+
+
+def fetch_singapore_policy_rate():
+    """
+    Fetch Singapore's latest official daily SORA.
+
+    Singapore implements monetary policy through its
+    exchange-rate framework rather than a conventional
+    central-bank policy interest rate. SORA is therefore
+    stored as the domestic overnight rate proxy.
+
+    Priority:
+    1. MAS official Domestic Interest Rates table
+    2. Cached official MAS value
+    """
+
+    try:
+        session = requests.Session()
+
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "text/html",
+        }
+
+        initial_response = session.get(
+            MAS_DOMESTIC_INTEREST_RATES_URL,
+            headers=headers,
+            timeout=20,
+        )
+
+        initial_response.raise_for_status()
+
+        now = datetime.now()
+
+        form_data = {
+            "__VIEWSTATE": (
+                _extract_hidden_form_value(
+                    initial_response.text,
+                    "__VIEWSTATE",
+                )
+            ),
+            "__VIEWSTATEGENERATOR": (
+                _extract_hidden_form_value(
+                    initial_response.text,
+                    "__VIEWSTATEGENERATOR",
+                )
+            ),
+            "__EVENTVALIDATION": (
+                _extract_hidden_form_value(
+                    initial_response.text,
+                    "__EVENTVALIDATION",
+                )
+            ),
+            (
+                "ctl00$ContentPlaceHolder1$"
+                "StartYearDropDownList"
+            ): str(now.year),
+            (
+                "ctl00$ContentPlaceHolder1$"
+                "EndYearDropDownList"
+            ): str(now.year),
+            (
+                "ctl00$ContentPlaceHolder1$"
+                "StartMonthDropDownList"
+            ): "1",
+            (
+                "ctl00$ContentPlaceHolder1$"
+                "EndMonthDropDownList"
+            ): str(now.month),
+            (
+                "ctl00$ContentPlaceHolder1$"
+                "ColumnsCheckBoxList$13"
+            ): "on",
+            (
+                "ctl00$ContentPlaceHolder1$Button1"
+            ): "Display",
+        }
+
+        response = session.post(
+            MAS_DOMESTIC_INTEREST_RATES_URL,
+            data=form_data,
+            headers=headers,
+            timeout=30,
+        )
+
+        response.raise_for_status()
+
+        observations = (
+            _parse_mas_sora_observations(
+                response.text
+            )
+        )
+
+        if not observations:
+            raise ValueError(
+                "No valid MAS SORA observations found."
+            )
+
+        latest = max(
+            observations,
+            key=lambda item: item[
+                "value_date"
+            ],
+        )
+
+        result = {
+            "name": (
+                "Singapore Overnight Rate Average"
+            ),
+            "value": round(
+                latest["value"],
+                4,
+            ),
+            "unit": "percent_per_annum",
+            "frequency": "daily",
+            "observation_date": (
+                latest["value_date"]
+                .strftime("%Y-%m-%d")
+            ),
+            "publication_date": (
+                latest["publication_date"]
+                .strftime("%Y-%m-%d")
+            ),
+            "source": (
+                "Monetary Authority of Singapore"
+            ),
+            "series_id": "SORA",
+            "policy_framework": (
+                "Exchange-rate-centred monetary policy"
+            ),
+            "role": (
+                "Domestic overnight interest-rate proxy"
+            ),
+            "is_policy_rate": False,
+            "is_fallback": False,
+            "is_cached": False,
+        }
+
+        save_macro_cache(
+            "SG",
+            "policy_rate",
+            result,
+        )
+
+        return result
+
+    except Exception as error:
+        print(
+            "MAS SORA request failed: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "SG",
+            "policy_rate",
+        )
+
+        if cached:
+            cached["is_fallback"] = False
+            return cached
+
+        return None
+
+
+def fetch_singapore_macro_snapshot():
+    """
+    Fetch Singapore's latest macroeconomic snapshot.
+
+    Each indicator independently uses its official
+    source and cached official-data fallback.
+    """
+
+    return {
+        "country": "Singapore",
+        "market_code": "SG",
+        "inflation": (
+            fetch_singapore_inflation()
+        ),
+        "policy_rate": (
+            fetch_singapore_policy_rate()
+        ),
+        "gdp_growth": (
+            fetch_singapore_gdp_growth()
+        ),
+        "unemployment": (
+            fetch_singapore_unemployment()
+        ),
+        "retrieved_at_utc": (
+            datetime.now(
+                timezone.utc
+            ).isoformat()
+        ),
+    }
