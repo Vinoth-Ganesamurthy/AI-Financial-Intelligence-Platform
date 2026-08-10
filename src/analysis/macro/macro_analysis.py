@@ -584,3 +584,405 @@ def analyze_macro_inflation(
         "country": features["country"],
         "inflation": interpretation,
     }
+
+
+# --------------------------------------------------
+# GDP Growth Framework Configuration
+# --------------------------------------------------
+
+GDP_GROWTH_FRAMEWORKS = {
+    "US": {
+        "framework_name": (
+            "US annualized quarterly GDP growth"
+        ),
+        "growth_basis": (
+            "Quarter-on-quarter annualized"
+        ),
+        "frequency": "quarterly",
+    },
+    "IN": {
+        "framework_name": (
+            "India annual real GDP growth"
+        ),
+        "growth_basis": "Annual growth",
+        "frequency": "annual",
+    },
+    "SG": {
+        "framework_name": (
+            "Singapore quarterly real GDP growth"
+        ),
+        "growth_basis": "Quarter-on-quarter",
+        "frequency": "quarterly",
+    },
+    "AU": {
+        "framework_name": (
+            "Australia quarterly real GDP growth"
+        ),
+        "growth_basis": "Quarter-on-quarter",
+        "frequency": "quarterly",
+    },
+}
+
+
+# --------------------------------------------------
+# GDP Growth Interpretation
+# --------------------------------------------------
+
+def interpret_gdp_growth(
+    market_code: str,
+    gdp_growth_rate,
+    is_fallback=False,
+):
+    """
+    Interpret GDP growth using country-specific
+    analytical thresholds.
+
+    GDP score:
+         2 = strong growth
+         1 = stable or moderate growth
+         0 = weak or flat growth
+        -1 = mild contraction
+        -2 = significant contraction
+    """
+
+    normalized_market = (
+        market_code.strip().upper()
+        if market_code
+        else None
+    )
+
+    framework = GDP_GROWTH_FRAMEWORKS.get(
+        normalized_market
+    )
+
+    if framework is None:
+        return {
+            "status": "unsupported_market",
+            "score": 0,
+            "summary": (
+                "GDP growth framework is unavailable "
+                f"for market {normalized_market}."
+            ),
+        }
+
+    try:
+        rate = float(gdp_growth_rate)
+
+    except (TypeError, ValueError):
+        return {
+            "status": "unavailable",
+            "score": 0,
+            "gdp_growth_rate": None,
+            "framework_name": framework[
+                "framework_name"
+            ],
+            "growth_basis": framework[
+                "growth_basis"
+            ],
+            "summary": (
+                "GDP growth data is unavailable."
+            ),
+        }
+
+    interpreters = {
+        "US": _interpret_us_gdp_growth,
+        "IN": _interpret_india_gdp_growth,
+        "SG": _interpret_singapore_gdp_growth,
+        "AU": _interpret_australia_gdp_growth,
+    }
+
+    interpretation = interpreters[
+        normalized_market
+    ](rate)
+
+    fallback_flag = bool(is_fallback)
+
+    result = {
+        "gdp_growth_rate": rate,
+        "framework_name": framework[
+            "framework_name"
+        ],
+        "growth_basis": framework[
+            "growth_basis"
+        ],
+        "frequency": framework["frequency"],
+        "is_fallback": fallback_flag,
+        **interpretation,
+    }
+
+    if fallback_flag:
+        result["data_quality"] = "fallback_source"
+        result["data_quality_note"] = (
+            "GDP growth was obtained from a fallback "
+            "source and may have a different frequency "
+            "or publication schedule from the preferred "
+            "official domestic source."
+        )
+    else:
+        result["data_quality"] = "official_source"
+
+    result["threshold_note"] = (
+        "GDP classifications use analytical thresholds "
+        "for investment analysis and are not official "
+        "government classifications."
+    )
+
+    return result
+
+
+def _interpret_us_gdp_growth(
+    rate: float,
+):
+    """
+    Interpret US annualized quarterly GDP growth.
+    """
+
+    if rate < -1.0:
+        return {
+            "status": "significant_contraction",
+            "score": -2,
+            "summary": (
+                "US real GDP is contracting at a "
+                "significant annualized rate."
+            ),
+        }
+
+    if rate < 0:
+        return {
+            "status": "mild_contraction",
+            "score": -1,
+            "summary": (
+                "US real GDP is experiencing a mild "
+                "annualized contraction."
+            ),
+        }
+
+    if rate < 1.0:
+        return {
+            "status": "weak_growth",
+            "score": 0,
+            "summary": (
+                "US real GDP growth is positive but "
+                "relatively weak."
+            ),
+        }
+
+    if rate <= 3.0:
+        return {
+            "status": "moderate_growth",
+            "score": 1,
+            "summary": (
+                "US real GDP is growing at a moderate "
+                "annualized rate."
+            ),
+        }
+
+    return {
+        "status": "strong_growth",
+        "score": 2,
+        "summary": (
+            "US real GDP is growing at a strong "
+            "annualized rate."
+        ),
+    }
+
+
+def _interpret_india_gdp_growth(
+    rate: float,
+):
+    """
+    Interpret India's annual real GDP growth.
+    """
+
+    if rate < -2.0:
+        return {
+            "status": "significant_contraction",
+            "score": -2,
+            "summary": (
+                "India's real GDP is experiencing a "
+                "significant annual contraction."
+            ),
+        }
+
+    if rate < 0:
+        return {
+            "status": "mild_contraction",
+            "score": -1,
+            "summary": (
+                "India's real GDP is experiencing an "
+                "annual contraction."
+            ),
+        }
+
+    if rate < 4.0:
+        return {
+            "status": "weak_growth",
+            "score": 0,
+            "summary": (
+                "India's real GDP growth is positive "
+                "but relatively weak."
+            ),
+        }
+
+    if rate < 6.0:
+        return {
+            "status": "moderate_growth",
+            "score": 1,
+            "summary": (
+                "India's real GDP is growing at a "
+                "moderate annual rate."
+            ),
+        }
+
+    return {
+        "status": "strong_growth",
+        "score": 2,
+        "summary": (
+            "India's real GDP is growing at a strong "
+            "annual rate."
+        ),
+    }
+
+
+def _interpret_singapore_gdp_growth(
+    rate: float,
+):
+    """
+    Interpret Singapore quarter-on-quarter GDP growth.
+    """
+
+    if rate < -1.0:
+        return {
+            "status": "significant_contraction",
+            "score": -2,
+            "summary": (
+                "Singapore's real GDP is experiencing "
+                "a significant quarterly contraction."
+            ),
+        }
+
+    if rate < 0:
+        return {
+            "status": "mild_contraction",
+            "score": -1,
+            "summary": (
+                "Singapore's real GDP is experiencing "
+                "a quarterly contraction."
+            ),
+        }
+
+    if rate < 0.3:
+        return {
+            "status": "weak_growth",
+            "score": 0,
+            "summary": (
+                "Singapore's quarterly GDP growth is "
+                "positive but relatively weak."
+            ),
+        }
+
+    if rate <= 1.0:
+        return {
+            "status": "moderate_growth",
+            "score": 1,
+            "summary": (
+                "Singapore's real GDP is growing at a "
+                "moderate quarterly rate."
+            ),
+        }
+
+    return {
+        "status": "strong_growth",
+        "score": 2,
+        "summary": (
+            "Singapore's real GDP is growing at a "
+            "strong quarterly rate."
+        ),
+    }
+
+
+def _interpret_australia_gdp_growth(
+    rate: float,
+):
+    """
+    Interpret Australia quarter-on-quarter GDP growth.
+    """
+
+    if rate < -1.0:
+        return {
+            "status": "significant_contraction",
+            "score": -2,
+            "summary": (
+                "Australia's real GDP is experiencing "
+                "a significant quarterly contraction."
+            ),
+        }
+
+    if rate < 0:
+        return {
+            "status": "mild_contraction",
+            "score": -1,
+            "summary": (
+                "Australia's real GDP is experiencing "
+                "a quarterly contraction."
+            ),
+        }
+
+    if rate < 0.3:
+        return {
+            "status": "weak_growth",
+            "score": 0,
+            "summary": (
+                "Australia's quarterly GDP growth is "
+                "positive but relatively weak."
+            ),
+        }
+
+    if rate <= 0.8:
+        return {
+            "status": "moderate_growth",
+            "score": 1,
+            "summary": (
+                "Australia's real GDP is growing at a "
+                "moderate quarterly rate."
+            ),
+        }
+
+    return {
+        "status": "strong_growth",
+        "score": 2,
+        "summary": (
+            "Australia's real GDP is growing at a "
+            "strong quarterly rate."
+        ),
+    }
+
+
+def analyze_macro_gdp(
+    stock_symbol: str,
+):
+    """
+    Fetch macroeconomic features and return the
+    country-aware GDP growth interpretation.
+    """
+
+    features = build_macro_features(
+        stock_symbol
+    )
+
+    interpretation = interpret_gdp_growth(
+        market_code=features["market_code"],
+        gdp_growth_rate=features[
+            "gdp_growth_rate"
+        ],
+        is_fallback=features[
+            "gdp_is_fallback"
+        ],
+    )
+
+    return {
+        "stock_symbol": features["stock_symbol"],
+        "market_code": features["market_code"],
+        "country": features["country"],
+        "gdp_growth": interpretation,
+    }
