@@ -1345,3 +1345,390 @@ def analyze_macro_unemployment(
         "country": features["country"],
         "unemployment": interpretation,
     }
+
+# --------------------------------------------------
+# Monetary-Rate Framework Configuration
+# --------------------------------------------------
+
+MONETARY_RATE_FRAMEWORKS = {
+    "US": {
+        "framework_name": (
+            "Federal Reserve interest-rate environment"
+        ),
+        "rate_name": (
+            "Federal Funds Effective Rate"
+        ),
+        "rate_role": "Policy-rate proxy",
+    },
+    "IN": {
+        "framework_name": (
+            "Reserve Bank of India monetary-policy "
+            "environment"
+        ),
+        "rate_name": "RBI Repo Rate",
+        "rate_role": "Policy rate",
+    },
+    "SG": {
+        "framework_name": (
+            "Singapore domestic interest-rate "
+            "environment"
+        ),
+        "rate_name": (
+            "Singapore Overnight Rate Average"
+        ),
+        "rate_role": (
+            "Domestic overnight market reference rate"
+        ),
+    },
+    "AU": {
+        "framework_name": (
+            "Reserve Bank of Australia interest-rate "
+            "environment"
+        ),
+        "rate_name": "Cash Rate Target",
+        "rate_role": "Policy rate",
+    },
+}
+
+
+# --------------------------------------------------
+# Monetary-Rate Interpretation
+# --------------------------------------------------
+
+def interpret_monetary_rate(
+    market_code: str,
+    monetary_rate,
+    inflation_rate,
+    is_policy_rate,
+):
+    """
+    Interpret the monetary-rate environment.
+
+    Monetary score:
+         1 = supportive or low-rate environment
+         0 = balanced, neutral, or unavailable
+        -1 = restrictive or high-rate environment
+        -2 = strongly restrictive environment
+
+    For policy-rate markets, the analysis uses a simple
+    real-rate proxy:
+
+        monetary rate - inflation rate
+
+    This is an analytical proxy and is not an official
+    central-bank estimate of the monetary-policy stance.
+    """
+
+    normalized_market = (
+        market_code.strip().upper()
+        if market_code
+        else None
+    )
+
+    framework = MONETARY_RATE_FRAMEWORKS.get(
+        normalized_market
+    )
+
+    if framework is None:
+        return {
+            "status": "unsupported_market",
+            "score": 0,
+            "summary": (
+                "Monetary-rate framework is unavailable "
+                f"for market {normalized_market}."
+            ),
+        }
+
+    try:
+        rate = float(monetary_rate)
+
+    except (TypeError, ValueError):
+        return {
+            "status": "unavailable",
+            "score": 0,
+            "monetary_rate": None,
+            "inflation_rate": (
+                _safe_float(inflation_rate)
+            ),
+            "is_policy_rate": (
+                None
+                if is_policy_rate is None
+                else bool(is_policy_rate)
+            ),
+            "framework_name": framework[
+                "framework_name"
+            ],
+            "rate_name": framework["rate_name"],
+            "rate_role": framework["rate_role"],
+            "summary": (
+                "The monetary rate is currently "
+                "unavailable."
+            ),
+        }
+
+    if rate < 0:
+        return {
+            "status": "negative_rate_environment",
+            "score": 1,
+            "monetary_rate": rate,
+            "inflation_rate": (
+                _safe_float(inflation_rate)
+            ),
+            "is_policy_rate": bool(
+                is_policy_rate
+            ),
+            "framework_name": framework[
+                "framework_name"
+            ],
+            "rate_name": framework["rate_name"],
+            "rate_role": framework["rate_role"],
+            "summary": (
+                "The monetary rate is negative, "
+                "indicating an unusually supportive "
+                "interest-rate environment."
+            ),
+        }
+
+    policy_rate_flag = bool(is_policy_rate)
+
+    if (
+        normalized_market == "SG"
+        or not policy_rate_flag
+    ):
+        interpretation = (
+            _interpret_market_reference_rate(rate)
+        )
+
+        return {
+            "monetary_rate": rate,
+            "inflation_rate": (
+                _safe_float(inflation_rate)
+            ),
+            "is_policy_rate": False,
+            "framework_name": framework[
+                "framework_name"
+            ],
+            "rate_name": framework["rate_name"],
+            "rate_role": framework["rate_role"],
+            **interpretation,
+            "policy_framework_note": (
+                "Singapore conducts monetary policy "
+                "primarily through the exchange rate. "
+                "SORA is a domestic overnight market "
+                "reference rate and is not an MAS "
+                "policy rate."
+            ),
+            "threshold_note": (
+                "The classification describes the "
+                "domestic interest-rate environment "
+                "and not the official MAS policy stance."
+            ),
+        }
+
+    inflation = _safe_float(
+        inflation_rate
+    )
+
+    if inflation is None:
+        return {
+            "status": "rate_available_inflation_unavailable",
+            "score": 0,
+            "monetary_rate": rate,
+            "inflation_rate": None,
+            "real_rate_proxy": None,
+            "is_policy_rate": True,
+            "framework_name": framework[
+                "framework_name"
+            ],
+            "rate_name": framework["rate_name"],
+            "rate_role": framework["rate_role"],
+            "summary": (
+                "The monetary rate is available, but "
+                "inflation is unavailable, so a simple "
+                "real-rate proxy cannot be calculated."
+            ),
+        }
+
+    real_rate_proxy = round(
+        rate - inflation,
+        2,
+    )
+
+    interpretation = (
+        _interpret_real_rate_proxy(
+            real_rate_proxy
+        )
+    )
+
+    return {
+        "monetary_rate": rate,
+        "inflation_rate": inflation,
+        "real_rate_proxy": real_rate_proxy,
+        "is_policy_rate": True,
+        "framework_name": framework[
+            "framework_name"
+        ],
+        "rate_name": framework["rate_name"],
+        "rate_role": framework["rate_role"],
+        **interpretation,
+        "calculation": (
+            "monetary_rate - inflation_rate"
+        ),
+        "threshold_note": (
+            "The real-rate proxy is a simplified "
+            "analytical measure. It is not an official "
+            "central-bank estimate of the neutral or "
+            "real policy rate."
+        ),
+    }
+
+
+def _safe_float(
+    value,
+):
+    """
+    Convert a value to float without raising an error.
+    """
+
+    try:
+        return float(value)
+
+    except (TypeError, ValueError):
+        return None
+
+
+def _interpret_real_rate_proxy(
+    real_rate_proxy: float,
+):
+    """
+    Interpret the simple monetary-rate-minus-inflation
+    proxy.
+    """
+
+    if real_rate_proxy < -1.0:
+        return {
+            "status": "supportive_rate_environment",
+            "score": 1,
+            "summary": (
+                "The monetary rate is materially below "
+                "inflation, indicating a supportive "
+                "real-rate environment."
+            ),
+        }
+
+    if real_rate_proxy <= 1.0:
+        return {
+            "status": "balanced_rate_environment",
+            "score": 0,
+            "summary": (
+                "The monetary rate is broadly aligned "
+                "with inflation, indicating a balanced "
+                "real-rate environment."
+            ),
+        }
+
+    if real_rate_proxy <= 2.0:
+        return {
+            "status": "restrictive_rate_environment",
+            "score": -1,
+            "summary": (
+                "The monetary rate is above inflation, "
+                "indicating a restrictive real-rate "
+                "environment."
+            ),
+        }
+
+    return {
+        "status": "strongly_restrictive_rate_environment",
+        "score": -2,
+        "summary": (
+            "The monetary rate is substantially above "
+            "inflation, indicating a strongly "
+            "restrictive real-rate environment."
+        ),
+    }
+
+
+def _interpret_market_reference_rate(
+    rate: float,
+):
+    """
+    Interpret a market reference rate without describing
+    it as an official policy stance.
+    """
+
+    if rate <= 1.5:
+        return {
+            "status": "low_rate_environment",
+            "score": 1,
+            "summary": (
+                "The domestic overnight reference rate "
+                "indicates a relatively low interest-rate "
+                "environment."
+            ),
+        }
+
+    if rate <= 3.0:
+        return {
+            "status": "moderate_rate_environment",
+            "score": 0,
+            "summary": (
+                "The domestic overnight reference rate "
+                "indicates a moderate interest-rate "
+                "environment."
+            ),
+        }
+
+    if rate <= 5.0:
+        return {
+            "status": "high_rate_environment",
+            "score": -1,
+            "summary": (
+                "The domestic overnight reference rate "
+                "indicates a relatively high interest-rate "
+                "environment."
+            ),
+        }
+
+    return {
+        "status": "very_high_rate_environment",
+        "score": -2,
+        "summary": (
+            "The domestic overnight reference rate "
+            "indicates a very high interest-rate "
+            "environment."
+        ),
+    }
+
+
+def analyze_macro_monetary_rate(
+    stock_symbol: str,
+):
+    """
+    Fetch macroeconomic features and return the
+    country-aware monetary-rate interpretation.
+    """
+
+    features = build_macro_features(
+        stock_symbol
+    )
+
+    interpretation = interpret_monetary_rate(
+        market_code=features["market_code"],
+        monetary_rate=features[
+            "monetary_rate"
+        ],
+        inflation_rate=features[
+            "inflation_rate"
+        ],
+        is_policy_rate=features[
+            "monetary_rate_is_policy_rate"
+        ],
+    )
+
+    return {
+        "stock_symbol": features["stock_symbol"],
+        "market_code": features["market_code"],
+        "country": features["country"],
+        "monetary_environment": interpretation,
+    }
