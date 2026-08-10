@@ -986,3 +986,362 @@ def analyze_macro_gdp(
         "country": features["country"],
         "gdp_growth": interpretation,
     }
+
+# --------------------------------------------------
+# Unemployment Framework Configuration
+# --------------------------------------------------
+
+UNEMPLOYMENT_FRAMEWORKS = {
+    "US": {
+        "framework_name": (
+            "United States labour-market conditions"
+        ),
+        "population_context": (
+            "Civilian labour force"
+        ),
+    },
+    "IN": {
+        "framework_name": (
+            "India labour-market conditions"
+        ),
+        "population_context": (
+            "Persons aged 15 years and above"
+        ),
+    },
+    "SG": {
+        "framework_name": (
+            "Singapore labour-market conditions"
+        ),
+        "population_context": (
+            "Total labour force"
+        ),
+    },
+    "AU": {
+        "framework_name": (
+            "Australia labour-market conditions"
+        ),
+        "population_context": (
+            "Civilian labour force"
+        ),
+    },
+}
+
+
+# --------------------------------------------------
+# Unemployment Interpretation
+# --------------------------------------------------
+
+def interpret_unemployment(
+    market_code: str,
+    unemployment_rate,
+):
+    """
+    Interpret unemployment using country-specific
+    analytical thresholds.
+
+    Unemployment score:
+         1 = strong or healthy labour market
+         0 = moderate labour-market conditions
+        -1 = elevated unemployment
+        -2 = high unemployment
+    """
+
+    normalized_market = (
+        market_code.strip().upper()
+        if market_code
+        else None
+    )
+
+    framework = UNEMPLOYMENT_FRAMEWORKS.get(
+        normalized_market
+    )
+
+    if framework is None:
+        return {
+            "status": "unsupported_market",
+            "score": 0,
+            "summary": (
+                "Unemployment framework is unavailable "
+                f"for market {normalized_market}."
+            ),
+        }
+
+    try:
+        rate = float(unemployment_rate)
+
+    except (TypeError, ValueError):
+        return {
+            "status": "unavailable",
+            "score": 0,
+            "unemployment_rate": None,
+            "framework_name": framework[
+                "framework_name"
+            ],
+            "summary": (
+                "Unemployment data is unavailable."
+            ),
+        }
+
+    if rate < 0:
+        return {
+            "status": "invalid_value",
+            "score": 0,
+            "unemployment_rate": rate,
+            "framework_name": framework[
+                "framework_name"
+            ],
+            "summary": (
+                "Unemployment cannot be negative."
+            ),
+        }
+
+    interpreters = {
+        "US": _interpret_us_unemployment,
+        "IN": _interpret_india_unemployment,
+        "SG": _interpret_singapore_unemployment,
+        "AU": _interpret_australia_unemployment,
+    }
+
+    interpretation = interpreters[
+        normalized_market
+    ](rate)
+
+    return {
+        "unemployment_rate": rate,
+        "framework_name": framework[
+            "framework_name"
+        ],
+        "population_context": framework[
+            "population_context"
+        ],
+        **interpretation,
+        "threshold_note": (
+            "Unemployment classifications use "
+            "country-specific analytical thresholds "
+            "and are not official government targets."
+        ),
+    }
+
+
+def _interpret_us_unemployment(
+    rate: float,
+):
+    """
+    Interpret the US unemployment rate.
+    """
+
+    if rate <= 4.5:
+        return {
+            "status": "healthy_labour_market",
+            "score": 1,
+            "summary": (
+                "US unemployment is consistent with "
+                "a relatively healthy labour market."
+            ),
+        }
+
+    if rate <= 5.5:
+        return {
+            "status": "moderate_unemployment",
+            "score": 0,
+            "summary": (
+                "US unemployment indicates moderate "
+                "labour-market conditions."
+            ),
+        }
+
+    if rate <= 7.0:
+        return {
+            "status": "elevated_unemployment",
+            "score": -1,
+            "summary": (
+                "US unemployment is elevated, "
+                "indicating labour-market weakness."
+            ),
+        }
+
+    return {
+        "status": "high_unemployment",
+        "score": -2,
+        "summary": (
+            "US unemployment is high, indicating "
+            "significant labour-market weakness."
+        ),
+    }
+
+
+def _interpret_india_unemployment(
+    rate: float,
+):
+    """
+    Interpret India's unemployment rate.
+    """
+
+    if rate <= 4.0:
+        return {
+            "status": "healthy_labour_market",
+            "score": 1,
+            "summary": (
+                "India's unemployment rate is "
+                "relatively low."
+            ),
+        }
+
+    if rate <= 6.0:
+        return {
+            "status": "moderate_unemployment",
+            "score": 0,
+            "summary": (
+                "India's unemployment rate indicates "
+                "moderate labour-market conditions."
+            ),
+        }
+
+    if rate <= 8.0:
+        return {
+            "status": "elevated_unemployment",
+            "score": -1,
+            "summary": (
+                "India's unemployment rate is "
+                "elevated, indicating labour-market "
+                "pressure."
+            ),
+        }
+
+    return {
+        "status": "high_unemployment",
+        "score": -2,
+        "summary": (
+            "India's unemployment rate is high, "
+            "indicating significant labour-market "
+            "weakness."
+        ),
+    }
+
+
+def _interpret_singapore_unemployment(
+    rate: float,
+):
+    """
+    Interpret Singapore's unemployment rate.
+    """
+
+    if rate <= 2.5:
+        return {
+            "status": "healthy_labour_market",
+            "score": 1,
+            "summary": (
+                "Singapore's unemployment rate is "
+                "consistent with a healthy labour "
+                "market."
+            ),
+        }
+
+    if rate <= 3.5:
+        return {
+            "status": "moderate_unemployment",
+            "score": 0,
+            "summary": (
+                "Singapore's unemployment rate "
+                "indicates moderate labour-market "
+                "conditions."
+            ),
+        }
+
+    if rate <= 5.0:
+        return {
+            "status": "elevated_unemployment",
+            "score": -1,
+            "summary": (
+                "Singapore's unemployment rate is "
+                "elevated."
+            ),
+        }
+
+    return {
+        "status": "high_unemployment",
+        "score": -2,
+        "summary": (
+            "Singapore's unemployment rate is high, "
+            "indicating significant labour-market "
+            "weakness."
+        ),
+    }
+
+
+def _interpret_australia_unemployment(
+    rate: float,
+):
+    """
+    Interpret Australia's unemployment rate.
+    """
+
+    if rate <= 4.5:
+        return {
+            "status": "healthy_labour_market",
+            "score": 1,
+            "summary": (
+                "Australia's unemployment rate is "
+                "consistent with a relatively healthy "
+                "labour market."
+            ),
+        }
+
+    if rate <= 5.5:
+        return {
+            "status": "moderate_unemployment",
+            "score": 0,
+            "summary": (
+                "Australia's unemployment rate "
+                "indicates moderate labour-market "
+                "conditions."
+            ),
+        }
+
+    if rate <= 7.0:
+        return {
+            "status": "elevated_unemployment",
+            "score": -1,
+            "summary": (
+                "Australia's unemployment rate is "
+                "elevated, indicating labour-market "
+                "weakness."
+            ),
+        }
+
+    return {
+        "status": "high_unemployment",
+        "score": -2,
+        "summary": (
+            "Australia's unemployment rate is high, "
+            "indicating significant labour-market "
+            "weakness."
+        ),
+    }
+
+
+def analyze_macro_unemployment(
+    stock_symbol: str,
+):
+    """
+    Fetch macroeconomic features and return the
+    country-aware unemployment interpretation.
+    """
+
+    features = build_macro_features(
+        stock_symbol
+    )
+
+    interpretation = interpret_unemployment(
+        market_code=features["market_code"],
+        unemployment_rate=features[
+            "unemployment_rate"
+        ],
+    )
+
+    return {
+        "stock_symbol": features["stock_symbol"],
+        "market_code": features["market_code"],
+        "country": features["country"],
+        "unemployment": interpretation,
+    }
