@@ -2675,3 +2675,63 @@ def fetch_australia_macro_snapshot():
             ).isoformat()
         ),
     }
+
+# ======================================================
+# Automatic Country Macro Router
+# ======================================================
+
+def fetch_macro_snapshot_for_symbol(
+    stock_symbol: str,
+):
+    """
+    Detect the stock's market and fetch the appropriate
+    country-specific macroeconomic snapshot.
+
+    Examples:
+        AAPL         -> United States
+        RELIANCE.NS  -> India
+        D05.SI       -> Singapore
+        BHP.AX       -> Australia
+    """
+
+    from src.data.macro.country_config import (
+        detect_market,
+    )
+
+    if not stock_symbol:
+        raise ValueError(
+            "Stock symbol is required."
+        )
+
+    normalized_symbol = (
+        stock_symbol
+        .strip()
+        .upper()
+    )
+
+    market_code = detect_market(
+        normalized_symbol
+    )
+
+    snapshot_fetchers = {
+        "US": fetch_us_macro_snapshot,
+        "IN": fetch_india_macro_snapshot,
+        "SG": fetch_singapore_macro_snapshot,
+        "AU": fetch_australia_macro_snapshot,
+    }
+
+    fetcher = snapshot_fetchers.get(
+        market_code
+    )
+
+    if fetcher is None:
+        raise ValueError(
+            f"Unsupported market: {market_code}"
+        )
+
+    snapshot = fetcher()
+
+    return {
+        "stock_symbol": normalized_symbol,
+        **snapshot,
+    }
