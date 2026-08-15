@@ -127,21 +127,26 @@ def _classify_sector_macro_score(score):
     )
 
 
-def build_sector_macro_impact(stock_symbol: str):
+def build_sector_macro_impact(
+    stock_symbol: str,
+    fundamental_data=None,
+    macro_analysis=None,
+):
     if not stock_symbol:
         raise ValueError("Stock symbol is required.")
 
     normalized_symbol = stock_symbol.strip().upper()
 
-    fundamental_data = fetch_fundamental_data(
-        normalized_symbol
-    )
+    if fundamental_data is None:
+        fundamental_data = fetch_fundamental_data(
+            normalized_symbol
+        )
 
-    macro_analysis = build_combined_macro_analysis(
-        normalized_symbol
-    )
-
-    sector = fundamental_data.get("sector")
+    if macro_analysis is None:
+        macro_analysis = build_combined_macro_analysis(
+            normalized_symbol
+        )    
+        sector = fundamental_data.get("sector")
 
     sector_weights = SECTOR_MACRO_WEIGHTS.get(
         sector,

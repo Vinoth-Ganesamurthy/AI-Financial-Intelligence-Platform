@@ -159,48 +159,6 @@ def analyze_company_sentiment(
             article["headline"]
         )
 
-        classified_article = {
-            **article,
-            "sentiment": sentiment,
-        }
-
-        classified_articles.append(
-            classified_article
-        )
-
-    features = calculate_sentiment_features(
-        classified_articles
-    )
-
-    return {
-        "features": features,
-        "articles": classified_articles,
-    }
-
-def analyze_company_sentiment(
-    symbol: str,
-    company_name: str | None = None,
-    limit: int = 10,
-):
-    """
-    Fetch company news, classify each article,
-    and return aggregate sentiment features.
-    """
-
-    articles = fetch_company_news(
-        symbol=symbol,
-        company_name=company_name,
-        limit=limit,
-    )
-
-    classified_articles = []
-
-    for article in articles:
-
-        sentiment = predict_sentiment(
-            article["headline"]
-        )
-
         classified_articles.append(
             {
                 **article,
