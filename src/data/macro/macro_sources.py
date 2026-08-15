@@ -1110,24 +1110,171 @@ def fetch_india_policy_rate():
     
 def fetch_india_gdp_growth():
     """
-    Fetch India's GDP growth.
+    Fetch India's latest official quarterly real GDP
+    growth rate.
+
+    Source:
+    MoSPI National Accounts Statistics
+
+    Indicator:
+    22 - GDP Growth Rate
 
     Priority:
-    1. MoSPI NAS official source
-    2. Cached official GDP observation
+    1. Official MoSPI NAS
+    2. Cached official observation
     3. World Bank annual fallback
     """
 
     try:
-        # Official NAS retrieval will be implemented
-        # once the MoSPI NAS endpoint is stable.
-        raise RuntimeError(
-            "MoSPI NAS GDP retrieval currently unavailable."
+        filters = {
+            "base_year": "2022-23",
+            "series": "Current",
+            "frequency_code": "Quarterly",
+            "indicator_code": 22,
+            "limit": 100,
+            "page": 1,
+        }
+
+        data = get_mospi_data(
+            "NAS",
+            filters,
         )
+
+        if not data:
+            raise ValueError(
+                "No MoSPI NAS GDP data returned."
+            )
+
+        candidates = []
+
+        for record in data:
+            if (
+                record.get("indicator")
+                != "GDP Growth Rate"
+            ):
+                continue
+
+            fiscal_year = record.get("year")
+            quarter = record.get("quarter")
+            real_growth = record.get(
+                "constant_price"
+            )
+
+            if (
+                fiscal_year is None
+                or quarter is None
+                or real_growth is None
+            ):
+                continue
+
+            year_match = re.fullmatch(
+                r"(\d{4})-(\d{2})",
+                str(fiscal_year),
+            )
+
+            quarter_match = re.fullmatch(
+                r"Q([1-4])",
+                str(quarter),
+                flags=re.IGNORECASE,
+            )
+
+            if (
+                year_match is None
+                or quarter_match is None
+            ):
+                continue
+
+            try:
+                fiscal_start_year = int(
+                    year_match.group(1)
+                )
+
+                quarter_number = int(
+                    quarter_match.group(1)
+                )
+
+                growth_value = float(
+                    real_growth
+                )
+
+            except (TypeError, ValueError):
+                continue
+
+            candidates.append(
+                {
+                    "fiscal_year": fiscal_year,
+                    "fiscal_start_year": (
+                        fiscal_start_year
+                    ),
+                    "quarter": quarter_number,
+                    "value": growth_value,
+                    "base_year": record.get(
+                        "base_year"
+                    ),
+                    "series": record.get(
+                        "series"
+                    ),
+                }
+            )
+
+        if not candidates:
+            raise ValueError(
+                "No valid MoSPI GDP growth "
+                "records found."
+            )
+
+        latest = max(
+            candidates,
+            key=lambda item: (
+                item["fiscal_start_year"],
+                item["quarter"],
+            ),
+        )
+
+        result = {
+            "name": "Real GDP Growth",
+            "value": round(
+                latest["value"],
+                2,
+            ),
+            "unit": "percent",
+            "frequency": "quarterly",
+            "observation_date": (
+                f"{latest['fiscal_year']}-"
+                f"Q{latest['quarter']}"
+            ),
+            "fiscal_year": (
+                latest["fiscal_year"]
+            ),
+            "quarter": latest["quarter"],
+            "growth_type": "Year-on-Year",
+            "measure": (
+                "GDP Growth Rate at "
+                "Constant Prices"
+            ),
+            "base_year": (
+                latest["base_year"]
+            ),
+            "series": latest["series"],
+            "source": "MoSPI NAS",
+            "resource_id": (
+                "NAS indicator 22"
+            ),
+            "is_fallback": False,
+            "is_cached": False,
+        }
+
+        save_macro_cache(
+            "IN",
+            "gdp_growth",
+            result,
+        )
+
+        return result
 
     except Exception as error:
         print(
-            "India GDP official source unavailable: "
+            "India GDP official source failed: "
             f"{error}"
         )
 
@@ -1141,7 +1288,7 @@ def fetch_india_gdp_growth():
             return cached
 
         return fetch_india_gdp_fallback()
-
+    
 def fetch_india_macro_snapshot():
     """
     Fetch the latest available macroeconomic snapshot for India.

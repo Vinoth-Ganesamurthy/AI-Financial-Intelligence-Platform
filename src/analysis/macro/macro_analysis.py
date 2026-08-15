@@ -600,12 +600,14 @@ GDP_GROWTH_FRAMEWORKS = {
         ),
         "frequency": "quarterly",
     },
-    "IN": {
+        "IN": {
         "framework_name": (
-            "India annual real GDP growth"
+            "India quarterly real GDP growth"
         ),
-        "growth_basis": "Annual growth",
-        "frequency": "annual",
+        "growth_basis": (
+            "Year-on-year quarterly growth"
+        ),
+        "frequency": "quarterly",
     },
     "SG": {
         "framework_name": (
@@ -791,7 +793,8 @@ def _interpret_india_gdp_growth(
     rate: float,
 ):
     """
-    Interpret India's annual real GDP growth.
+    Interpret India's quarterly year-on-year real GDP
+    growth rate.
     """
 
     if rate < -2.0:
@@ -800,7 +803,7 @@ def _interpret_india_gdp_growth(
             "score": -2,
             "summary": (
                 "India's real GDP is experiencing a "
-                "significant annual contraction."
+                "significant year-on-year contraction."
             ),
         }
 
@@ -809,8 +812,8 @@ def _interpret_india_gdp_growth(
             "status": "mild_contraction",
             "score": -1,
             "summary": (
-                "India's real GDP is experiencing an "
-                "annual contraction."
+                "India's real GDP is experiencing a "
+                "year-on-year contraction."
             ),
         }
 
@@ -819,8 +822,8 @@ def _interpret_india_gdp_growth(
             "status": "weak_growth",
             "score": 0,
             "summary": (
-                "India's real GDP growth is positive "
-                "but relatively weak."
+                "India's year-on-year real GDP growth "
+                "is positive but relatively weak."
             ),
         }
 
@@ -830,7 +833,7 @@ def _interpret_india_gdp_growth(
             "score": 1,
             "summary": (
                 "India's real GDP is growing at a "
-                "moderate annual rate."
+                "moderate year-on-year rate."
             ),
         }
 
@@ -839,10 +842,9 @@ def _interpret_india_gdp_growth(
         "score": 2,
         "summary": (
             "India's real GDP is growing at a strong "
-            "annual rate."
+            "year-on-year rate."
         ),
     }
-
 
 def _interpret_singapore_gdp_growth(
     rate: float,
