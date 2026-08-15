@@ -10,6 +10,9 @@ from fastapi import FastAPI, HTTPException, Query
 from src.analysis.intelligence.intelligence_engine import (
     build_financial_intelligence,
 )
+from src.api.schemas import (
+    FinancialIntelligenceResponse,
+)
 
 
 logging.basicConfig(level=logging.INFO)
@@ -46,7 +49,14 @@ def health_check():
 
 
 @app.get(
-    "/api/v1/intelligence/{stock_symbol}"
+    "/api/v1/intelligence/{stock_symbol}",
+    response_model=FinancialIntelligenceResponse,
+    summary="Generate financial intelligence",
+    description=(
+        "Combines historical, technical, fundamental, "
+        "sentiment, and sector-adjusted macroeconomic "
+        "analysis for a stock symbol."
+    ),
 )
 def get_financial_intelligence(
     stock_symbol: str,

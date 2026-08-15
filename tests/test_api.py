@@ -38,14 +38,41 @@ def test_health_endpoint():
 def test_intelligence_endpoint(
     mock_build_intelligence,
 ):
+    empty_module_score = {
+        "score": 0.0,
+        "is_available": True,
+        "quality_factor": 1.0,
+        "weight": 0.2,
+        "weighted_contribution": 0.0,
+    }
+
     mock_build_intelligence.return_value = {
         "stock_symbol": "AAPL",
         "company_name": "Apple Inc.",
+        "sector": "Technology",
         "intelligence_score": 0.3,
         "classification": "favourable",
+        "summary": (
+            "The available financial indicators "
+            "are favourable overall."
+        ),
         "coverage_ratio": 1.0,
         "confidence_score": 0.9,
+        "module_scores": {
+            "fundamental": empty_module_score,
+            "technical": empty_module_score,
+            "sentiment": empty_module_score,
+            "historical": empty_module_score,
+            "sector_macro": empty_module_score,
+        },
+        "analysis": {},
         "errors": {},
+        "generated_at_utc": (
+            "2026-08-15T12:00:00+00:00"
+        ),
+        "disclaimer": (
+            "For research and educational purposes."
+        ),
     }
 
     response = client.get(
