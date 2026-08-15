@@ -9,3 +9,5 @@ mospi-esankhyiki
 curl-cffi
 fastapi
 uvicorn
+pytest
+httpx
