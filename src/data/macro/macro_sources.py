@@ -670,8 +670,9 @@ def fetch_india_unemployment_fallback():
 
 import calendar
 
-import esankhyiki
-
+from src.data.macro.mospi_client import (
+    get_mospi_data,
+)
 
 MONTH_NUMBER = {
     month: number
@@ -704,7 +705,7 @@ def fetch_india_inflation():
             "page": 1,
         }
 
-        data = esankhyiki.get_data(
+        data = get_mospi_data(
             "CPI",
             filters,
         )
@@ -837,7 +838,7 @@ def fetch_india_unemployment():
             "page": 1,
         }
 
-        data = esankhyiki.get_data(
+        data = get_mospi_data(
             "PLFS",
             filters,
         )
