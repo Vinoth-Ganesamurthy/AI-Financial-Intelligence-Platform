@@ -142,11 +142,12 @@ def build_sector_macro_impact(
             normalized_symbol
         )
 
-    if macro_analysis is None:
-        macro_analysis = build_combined_macro_analysis(
+        if macro_analysis is None:
+         macro_analysis = build_combined_macro_analysis(
             normalized_symbol
-        )    
-        sector = fundamental_data.get("sector")
+        )
+
+    sector = fundamental_data.get("sector")
 
     sector_weights = SECTOR_MACRO_WEIGHTS.get(
         sector,
