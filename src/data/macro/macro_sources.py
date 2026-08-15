@@ -21,7 +21,8 @@ from src.data.macro.macro_cache import (
     save_macro_cache,
     get_macro_cache,
 )
-
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 # ======================================================
 # Configuration
 # ======================================================
@@ -83,7 +84,7 @@ def fetch_fred_observations(
     limit: int = 24,
 ):
     """
-    Fetch recent observations for one FRED series.
+    Fetch recent FRED observations with retry support.
     """
 
     if not FRED_API_KEY:
@@ -99,18 +100,39 @@ def fetch_fred_observations(
         "limit": limit,
     }
 
-    response = requests.get(
-        FRED_OBSERVATIONS_URL,
-        params=params,
-        timeout=15,
+    retry_strategy = Retry(
+        total=2,
+        connect=2,
+        read=2,
+        status=2,
+        backoff_factor=0.5,
+        status_forcelist=[
+            429,
+            500,
+            502,
+            503,
+            504,
+        ],
+        allowed_methods=["GET"],
+        raise_on_status=False,
     )
 
-    if response.status_code != 200:
-        raise RuntimeError(
-            f"FRED request failed for "
-            f"{series_id}: "
-            f"HTTP {response.status_code}"
-        )
+    session = requests.Session()
+
+    session.mount(
+        "https://",
+        HTTPAdapter(
+            max_retries=retry_strategy
+        ),
+    )
+
+    response = session.get(
+        FRED_OBSERVATIONS_URL,
+        params=params,
+        timeout=(5, 20),
+    )
+
+    response.raise_for_status()
 
     payload = response.json()
 
@@ -122,12 +144,10 @@ def fetch_fred_observations(
     cleaned = []
 
     for observation in observations:
-
         raw_value = observation.get(
             "value"
         )
 
-        # FRED may use "." for missing values.
         if (
             raw_value is None
             or raw_value == "."
@@ -137,7 +157,7 @@ def fetch_fred_observations(
         try:
             value = float(raw_value)
 
-        except ValueError:
+        except (TypeError, ValueError):
             continue
 
         cleaned.append(
@@ -150,7 +170,6 @@ def fetch_fred_observations(
         )
 
     return cleaned
-
 
 # ======================================================
 # Latest Observation
@@ -369,37 +388,106 @@ def fetch_us_gdp_growth():
 
 def fetch_us_macro_snapshot():
     """
-    Fetch current/latest available US
-    macroeconomic indicators.
+    Fetch the latest US macroeconomic snapshot.
+
+    A successful complete snapshot is cached. If FRED
+    is temporarily unavailable, the last successful
+    cached snapshot is returned.
     """
 
-    return {
-        "country": "United States",
-        "market_code": "US",
+    indicator_names = [
+        "policy_rate",
+        "inflation",
+        "gdp_growth",
+        "unemployment",
+    ]
 
-        "policy_rate": (
-            fetch_us_policy_rate()
-        ),
+    try:
+        snapshot = {
+            "country": "United States",
+            "market_code": "US",
+            "policy_rate": (
+                fetch_us_policy_rate()
+            ),
+            "inflation": (
+                fetch_us_inflation()
+            ),
+            "gdp_growth": (
+                fetch_us_gdp_growth()
+            ),
+            "unemployment": (
+                fetch_us_unemployment()
+            ),
+            "retrieved_at_utc": (
+                datetime.now(
+                    timezone.utc
+                ).isoformat()
+            ),
+        }
 
-        "inflation": (
-            fetch_us_inflation()
-        ),
+        missing_indicators = [
+            name
+            for name in indicator_names
+            if snapshot.get(name) is None
+        ]
 
-        "gdp_growth": (
-            fetch_us_gdp_growth()
-        ),
+        if missing_indicators:
+            raise RuntimeError(
+                "Missing US macro indicators: "
+                + ", ".join(missing_indicators)
+            )
 
-        "unemployment": (
-            fetch_us_unemployment()
-        ),
+        for name in indicator_names:
+            snapshot[name][
+                "is_cached"
+            ] = False
 
-        "retrieved_at_utc": (
+            snapshot[name][
+                "is_fallback"
+            ] = False
+
+        save_macro_cache(
+            "US",
+            "macro_snapshot",
+            snapshot,
+        )
+
+        return snapshot
+
+    except Exception as error:
+        print(
+            "FRED US macro snapshot request failed: "
+            f"{error}"
+        )
+
+        cached = get_macro_cache(
+            "US",
+            "macro_snapshot",
+        )
+
+        if cached is None:
+            return None
+
+        cached_at = cached.get(
+            "cached_at_utc"
+        )
+
+        for name in indicator_names:
+            indicator = cached.get(name)
+
+            if indicator:
+                indicator["is_cached"] = True
+                indicator[
+                    "cached_at_utc"
+                ] = cached_at
+
+        cached["served_at_utc"] = (
             datetime.now(
                 timezone.utc
             ).isoformat()
-        ),
-    }
+        )
 
+        return cached
 # ======================================================
 # World Bank Fallback Data
 # ======================================================
