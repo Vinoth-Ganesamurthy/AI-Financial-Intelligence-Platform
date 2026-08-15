@@ -12,3 +12,4 @@ uvicorn
 pytest
 httpx
 certifi
+beautifulsoup4

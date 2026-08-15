@@ -23,6 +23,7 @@ from src.data.macro.macro_cache import (
 )
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+from bs4 import BeautifulSoup
 # ======================================================
 # Configuration
 # ======================================================
@@ -950,23 +951,148 @@ def fetch_india_unemployment():
             fetch_india_unemployment_fallback()
         )
 
+RBI_CURRENT_RATES_URL = (
+    "https://www.rbi.org.in/"
+)
+
+
+def _parse_rbi_policy_rate_html(
+    html,
+):
+    """
+    Parse the current RBI policy repo rate and the
+    website's last-updated date.
+    """
+
+    page_text = BeautifulSoup(
+        html,
+        "html.parser",
+    ).get_text(
+        " ",
+        strip=True,
+    )
+
+    rate_match = re.search(
+        (
+            r"Policy\s+Repo\s+Rate\s*:\s*"
+            r"([0-9]+(?:\.[0-9]+)?)\s*%"
+        ),
+        page_text,
+        flags=re.IGNORECASE,
+    )
+
+    if rate_match is None:
+        raise ValueError(
+            "RBI policy repo rate was not found."
+        )
+
+    rate = float(
+        rate_match.group(1)
+    )
+
+    updated_match = re.search(
+        (
+            r"Website\s+last\s+updated\s+date"
+            r"\s*:\s*"
+            r"([A-Za-z]{3}\s+\d{1,2},\s+\d{4})"
+        ),
+        page_text,
+        flags=re.IGNORECASE,
+    )
+
+    page_last_updated_date = None
+
+    if updated_match is not None:
+        try:
+            page_last_updated_date = (
+                datetime.strptime(
+                    updated_match.group(1),
+                    "%b %d, %Y",
+                )
+                .date()
+                .isoformat()
+            )
+
+        except ValueError:
+            page_last_updated_date = None
+
+    return {
+        "value": rate,
+        "page_last_updated_date": (
+            page_last_updated_date
+        ),
+    }
+
+
 def fetch_india_policy_rate():
     """
-    Fetch India's RBI policy repo rate.
+    Fetch India's current RBI policy repo rate.
 
     Priority:
-    1. RBI official live source
+    1. RBI official current-rates page
     2. Last successfully cached RBI observation
     """
 
     try:
-        raise RuntimeError(
-            "RBI live policy-rate retrieval not implemented yet."
+        response = browser_requests.get(
+            RBI_CURRENT_RATES_URL,
+            impersonate="chrome",
+            headers={
+                "Accept": "text/html",
+                "Accept-Language": "en-IN,en;q=0.9",
+            },
+            timeout=30,
         )
+
+        response.raise_for_status()
+
+        parsed = _parse_rbi_policy_rate_html(
+            response.text
+        )
+
+        result = {
+            "name": "Policy Repo Rate",
+            "value": round(
+                parsed["value"],
+                2,
+            ),
+            "unit": "percent",
+            "frequency": "event_driven",
+            "observation_date": (
+                datetime.now(
+                    timezone.utc
+                )
+                .date()
+                .isoformat()
+            ),
+            "page_last_updated_date": (
+                parsed[
+                    "page_last_updated_date"
+                ]
+            ),
+            "source": "Reserve Bank of India",
+            "source_url": (
+                RBI_CURRENT_RATES_URL
+            ),
+            "series_id": (
+                "RBI_POLICY_REPO_RATE"
+            ),
+            "is_policy_rate": True,
+            "is_fallback": False,
+            "is_cached": False,
+        }
+
+        save_macro_cache(
+            "IN",
+            "policy_rate",
+            result,
+        )
+
+        return result
 
     except Exception as error:
         print(
-            "RBI policy rate request unavailable: "
+            "RBI policy rate request failed: "
             f"{error}"
         )
 
@@ -977,10 +1103,11 @@ def fetch_india_policy_rate():
 
         if cached:
             cached["is_fallback"] = False
+            cached["is_policy_rate"] = True
             return cached
 
         return None
-
+    
 def fetch_india_gdp_growth():
     """
     Fetch India's GDP growth.
