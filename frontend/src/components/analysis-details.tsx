@@ -494,7 +494,9 @@ export function AnalysisDetails({
                 <>
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <h3 className="font-semibold text-slate-900">
-                      {formatText(article.title)}
+                      {formatText(
+                      article.headline ?? article.title,
+                      )}
                     </h3>
 
                     <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase text-blue-700">
