@@ -4,7 +4,7 @@ AI Financial Intelligence Platform.
 """
 
 import logging
-
+import os
 from fastapi import FastAPI, HTTPException, Query
 
 from src.analysis.intelligence.intelligence_engine import (
@@ -19,6 +19,28 @@ logging.basicConfig(level=logging.INFO)
 
 logger = logging.getLogger(__name__)
 
+LOCAL_FRONTEND_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:3001",
+    "http://127.0.0.1:3001",
+]
+
+configured_frontend_origins = [
+    origin.strip().rstrip("/")
+    for origin in os.getenv(
+        "FRONTEND_ORIGINS",
+        "",
+    ).split(",")
+    if origin.strip()
+]
+
+ALLOWED_FRONTEND_ORIGINS = list(
+    dict.fromkeys(
+        LOCAL_FRONTEND_ORIGINS
+        + configured_frontend_origins
+    )
+)
 
 app = FastAPI(
     title="AI Financial Intelligence Platform",
@@ -32,10 +54,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ],
+    allow_origins=ALLOWED_FRONTEND_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
