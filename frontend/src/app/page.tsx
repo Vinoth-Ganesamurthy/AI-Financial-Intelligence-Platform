@@ -18,6 +18,10 @@ import type {
   ModuleScore,
 } from "@/types/intelligence";
 
+import {
+  IntelligenceCharts,
+} from "@/components/intelligence-charts";
+
 const moduleNames: Record<string, string> = {
   fundamental: "Fundamental",
   technical: "Technical",
@@ -290,7 +294,10 @@ export default function Home() {
                 ))}
               </div>
             </section>
-            
+            <IntelligenceCharts
+            moduleScores={result.module_scores}
+            analysis={result.analysis}
+            />
             <AnalysisDetails analysis={result.analysis} />
 
             {Object.keys(result.errors).length > 0 && (
