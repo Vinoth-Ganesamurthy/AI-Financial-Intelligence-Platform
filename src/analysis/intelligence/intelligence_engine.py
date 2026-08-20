@@ -26,7 +26,7 @@ from src.analysis.macro.macro_analysis import (
 from src.analysis.macro.sector_impact import (
     build_sector_macro_impact,
 )
-
+from src.data.company_lookup import get_stock_symbol
 
 INTELLIGENCE_WEIGHTS = {
     "fundamental": 0.30,
@@ -420,6 +420,7 @@ def _classify_intelligence_score(score):
 def build_financial_intelligence(
     stock_symbol: str,
     news_limit: int = 5,
+    _allow_company_lookup: bool = True,
 ):
     if not stock_symbol:
         raise ValueError("Stock symbol is required.")
@@ -465,7 +466,41 @@ def build_financial_intelligence(
         )
     except Exception as error:
         errors["fundamental"] = str(error)
+    has_market_data = market_data is not None
 
+    has_company_identity = bool(
+        fundamental
+        and fundamental.get("company_name")
+    )
+
+    if (
+        not has_market_data
+        and not has_company_identity
+    ):
+        if _allow_company_lookup:
+            resolved_symbol = get_stock_symbol(
+                stock_symbol
+            )
+
+            if resolved_symbol:
+                resolved_symbol = (
+                    resolved_symbol
+                    .strip()
+                    .upper()
+                )
+
+                if resolved_symbol != symbol:
+                    return build_financial_intelligence(
+                        stock_symbol=resolved_symbol,
+                        news_limit=news_limit,
+                        _allow_company_lookup=False,
+                    )
+
+        raise ValueError(
+            f"No listed company found for "
+            f"{stock_symbol}. Enter a valid "
+            f"company name or stock symbol."
+        )
     try:
         company_name = (
             fundamental.get("company_name")

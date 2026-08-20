@@ -102,7 +102,7 @@ function ModuleCard({
 }
 
 export default function Home() {
-  const [symbol, setSymbol] = useState("AAPL");
+  const [symbol, setSymbol] = useState("");
   const [result, setResult] =
     useState<FinancialIntelligenceResponse | null>(
       null,
@@ -111,30 +111,62 @@ export default function Home() {
   const [error, setError] = useState("");
 
   async function handleSubmit(
-    event: FormEvent<HTMLFormElement>,
-  ) {
-    event.preventDefault();
+  event: FormEvent<HTMLFormElement>,
+) {
+  event.preventDefault();
 
-    setLoading(true);
-    setError("");
+  const normalizedSymbol = symbol
+    .trim()
+    .toUpperCase();
 
-    try {
-      const response =
-        await fetchFinancialIntelligence(symbol);
+  const validSymbolPattern =
+  /^[A-Z0-9][A-Z0-9&-]{0,19}(?:\.(?:NS|BO|SI|AX))?$/;
 
-      setResult(response);
-    } catch (requestError) {
-      setResult(null);
+const validCompanyNamePattern =
+  /^[A-Z0-9][A-Z0-9 .&'()-]{1,79}$/;
 
-      setError(
-        requestError instanceof Error
-          ? requestError.message
-          : "Unable to complete the analysis.",
-      );
-    } finally {
-      setLoading(false);
-    }
+const isValidSearch =
+  validSymbolPattern.test(normalizedSymbol) ||
+  validCompanyNamePattern.test(normalizedSymbol);
+
+  setError("");
+
+  if (!normalizedSymbol) {
+    setResult(null);
+    setError("Please enter a stock symbol.");
+    return;
   }
+
+  if (!isValidSearch) {
+    setResult(null);
+    setError(
+     "Enter one company name or stock symbol only.",
+);
+    return;
+  }
+
+  setSymbol(normalizedSymbol);
+  setLoading(true);
+
+  try {
+    const response =
+      await fetchFinancialIntelligence(
+        normalizedSymbol,
+      );
+
+    setResult(response);
+  } catch (requestError) {
+    setResult(null);
+
+    setError(
+      requestError instanceof Error
+        ? requestError.message
+        : "Unable to complete the analysis.",
+    );
+  } finally {
+    setLoading(false);
+  }
+}
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -241,7 +273,18 @@ export default function Home() {
                 <p className="mt-2 text-5xl font-bold">
                   {result.intelligence_score.toFixed(3)}
                 </p>
+                <p className="mt-2 text-sm font-medium text-blue-100">
+                  Scale: -1.000 to +1.000
+                </p>
 
+                <p className="mt-1 text-xs text-blue-100">
+                  Neutral range: above -0.200 and below +0.200
+                </p>
+
+                <p className="mt-1 text-xs text-blue-100">
+                  Higher scores indicate more favourable overall
+                  conditions.
+                </p>
                 <div className="mt-7 space-y-3 text-sm">
                   <div className="flex justify-between">
                     <span className="text-blue-100">
@@ -276,10 +319,11 @@ export default function Home() {
                   Analysis Modules
                 </h2>
 
-                <p className="mt-1 text-slate-500">
-                  Individual scores contributing to the
-                  combined intelligence score.
-                </p>
+              <p className="mt-1 text-slate-500">
+               Individual module scores range from -1 to +1.
+               Negative values weaken the combined score, while
+               positive values strengthen it.
+              </p>
               </div>
 
               <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
