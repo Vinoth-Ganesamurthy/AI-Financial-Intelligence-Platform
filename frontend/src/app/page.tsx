@@ -295,9 +295,12 @@ export default function Home() {
               </div>
             </section>
             <IntelligenceCharts
-            moduleScores={result.module_scores}
-            analysis={result.analysis}
-            />
+              intelligenceScore={result.intelligence_score}
+              coverageRatio={result.coverage_ratio}
+              confidenceScore={result.confidence_score}
+              moduleScores={result.module_scores}
+              analysis={result.analysis}
+             />
             <AnalysisDetails analysis={result.analysis} />
 
             {Object.keys(result.errors).length > 0 && (

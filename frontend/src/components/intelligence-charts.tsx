@@ -65,12 +65,25 @@ function ChartContainer({
 }
 
 export function IntelligenceCharts({
+  intelligenceScore,
+  coverageRatio,
+  confidenceScore,
   moduleScores,
   analysis,
 }: {
+  intelligenceScore: number;
+  coverageRatio: number;
+  confidenceScore: number;
   moduleScores: ModuleScores;
   analysis: Record<string, unknown>;
 }) {
+  const boundedScore = Math.max(
+    -1,
+    Math.min(1, intelligenceScore),
+  );
+
+  const scorePosition =
+    ((boundedScore + 1) / 2) * 100;
   const historical = asRecord(
     analysis.historical,
   );
@@ -126,7 +139,61 @@ export function IntelligenceCharts({
           historical stock returns.
         </p>
       </div>
+<article className="mb-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+      <h3 className="text-xl font-bold text-slate-950">
+        Overall Intelligence Score
+      </h3>
 
+      <p className="mt-1 text-sm text-slate-500">
+        Combined weighted assessment from -1 to +1.
+        This is not a predicted investment return.
+      </p>
+
+      <p className="mt-3 text-4xl font-bold text-slate-950">
+        {intelligenceScore.toFixed(3)}
+      </p>
+    </div>
+
+    <div className="grid grid-cols-2 gap-3">
+        <MetricSummary
+        label="Coverage"
+        value={`${(coverageRatio * 100).toFixed(0)}%`}
+      />
+
+        <MetricSummary
+        label="Confidence"
+        value={`${(confidenceScore * 100).toFixed(0)}%`}
+      />
+    </div>
+  </div>
+
+  <div className="mt-7">
+    <div className="relative">
+      <div
+        className="h-3 rounded-full"
+        style={{
+          background:
+            "linear-gradient(90deg, #ef4444 0%, #f59e0b 50%, #10b981 100%)",
+        }}
+      />
+
+      <div
+        className="absolute top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-white bg-slate-950 shadow"
+        style={{
+          left: `${scorePosition}%`,
+        }}
+      />
+    </div>
+
+    <div className="mt-3 flex justify-between text-xs font-semibold text-slate-500">
+      <span>-1 Unfavourable</span>
+      <span>0 Neutral</span>
+      <span>+1 Favourable</span>
+    </div>
+  </div>
+</article>
       <div className="grid gap-6 xl:grid-cols-2">
         <ChartContainer
           title="Module Score Comparison"
@@ -270,5 +337,24 @@ export function IntelligenceCharts({
         </ChartContainer>
       </div>
     </section>
+  );
+}
+function MetricSummary({
+  label,
+  value,
+}: {
+  label: string;
+  value: string;
+}) {
+  return (
+    <div className="min-w-32 rounded-2xl bg-slate-50 px-4 py-3">
+      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+        {label}
+      </p>
+
+      <p className="mt-1 text-xl font-bold text-slate-950">
+        {value}
+      </p>
+    </div>
   );
 }
