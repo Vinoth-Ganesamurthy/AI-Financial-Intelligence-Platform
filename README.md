@@ -140,37 +140,24 @@ npm run dev
 bash
 python -m pytest -q
 npm run build
+
 Covers:
-
 Module score calculations
-
 Intelligence aggregation
-
 API routes & validation
-
 Company resolution & rejection
-
 Macro resilience & caching
 
 🔮 Future Improvements
 Interactive candlestick charts
-
 Sentiment trends over time
-
 Side-by-side company comparison
-
 Watchlists & portfolio analysis
-
 FinBERT sentiment model
-
 Earnings calendar integration
-
 Peer valuation comparisons
-
 PDF export & saved reports
-
 Authentication & history
-
 Docker + CI/CD
 
 ⚖️ Disclaimer
@@ -180,7 +167,6 @@ Users should conduct independent research and consult professionals before makin
 
 👨‍💻 Owner & Author
 Vinoth Ganesamurthy
-
 LinkedIn → https://www.linkedin.com/in/vinoth-ganesamurthy/
 
 Developed as a full-stack financial analytics, machine-learning, and cloud-deployment portfolio project.
@@ -189,5 +175,4 @@ Developed as a full-stack financial analytics, machine-learning, and cloud-deplo
 If you find this project useful, consider giving the repository a ⭐ on GitHub.
 
 Repository → https://github.com/Vinoth-Ganesamurthy/Real-Time-Financial-News-Sentiment-Analyzer
-
 Live Demo → https://ai-financial-intelligence-platform-m9jl.onrender.com
