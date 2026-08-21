@@ -7,14 +7,85 @@ generic list-style articles.
 """
 
 import os
-import requests
+import time
 
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
 
 NEWS_API_KEY = os.getenv("NEWS_API_KEY")
 
+NEWS_API_RETRY_DELAYS = (
+    0,
+    1,
+    3,
+)
+
+NEWS_API_RETRY_STATUSES = {
+    429,
+    500,
+    502,
+    503,
+    504,
+}
+
+
+def _request_newsapi(
+    url,
+    params,
+):
+    """
+    Request NewsAPI with retries for temporary
+    connection and server failures.
+    """
+
+    last_error = None
+    last_response = None
+
+    for delay in NEWS_API_RETRY_DELAYS:
+        if delay:
+            time.sleep(delay)
+
+        try:
+            response = requests.get(
+                url,
+                params=params,
+                timeout=20,
+            )
+
+        except requests.RequestException as error:
+            last_error = error
+            continue
+
+        last_response = response
+
+        if response.status_code == 200:
+            return response
+
+        if (
+            response.status_code
+            not in NEWS_API_RETRY_STATUSES
+        ):
+            break
+
+    if last_response is not None:
+        raise RuntimeError(
+            "NewsAPI request failed after retries: "
+            f"HTTP {last_response.status_code}"
+        )
+
+    error_name = (
+        type(last_error).__name__
+        if last_error
+        else "UnknownError"
+    )
+
+    raise RuntimeError(
+        "NewsAPI connection failed after "
+        f"{len(NEWS_API_RETRY_DELAYS)} attempts "
+        f"({error_name})."
+    )
 
 # ======================================================
 # Company Search Names
@@ -216,17 +287,10 @@ def fetch_company_news(
         "apiKey": NEWS_API_KEY,
     }
 
-    response = requests.get(
-        url,
+    response = _request_newsapi(
+        url=url,
         params=params,
-        timeout=15,
     )
-
-    if response.status_code != 200:
-        raise RuntimeError(
-            f"NewsAPI request failed: "
-            f"HTTP {response.status_code}"
-        )
 
     payload = response.json()
 
