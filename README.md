@@ -165,14 +165,19 @@ This project is for educational and analytical purposes only.
 It does not provide financial advice or guarantee future performance.
 Users should conduct independent research and consult professionals before making investment decisions.
 
-👨‍💻 Owner & Author
-Vinoth Ganesamurthy
-LinkedIn → https://www.linkedin.com/in/vinoth-ganesamurthy/
-
-Developed as a full-stack financial analytics, machine-learning, and cloud-deployment portfolio project.
-
 ⭐ Support
 If you find this project useful, consider giving the repository a ⭐ on GitHub.
+
+Live Demo
+https://real-time-financial-news-sentiment-iskv.onrender.com
+
+API Documentation
+https://real-time-financial-news-sentiment.onrender.com/docs
+
+📄 License
+This project is licensed under the MIT License.
+
+See the LICENSE file for details.
 
 Repository → https://github.com/Vinoth-Ganesamurthy/Real-Time-Financial-News-Sentiment-Analyzer
 Live Demo → https://ai-financial-intelligence-platform-m9jl.onrender.com
