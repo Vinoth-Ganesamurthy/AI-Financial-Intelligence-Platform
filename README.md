@@ -1,432 +1,446 @@
-AI Financial Intelligence Platform
+<div align="center">
 
-A full-stack financial research application that combines fundamental analysis, technical indicators, historical stock performance, machine-learning-based news sentiment, and country-aware macroeconomic analysis in a responsive web dashboard.
+📊 AI Financial Intelligence Platform
 
-The application allows users to search using a company name or stock symbol, resolves the listed company, collects data from multiple financial sources, evaluates five independent analysis modules, and generates an explainable Intelligence Score with coverage and confidence indicators.
+Explainable, multi-market investment research in one dashboard
 
-The platform supports companies across multiple international markets, including the United States, India, Singapore, and Australia.
+Combine company fundamentals, technical indicators, historical performance, financial-news sentiment, and country-aware macroeconomic analysis in a single transparent report.
+
+
+
+
+
+
+
+
+
+
+
+Live Application · REST API · Swagger UI
+
+</div>
 
 🌐 Live Application
 
-🚀 Live Dashboard
+Service
 
-👉 https://ai-financial-intelligence-platform-m9jl.onrender.com
+Link
 
-📚 FastAPI Swagger Documentation
+🚀 Dashboard
 
-👉 https://ai-financial-intelligence-platform-api.onrender.com/docs
+Open the live dashboard
 
 ⚙️ Backend API
 
-👉 https://ai-financial-intelligence-platform-api.onrender.com
+Open the FastAPI service
 
-❤️ Health Check
+📚 Swagger documentation
 
-👉 https://ai-financial-intelligence-platform-api.onrender.com/health
+Explore the API
 
-Note: The application is hosted on Render. If the free backend instance has been inactive, the first request can take approximately 50 seconds or longer while the service starts. Subsequent requests should be faster.
+❤️ Health check
+
+Check API health
+
+[!NOTE]
+Render's free backend can spin down after inactivity. The first request may take 50 seconds or longer while the service starts; later requests should be faster.
 
 📌 Project Overview
 
-Investment research usually requires information from several independent sources. A user may need to review company fundamentals, technical signals, historical risk, recent news, and the broader economic environment before forming a view.
+Investment research is often fragmented across company accounts, price charts, news, and economic releases. This platform combines those areas into one explainable workflow.
 
-This project brings those areas together in one automated workflow that:
+The application:
 
-Accepts a company name or stock symbol from the user.
+Accepts a company name or stock symbol.
 
-Resolves company names to supported exchange symbols.
+Resolves the input to a supported listed symbol.
 
-Validates that the listed company exists.
+Retrieves market, company, news, and macroeconomic data.
 
-Retrieves historical OHLCV market data.
+Runs five independent analysis modules.
 
-Calculates technical indicators and historical risk metrics.
+Normalizes every module to a -1 to +1 scale.
 
-Retrieves and normalizes company fundamental data.
+Produces a weighted Intelligence Score.
 
-Fetches, filters, and deduplicates relevant financial news.
+Reports coverage, confidence, module contributions, and partial-data warnings.
 
-Uses a trained machine-learning model to classify article sentiment.
+Presents the complete result through a responsive Next.js dashboard.
 
-Retrieves country-specific macroeconomic indicators.
-
-Adjusts macroeconomic effects according to the company sector.
-
-Normalizes all module results to a common -1 to +1 scale.
-
-Produces a weighted Intelligence Score, classification, coverage, and confidence.
-
-Presents the complete analysis through a Next.js dashboard.
-
-The system is intentionally explainable. It displays the individual module scores, weights, weighted contributions, data availability, and underlying metrics instead of returning an unexplained prediction.
+Unlike a black-box prediction, the report exposes the inputs and contribution of every available module.
 
 ✨ Key Features
 
-🏢 Fundamental Analysis
+Module
 
-The application evaluates company financial strength using metrics such as:
+What the platform analyses
 
-Market capitalization
+🏢 Fundamental
 
-Total revenue
+Valuation, profitability, growth, leverage, returns, revenue, and cash flow
 
-Trailing and forward price-to-earnings ratios
+📈 Technical
 
-Price-to-book ratio
+SMA, EMA, RSI, MACD, Bollinger Bands, ATR, volume, and combined signals
 
-Profit margin
+📰 Sentiment
 
-Return on equity
+Relevant company news classified as Positive, Neutral, or Negative by a trained ML model
 
-Return on assets
+📊 Historical
 
-Revenue growth
+Returns, annualized volatility, maximum drawdown, price range, and current price
 
-Earnings growth
+🌎 Sector & Macro
 
-Debt-to-equity ratio
+Inflation, GDP growth, unemployment, and interest-rate conditions weighted by sector
 
-Free cash flow
+Additional capabilities include:
 
-Fundamental data uses multiple retrieval paths so the report can continue when a primary provider is unavailable or rate-limited.
+Search by stock symbol or company name
 
-📈 Technical Analysis
+Multi-market symbol resolution
 
-The technical-analysis module calculates:
+Invalid-company rejection
 
-20-day, 50-day, and 200-day simple moving averages
+Provider fallback and retry handling
 
-12-day and 26-day exponential moving averages
+Official macroeconomic data caching
 
-Relative Strength Index (RSI)
+Explainable weights and contributions
 
-Moving Average Convergence Divergence (MACD)
+Coverage and confidence indicators
 
-MACD signal and histogram
+Responsive charts and detailed metric cards
 
-Bollinger Bands
+FastAPI OpenAPI documentation
 
-Average True Range (ATR)
+Production deployment on Render
 
-Current and average trading volume
+🌍 Multi-Market Support
 
-Relative volume
+Market
 
-Bullish and bearish signal points
+Example companies
 
-These indicators are combined into a normalized technical score and an interpretable technical signal.
+Symbols
 
-📰 Financial News Retrieval
+🇺🇸 United States
 
-The application retrieves recent company-related news using NewsAPI.
+Apple, Tesla, NVIDIA
 
-The news pipeline includes:
+AAPL, TSLA, NVDA
 
-Company-specific search-name generation
+🇮🇳 India — NSE
 
-Symbol and company-term matching
+Reliance Industries, Infosys, TCS
 
-Headline and description relevance scoring
+RELIANCE.NS, INFY.NS, TCS.NS
 
-Low-quality headline filtering
+🇸🇬 Singapore — SGX
 
-Duplicate-title and duplicate-URL removal
+DBS Group, ST Engineering
 
-Retry handling for temporary connection failures
+D05.SI, S63.SI
 
-Configurable article limits
+🇦🇺 Australia — ASX
 
-Only sufficiently relevant articles are sent to the sentiment model.
+BHP, Commonwealth Bank
 
-🤖 Machine-Learning Sentiment Analysis
+BHP.AX, CBA.AX
 
-Financial headlines are classified into three sentiment categories:
+The search box accepts both direct symbols and company names such as Tesla, Infosys, or Tata Consultancy Services.
 
-🟢 Positive
+🔄 Application Flow
 
-🟡 Neutral
+flowchart TD
+    A[User enters company name or symbol] --> B[Next.js Dashboard]
+    B --> C[FastAPI API]
+    C --> D[Company & Symbol Resolution]
+    D --> E[Financial Intelligence Engine]
 
-🔴 Negative
+    E --> F[Fundamental Analysis]
+    E --> G[Technical Analysis]
+    E --> H[News Sentiment Analysis]
+    E --> I[Historical Analysis]
+    E --> J[Sector-aware Macro Analysis]
 
-The sentiment pipeline uses:
+    F --> K[Normalized Module Scores]
+    G --> K
+    H --> K
+    I --> K
+    J --> K
 
-TF-IDF text vectorization
+    K --> L[Weighted Intelligence Score]
+    L --> M[Classification, Coverage & Confidence]
+    M --> N[JSON Response]
+    N --> B
 
-A trained scikit-learn classification model
+🏗️ System Architecture
 
-Label encoding
+flowchart LR
+    UI[Next.js Frontend] -->|HTTPS / JSON| API[FastAPI Backend]
+    API --> ENGINE[Intelligence Engine]
 
-Saved model artifacts loaded with Joblib
+    ENGINE --> MARKET[Market Data Services]
+    ENGINE --> FUND[Fundamental Services]
+    ENGINE --> NEWS[News Service]
+    ENGINE --> MACRO[Macro Data Services]
+    ENGINE --> MODEL[Sentiment Model]
 
-The model produces article-level classifications and an overall company-news sentiment summary.
+    MARKET --> YF[Yahoo Finance]
+    FUND --> FH[Finnhub]
+    NEWS --> NA[NewsAPI]
+    MACRO --> OFFICIAL[FRED / MoSPI / RBI / SingStat]
+    MACRO --> WB[World Bank Fallback]
 
-📊 Historical Stock Performance
+    ENGINE --> RESULT[Explainable Financial Intelligence Report]
 
-The historical-analysis module calculates:
+🧠 Intelligence Score
 
-Current Price
+Each module produces a normalized score:
 
-1-Week Return
+Score range
 
-1-Month Return
+Interpretation
 
-3-Month Return
++0.50 to +1.00
 
-6-Month Return
+Strongly favourable
 
-1-Year Return
++0.20 to < +0.50
 
-Annualized Volatility
+Favourable
 
-Maximum Drawdown
+-0.20 to < +0.20
 
-Period High
+Neutral or balanced
 
-Period Low
+-0.50 to -0.20
 
-These metrics help users understand recent performance, variability, and downside risk.
+Cautious
 
-🌎 Country-Aware Macroeconomic Analysis
+-1.00 to ≤ -0.50
 
-The platform evaluates the economic environment associated with the stock's market using:
+Unfavourable
 
-Inflation
-
-GDP growth
-
-Unemployment
-
-Monetary or policy rates
-
-A real-rate proxy
-
-Country-specific frameworks are configured for the United States, India, Singapore, and Australia. The macro module reports the source quality, availability, classification, and component contribution for each indicator.
-
-🏭 Sector-Sensitive Macro Impact
-
-Macroeconomic conditions do not affect every industry equally.
-
-The platform applies sector-specific weights to inflation, growth, unemployment, and monetary conditions. For example, interest-rate changes can receive a larger weight for rate-sensitive sectors, while economic growth may receive a larger weight for cyclical sectors.
-
-If the company sector cannot be identified, the application uses transparent default weights and marks that fallback in the response.
-
-🧠 Explainable Intelligence Score
-
-The five analytical modules contribute to a combined score:
+Module Weights
 
 Module
 
 Weight
 
-Purpose
-
 Fundamental
 
 30%
-
-Financial quality, valuation, growth, and leverage
 
 Technical
 
 20%
 
-Trend, momentum, volatility, and volume
-
 Sentiment
 
 15%
-
-Recent company-news sentiment
 
 Historical
 
 15%
 
-Return and risk characteristics
-
 Sector & Macro
 
 20%
 
-Economic conditions adjusted for sector sensitivity
+The combined score is calculated from available weighted contributions:
 
-Each module uses a normalized range from -1 to +1:
+                         Sum of available weighted contributions
+Intelligence Score = -------------------------------------------------
+                              Sum of available module weights
 
--1.0  → Strongly unfavourable
- 0.0  → Neutral or balanced
-+1.0  → Strongly favourable
+If a module is unavailable, its weight is excluded rather than treated as a negative score.
 
-When a module is unavailable, the final result is recalculated using the available weights. The dashboard separately displays:
+[!IMPORTANT]
+The Intelligence Score is an analytical research indicator. It is not a price forecast, guaranteed return, or direct buy/sell recommendation.
 
-Intelligence Score
+🛡️ Resilient Data Pipeline
 
-Overall classification
+The platform uses layered data retrieval so a temporary provider failure does not automatically stop the report.
 
-Coverage ratio
+Market Data
 
-Confidence score
+flowchart LR
+    A[Stock Symbol] --> B[yfinance]
+    B -->|Success| D[Clean OHLCV Data]
+    B -->|Unavailable / Rate-limited| C[Direct Yahoo Chart API]
+    C --> D
 
-Module availability
+Fundamental Data
 
-Module quality factor
+flowchart LR
+    A[Stock Symbol] --> B[yfinance Company Info]
+    B -->|Unavailable| C[Finnhub Profile & Metrics]
+    C -->|Restricted / Unavailable| D[Direct Yahoo Search & Time Series]
+    B -->|Success| E[Normalized Fundamentals]
+    C -->|Success| E
+    D --> E
 
-Weighted contribution
+Financial News and Sentiment
 
-The Intelligence Score is an analytical research indicator. It is not a guaranteed forecast or a direct buy/sell recommendation.
+flowchart LR
+    A[Company & Symbol] --> B[NewsAPI]
+    B --> C[Relevance Scoring]
+    C --> D[Quality Filtering]
+    D --> E[Duplicate Removal]
+    E --> F[TF-IDF Vectorizer]
+    F --> G[ML Classifier]
+    G --> H[Positive / Neutral / Negative]
 
-🏗️ System Architecture
+Macroeconomic Data
 
-The application follows a full-stack, service-oriented architecture.
+Market
 
-┌───────────────────────────────────────────────┐
-│                Next.js Frontend               │
-│                                               │
-│ Company Search       Intelligence Summary     │
-│ Module Cards         Charts and Metrics       │
-│ Detailed Analysis    Partial-Data Warnings    │
-└───────────────────────┬───────────────────────┘
-                        │ HTTP / JSON
-                        ▼
-┌───────────────────────────────────────────────┐
-│                FastAPI Backend                │
-│                                               │
-│ Input Validation      Response Schemas        │
-│ Company Resolution    Error Handling          │
-│ CORS Configuration    OpenAPI Documentation   │
-└───────────────────────┬───────────────────────┘
-                        │
-                        ▼
-┌───────────────────────────────────────────────┐
-│          Financial Intelligence Engine        │
-│                                               │
-│ Fundamental          Technical                │
-│ Sentiment            Historical               │
-│ Sector & Macro       Weighted Aggregation     │
-└───────────────┬─────────────────┬─────────────┘
-                │                 │
-                ▼                 ▼
-        External Data APIs    ML Model Artifacts
+Preferred sources
 
-🧰 Technology Stack
+Resilience
 
-Frontend
-
-Next.js 16
-
-React
-
-TypeScript
-
-Tailwind CSS
-
-Recharts
-
-Backend
-
-Python 3.12
-
-FastAPI
-
-Uvicorn
-
-Requests
-
-curl-cffi
-
-python-dotenv
-
-Data Analysis and Machine Learning
-
-pandas
-
-NumPy
-
-scikit-learn
-
-TF-IDF Vectorization
-
-Joblib
-
-yfinance
-
-Financial and Macroeconomic Data
-
-Yahoo Finance
-
-Finnhub
-
-NewsAPI
+United States
 
 FRED
 
-MoSPI eSankhyiki
+Latest successful official snapshot is cached
 
-Reserve Bank of India
+India
 
-SingStat
+MoSPI CPI, PLFS, NAS and RBI
 
-World Bank
+Cached official observations and World Bank fallbacks
 
-Testing and Deployment
+Singapore
 
-pytest
+SingStat and configured official sources
 
-FastAPI TestClient
+Cached observations and configured fallbacks
 
-Render Web Service
+Australia
 
-Render Static Site
+Configured official sources
 
-GitHub
+Cached observations and configured fallbacks
+
+Every module reports its availability and quality factor. Any recoverable failure appears under Partial data warnings.
+
+🧰 Technology Stack
+
+Layer
+
+Technologies
+
+Frontend
+
+Next.js 16, React, TypeScript, Tailwind CSS, Recharts
+
+Backend
+
+Python 3.12, FastAPI, Uvicorn, Pydantic
+
+Data analysis
+
+pandas, NumPy, yfinance
+
+Machine learning
+
+scikit-learn, TF-IDF, Joblib
+
+HTTP and configuration
+
+Requests, curl-cffi, python-dotenv
+
+Data providers
+
+Yahoo Finance, Finnhub, NewsAPI, FRED, MoSPI, RBI, SingStat, World Bank
+
+Testing
+
+pytest, FastAPI TestClient
+
+Deployment
+
+Render Web Service, Render Static Site, GitHub
 
 📁 Project Structure
 
-AI-Financial-Intelligence-Platform/
-│
-├── frontend/                         # Next.js dashboard
-│   ├── public/
-│   ├── src/
-│   │   ├── app/
-│   │   ├── components/
-│   │   ├── lib/
-│   │   └── types/
-│   ├── next.config.ts
-│   └── package.json
-│
-├── models/                           # Trained sentiment artifacts
-│   ├── sentiment_model.pkl
-│   ├── tfidf_vectorizer.pkl
-│   └── label_encoder.pkl
-│
-├── src/
-│   ├── analysis/
-│   │   ├── fundamental/
-│   │   ├── historical/
-│   │   ├── intelligence/
-│   │   ├── macro/
-│   │   ├── sentiment/
-│   │   └── technical/
-│   ├── api/                          # FastAPI app and schemas
-│   └── data/                         # Company, market, and macro services
-│
-├── tests/                            # Unit and API tests
-├── requirements.txt
-├── .python-version
-└── README.md
+Path
+
+Purpose
+
+frontend/
+
+Next.js and TypeScript dashboard
+
+frontend/src/app/
+
+Main application page and layout
+
+frontend/src/components/
+
+Report details and intelligence charts
+
+frontend/src/lib/
+
+Backend API client
+
+frontend/src/types/
+
+TypeScript response definitions
+
+models/
+
+Trained sentiment model, TF-IDF vectorizer, and label encoder
+
+src/analysis/fundamental/
+
+Fundamental data normalization and scoring
+
+src/analysis/technical/
+
+Technical indicator calculations
+
+src/analysis/historical/
+
+Historical return and risk calculations
+
+src/analysis/sentiment/
+
+News retrieval and ML sentiment prediction
+
+src/analysis/macro/
+
+Macro interpretation and sector impact
+
+src/analysis/intelligence/
+
+Weighted intelligence aggregation
+
+src/api/
+
+FastAPI routes and response schemas
+
+src/data/
+
+Company lookup, market data, and macro data services
+
+tests/
+
+Backend unit and API tests
 
 🔌 API Endpoints
 
-Interactive API documentation is available at:
-
-https://ai-financial-intelligence-platform-api.onrender.com/docs
+Interactive documentation: Open Swagger UI
 
 API Status
 
 GET /
 
-Returns the application name, version, running status, and documentation path.
-
-Example:
+Example response:
 
 {
   "name": "AI Financial Intelligence Platform",
@@ -439,9 +453,7 @@ Health Check
 
 GET /health
 
-Used by users and Render to confirm that the backend service is healthy.
-
-Example:
+Example response:
 
 {
   "status": "healthy"
@@ -449,21 +461,7 @@ Example:
 
 Generate Financial Intelligence
 
-GET /api/v1/intelligence/{stock_symbol}
-
-Query parameter:
-
-Parameter
-
-Type
-
-Description
-
-news_limit
-
-Integer
-
-Maximum number of relevant news articles to analyze
+GET /api/v1/intelligence/{stock_symbol}?news_limit=5
 
 Examples:
 
@@ -471,228 +469,21 @@ GET /api/v1/intelligence/AAPL?news_limit=5
 GET /api/v1/intelligence/INFY.NS?news_limit=5
 GET /api/v1/intelligence/Tesla?news_limit=5
 
-The response contains:
+The response includes:
 
-Resolved stock symbol
+Resolved company identity
 
-Company name and sector
-
-Intelligence Score and classification
+Overall Intelligence Score and classification
 
 Coverage and confidence
 
-Five module scores
+Module scores, weights, and contributions
 
-Module weights and contributions
-
-Detailed analysis data
+Fundamental, technical, sentiment, historical, and macro details
 
 Partial-data warnings
 
-Generation timestamp
-
-Research disclaimer
-
-🛡️ Resilient Data Retrieval Strategy
-
-External financial providers can be rate-limited, unavailable, or restricted by subscription level. The platform therefore uses layered data retrieval and reports partial-data warnings instead of silently generating misleading values.
-
-Market Data
-
-Stock Symbol
-     ↓
-yfinance Historical Data
-     ↓ unavailable or rate-limited
-Direct Yahoo Finance Chart API
-     ↓
-Clean OHLCV DataFrame
-
-The fallback retains the same Open, High, Low, Close, and Volume structure required by the technical and historical modules.
-
-Fundamental Data
-
-Stock Symbol
-     ↓
-yfinance Company Information
-     ↓ unavailable or rate-limited
-Finnhub Profile and Metrics
-     ↓ unavailable or market-restricted
-Direct Yahoo Search and Time-Series Data
-     ↓
-Normalized Fundamental Metrics
-
-The direct Yahoo fallback supports international securities such as NSE-listed stocks and performs currency normalization where required.
-
-Financial News
-
-Company Name + Symbol
-          ↓
-       NewsAPI
-          ↓
-  Relevance Scoring
-          ↓
-  Duplicate Removal
-          ↓
-  Selected Articles
-          ↓
- TF-IDF + ML Classifier
-          ↓
-Positive / Neutral / Negative
-
-Transient NewsAPI connection failures use retry handling before the sentiment module is marked unavailable.
-
-Macroeconomic Data
-
-Official sources are preferred wherever possible:
-
-United States: FRED
-
-India: MoSPI CPI, PLFS, NAS, and Reserve Bank of India
-
-Singapore: SingStat and configured official sources
-
-Australia: Configured official sources
-
-Fallback: World Bank annual indicators where appropriate
-
-Successful official observations are cached so temporary source outages do not automatically remove macro coverage.
-
-📐 Intelligence Calculations
-
-Weighted Module Contribution
-
-Weighted Contribution = Module Score × Module Weight
-
-Example:
-
-Fundamental Score     = 0.800
-Fundamental Weight    = 0.300
-Weighted Contribution = 0.240
-
-Final Intelligence Score
-
-                         Sum of Available Weighted Contributions
-Intelligence Score = ------------------------------------------------
-                              Sum of Available Module Weights
-
-This prevents an unavailable provider from being treated as a negative investment signal.
-
-Coverage Ratio
-
-Coverage Ratio = Sum of Available Module Weights
-
-A coverage value of 1.0 means all five analytical modules are available.
-
-Confidence Score
-
-Confidence considers both coverage and the quality of the available inputs. Examples include:
-
-Number of relevant news articles
-
-Official versus fallback macro data
-
-Fundamental metric availability
-
-Market-history availability
-
-Sector identification
-
-Historical Return
-
-             Current Price - Previous Price
-Return (%) = ------------------------------ × 100
-                       Previous Price
-
-Annualized Volatility
-
-Annualized volatility estimates the variability of daily returns over a trading year. Higher values generally indicate larger price fluctuations.
-
-Maximum Drawdown
-
-Maximum drawdown measures the largest decline from a historical peak to a subsequent trough during the analyzed period. It provides a simple measure of downside risk.
-
-🌍 Multi-Market Support
-
-The application has been tested with companies from multiple stock exchanges.
-
-Market
-
-Example Companies
-
-Example Symbols
-
-🇺🇸 United States
-
-Apple, Tesla, NVIDIA
-
-AAPL, TSLA, NVDA
-
-🇮🇳 India
-
-Reliance Industries, Infosys, TCS
-
-RELIANCE.NS, INFY.NS, TCS.NS
-
-🇸🇬 Singapore
-
-DBS Group, ST Engineering
-
-D05.SI, S63.SI
-
-🇦🇺 Australia
-
-BHP, Commonwealth Bank
-
-BHP.AX, CBA.AX
-
-Users can search with either a symbol or a company name. Examples:
-
-AAPL
-Tesla
-INFY.NS
-Tata Consultancy Services
-DBS Group
-BHP.AX
-
-🔄 Application Flow
-
-                         USER
-                           │
-                           ▼
-                 Next.js Web Dashboard
-                           │
-                  Company Name / Symbol
-                           ▼
-                    FastAPI Backend
-                           │
-                           ▼
-               Company & Symbol Resolution
-                           │
-                           ▼
-              Financial Intelligence Engine
-                           │
-       ┌──────────┬────────┼────────┬──────────┐
-       │          │        │        │          │
-       ▼          ▼        ▼        ▼          ▼
- Fundamental  Technical  Sentiment Historical  Macro
-   Analysis   Analysis   Analysis   Analysis   Analysis
-       │          │        │        │          │
-       └──────────┴────────┼────────┴──────────┘
-                           │
-                           ▼
-                Normalized Module Scores
-                           │
-                           ▼
-               Weighted Intelligence Score
-                           │
-                           ▼
-       Classification + Coverage + Confidence
-                           │
-                           ▼
-                    JSON API Response
-                           │
-                           ▼
-                 Interactive Dashboard
+Generation timestamp and disclaimer
 
 💻 Local Installation
 
@@ -701,7 +492,7 @@ BHP.AX
 git clone https://github.com/Vinoth-Ganesamurthy/AI-Financial-Intelligence-Platform.git
 cd AI-Financial-Intelligence-Platform
 
-2. Create a Python Virtual Environment
+2. Create a Virtual Environment
 
 Windows PowerShell:
 
@@ -718,169 +509,43 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 
-4. Configure Backend Environment Variables
+4. Configure Backend Variables
 
-Create a .env file in the project root:
+Create .env in the repository root:
 
 FRED_API_KEY=your_fred_api_key
 NEWS_API_KEY=your_newsapi_key
 FINNHUB_API_KEY=your_finnhub_api_key
 FRONTEND_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
 
-Never commit the .env file or API keys to GitHub.
-
-5. Start the FastAPI Backend
-
-From the project root:
+5. Start the Backend
 
 python -m uvicorn src.api.main:app --reload
 
-The backend will run locally at:
+Backend: http://127.0.0.1:8000
+Swagger: http://127.0.0.1:8000/docs
 
-http://127.0.0.1:8000
-
-Swagger documentation:
-
-http://127.0.0.1:8000/docs
-
-6. Install Frontend Dependencies
-
-Open another terminal:
+6. Configure and Start the Frontend
 
 cd frontend
 npm ci
-
-7. Configure the Frontend API URL
 
 Create frontend/.env.local:
 
 NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8000
 
-8. Start the Next.js Frontend
+Start Next.js:
 
 npm run dev
 
-The frontend will normally run at:
+Frontend: http://localhost:3000
 
-http://localhost:3000
-
-⚙️ Frontend API Configuration
-
-The frontend uses an environment-based backend URL:
-
-NEXT_PUBLIC_API_BASE_URL=https://your-backend-domain.com
-
-For production, the deployed static site communicates with the Render-hosted FastAPI backend using this variable at build time.
-
-The frontend API helper also provides a local default:
-
-http://127.0.0.1:8000
-
-🔐 Security
-
-API credentials are stored using environment variables.
-
-The project .env and frontend .env.local files should remain excluded through .gitignore.
-
-Production API keys are configured directly through Render environment variables rather than being committed to the repository.
-
-Required backend variables:
-
-FRED_API_KEY=...
-NEWS_API_KEY=...
-FINNHUB_API_KEY=...
-FRONTEND_ORIGINS=...
-
-Frontend production variable:
-
-NEXT_PUBLIC_API_BASE_URL=https://ai-financial-intelligence-platform-api.onrender.com
-
-Additional safeguards include:
-
-Sanitized provider errors
-
-Validated API query parameters
-
-Rejection of unresolved stock inputs
-
-Explicitly configured CORS origins
-
-No secrets stored in frontend code
-
-🚀 Production Deployment
-
-Backend
-
-The FastAPI backend is deployed as a Render Web Service.
-
-Root directory:
-
-Repository root
-
-Build command:
-
-pip install -r requirements.txt
-
-Start command:
-
-python -m uvicorn src.api.main:app --host 0.0.0.0 --port $PORT
-
-Health-check path:
-
-/health
-
-Backend:
-
-https://ai-financial-intelligence-platform-api.onrender.com
-
-Swagger:
-
-https://ai-financial-intelligence-platform-api.onrender.com/docs
-
-Frontend
-
-The Next.js application is deployed as a Render Static Site using static export mode.
-
-Root directory:
-
-frontend
-
-Build command:
-
-npm ci && npm run build
-
-Publish directory:
-
-out
-
-Production environment variable:
-
-NEXT_PUBLIC_API_BASE_URL=https://ai-financial-intelligence-platform-api.onrender.com
-
-Live dashboard:
-
-https://ai-financial-intelligence-platform-m9jl.onrender.com
-
-🌐 CORS Configuration
-
-Because the frontend and backend are deployed separately, the FastAPI backend allows requests from configured frontend origins.
-
-Development origins include:
-
-http://localhost:3000
-http://127.0.0.1:3000
-http://localhost:3001
-http://127.0.0.1:3001
-
-Production origin:
-
-https://ai-financial-intelligence-platform-m9jl.onrender.com
-
-Additional origins can be supplied through the comma-separated FRONTEND_ORIGINS environment variable.
+[!WARNING]
+Never commit .env, .env.local, or API keys to GitHub.
 
 🧪 Testing
 
-Run the backend test suite from the repository root:
+Run all backend tests from the repository root:
 
 python -m pytest -q
 
@@ -888,222 +553,225 @@ Current verified result:
 
 26 passed
 
-The suite covers:
+The test suite covers:
 
-Individual intelligence-module scoring
+Module score calculations
 
-Complete financial-intelligence aggregation
+Complete intelligence aggregation
 
-FastAPI routes and validation
+API routes and validation
 
-Company-name and acronym lookup
+Company-name resolution
 
 Invalid-company rejection
 
-United States macro-data resilience
-
 India GDP and policy-rate retrieval
 
-Verified MoSPI connectivity
+United States macro resilience
 
-Provider outage and cache behavior
+MoSPI connectivity
+
+Cache and provider-failure behaviour
 
 Build and type-check the frontend:
 
 cd frontend
 npm run build
 
-The production build generates the static out directory used by Render.
+🚀 Production Deployment
 
-🧪 Example Companies to Test
+Backend — Render Web Service
+
+Setting
+
+Value
+
+Root directory
+
+Repository root
+
+Build command
+
+pip install -r requirements.txt
+
+Start command
+
+python -m uvicorn src.api.main:app --host 0.0.0.0 --port $PORT
+
+Health-check path
+
+/health
+
+Backend environment variables:
+
+FRED_API_KEY=...
+NEWS_API_KEY=...
+FINNHUB_API_KEY=...
+FRONTEND_ORIGINS=https://ai-financial-intelligence-platform-m9jl.onrender.com
+
+Frontend — Render Static Site
+
+Setting
+
+Value
+
+Root directory
+
+frontend
+
+Build command
+
+npm ci && npm run build
+
+Publish directory
+
+out
+
+Frontend environment variable:
+
+NEXT_PUBLIC_API_BASE_URL=https://ai-financial-intelligence-platform-api.onrender.com
+
+The frontend uses Next.js static export mode and is served through Render's static-site CDN.
+
+🧪 Example Companies
 
 Try the live application with:
 
+Company input
+
+Resolved symbol
+
 Apple
+
+AAPL
+
 Tesla
-NVIDIA
-Reliance Industries
-Infosys
-Tata Consultancy Services
-DBS Group
-BHP
-Commonwealth Bank
 
-These examples demonstrate company-name resolution and the platform's multi-market capabilities.
-
-📊 Example Workflow
-
-Searching for:
+TSLA
 
 Infosys
 
-produces a workflow similar to:
-
-Infosys
-   ↓
 INFY.NS
-   ↓
-Company Validation
-   ↓
-Historical Market Data
-   ├── Technical Indicators
-   └── Historical Risk and Return
 
-Fundamental Data
-   ↓
-Valuation, Profitability, Growth, and Leverage
+Tata Consultancy Services
 
-NewsAPI
-   ↓
-Infosys-Relevant Articles
-   ↓
-ML Sentiment Classification
+TCS.NS
 
-India Macro Sources
-   ↓
-Inflation + GDP + Unemployment + RBI Policy Rate
-   ↓
-Technology-Sector Macro Impact
+Reliance Industries
 
-All Five Module Scores
-   ↓
-Weighted Intelligence Score
-   ↓
-Coverage + Confidence + Detailed Dashboard
+RELIANCE.NS
+
+DBS Group
+
+D05.SI
+
+BHP
+
+BHP.AX
 
 ⚠️ Limitations
 
-The application has several practical limitations:
+Third-party providers can impose rate limits or temporary restrictions.
 
-Financial-data providers can impose rate limits or temporary access restrictions.
+Some fallback sources provide fewer metrics than primary providers.
 
-Some fallback sources expose fewer metrics than the primary provider.
+News coverage varies by company, market, and publication activity.
 
-News availability depends on NewsAPI coverage and the selected article limit.
-
-A company may have fewer relevant recent articles than requested.
-
-Sentiment classifications do not necessarily predict future price movement.
+Sentiment does not necessarily predict future price movement.
 
 Historical performance does not guarantee future returns.
 
-Country and sector thresholds are analytical classifications, not official forecasts.
+Macro classifications use analytical thresholds rather than official forecasts.
 
-The project currently focuses on four configured market contexts.
+Free hosting can introduce a cold-start delay after inactivity.
 
-Free Render services may require a startup period after inactivity.
-
-When a non-critical module fails, the application reports reduced coverage and displays the provider issue under Partial data warnings.
+The platform currently focuses on four configured market contexts.
 
 🔮 Future Improvements
 
-Potential future enhancements include:
-
-Interactive candlestick and long-term price charts
+Interactive candlestick charts
 
 Sentiment trends over time
 
 Side-by-side company comparison
 
-Portfolio analysis and watchlists
+Watchlists and portfolio analysis
 
-Additional international exchanges
+Additional exchanges and macro frameworks
 
-Larger company-symbol reference data
-
-Transformer-based sentiment models such as FinBERT
-
-Article-level sentiment confidence
+FinBERT-based sentiment analysis
 
 News-source credibility weighting
 
-Earnings-calendar integration
+Earnings-calendar and analyst-estimate integration
 
-Analyst-estimate and target-price analysis
+Peer valuation comparisons
 
-Valuation comparison against sector peers
+Saved reports and PDF export
 
-User authentication
+Authentication and database-backed history
 
-Saved reports and database-backed history
+Docker and automated CI/CD
 
-PDF report export
-
-Docker deployment
-
-Automated CI/CD workflows
-
-Scheduled provider-health monitoring
-
-Automated model evaluation and retraining
+Scheduled data-provider monitoring
 
 🎓 Project Highlights
 
-This project demonstrates practical experience with:
+This project demonstrates experience with:
 
 Full-stack financial application development
 
-REST API development with FastAPI
+FastAPI REST API design
 
-Next.js and TypeScript frontend development
+Next.js and TypeScript dashboard development
 
-Responsive dashboard design
+Financial and macroeconomic data analysis
 
-Machine-learning model integration
+Machine-learning model deployment
 
-NLP-based financial sentiment analysis
+Explainable weighted scoring
 
-Fundamental and technical analysis
+Multi-market symbol resolution
 
-Financial risk and return calculations
-
-Country-aware macroeconomic analysis
-
-Sector-sensitive economic scoring
-
-Explainable weighted scoring systems
-
-External financial API integration
-
-Multi-market stock-symbol handling
-
-Company-name and acronym resolution
-
-Data normalization and currency conversion
-
-Provider fallback, retry, and caching strategies
+Provider retry, fallback, and caching strategies
 
 Pydantic response validation
 
-Automated testing with pytest
+Automated pytest coverage
 
-Environment-variable and CORS management
+Render cloud deployment
 
-Git and GitHub version control
+Git and GitHub workflow
 
-Full-stack cloud deployment with Render
+🔐 Security
+
+Secrets are loaded from environment variables.
+
+Provider errors are sanitized before reaching users.
+
+API parameters and company inputs are validated.
+
+Unresolved companies are rejected rather than scored.
+
+CORS origins are explicitly configured.
+
+Production credentials are managed in Render, not committed to Git.
 
 ⚖️ Disclaimer
 
 This project is intended for educational, research, and analytical purposes only.
 
-The Intelligence Score, sentiment classifications, fundamental metrics, technical indicators, macroeconomic analysis, and other information displayed by the application should not be considered personal financial or investment advice.
+The Intelligence Score, sentiment classifications, fundamental metrics, technical indicators, macroeconomic analysis, and other information displayed by the platform should not be considered personal financial or investment advice.
 
-The platform does not guarantee future performance or provide an automated recommendation to buy, hold, or sell any security.
-
-Users should conduct independent research and consult qualified financial professionals before making investment decisions.
+The platform does not guarantee future performance or provide an automated recommendation to buy, hold, or sell a security. Users should conduct independent research and consult qualified financial professionals before making investment decisions.
 
 👨‍💻 Author
 
 Vinoth Ganesamurthy
 
-GitHub
+GitHub: github.com/Vinoth-Ganesamurthy
 
-https://github.com/Vinoth-Ganesamurthy
-
-LinkedIn
-
-https://www.linkedin.com/in/vinoth-ganesamurthy/
+LinkedIn: linkedin.com/in/vinoth-ganesamurthy
 
 Developed as a full-stack financial analytics, machine-learning, and cloud-deployment portfolio project.
 
@@ -1113,16 +781,10 @@ If you find this project useful, consider giving the repository a ⭐ on GitHub.
 
 GitHub Repository
 
-https://github.com/Vinoth-Ganesamurthy/AI-Financial-Intelligence-Platform
-
-Live Demo
-
-https://ai-financial-intelligence-platform-m9jl.onrender.com
+Live Dashboard
 
 API Documentation
 
-https://ai-financial-intelligence-platform-api.onrender.com/docs
-
 📄 License
 
-See the repository's LICENSE file for the applicable license terms.
+This project is licensed under the MIT License. See the LICENSE file for details.
