@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420" role="img" aria-labelledby="title desc">
+  <title id="title">AI Financial Intelligence Platform</title>
+  <desc id="desc">A professional blue financial analytics banner with an abstract market chart.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="0.52" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="420" rx="28" fill="url(#background)"/>
+
+  <g opacity="0.12" stroke="#93c5fd" stroke-width="1">
+    <path d="M0 70H1400M0 140H1400M0 210H1400M0 280H1400M0 350H1400"/>
+    <path d="M100 0V420M200 0V420M300 0V420M400 0V420M500 0V420M600 0V420M700 0V420M800 0V420M900 0V420M1000 0V420M1100 0V420M1200 0V420M1300 0V420"/>
+  </g>
+
+  <circle cx="1240" cy="65" r="170" fill="#2563eb" opacity="0.10"/>
+  <circle cx="1290" cy="380" r="225" fill="#0ea5e9" opacity="0.07"/>
+
+  <g transform="translate(86 75)">
+    <rect width="64" height="64" rx="16" fill="url(#accent)"/>
+    <path d="M14 45L26 32L35 39L51 18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="51" cy="18" r="4" fill="#fff"/>
+
+    <text x="0" y="116" fill="#93c5fd" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="5">INVESTMENT RESEARCH DASHBOARD</text>
+    <text x="0" y="178" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="48" font-weight="800">AI Financial Intelligence</text>
+    <text x="0" y="230" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="48" font-weight="800">Platform</text>
+    <text x="0" y="278" fill="#cbd5e1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21">Explainable multi-market analysis across five intelligence modules.</text>
+  </g>
+
+  <g transform="translate(790 75)">
+    <path d="M0 250L60 220L115 235L180 160L245 180L315 95L380 120L455 35L520 58V300H0Z" fill="url(#chartFill)"/>
+    <path d="M0 250L60 220L115 235L180 160L245 180L315 95L380 120L455 35L520 58" fill="none" stroke="#60a5fa" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+    <g fill="#bfdbfe">
+      <circle cx="60" cy="220" r="5"/>
+      <circle cx="180" cy="160" r="5"/>
+      <circle cx="315" cy="95" r="5"/>
+      <circle cx="455" cy="35" r="6"/>
+    </g>
+    <g transform="translate(42 266)" font-family="Inter,Segoe UI,Arial,sans-serif">
+      <rect width="125" height="38" rx="19" fill="#052e16" stroke="#22c55e" stroke-opacity="0.55"/>
+      <text x="62.5" y="25" text-anchor="middle" fill="#86efac" font-size="14" font-weight="700">5 MODULES</text>
+      <rect x="145" width="150" height="38" rx="19" fill="#172554" stroke="#60a5fa" stroke-opacity="0.55"/>
+      <text x="220" y="25" text-anchor="middle" fill="#bfdbfe" font-size="14" font-weight="700">4 MARKETS</text>
+      <rect x="313" width="165" height="38" rx="19" fill="#3b0764" stroke="#c084fc" stroke-opacity="0.55"/>
+      <text x="395.5" y="25" text-anchor="middle" fill="#e9d5ff" font-size="14" font-weight="700">EXPLAINABLE AI</text>
+    </g>
+  </g>
+</svg>
