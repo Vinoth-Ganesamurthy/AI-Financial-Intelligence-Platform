@@ -1,0 +1,41 @@
+market,symbol,company,sector
+India,RELIANCE.NS,Reliance Industries,Energy
+India,TCS.NS,Tata Consultancy Services,Information Technology
+India,HDFCBANK.NS,HDFC Bank,Financials
+India,SUNPHARMA.NS,Sun Pharmaceutical Industries,Health Care
+India,HINDUNILVR.NS,Hindustan Unilever,Consumer Staples
+India,MARUTI.NS,Maruti Suzuki India,Consumer Discretionary
+India,LT.NS,Larsen & Toubro,Industrials
+India,BHARTIARTL.NS,Bharti Airtel,Communication Services
+India,NTPC.NS,NTPC,Utilities
+India,ULTRACEMCO.NS,UltraTech Cement,Materials
+United States,MSFT,Microsoft,Information Technology
+United States,JPM,JPMorgan Chase,Financials
+United States,JNJ,Johnson & Johnson,Health Care
+United States,XOM,Exxon Mobil,Energy
+United States,PG,Procter & Gamble,Consumer Staples
+United States,AMZN,Amazon,Consumer Discretionary
+United States,CAT,Caterpillar,Industrials
+United States,NEE,NextEra Energy,Utilities
+United States,AMT,American Tower,Real Estate
+United States,GOOGL,Alphabet,Communication Services
+Singapore,D05.SI,DBS Group,Financials
+Singapore,Z74.SI,Singtel,Communication Services
+Singapore,C6L.SI,Singapore Airlines,Industrials
+Singapore,C38U.SI,CapitaLand Integrated Commercial Trust,Real Estate
+Singapore,F34.SI,Wilmar International,Consumer Staples
+Singapore,U96.SI,Sembcorp Industries,Utilities
+Singapore,BN4.SI,Keppel,Industrials
+Singapore,S68.SI,Singapore Exchange,Financials
+Singapore,S63.SI,ST Engineering,Industrials
+Singapore,V03.SI,Venture Corporation,Information Technology
+Australia,BHP.AX,BHP Group,Materials
+Australia,CBA.AX,Commonwealth Bank of Australia,Financials
+Australia,CSL.AX,CSL,Health Care
+Australia,WES.AX,Wesfarmers,Consumer Discretionary
+Australia,WOW.AX,Woolworths Group,Consumer Staples
+Australia,TLS.AX,Telstra Group,Communication Services
+Australia,GMG.AX,Goodman Group,Real Estate
+Australia,TCL.AX,Transurban Group,Industrials
+Australia,STO.AX,Santos,Energy
+Australia,ORG.AX,Origin Energy,Utilities
