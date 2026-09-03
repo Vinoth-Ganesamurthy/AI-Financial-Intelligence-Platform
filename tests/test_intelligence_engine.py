@@ -96,6 +96,24 @@ def test_fundamental_score():
     assert result["score"] == 0.929
     assert result["quality_factor"] == 1.0
 
+@pytest.mark.parametrize(
+    "forward_pe",
+    [0, -5],
+)
+def test_non_positive_forward_pe_is_unfavourable(
+    forward_pe,
+):
+    result = score_fundamental_analysis(
+        {
+            "forward_pe": forward_pe,
+        }
+    )
+
+    assert (
+        result["metric_scores"]["forward_pe"]
+        == -1.0
+    )
+    assert result["score"] == -1.0
 
 @patch(
     "src.analysis.intelligence.intelligence_engine."
@@ -125,6 +143,7 @@ def test_fundamental_score():
     "src.analysis.intelligence.intelligence_engine."
     "fetch_market_data"
 )
+    
 def test_complete_financial_intelligence(
     mock_market_data,
     mock_historical,

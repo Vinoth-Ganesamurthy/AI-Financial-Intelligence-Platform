@@ -320,7 +320,7 @@ def _fetch_finnhub_fundamental_data(
         metrics.get("revenuePerShareTTM"),
         shares_outstanding,
     )
-
+    
     free_cash_flow = _per_share_to_total(
         metrics.get("freeCashFlowPerShareTTM"),
         shares_outstanding,
@@ -969,7 +969,7 @@ def _fetch_yahoo_direct_fundamental_data(
             if len(revenue_values) >= 2
             else None
         ),
-        "earnings_growth": (
+                "earnings_growth": (
             _growth_percentage(
                 net_income_values[-1],
                 net_income_values[-2],
@@ -980,6 +980,7 @@ def _fetch_yahoo_direct_fundamental_data(
         "debt_to_equity": _safe_ratio(
             latest_debt,
             latest_equity,
+            as_percentage=True,
         ),
         "free_cash_flow": _number(
             converted_free_cash_flow
