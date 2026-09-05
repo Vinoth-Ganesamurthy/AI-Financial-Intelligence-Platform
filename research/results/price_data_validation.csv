@@ -1,0 +1,41 @@
+market,symbol,company,file_name,row_count,first_date,last_date,warmup_rows,research_rows,forward_coverage_rows,duplicate_dates,missing_ohlcv_values,nonpositive_price_values,negative_volume_values,price_relationship_errors,hash_matches_manifest,status,issues,warnings
+India,RELIANCE.NS,Reliance Industries,RELIANCE_NS.csv,1771,2019-01-01,2026-02-27,494,1236,41,0,0,0,0,0,True,PASS,,
+India,TCS.NS,Tata Consultancy Services,TCS_NS.csv,1771,2019-01-01,2026-02-27,494,1236,41,0,0,0,0,0,True,PASS,,
+India,HDFCBANK.NS,HDFC Bank,HDFCBANK_NS.csv,1771,2019-01-01,2026-02-27,494,1236,41,0,0,0,0,0,True,PASS,,
+India,SUNPHARMA.NS,Sun Pharmaceutical Industries,SUNPHARMA_NS.csv,1771,2019-01-01,2026-02-27,494,1236,41,0,0,0,0,0,True,PASS,,
+India,HINDUNILVR.NS,Hindustan Unilever,HINDUNILVR_NS.csv,1771,2019-01-01,2026-02-27,494,1236,41,0,0,0,0,0,True,PASS,,
+India,MARUTI.NS,Maruti Suzuki India,MARUTI_NS.csv,1771,2019-01-01,2026-02-27,494,1236,41,0,0,0,0,0,True,PASS,,
+India,LT.NS,Larsen & Toubro,LT_NS.csv,1771,2019-01-01,2026-02-27,494,1236,41,0,0,0,0,0,True,PASS,,
+India,BHARTIARTL.NS,Bharti Airtel,BHARTIARTL_NS.csv,1771,2019-01-01,2026-02-27,494,1236,41,0,0,0,0,0,True,PASS,,
+India,NTPC.NS,NTPC,NTPC_NS.csv,1771,2019-01-01,2026-02-27,494,1236,41,0,0,0,0,0,True,PASS,,
+India,ULTRACEMCO.NS,UltraTech Cement,ULTRACEMCO_NS.csv,1771,2019-01-01,2026-02-27,494,1236,41,0,0,0,0,0,True,PASS,,
+United States,MSFT,Microsoft,MSFT.csv,1799,2019-01-02,2026-02-27,505,1255,39,0,0,0,0,0,True,PASS,,
+United States,JPM,JPMorgan Chase,JPM.csv,1799,2019-01-02,2026-02-27,505,1255,39,0,0,0,0,0,True,PASS,,
+United States,JNJ,Johnson & Johnson,JNJ.csv,1799,2019-01-02,2026-02-27,505,1255,39,0,0,0,0,0,True,PASS,,
+United States,XOM,Exxon Mobil,XOM.csv,1799,2019-01-02,2026-02-27,505,1255,39,0,0,0,0,0,True,PASS,,
+United States,PG,Procter & Gamble,PG.csv,1799,2019-01-02,2026-02-27,505,1255,39,0,0,0,0,0,True,PASS,,
+United States,AMZN,Amazon,AMZN.csv,1799,2019-01-02,2026-02-27,505,1255,39,0,0,0,0,0,True,PASS,,
+United States,CAT,Caterpillar,CAT.csv,1799,2019-01-02,2026-02-27,505,1255,39,0,0,0,0,0,True,PASS,,
+United States,NEE,NextEra Energy,NEE.csv,1799,2019-01-02,2026-02-27,505,1255,39,0,0,0,0,0,True,PASS,,
+United States,AMT,American Tower,AMT.csv,1799,2019-01-02,2026-02-27,505,1255,39,0,0,0,0,0,True,PASS,,
+United States,GOOGL,Alphabet,GOOGL.csv,1799,2019-01-02,2026-02-27,505,1255,39,0,0,0,0,0,True,PASS,,
+Singapore,D05.SI,DBS Group,D05_SI.csv,1800,2019-01-01,2026-02-27,505,1256,39,0,0,0,0,0,True,PASS,,
+Singapore,Z74.SI,Singtel,Z74_SI.csv,1800,2019-01-01,2026-02-27,505,1256,39,0,0,0,0,0,True,PASS,,
+Singapore,C6L.SI,Singapore Airlines,C6L_SI.csv,1800,2019-01-01,2026-02-27,505,1256,39,0,0,0,0,0,True,PASS,,
+Singapore,C38U.SI,CapitaLand Integrated Commercial Trust,C38U_SI.csv,1800,2019-01-01,2026-02-27,505,1256,39,0,0,0,0,0,True,PASS,,
+Singapore,F34.SI,Wilmar International,F34_SI.csv,1800,2019-01-01,2026-02-27,505,1256,39,0,0,0,0,1,True,WARN,,One provider OHLC relationship anomaly; raw value preserved
+Singapore,U96.SI,Sembcorp Industries,U96_SI.csv,1800,2019-01-01,2026-02-27,505,1256,39,0,0,0,0,1,True,WARN,,One provider OHLC relationship anomaly; raw value preserved
+Singapore,BN4.SI,Keppel,BN4_SI.csv,1800,2019-01-01,2026-02-27,505,1256,39,0,0,0,0,1,True,WARN,,One provider OHLC relationship anomaly; raw value preserved
+Singapore,S68.SI,Singapore Exchange,S68_SI.csv,1800,2019-01-01,2026-02-27,505,1256,39,0,0,0,0,0,True,PASS,,
+Singapore,S63.SI,ST Engineering,S63_SI.csv,1800,2019-01-01,2026-02-27,505,1256,39,0,0,0,0,1,True,WARN,,One provider OHLC relationship anomaly; raw value preserved
+Singapore,V03.SI,Venture Corporation,V03_SI.csv,1800,2019-01-01,2026-02-27,505,1256,39,0,0,0,0,1,True,WARN,,One provider OHLC relationship anomaly; raw value preserved
+Australia,BHP.AX,BHP Group,BHP_AX.csv,1812,2019-01-02,2026-02-27,508,1264,40,0,0,0,0,0,True,PASS,,
+Australia,CBA.AX,Commonwealth Bank of Australia,CBA_AX.csv,1812,2019-01-02,2026-02-27,508,1264,40,0,0,0,0,1,True,WARN,,One provider OHLC relationship anomaly; raw value preserved
+Australia,CSL.AX,CSL,CSL_AX.csv,1812,2019-01-02,2026-02-27,508,1264,40,0,0,0,0,0,True,PASS,,
+Australia,WES.AX,Wesfarmers,WES_AX.csv,1812,2019-01-02,2026-02-27,508,1264,40,0,0,0,0,0,True,PASS,,
+Australia,WOW.AX,Woolworths Group,WOW_AX.csv,1812,2019-01-02,2026-02-27,508,1264,40,0,0,0,0,0,True,PASS,,
+Australia,TLS.AX,Telstra Group,TLS_AX.csv,1812,2019-01-02,2026-02-27,508,1264,40,0,0,0,0,0,True,PASS,,
+Australia,GMG.AX,Goodman Group,GMG_AX.csv,1812,2019-01-02,2026-02-27,508,1264,40,0,0,0,0,0,True,PASS,,
+Australia,TCL.AX,Transurban Group,TCL_AX.csv,1812,2019-01-02,2026-02-27,508,1264,40,0,0,0,0,0,True,PASS,,
+Australia,STO.AX,Santos,STO_AX.csv,1812,2019-01-02,2026-02-27,508,1264,40,0,0,0,0,0,True,PASS,,
+Australia,ORG.AX,Origin Energy,ORG_AX.csv,1812,2019-01-02,2026-02-27,508,1264,40,0,0,0,0,0,True,PASS,,
