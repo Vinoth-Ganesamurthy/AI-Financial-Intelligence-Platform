@@ -1,0 +1,4 @@
+split,inflation_rate,monetary_rate,gdp_growth_rate,unemployment_rate,observations
+test,120,120,120,120,120
+train,380,380,380,380,380
+validation,130,130,130,130,130
