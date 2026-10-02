@@ -1,0 +1,11 @@
+symbol,observations,fundamental_available,total_revenue_available,profit_margin_available,return_on_equity_available,return_on_assets_available,revenue_growth_available,earnings_growth_available,free_cash_flow_available,forward_pe_available,debt_to_equity_available
+MSFT,63,63,63,63,63,63,63,63,63,0,0
+JPM,63,63,63,63,63,63,63,63,0,0,0
+JNJ,63,63,63,63,0,63,63,63,63,0,0
+XOM,63,63,63,63,63,63,63,51,63,0,0
+PG,63,63,63,63,0,63,63,63,63,0,0
+AMZN,63,63,63,63,63,63,63,50,0,0,0
+CAT,63,63,63,0,0,0,63,0,61,0,0
+NEE,63,63,63,63,63,63,63,63,0,0,0
+AMT,63,63,63,15,15,15,63,15,63,0,0
+GOOGL,63,63,63,63,63,63,63,63,63,0,0

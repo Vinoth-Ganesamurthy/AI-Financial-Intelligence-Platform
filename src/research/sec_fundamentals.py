@@ -153,6 +153,11 @@ def build_sec_annual_features(companyfacts, observation_date):
         "SalesRevenueGoodsNet",
     ]
 
+    # American Tower: contract revenue excludes rental revenue.
+    # Use the total-revenue tag for both current and prior periods.
+    if str(companyfacts.get("cik", "")).lstrip("0") == "1053507":
+        revenue_tags = ["Revenues"]
+
     revenue = select_annual_fact(
         companyfacts,
         revenue_tags,

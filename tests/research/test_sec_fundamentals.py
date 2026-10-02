@@ -169,3 +169,19 @@ def test_growth_handles_52_week_fiscal_calendar():
 
     result = build_sec_annual_features(facts, "2021-01-04")
     assert result["revenue_growth"] == pytest.approx(25)
+
+
+def test_amt_uses_total_revenue_not_contract_revenue():
+    facts = payload({
+        "Revenues": [record(11144200000)],
+        "RevenueFromContractWithCustomerExcludingAssessedTax": [
+            record(756700000)
+        ],
+    })
+    facts["cik"] = 1053507
+
+    result = build_sec_annual_features(facts, "2021-01-04")
+
+    assert result["total_revenue"] == 11144200000
+    assert result["provenance"]["total_revenue"]["tag"] == "Revenues"
+    
