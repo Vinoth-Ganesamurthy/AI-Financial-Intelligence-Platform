@@ -185,3 +185,35 @@ def test_amt_uses_total_revenue_not_contract_revenue():
     assert result["total_revenue"] == 11144200000
     assert result["provenance"]["total_revenue"]["tag"] == "Revenues"
     
+def test_consolidated_profit_fallback_preserves_roe_definition():
+    facts = payload({
+        "Revenues": [
+            record(1000),
+            record(
+                800,
+                start="2018-07-01",
+                end="2019-06-30",
+                filed="2019-07-30",
+            ),
+        ],
+        "ProfitLoss": [
+            record(100),
+            record(
+                80,
+                start="2018-07-01",
+                end="2019-06-30",
+                filed="2019-07-30",
+            ),
+        ],
+        "Assets": [record(500, start=None)],
+        "StockholdersEquity": [record(400, start=None)],
+    })
+
+    result = build_sec_annual_features(facts, "2021-01-04")
+
+    assert result["profit_margin"] == pytest.approx(10)
+    assert result["return_on_assets"] == pytest.approx(20)
+    assert result["earnings_growth"] == pytest.approx(25)
+
+    # Do not divide consolidated profit by parent shareholder equity.
+    assert result["return_on_equity"] is None

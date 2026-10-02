@@ -139,10 +139,11 @@ def ratio(numerator, denominator, *, percentage=False):
 
 def build_sec_annual_features(companyfacts, observation_date):
     """
-    Build a partial annual US fundamental snapshot.
+    Build annual features using facts filed before the observation.
 
-    Missing debt, forward P/E, and valuation fields remain unavailable.
-    Every selected fact retains its source and filing provenance.
+    ProfitLoss is a consolidated-income fallback. ROE requires
+    parent shareholder income and parent shareholder equity.
+    Earnings growth compares the same income tag across years.
     """
     provenance = {}
 
@@ -153,8 +154,6 @@ def build_sec_annual_features(companyfacts, observation_date):
         "SalesRevenueGoodsNet",
     ]
 
-    # American Tower: contract revenue excludes rental revenue.
-    # Use the total-revenue tag for both current and prior periods.
     if str(companyfacts.get("cik", "")).lstrip("0") == "1053507":
         revenue_tags = ["Revenues"]
 
@@ -172,7 +171,7 @@ def build_sec_annual_features(companyfacts, observation_date):
     end = revenue["period_end"]
     provenance["total_revenue"] = revenue
 
-    def fetch(field, tags, *, instant=False):
+    def fetch_fact(field, tags, *, instant=False):
         fact = select_annual_fact(
             companyfacts,
             tags,
@@ -180,38 +179,49 @@ def build_sec_annual_features(companyfacts, observation_date):
             period_end=end,
             instant=instant,
         )
-
         provenance[field] = fact
-        return fact["value"] if fact else None
+        return fact
 
-    income = fetch(
-        "net_income",
+    def value(fact):
+        return fact["value"] if fact is not None else None
+
+    parent_income = fetch_fact(
+        "parent_net_income",
         ["NetIncomeLoss"],
     )
 
-    equity = fetch(
+    income_fact = parent_income
+    if income_fact is None:
+        income_fact = fetch_fact(
+            "consolidated_profit",
+            ["ProfitLoss"],
+        )
+
+    provenance["net_income"] = income_fact
+    income = value(income_fact)
+
+    equity = value(fetch_fact(
         "equity",
         ["StockholdersEquity"],
         instant=True,
-    )
+    ))
 
-    assets = fetch(
+    assets = value(fetch_fact(
         "assets",
         ["Assets"],
         instant=True,
-    )
+    ))
 
-    operating_cash = fetch(
+    operating_cash = value(fetch_fact(
         "operating_cash_flow",
         ["NetCashProvidedByUsedInOperatingActivities"],
-    )
+    ))
 
-    capex = fetch(
+    capex = value(fetch_fact(
         "capital_expenditure",
         ["PaymentsToAcquirePropertyPlantAndEquipment"],
-    )
+    ))
 
-    # Previous fiscal year-end need not have the same month and day.
     previous_revenue = select_annual_fact(
         companyfacts,
         revenue_tags,
@@ -219,17 +229,14 @@ def build_sec_annual_features(companyfacts, observation_date):
         preceding_period_end=end,
     )
 
-    # Match prior income to the selected prior revenue period.
-    previous_income = (
-        select_annual_fact(
+    previous_income = None
+    if previous_revenue is not None and income_fact is not None:
+        previous_income = select_annual_fact(
             companyfacts,
-            ["NetIncomeLoss"],
+            [income_fact["tag"]],
             observation_date,
             period_end=previous_revenue["period_end"],
         )
-        if previous_revenue is not None
-        else None
-    )
 
     provenance["previous_revenue"] = previous_revenue
     provenance["previous_net_income"] = previous_income
@@ -243,7 +250,6 @@ def build_sec_annual_features(companyfacts, observation_date):
             return None
 
         comparison = ratio(current, previous["value"])
-
         if comparison is None:
             return None
 
@@ -259,7 +265,7 @@ def build_sec_annual_features(companyfacts, observation_date):
             percentage=True,
         ),
         "return_on_equity": ratio(
-            income,
+            value(parent_income),
             equity,
             percentage=True,
         ),
