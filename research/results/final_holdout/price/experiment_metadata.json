@@ -1,0 +1,41 @@
+{
+  "purpose": "Price-only development benchmark; not the full model",
+  "training_rows": 1480,
+  "test_rows": 490,
+  "test_evaluated": true,
+  "features": [
+    "technical_rsi",
+    "technical_relative_volume",
+    "price_to_sma_20",
+    "price_to_sma_50",
+    "price_to_sma_200",
+    "ema_spread",
+    "macd_pct",
+    "macd_histogram_pct",
+    "bollinger_position",
+    "atr_pct",
+    "price_range_position",
+    "historical_one_week_return",
+    "historical_one_month_return",
+    "historical_three_month_return",
+    "historical_six_month_return",
+    "historical_one_year_return",
+    "historical_annualized_volatility",
+    "historical_maximum_drawdown"
+  ],
+  "score_thresholds": [
+    -0.2,
+    0.2
+  ],
+  "seed": 42,
+  "python": "3.12.10",
+  "sklearn": "1.9.0",
+  "pandas": "3.0.5",
+  "numpy": "2.5.1",
+  "input_sha256": "47255633db21edc0e64c51c5fd292f20f4a1a77b272807a0560aca4f5df65d5c",
+  "models": {
+    "majority_class": "DummyClassifier(strategy='most_frequent')",
+    "logistic_regression": "Pipeline(steps=[('imputer',\n                 SimpleImputer(add_indicator=True, strategy='median')),\n                ('scaler', StandardScaler()),\n                ('model',\n                 LogisticRegression(class_weight='balanced', max_iter=3000,\n                                    random_state=42))])",
+    "random_forest": "Pipeline(steps=[('imputer',\n                 SimpleImputer(add_indicator=True, strategy='median')),\n                ('model',\n                 RandomForestClassifier(class_weight='balanced', max_depth=6,\n                                        min_samples_leaf=20, n_estimators=300,\n                                        n_jobs=-1, random_state=42))])"
+  }
+}

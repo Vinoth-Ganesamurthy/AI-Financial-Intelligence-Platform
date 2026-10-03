@@ -1,0 +1,29 @@
+{
+  "started_at_utc": "2026-10-03T14:05:06.936140+00:00",
+  "status": "completed",
+  "training_period": "2021-2023",
+  "evaluation_period": "2025",
+  "validation_used_for_refitting": false,
+  "protocol_sha256": "df58167c8c606d9c05e19d70bad60bdb707dbc947e22d6bd1897b07a50ddf851",
+  "runner_sha256": "cf1064a10a17fe257f4598aef85bff413ebcb90cb5f40d232b773598793971c8",
+  "input_hashes": {
+    "data/processed/research/price_features.csv": "47255633db21edc0e64c51c5fd292f20f4a1a77b272807a0560aca4f5df65d5c",
+    "data/interim/research/sec_annual_features.csv": "4a6e8f6b393679ba54416e5c71bdd5a50687de39e8cbdec8e94adbcb500d25b3",
+    "data/interim/research/us_macro_features.csv": "57ed204d2d2b15074312c0a21d59efc1757853ff670e30fe32fdba11bc197f62"
+  },
+  "experiments": {
+    "price": {
+      "original_script": "research\\experiments\\06_price_baselines.py",
+      "original_sha256": "af46ee52bf4b1e8d6349667f5b16e22e83f1b12d2d05db5893f9abf679ab84b9",
+      "executed_sha256": "32ab55bc58871a59e08e8c288d9201deed51c6faf713713d1e874478e0e0ada3",
+      "status": "completed"
+    },
+    "us": {
+      "original_script": "research\\experiments\\10_us_macro_baselines.py",
+      "original_sha256": "7d86d40f58625b80092c9f691972003fbf2351424097cab68fe207125ec192dc",
+      "executed_sha256": "e1fcb561965d412b1fe2261a4fda45e2dcd2d8b762c2482bd4fd80e2d621adbd",
+      "status": "completed"
+    }
+  },
+  "completed_at_utc": "2026-10-03T14:05:10.985501+00:00"
+}

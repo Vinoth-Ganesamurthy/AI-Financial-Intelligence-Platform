@@ -1,0 +1,8 @@
+model,split,market,rows,prediction_coverage,macro_f1,balanced_accuracy,accuracy
+majority_class,test,United States,120,1.0,0.18762475049900199,0.3333333333333333,0.39166666666666666
+logistic_regression_price_only,test,United States,120,1.0,0.3420867432365357,0.3881487870849573,0.36666666666666664
+random_forest_price_only,test,United States,120,1.0,0.34482583269768624,0.3774732178987498,0.35833333333333334
+logistic_regression_price_plus_fundamentals,test,United States,120,1.0,0.2985343947744438,0.3333439822801525,0.31666666666666665
+random_forest_price_plus_fundamentals,test,United States,120,1.0,0.3590791915012397,0.39115711456136987,0.375
+logistic_regression_price_plus_fundamentals_plus_macro,test,United States,120,1.0,0.2987275882012724,0.33560155900581434,0.325
+random_forest_price_plus_fundamentals_plus_macro,test,United States,120,1.0,0.33262108262108264,0.38557174195472066,0.375
