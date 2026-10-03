@@ -1,0 +1,22 @@
+experiment,scope,target_class,count,rows
+price,overall,favourable,222,490
+price,overall,neutral,137,490
+price,overall,unfavourable,131,490
+price,Australia,favourable,56,130
+price,Australia,neutral,33,130
+price,Australia,unfavourable,41,130
+price,India,favourable,51,120
+price,India,neutral,35,120
+price,India,unfavourable,34,120
+price,Singapore,favourable,68,120
+price,Singapore,neutral,32,120
+price,Singapore,unfavourable,20,120
+price,United States,favourable,47,120
+price,United States,neutral,37,120
+price,United States,unfavourable,36,120
+us,overall,favourable,47,120
+us,overall,neutral,37,120
+us,overall,unfavourable,36,120
+us,United States,favourable,47,120
+us,United States,neutral,37,120
+us,United States,unfavourable,36,120

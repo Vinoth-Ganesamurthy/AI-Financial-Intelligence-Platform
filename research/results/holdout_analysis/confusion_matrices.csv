@@ -1,0 +1,397 @@
+experiment,scope,model,actual,predicted,count
+price,overall,equal_weight_price,favourable,favourable,98
+price,overall,equal_weight_price,favourable,neutral,77
+price,overall,equal_weight_price,favourable,unfavourable,47
+price,overall,equal_weight_price,neutral,favourable,64
+price,overall,equal_weight_price,neutral,neutral,45
+price,overall,equal_weight_price,neutral,unfavourable,28
+price,overall,equal_weight_price,unfavourable,favourable,59
+price,overall,equal_weight_price,unfavourable,neutral,47
+price,overall,equal_weight_price,unfavourable,unfavourable,25
+price,overall,historical_only,favourable,favourable,99
+price,overall,historical_only,favourable,neutral,94
+price,overall,historical_only,favourable,unfavourable,29
+price,overall,historical_only,neutral,favourable,68
+price,overall,historical_only,neutral,neutral,56
+price,overall,historical_only,neutral,unfavourable,13
+price,overall,historical_only,unfavourable,favourable,44
+price,overall,historical_only,unfavourable,neutral,69
+price,overall,historical_only,unfavourable,unfavourable,18
+price,overall,logistic_regression,favourable,favourable,32
+price,overall,logistic_regression,favourable,neutral,137
+price,overall,logistic_regression,favourable,unfavourable,53
+price,overall,logistic_regression,neutral,favourable,15
+price,overall,logistic_regression,neutral,neutral,93
+price,overall,logistic_regression,neutral,unfavourable,29
+price,overall,logistic_regression,unfavourable,favourable,27
+price,overall,logistic_regression,unfavourable,neutral,75
+price,overall,logistic_regression,unfavourable,unfavourable,29
+price,overall,majority_class,favourable,favourable,222
+price,overall,majority_class,favourable,neutral,0
+price,overall,majority_class,favourable,unfavourable,0
+price,overall,majority_class,neutral,favourable,137
+price,overall,majority_class,neutral,neutral,0
+price,overall,majority_class,neutral,unfavourable,0
+price,overall,majority_class,unfavourable,favourable,131
+price,overall,majority_class,unfavourable,neutral,0
+price,overall,majority_class,unfavourable,unfavourable,0
+price,overall,random_forest,favourable,favourable,65
+price,overall,random_forest,favourable,neutral,91
+price,overall,random_forest,favourable,unfavourable,66
+price,overall,random_forest,neutral,favourable,27
+price,overall,random_forest,neutral,neutral,74
+price,overall,random_forest,neutral,unfavourable,36
+price,overall,random_forest,unfavourable,favourable,40
+price,overall,random_forest,unfavourable,neutral,68
+price,overall,random_forest,unfavourable,unfavourable,23
+price,overall,technical_only,favourable,favourable,96
+price,overall,technical_only,favourable,neutral,64
+price,overall,technical_only,favourable,unfavourable,62
+price,overall,technical_only,neutral,favourable,63
+price,overall,technical_only,neutral,neutral,31
+price,overall,technical_only,neutral,unfavourable,43
+price,overall,technical_only,unfavourable,favourable,64
+price,overall,technical_only,unfavourable,neutral,34
+price,overall,technical_only,unfavourable,unfavourable,33
+price,Australia,equal_weight_price,favourable,favourable,16
+price,Australia,equal_weight_price,favourable,neutral,24
+price,Australia,equal_weight_price,favourable,unfavourable,16
+price,Australia,equal_weight_price,neutral,favourable,15
+price,Australia,equal_weight_price,neutral,neutral,11
+price,Australia,equal_weight_price,neutral,unfavourable,7
+price,Australia,equal_weight_price,unfavourable,favourable,18
+price,Australia,equal_weight_price,unfavourable,neutral,13
+price,Australia,equal_weight_price,unfavourable,unfavourable,10
+price,Australia,historical_only,favourable,favourable,16
+price,Australia,historical_only,favourable,neutral,27
+price,Australia,historical_only,favourable,unfavourable,13
+price,Australia,historical_only,neutral,favourable,15
+price,Australia,historical_only,neutral,neutral,14
+price,Australia,historical_only,neutral,unfavourable,4
+price,Australia,historical_only,unfavourable,favourable,11
+price,Australia,historical_only,unfavourable,neutral,22
+price,Australia,historical_only,unfavourable,unfavourable,8
+price,Australia,logistic_regression,favourable,favourable,7
+price,Australia,logistic_regression,favourable,neutral,34
+price,Australia,logistic_regression,favourable,unfavourable,15
+price,Australia,logistic_regression,neutral,favourable,3
+price,Australia,logistic_regression,neutral,neutral,24
+price,Australia,logistic_regression,neutral,unfavourable,6
+price,Australia,logistic_regression,unfavourable,favourable,6
+price,Australia,logistic_regression,unfavourable,neutral,29
+price,Australia,logistic_regression,unfavourable,unfavourable,6
+price,Australia,majority_class,favourable,favourable,56
+price,Australia,majority_class,favourable,neutral,0
+price,Australia,majority_class,favourable,unfavourable,0
+price,Australia,majority_class,neutral,favourable,33
+price,Australia,majority_class,neutral,neutral,0
+price,Australia,majority_class,neutral,unfavourable,0
+price,Australia,majority_class,unfavourable,favourable,41
+price,Australia,majority_class,unfavourable,neutral,0
+price,Australia,majority_class,unfavourable,unfavourable,0
+price,Australia,random_forest,favourable,favourable,19
+price,Australia,random_forest,favourable,neutral,21
+price,Australia,random_forest,favourable,unfavourable,16
+price,Australia,random_forest,neutral,favourable,8
+price,Australia,random_forest,neutral,neutral,18
+price,Australia,random_forest,neutral,unfavourable,7
+price,Australia,random_forest,unfavourable,favourable,13
+price,Australia,random_forest,unfavourable,neutral,25
+price,Australia,random_forest,unfavourable,unfavourable,3
+price,Australia,technical_only,favourable,favourable,13
+price,Australia,technical_only,favourable,neutral,21
+price,Australia,technical_only,favourable,unfavourable,22
+price,Australia,technical_only,neutral,favourable,13
+price,Australia,technical_only,neutral,neutral,8
+price,Australia,technical_only,neutral,unfavourable,12
+price,Australia,technical_only,unfavourable,favourable,20
+price,Australia,technical_only,unfavourable,neutral,7
+price,Australia,technical_only,unfavourable,unfavourable,14
+price,India,equal_weight_price,favourable,favourable,15
+price,India,equal_weight_price,favourable,neutral,22
+price,India,equal_weight_price,favourable,unfavourable,14
+price,India,equal_weight_price,neutral,favourable,13
+price,India,equal_weight_price,neutral,neutral,14
+price,India,equal_weight_price,neutral,unfavourable,8
+price,India,equal_weight_price,unfavourable,favourable,7
+price,India,equal_weight_price,unfavourable,neutral,20
+price,India,equal_weight_price,unfavourable,unfavourable,7
+price,India,historical_only,favourable,favourable,14
+price,India,historical_only,favourable,neutral,29
+price,India,historical_only,favourable,unfavourable,8
+price,India,historical_only,neutral,favourable,14
+price,India,historical_only,neutral,neutral,17
+price,India,historical_only,neutral,unfavourable,4
+price,India,historical_only,unfavourable,favourable,7
+price,India,historical_only,unfavourable,neutral,22
+price,India,historical_only,unfavourable,unfavourable,5
+price,India,logistic_regression,favourable,favourable,7
+price,India,logistic_regression,favourable,neutral,34
+price,India,logistic_regression,favourable,unfavourable,10
+price,India,logistic_regression,neutral,favourable,2
+price,India,logistic_regression,neutral,neutral,23
+price,India,logistic_regression,neutral,unfavourable,10
+price,India,logistic_regression,unfavourable,favourable,6
+price,India,logistic_regression,unfavourable,neutral,18
+price,India,logistic_regression,unfavourable,unfavourable,10
+price,India,majority_class,favourable,favourable,51
+price,India,majority_class,favourable,neutral,0
+price,India,majority_class,favourable,unfavourable,0
+price,India,majority_class,neutral,favourable,35
+price,India,majority_class,neutral,neutral,0
+price,India,majority_class,neutral,unfavourable,0
+price,India,majority_class,unfavourable,favourable,34
+price,India,majority_class,unfavourable,neutral,0
+price,India,majority_class,unfavourable,unfavourable,0
+price,India,random_forest,favourable,favourable,21
+price,India,random_forest,favourable,neutral,17
+price,India,random_forest,favourable,unfavourable,13
+price,India,random_forest,neutral,favourable,8
+price,India,random_forest,neutral,neutral,18
+price,India,random_forest,neutral,unfavourable,9
+price,India,random_forest,unfavourable,favourable,10
+price,India,random_forest,unfavourable,neutral,16
+price,India,random_forest,unfavourable,unfavourable,8
+price,India,technical_only,favourable,favourable,19
+price,India,technical_only,favourable,neutral,16
+price,India,technical_only,favourable,unfavourable,16
+price,India,technical_only,neutral,favourable,16
+price,India,technical_only,neutral,neutral,8
+price,India,technical_only,neutral,unfavourable,11
+price,India,technical_only,unfavourable,favourable,9
+price,India,technical_only,unfavourable,neutral,15
+price,India,technical_only,unfavourable,unfavourable,10
+price,Singapore,equal_weight_price,favourable,favourable,45
+price,Singapore,equal_weight_price,favourable,neutral,16
+price,Singapore,equal_weight_price,favourable,unfavourable,7
+price,Singapore,equal_weight_price,neutral,favourable,19
+price,Singapore,equal_weight_price,neutral,neutral,9
+price,Singapore,equal_weight_price,neutral,unfavourable,4
+price,Singapore,equal_weight_price,unfavourable,favourable,16
+price,Singapore,equal_weight_price,unfavourable,neutral,2
+price,Singapore,equal_weight_price,unfavourable,unfavourable,2
+price,Singapore,historical_only,favourable,favourable,46
+price,Singapore,historical_only,favourable,neutral,20
+price,Singapore,historical_only,favourable,unfavourable,2
+price,Singapore,historical_only,neutral,favourable,20
+price,Singapore,historical_only,neutral,neutral,10
+price,Singapore,historical_only,neutral,unfavourable,2
+price,Singapore,historical_only,unfavourable,favourable,13
+price,Singapore,historical_only,unfavourable,neutral,5
+price,Singapore,historical_only,unfavourable,unfavourable,2
+price,Singapore,logistic_regression,favourable,favourable,6
+price,Singapore,logistic_regression,favourable,neutral,56
+price,Singapore,logistic_regression,favourable,unfavourable,6
+price,Singapore,logistic_regression,neutral,favourable,1
+price,Singapore,logistic_regression,neutral,neutral,24
+price,Singapore,logistic_regression,neutral,unfavourable,7
+price,Singapore,logistic_regression,unfavourable,favourable,0
+price,Singapore,logistic_regression,unfavourable,neutral,17
+price,Singapore,logistic_regression,unfavourable,unfavourable,3
+price,Singapore,majority_class,favourable,favourable,68
+price,Singapore,majority_class,favourable,neutral,0
+price,Singapore,majority_class,favourable,unfavourable,0
+price,Singapore,majority_class,neutral,favourable,32
+price,Singapore,majority_class,neutral,neutral,0
+price,Singapore,majority_class,neutral,unfavourable,0
+price,Singapore,majority_class,unfavourable,favourable,20
+price,Singapore,majority_class,unfavourable,neutral,0
+price,Singapore,majority_class,unfavourable,unfavourable,0
+price,Singapore,random_forest,favourable,favourable,8
+price,Singapore,random_forest,favourable,neutral,43
+price,Singapore,random_forest,favourable,unfavourable,17
+price,Singapore,random_forest,neutral,favourable,3
+price,Singapore,random_forest,neutral,neutral,23
+price,Singapore,random_forest,neutral,unfavourable,6
+price,Singapore,random_forest,unfavourable,favourable,2
+price,Singapore,random_forest,unfavourable,neutral,16
+price,Singapore,random_forest,unfavourable,unfavourable,2
+price,Singapore,technical_only,favourable,favourable,40
+price,Singapore,technical_only,favourable,neutral,16
+price,Singapore,technical_only,favourable,unfavourable,12
+price,Singapore,technical_only,neutral,favourable,16
+price,Singapore,technical_only,neutral,neutral,8
+price,Singapore,technical_only,neutral,unfavourable,8
+price,Singapore,technical_only,unfavourable,favourable,15
+price,Singapore,technical_only,unfavourable,neutral,3
+price,Singapore,technical_only,unfavourable,unfavourable,2
+price,United States,equal_weight_price,favourable,favourable,22
+price,United States,equal_weight_price,favourable,neutral,15
+price,United States,equal_weight_price,favourable,unfavourable,10
+price,United States,equal_weight_price,neutral,favourable,17
+price,United States,equal_weight_price,neutral,neutral,11
+price,United States,equal_weight_price,neutral,unfavourable,9
+price,United States,equal_weight_price,unfavourable,favourable,18
+price,United States,equal_weight_price,unfavourable,neutral,12
+price,United States,equal_weight_price,unfavourable,unfavourable,6
+price,United States,historical_only,favourable,favourable,23
+price,United States,historical_only,favourable,neutral,18
+price,United States,historical_only,favourable,unfavourable,6
+price,United States,historical_only,neutral,favourable,19
+price,United States,historical_only,neutral,neutral,15
+price,United States,historical_only,neutral,unfavourable,3
+price,United States,historical_only,unfavourable,favourable,13
+price,United States,historical_only,unfavourable,neutral,20
+price,United States,historical_only,unfavourable,unfavourable,3
+price,United States,logistic_regression,favourable,favourable,12
+price,United States,logistic_regression,favourable,neutral,13
+price,United States,logistic_regression,favourable,unfavourable,22
+price,United States,logistic_regression,neutral,favourable,9
+price,United States,logistic_regression,neutral,neutral,22
+price,United States,logistic_regression,neutral,unfavourable,6
+price,United States,logistic_regression,unfavourable,favourable,15
+price,United States,logistic_regression,unfavourable,neutral,11
+price,United States,logistic_regression,unfavourable,unfavourable,10
+price,United States,majority_class,favourable,favourable,47
+price,United States,majority_class,favourable,neutral,0
+price,United States,majority_class,favourable,unfavourable,0
+price,United States,majority_class,neutral,favourable,37
+price,United States,majority_class,neutral,neutral,0
+price,United States,majority_class,neutral,unfavourable,0
+price,United States,majority_class,unfavourable,favourable,36
+price,United States,majority_class,unfavourable,neutral,0
+price,United States,majority_class,unfavourable,unfavourable,0
+price,United States,random_forest,favourable,favourable,17
+price,United States,random_forest,favourable,neutral,10
+price,United States,random_forest,favourable,unfavourable,20
+price,United States,random_forest,neutral,favourable,8
+price,United States,random_forest,neutral,neutral,15
+price,United States,random_forest,neutral,unfavourable,14
+price,United States,random_forest,unfavourable,favourable,15
+price,United States,random_forest,unfavourable,neutral,11
+price,United States,random_forest,unfavourable,unfavourable,10
+price,United States,technical_only,favourable,favourable,24
+price,United States,technical_only,favourable,neutral,11
+price,United States,technical_only,favourable,unfavourable,12
+price,United States,technical_only,neutral,favourable,18
+price,United States,technical_only,neutral,neutral,7
+price,United States,technical_only,neutral,unfavourable,12
+price,United States,technical_only,unfavourable,favourable,20
+price,United States,technical_only,unfavourable,neutral,9
+price,United States,technical_only,unfavourable,unfavourable,7
+us,overall,logistic_regression_price_only,favourable,favourable,6
+us,overall,logistic_regression_price_only,favourable,neutral,21
+us,overall,logistic_regression_price_only,favourable,unfavourable,20
+us,overall,logistic_regression_price_only,neutral,favourable,4
+us,overall,logistic_regression_price_only,neutral,neutral,25
+us,overall,logistic_regression_price_only,neutral,unfavourable,8
+us,overall,logistic_regression_price_only,unfavourable,favourable,5
+us,overall,logistic_regression_price_only,unfavourable,neutral,18
+us,overall,logistic_regression_price_only,unfavourable,unfavourable,13
+us,overall,logistic_regression_price_plus_fundamentals,favourable,favourable,6
+us,overall,logistic_regression_price_plus_fundamentals,favourable,neutral,24
+us,overall,logistic_regression_price_plus_fundamentals,favourable,unfavourable,17
+us,overall,logistic_regression_price_plus_fundamentals,neutral,favourable,7
+us,overall,logistic_regression_price_plus_fundamentals,neutral,neutral,22
+us,overall,logistic_regression_price_plus_fundamentals,neutral,unfavourable,8
+us,overall,logistic_regression_price_plus_fundamentals,unfavourable,favourable,9
+us,overall,logistic_regression_price_plus_fundamentals,unfavourable,neutral,17
+us,overall,logistic_regression_price_plus_fundamentals,unfavourable,unfavourable,10
+us,overall,logistic_regression_price_plus_fundamentals_plus_macro,favourable,favourable,9
+us,overall,logistic_regression_price_plus_fundamentals_plus_macro,favourable,neutral,29
+us,overall,logistic_regression_price_plus_fundamentals_plus_macro,favourable,unfavourable,9
+us,overall,logistic_regression_price_plus_fundamentals_plus_macro,neutral,favourable,12
+us,overall,logistic_regression_price_plus_fundamentals_plus_macro,neutral,neutral,24
+us,overall,logistic_regression_price_plus_fundamentals_plus_macro,neutral,unfavourable,1
+us,overall,logistic_regression_price_plus_fundamentals_plus_macro,unfavourable,favourable,8
+us,overall,logistic_regression_price_plus_fundamentals_plus_macro,unfavourable,neutral,22
+us,overall,logistic_regression_price_plus_fundamentals_plus_macro,unfavourable,unfavourable,6
+us,overall,majority_class,favourable,favourable,47
+us,overall,majority_class,favourable,neutral,0
+us,overall,majority_class,favourable,unfavourable,0
+us,overall,majority_class,neutral,favourable,37
+us,overall,majority_class,neutral,neutral,0
+us,overall,majority_class,neutral,unfavourable,0
+us,overall,majority_class,unfavourable,favourable,36
+us,overall,majority_class,unfavourable,neutral,0
+us,overall,majority_class,unfavourable,unfavourable,0
+us,overall,random_forest_price_only,favourable,favourable,7
+us,overall,random_forest_price_only,favourable,neutral,20
+us,overall,random_forest_price_only,favourable,unfavourable,20
+us,overall,random_forest_price_only,neutral,favourable,9
+us,overall,random_forest_price_only,neutral,neutral,22
+us,overall,random_forest_price_only,neutral,unfavourable,6
+us,overall,random_forest_price_only,unfavourable,favourable,6
+us,overall,random_forest_price_only,unfavourable,neutral,16
+us,overall,random_forest_price_only,unfavourable,unfavourable,14
+us,overall,random_forest_price_plus_fundamentals,favourable,favourable,9
+us,overall,random_forest_price_plus_fundamentals,favourable,neutral,22
+us,overall,random_forest_price_plus_fundamentals,favourable,unfavourable,16
+us,overall,random_forest_price_plus_fundamentals,neutral,favourable,5
+us,overall,random_forest_price_plus_fundamentals,neutral,neutral,24
+us,overall,random_forest_price_plus_fundamentals,neutral,unfavourable,8
+us,overall,random_forest_price_plus_fundamentals,unfavourable,favourable,6
+us,overall,random_forest_price_plus_fundamentals,unfavourable,neutral,18
+us,overall,random_forest_price_plus_fundamentals,unfavourable,unfavourable,12
+us,overall,random_forest_price_plus_fundamentals_plus_macro,favourable,favourable,11
+us,overall,random_forest_price_plus_fundamentals_plus_macro,favourable,neutral,29
+us,overall,random_forest_price_plus_fundamentals_plus_macro,favourable,unfavourable,7
+us,overall,random_forest_price_plus_fundamentals_plus_macro,neutral,favourable,4
+us,overall,random_forest_price_plus_fundamentals_plus_macro,neutral,neutral,29
+us,overall,random_forest_price_plus_fundamentals_plus_macro,neutral,unfavourable,4
+us,overall,random_forest_price_plus_fundamentals_plus_macro,unfavourable,favourable,10
+us,overall,random_forest_price_plus_fundamentals_plus_macro,unfavourable,neutral,21
+us,overall,random_forest_price_plus_fundamentals_plus_macro,unfavourable,unfavourable,5
+us,United States,logistic_regression_price_only,favourable,favourable,6
+us,United States,logistic_regression_price_only,favourable,neutral,21
+us,United States,logistic_regression_price_only,favourable,unfavourable,20
+us,United States,logistic_regression_price_only,neutral,favourable,4
+us,United States,logistic_regression_price_only,neutral,neutral,25
+us,United States,logistic_regression_price_only,neutral,unfavourable,8
+us,United States,logistic_regression_price_only,unfavourable,favourable,5
+us,United States,logistic_regression_price_only,unfavourable,neutral,18
+us,United States,logistic_regression_price_only,unfavourable,unfavourable,13
+us,United States,logistic_regression_price_plus_fundamentals,favourable,favourable,6
+us,United States,logistic_regression_price_plus_fundamentals,favourable,neutral,24
+us,United States,logistic_regression_price_plus_fundamentals,favourable,unfavourable,17
+us,United States,logistic_regression_price_plus_fundamentals,neutral,favourable,7
+us,United States,logistic_regression_price_plus_fundamentals,neutral,neutral,22
+us,United States,logistic_regression_price_plus_fundamentals,neutral,unfavourable,8
+us,United States,logistic_regression_price_plus_fundamentals,unfavourable,favourable,9
+us,United States,logistic_regression_price_plus_fundamentals,unfavourable,neutral,17
+us,United States,logistic_regression_price_plus_fundamentals,unfavourable,unfavourable,10
+us,United States,logistic_regression_price_plus_fundamentals_plus_macro,favourable,favourable,9
+us,United States,logistic_regression_price_plus_fundamentals_plus_macro,favourable,neutral,29
+us,United States,logistic_regression_price_plus_fundamentals_plus_macro,favourable,unfavourable,9
+us,United States,logistic_regression_price_plus_fundamentals_plus_macro,neutral,favourable,12
+us,United States,logistic_regression_price_plus_fundamentals_plus_macro,neutral,neutral,24
+us,United States,logistic_regression_price_plus_fundamentals_plus_macro,neutral,unfavourable,1
+us,United States,logistic_regression_price_plus_fundamentals_plus_macro,unfavourable,favourable,8
+us,United States,logistic_regression_price_plus_fundamentals_plus_macro,unfavourable,neutral,22
+us,United States,logistic_regression_price_plus_fundamentals_plus_macro,unfavourable,unfavourable,6
+us,United States,majority_class,favourable,favourable,47
+us,United States,majority_class,favourable,neutral,0
+us,United States,majority_class,favourable,unfavourable,0
+us,United States,majority_class,neutral,favourable,37
+us,United States,majority_class,neutral,neutral,0
+us,United States,majority_class,neutral,unfavourable,0
+us,United States,majority_class,unfavourable,favourable,36
+us,United States,majority_class,unfavourable,neutral,0
+us,United States,majority_class,unfavourable,unfavourable,0
+us,United States,random_forest_price_only,favourable,favourable,7
+us,United States,random_forest_price_only,favourable,neutral,20
+us,United States,random_forest_price_only,favourable,unfavourable,20
+us,United States,random_forest_price_only,neutral,favourable,9
+us,United States,random_forest_price_only,neutral,neutral,22
+us,United States,random_forest_price_only,neutral,unfavourable,6
+us,United States,random_forest_price_only,unfavourable,favourable,6
+us,United States,random_forest_price_only,unfavourable,neutral,16
+us,United States,random_forest_price_only,unfavourable,unfavourable,14
+us,United States,random_forest_price_plus_fundamentals,favourable,favourable,9
+us,United States,random_forest_price_plus_fundamentals,favourable,neutral,22
+us,United States,random_forest_price_plus_fundamentals,favourable,unfavourable,16
+us,United States,random_forest_price_plus_fundamentals,neutral,favourable,5
+us,United States,random_forest_price_plus_fundamentals,neutral,neutral,24
+us,United States,random_forest_price_plus_fundamentals,neutral,unfavourable,8
+us,United States,random_forest_price_plus_fundamentals,unfavourable,favourable,6
+us,United States,random_forest_price_plus_fundamentals,unfavourable,neutral,18
+us,United States,random_forest_price_plus_fundamentals,unfavourable,unfavourable,12
+us,United States,random_forest_price_plus_fundamentals_plus_macro,favourable,favourable,11
+us,United States,random_forest_price_plus_fundamentals_plus_macro,favourable,neutral,29
+us,United States,random_forest_price_plus_fundamentals_plus_macro,favourable,unfavourable,7
+us,United States,random_forest_price_plus_fundamentals_plus_macro,neutral,favourable,4
+us,United States,random_forest_price_plus_fundamentals_plus_macro,neutral,neutral,29
+us,United States,random_forest_price_plus_fundamentals_plus_macro,neutral,unfavourable,4
+us,United States,random_forest_price_plus_fundamentals_plus_macro,unfavourable,favourable,10
+us,United States,random_forest_price_plus_fundamentals_plus_macro,unfavourable,neutral,21
+us,United States,random_forest_price_plus_fundamentals_plus_macro,unfavourable,unfavourable,5

@@ -1,0 +1,16 @@
+{
+  "created_at_utc": "2026-10-03T14:09:48.463468+00:00",
+  "prediction_input_hashes": {
+    "price": "d4a649a275e9f5e7b7a34fdc8bdba82076fa8def8359fd45aa07269b60172448",
+    "us": "5456f12f63f42ad00e16ed1f75fe7d696c4dcd59519355cfe00a7237abe04925"
+  },
+  "analysis_script_sha256": "ec03fee168d86c372752596f0ac262b792984c64a0bee388ae57504edd77574f",
+  "evaluation_module_sha256": "595a6c11a012ac611801f2cc6ed2e7c4c1259c8640d42054dac5814f950eef63",
+  "protocol_sha256": "df58167c8c606d9c05e19d70bad60bdb707dbc947e22d6bd1897b07a50ddf851",
+  "replicates": 2000,
+  "block_length": 3,
+  "seed": 42,
+  "retrained_models": false,
+  "interval_method": "Paired moving-block bootstrap over company observation ordinals; percentile 95% intervals",
+  "limitations": "Few holdout rounds and differing market calendars; intervals are approximate and descriptive."
+}
