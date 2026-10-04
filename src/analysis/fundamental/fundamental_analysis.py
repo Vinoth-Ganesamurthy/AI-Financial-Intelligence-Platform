@@ -969,7 +969,7 @@ def _fetch_yahoo_direct_fundamental_data(
             if len(revenue_values) >= 2
             else None
         ),
-                "earnings_growth": (
+        "earnings_growth": (
             _growth_percentage(
                 net_income_values[-1],
                 net_income_values[-2],
