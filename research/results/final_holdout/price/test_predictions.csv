@@ -1,0 +1,2941 @@
+symbol,market,observation_date,target_class,model,prediction
+RELIANCE.NS,India,2025-01-20,unfavourable,technical_only,neutral
+RELIANCE.NS,India,2025-02-14,neutral,technical_only,unfavourable
+RELIANCE.NS,India,2025-03-18,favourable,technical_only,neutral
+RELIANCE.NS,India,2025-04-21,favourable,technical_only,favourable
+RELIANCE.NS,India,2025-05-20,neutral,technical_only,favourable
+RELIANCE.NS,India,2025-06-17,favourable,technical_only,favourable
+RELIANCE.NS,India,2025-07-15,unfavourable,technical_only,neutral
+RELIANCE.NS,India,2025-08-12,neutral,technical_only,unfavourable
+RELIANCE.NS,India,2025-09-11,neutral,technical_only,neutral
+RELIANCE.NS,India,2025-10-10,favourable,technical_only,neutral
+RELIANCE.NS,India,2025-11-11,favourable,technical_only,favourable
+RELIANCE.NS,India,2025-12-09,neutral,technical_only,neutral
+TCS.NS,India,2025-01-20,unfavourable,technical_only,neutral
+TCS.NS,India,2025-02-14,unfavourable,technical_only,unfavourable
+TCS.NS,India,2025-03-18,unfavourable,technical_only,neutral
+TCS.NS,India,2025-04-21,favourable,technical_only,unfavourable
+TCS.NS,India,2025-05-20,neutral,technical_only,favourable
+TCS.NS,India,2025-06-17,unfavourable,technical_only,favourable
+TCS.NS,India,2025-07-15,unfavourable,technical_only,unfavourable
+TCS.NS,India,2025-08-12,favourable,technical_only,neutral
+TCS.NS,India,2025-09-11,unfavourable,technical_only,neutral
+TCS.NS,India,2025-10-10,neutral,technical_only,unfavourable
+TCS.NS,India,2025-11-11,favourable,technical_only,favourable
+TCS.NS,India,2025-12-09,favourable,technical_only,favourable
+HDFCBANK.NS,India,2025-01-20,favourable,technical_only,neutral
+HDFCBANK.NS,India,2025-02-14,neutral,technical_only,favourable
+HDFCBANK.NS,India,2025-03-18,favourable,technical_only,favourable
+HDFCBANK.NS,India,2025-04-21,neutral,technical_only,favourable
+HDFCBANK.NS,India,2025-05-20,neutral,technical_only,neutral
+HDFCBANK.NS,India,2025-06-17,favourable,technical_only,neutral
+HDFCBANK.NS,India,2025-07-15,neutral,technical_only,favourable
+HDFCBANK.NS,India,2025-08-12,neutral,technical_only,unfavourable
+HDFCBANK.NS,India,2025-09-11,neutral,technical_only,neutral
+HDFCBANK.NS,India,2025-10-10,neutral,technical_only,favourable
+HDFCBANK.NS,India,2025-11-11,neutral,technical_only,neutral
+HDFCBANK.NS,India,2025-12-09,unfavourable,technical_only,neutral
+SUNPHARMA.NS,India,2025-01-20,unfavourable,technical_only,neutral
+SUNPHARMA.NS,India,2025-02-14,neutral,technical_only,unfavourable
+SUNPHARMA.NS,India,2025-03-18,favourable,technical_only,neutral
+SUNPHARMA.NS,India,2025-04-21,unfavourable,technical_only,favourable
+SUNPHARMA.NS,India,2025-05-20,unfavourable,technical_only,unfavourable
+SUNPHARMA.NS,India,2025-06-17,favourable,technical_only,unfavourable
+SUNPHARMA.NS,India,2025-07-15,unfavourable,technical_only,neutral
+SUNPHARMA.NS,India,2025-08-12,neutral,technical_only,unfavourable
+SUNPHARMA.NS,India,2025-09-11,favourable,technical_only,neutral
+SUNPHARMA.NS,India,2025-10-10,favourable,technical_only,favourable
+SUNPHARMA.NS,India,2025-11-11,favourable,technical_only,favourable
+SUNPHARMA.NS,India,2025-12-09,neutral,technical_only,neutral
+HINDUNILVR.NS,India,2025-01-20,neutral,technical_only,unfavourable
+HINDUNILVR.NS,India,2025-02-14,unfavourable,technical_only,unfavourable
+HINDUNILVR.NS,India,2025-03-18,favourable,technical_only,unfavourable
+HINDUNILVR.NS,India,2025-04-21,neutral,technical_only,neutral
+HINDUNILVR.NS,India,2025-05-20,neutral,technical_only,unfavourable
+HINDUNILVR.NS,India,2025-06-17,favourable,technical_only,unfavourable
+HINDUNILVR.NS,India,2025-07-15,neutral,technical_only,favourable
+HINDUNILVR.NS,India,2025-08-12,favourable,technical_only,neutral
+HINDUNILVR.NS,India,2025-09-11,unfavourable,technical_only,neutral
+HINDUNILVR.NS,India,2025-10-10,unfavourable,technical_only,unfavourable
+HINDUNILVR.NS,India,2025-11-11,unfavourable,technical_only,neutral
+HINDUNILVR.NS,India,2025-12-09,favourable,technical_only,unfavourable
+MARUTI.NS,India,2025-01-20,favourable,technical_only,neutral
+MARUTI.NS,India,2025-02-14,unfavourable,technical_only,favourable
+MARUTI.NS,India,2025-03-18,neutral,technical_only,unfavourable
+MARUTI.NS,India,2025-04-21,favourable,technical_only,neutral
+MARUTI.NS,India,2025-05-20,neutral,technical_only,favourable
+MARUTI.NS,India,2025-06-17,neutral,technical_only,favourable
+MARUTI.NS,India,2025-07-15,favourable,technical_only,unfavourable
+MARUTI.NS,India,2025-08-12,favourable,technical_only,favourable
+MARUTI.NS,India,2025-09-11,favourable,technical_only,neutral
+MARUTI.NS,India,2025-10-10,unfavourable,technical_only,favourable
+MARUTI.NS,India,2025-11-11,favourable,technical_only,neutral
+MARUTI.NS,India,2025-12-09,favourable,technical_only,favourable
+LT.NS,India,2025-01-20,unfavourable,technical_only,unfavourable
+LT.NS,India,2025-02-14,neutral,technical_only,unfavourable
+LT.NS,India,2025-03-18,favourable,technical_only,unfavourable
+LT.NS,India,2025-04-21,favourable,technical_only,unfavourable
+LT.NS,India,2025-05-20,favourable,technical_only,favourable
+LT.NS,India,2025-06-17,unfavourable,technical_only,favourable
+LT.NS,India,2025-07-15,favourable,technical_only,neutral
+LT.NS,India,2025-08-12,unfavourable,technical_only,favourable
+LT.NS,India,2025-09-11,favourable,technical_only,unfavourable
+LT.NS,India,2025-10-10,favourable,technical_only,favourable
+LT.NS,India,2025-11-11,neutral,technical_only,favourable
+LT.NS,India,2025-12-09,favourable,technical_only,neutral
+BHARTIARTL.NS,India,2025-01-20,favourable,technical_only,favourable
+BHARTIARTL.NS,India,2025-02-14,unfavourable,technical_only,favourable
+BHARTIARTL.NS,India,2025-03-18,favourable,technical_only,favourable
+BHARTIARTL.NS,India,2025-04-21,unfavourable,technical_only,favourable
+BHARTIARTL.NS,India,2025-05-20,favourable,technical_only,neutral
+BHARTIARTL.NS,India,2025-06-17,favourable,technical_only,favourable
+BHARTIARTL.NS,India,2025-07-15,unfavourable,technical_only,neutral
+BHARTIARTL.NS,India,2025-08-12,favourable,technical_only,neutral
+BHARTIARTL.NS,India,2025-09-11,neutral,technical_only,favourable
+BHARTIARTL.NS,India,2025-10-10,favourable,technical_only,favourable
+BHARTIARTL.NS,India,2025-11-11,favourable,technical_only,favourable
+BHARTIARTL.NS,India,2025-12-09,neutral,technical_only,neutral
+NTPC.NS,India,2025-01-20,unfavourable,technical_only,neutral
+NTPC.NS,India,2025-02-14,favourable,technical_only,unfavourable
+NTPC.NS,India,2025-03-18,favourable,technical_only,favourable
+NTPC.NS,India,2025-04-21,unfavourable,technical_only,neutral
+NTPC.NS,India,2025-05-20,unfavourable,technical_only,unfavourable
+NTPC.NS,India,2025-06-17,favourable,technical_only,unfavourable
+NTPC.NS,India,2025-07-15,neutral,technical_only,favourable
+NTPC.NS,India,2025-08-12,neutral,technical_only,favourable
+NTPC.NS,India,2025-09-11,favourable,technical_only,unfavourable
+NTPC.NS,India,2025-10-10,unfavourable,technical_only,favourable
+NTPC.NS,India,2025-11-11,unfavourable,technical_only,unfavourable
+NTPC.NS,India,2025-12-09,favourable,technical_only,unfavourable
+ULTRACEMCO.NS,India,2025-01-20,favourable,technical_only,unfavourable
+ULTRACEMCO.NS,India,2025-02-14,unfavourable,technical_only,neutral
+ULTRACEMCO.NS,India,2025-03-18,favourable,technical_only,unfavourable
+ULTRACEMCO.NS,India,2025-04-21,neutral,technical_only,favourable
+ULTRACEMCO.NS,India,2025-05-20,unfavourable,technical_only,neutral
+ULTRACEMCO.NS,India,2025-06-17,favourable,technical_only,favourable
+ULTRACEMCO.NS,India,2025-07-15,neutral,technical_only,favourable
+ULTRACEMCO.NS,India,2025-08-12,neutral,technical_only,favourable
+ULTRACEMCO.NS,India,2025-09-11,neutral,technical_only,unfavourable
+ULTRACEMCO.NS,India,2025-10-10,unfavourable,technical_only,unfavourable
+ULTRACEMCO.NS,India,2025-11-11,unfavourable,technical_only,unfavourable
+ULTRACEMCO.NS,India,2025-12-09,favourable,technical_only,unfavourable
+MSFT,United States,2025-01-27,unfavourable,technical_only,favourable
+MSFT,United States,2025-02-25,neutral,technical_only,unfavourable
+MSFT,United States,2025-03-25,unfavourable,technical_only,neutral
+MSFT,United States,2025-04-23,favourable,technical_only,unfavourable
+MSFT,United States,2025-05-21,favourable,technical_only,favourable
+MSFT,United States,2025-06-20,favourable,technical_only,neutral
+MSFT,United States,2025-07-21,neutral,technical_only,favourable
+MSFT,United States,2025-08-18,neutral,technical_only,neutral
+MSFT,United States,2025-09-16,neutral,technical_only,favourable
+MSFT,United States,2025-10-14,neutral,technical_only,neutral
+MSFT,United States,2025-11-11,unfavourable,technical_only,unfavourable
+MSFT,United States,2025-12-10,neutral,technical_only,neutral
+JPM,United States,2025-01-27,unfavourable,technical_only,favourable
+JPM,United States,2025-02-25,unfavourable,technical_only,neutral
+JPM,United States,2025-03-25,unfavourable,technical_only,favourable
+JPM,United States,2025-04-23,favourable,technical_only,favourable
+JPM,United States,2025-05-21,favourable,technical_only,favourable
+JPM,United States,2025-06-20,favourable,technical_only,favourable
+JPM,United States,2025-07-21,neutral,technical_only,favourable
+JPM,United States,2025-08-18,favourable,technical_only,neutral
+JPM,United States,2025-09-16,neutral,technical_only,favourable
+JPM,United States,2025-10-14,favourable,technical_only,neutral
+JPM,United States,2025-11-11,neutral,technical_only,favourable
+JPM,United States,2025-12-10,favourable,technical_only,favourable
+JNJ,United States,2025-01-27,favourable,technical_only,favourable
+JNJ,United States,2025-02-25,unfavourable,technical_only,favourable
+JNJ,United States,2025-03-25,unfavourable,technical_only,neutral
+JNJ,United States,2025-04-23,neutral,technical_only,neutral
+JNJ,United States,2025-05-21,neutral,technical_only,unfavourable
+JNJ,United States,2025-06-20,favourable,technical_only,unfavourable
+JNJ,United States,2025-07-21,favourable,technical_only,favourable
+JNJ,United States,2025-08-18,neutral,technical_only,favourable
+JNJ,United States,2025-09-16,favourable,technical_only,neutral
+JNJ,United States,2025-10-14,neutral,technical_only,favourable
+JNJ,United States,2025-11-11,favourable,technical_only,favourable
+JNJ,United States,2025-12-10,neutral,technical_only,favourable
+XOM,United States,2025-01-27,neutral,technical_only,neutral
+XOM,United States,2025-02-25,favourable,technical_only,favourable
+XOM,United States,2025-03-25,unfavourable,technical_only,favourable
+XOM,United States,2025-04-23,unfavourable,technical_only,unfavourable
+XOM,United States,2025-05-21,favourable,technical_only,unfavourable
+XOM,United States,2025-06-20,unfavourable,technical_only,favourable
+XOM,United States,2025-07-21,neutral,technical_only,unfavourable
+XOM,United States,2025-08-18,favourable,technical_only,unfavourable
+XOM,United States,2025-09-16,unfavourable,technical_only,favourable
+XOM,United States,2025-10-14,favourable,technical_only,neutral
+XOM,United States,2025-11-11,neutral,technical_only,favourable
+XOM,United States,2025-12-10,favourable,technical_only,favourable
+PG,United States,2025-01-27,neutral,technical_only,favourable
+PG,United States,2025-02-25,unfavourable,technical_only,favourable
+PG,United States,2025-03-25,favourable,technical_only,unfavourable
+PG,United States,2025-04-23,neutral,technical_only,unfavourable
+PG,United States,2025-05-21,unfavourable,technical_only,favourable
+PG,United States,2025-06-20,neutral,technical_only,unfavourable
+PG,United States,2025-07-21,neutral,technical_only,unfavourable
+PG,United States,2025-08-18,neutral,technical_only,neutral
+PG,United States,2025-09-16,unfavourable,technical_only,neutral
+PG,United States,2025-10-14,neutral,technical_only,unfavourable
+PG,United States,2025-11-11,unfavourable,technical_only,unfavourable
+PG,United States,2025-12-10,neutral,technical_only,unfavourable
+AMZN,United States,2025-01-27,unfavourable,technical_only,favourable
+AMZN,United States,2025-02-25,unfavourable,technical_only,neutral
+AMZN,United States,2025-03-25,unfavourable,technical_only,favourable
+AMZN,United States,2025-04-23,favourable,technical_only,unfavourable
+AMZN,United States,2025-05-21,favourable,technical_only,favourable
+AMZN,United States,2025-06-20,favourable,technical_only,favourable
+AMZN,United States,2025-07-21,neutral,technical_only,favourable
+AMZN,United States,2025-08-18,neutral,technical_only,favourable
+AMZN,United States,2025-09-16,unfavourable,technical_only,favourable
+AMZN,United States,2025-10-14,favourable,technical_only,unfavourable
+AMZN,United States,2025-11-11,unfavourable,technical_only,favourable
+AMZN,United States,2025-12-10,favourable,technical_only,favourable
+CAT,United States,2025-01-27,unfavourable,technical_only,favourable
+CAT,United States,2025-02-25,neutral,technical_only,unfavourable
+CAT,United States,2025-03-25,unfavourable,technical_only,neutral
+CAT,United States,2025-04-23,favourable,technical_only,unfavourable
+CAT,United States,2025-05-21,favourable,technical_only,neutral
+CAT,United States,2025-06-20,favourable,technical_only,favourable
+CAT,United States,2025-07-21,neutral,technical_only,favourable
+CAT,United States,2025-08-18,favourable,technical_only,neutral
+CAT,United States,2025-09-16,favourable,technical_only,favourable
+CAT,United States,2025-10-14,favourable,technical_only,favourable
+CAT,United States,2025-11-11,favourable,technical_only,favourable
+CAT,United States,2025-12-10,neutral,technical_only,favourable
+NEE,United States,2025-01-27,unfavourable,technical_only,favourable
+NEE,United States,2025-02-25,unfavourable,technical_only,favourable
+NEE,United States,2025-03-25,neutral,technical_only,unfavourable
+NEE,United States,2025-04-23,favourable,technical_only,unfavourable
+NEE,United States,2025-05-21,neutral,technical_only,favourable
+NEE,United States,2025-06-20,favourable,technical_only,neutral
+NEE,United States,2025-07-21,neutral,technical_only,favourable
+NEE,United States,2025-08-18,unfavourable,technical_only,favourable
+NEE,United States,2025-09-16,favourable,technical_only,unfavourable
+NEE,United States,2025-10-14,neutral,technical_only,favourable
+NEE,United States,2025-11-11,unfavourable,technical_only,favourable
+NEE,United States,2025-12-10,neutral,technical_only,unfavourable
+AMT,United States,2025-01-27,favourable,technical_only,favourable
+AMT,United States,2025-02-25,favourable,technical_only,favourable
+AMT,United States,2025-03-25,favourable,technical_only,neutral
+AMT,United States,2025-04-23,neutral,technical_only,neutral
+AMT,United States,2025-05-21,favourable,technical_only,unfavourable
+AMT,United States,2025-06-20,favourable,technical_only,favourable
+AMT,United States,2025-07-21,unfavourable,technical_only,favourable
+AMT,United States,2025-08-18,unfavourable,technical_only,unfavourable
+AMT,United States,2025-09-16,unfavourable,technical_only,unfavourable
+AMT,United States,2025-10-14,neutral,technical_only,unfavourable
+AMT,United States,2025-11-11,unfavourable,technical_only,unfavourable
+AMT,United States,2025-12-10,unfavourable,technical_only,neutral
+GOOGL,United States,2025-01-27,unfavourable,technical_only,neutral
+GOOGL,United States,2025-02-25,unfavourable,technical_only,unfavourable
+GOOGL,United States,2025-03-25,unfavourable,technical_only,neutral
+GOOGL,United States,2025-04-23,favourable,technical_only,neutral
+GOOGL,United States,2025-05-21,neutral,technical_only,favourable
+GOOGL,United States,2025-06-20,favourable,technical_only,unfavourable
+GOOGL,United States,2025-07-21,favourable,technical_only,favourable
+GOOGL,United States,2025-08-18,favourable,technical_only,favourable
+GOOGL,United States,2025-09-16,unfavourable,technical_only,favourable
+GOOGL,United States,2025-10-14,favourable,technical_only,neutral
+GOOGL,United States,2025-11-11,favourable,technical_only,favourable
+GOOGL,United States,2025-12-10,favourable,technical_only,favourable
+D05.SI,Singapore,2025-01-24,favourable,technical_only,neutral
+D05.SI,Singapore,2025-02-25,neutral,technical_only,favourable
+D05.SI,Singapore,2025-03-25,unfavourable,technical_only,favourable
+D05.SI,Singapore,2025-04-24,favourable,technical_only,favourable
+D05.SI,Singapore,2025-05-26,neutral,technical_only,favourable
+D05.SI,Singapore,2025-06-23,favourable,technical_only,neutral
+D05.SI,Singapore,2025-07-21,favourable,technical_only,favourable
+D05.SI,Singapore,2025-08-18,favourable,technical_only,favourable
+D05.SI,Singapore,2025-09-15,favourable,technical_only,favourable
+D05.SI,Singapore,2025-10-13,favourable,technical_only,favourable
+D05.SI,Singapore,2025-11-11,neutral,technical_only,favourable
+D05.SI,Singapore,2025-12-09,favourable,technical_only,favourable
+Z74.SI,Singapore,2025-01-24,favourable,technical_only,neutral
+Z74.SI,Singapore,2025-02-25,favourable,technical_only,favourable
+Z74.SI,Singapore,2025-03-25,favourable,technical_only,favourable
+Z74.SI,Singapore,2025-04-24,neutral,technical_only,favourable
+Z74.SI,Singapore,2025-05-26,neutral,technical_only,favourable
+Z74.SI,Singapore,2025-06-23,favourable,technical_only,neutral
+Z74.SI,Singapore,2025-07-21,neutral,technical_only,favourable
+Z74.SI,Singapore,2025-08-18,favourable,technical_only,favourable
+Z74.SI,Singapore,2025-09-15,neutral,technical_only,neutral
+Z74.SI,Singapore,2025-10-13,favourable,technical_only,neutral
+Z74.SI,Singapore,2025-11-11,neutral,technical_only,favourable
+Z74.SI,Singapore,2025-12-09,unfavourable,technical_only,neutral
+C6L.SI,Singapore,2025-01-24,favourable,technical_only,unfavourable
+C6L.SI,Singapore,2025-02-25,favourable,technical_only,favourable
+C6L.SI,Singapore,2025-03-25,unfavourable,technical_only,favourable
+C6L.SI,Singapore,2025-04-24,favourable,technical_only,favourable
+C6L.SI,Singapore,2025-05-26,unfavourable,technical_only,favourable
+C6L.SI,Singapore,2025-06-23,favourable,technical_only,neutral
+C6L.SI,Singapore,2025-07-21,unfavourable,technical_only,favourable
+C6L.SI,Singapore,2025-08-18,neutral,technical_only,unfavourable
+C6L.SI,Singapore,2025-09-15,neutral,technical_only,neutral
+C6L.SI,Singapore,2025-10-13,neutral,technical_only,favourable
+C6L.SI,Singapore,2025-11-11,unfavourable,technical_only,favourable
+C6L.SI,Singapore,2025-12-09,favourable,technical_only,unfavourable
+C38U.SI,Singapore,2025-01-24,favourable,technical_only,unfavourable
+C38U.SI,Singapore,2025-02-25,favourable,technical_only,favourable
+C38U.SI,Singapore,2025-03-25,neutral,technical_only,favourable
+C38U.SI,Singapore,2025-04-24,unfavourable,technical_only,favourable
+C38U.SI,Singapore,2025-05-26,favourable,technical_only,neutral
+C38U.SI,Singapore,2025-06-23,favourable,technical_only,favourable
+C38U.SI,Singapore,2025-07-21,neutral,technical_only,favourable
+C38U.SI,Singapore,2025-08-18,favourable,technical_only,favourable
+C38U.SI,Singapore,2025-09-15,neutral,technical_only,favourable
+C38U.SI,Singapore,2025-10-13,neutral,technical_only,favourable
+C38U.SI,Singapore,2025-11-11,neutral,technical_only,neutral
+C38U.SI,Singapore,2025-12-09,favourable,technical_only,unfavourable
+F34.SI,Singapore,2025-01-24,neutral,technical_only,unfavourable
+F34.SI,Singapore,2025-02-25,favourable,technical_only,neutral
+F34.SI,Singapore,2025-03-25,unfavourable,technical_only,favourable
+F34.SI,Singapore,2025-04-24,neutral,technical_only,unfavourable
+F34.SI,Singapore,2025-05-26,unfavourable,technical_only,unfavourable
+F34.SI,Singapore,2025-06-23,favourable,technical_only,unfavourable
+F34.SI,Singapore,2025-07-21,unfavourable,technical_only,neutral
+F34.SI,Singapore,2025-08-18,favourable,technical_only,unfavourable
+F34.SI,Singapore,2025-09-15,neutral,technical_only,unfavourable
+F34.SI,Singapore,2025-10-13,favourable,technical_only,neutral
+F34.SI,Singapore,2025-11-11,unfavourable,technical_only,favourable
+F34.SI,Singapore,2025-12-09,neutral,technical_only,neutral
+U96.SI,Singapore,2025-01-24,favourable,technical_only,favourable
+U96.SI,Singapore,2025-02-25,favourable,technical_only,favourable
+U96.SI,Singapore,2025-03-25,favourable,technical_only,favourable
+U96.SI,Singapore,2025-04-24,favourable,technical_only,favourable
+U96.SI,Singapore,2025-05-26,favourable,technical_only,favourable
+U96.SI,Singapore,2025-06-23,favourable,technical_only,favourable
+U96.SI,Singapore,2025-07-21,unfavourable,technical_only,favourable
+U96.SI,Singapore,2025-08-18,favourable,technical_only,unfavourable
+U96.SI,Singapore,2025-09-15,favourable,technical_only,neutral
+U96.SI,Singapore,2025-10-13,neutral,technical_only,favourable
+U96.SI,Singapore,2025-11-11,unfavourable,technical_only,favourable
+U96.SI,Singapore,2025-12-09,favourable,technical_only,unfavourable
+BN4.SI,Singapore,2025-01-24,neutral,technical_only,neutral
+BN4.SI,Singapore,2025-02-25,neutral,technical_only,unfavourable
+BN4.SI,Singapore,2025-03-25,unfavourable,technical_only,favourable
+BN4.SI,Singapore,2025-04-24,favourable,technical_only,favourable
+BN4.SI,Singapore,2025-05-26,favourable,technical_only,favourable
+BN4.SI,Singapore,2025-06-23,favourable,technical_only,favourable
+BN4.SI,Singapore,2025-07-21,favourable,technical_only,favourable
+BN4.SI,Singapore,2025-08-18,favourable,technical_only,favourable
+BN4.SI,Singapore,2025-09-15,favourable,technical_only,neutral
+BN4.SI,Singapore,2025-10-13,favourable,technical_only,favourable
+BN4.SI,Singapore,2025-11-11,neutral,technical_only,neutral
+BN4.SI,Singapore,2025-12-09,favourable,technical_only,neutral
+S68.SI,Singapore,2025-01-24,favourable,technical_only,unfavourable
+S68.SI,Singapore,2025-02-25,neutral,technical_only,favourable
+S68.SI,Singapore,2025-03-25,favourable,technical_only,favourable
+S68.SI,Singapore,2025-04-24,unfavourable,technical_only,favourable
+S68.SI,Singapore,2025-05-26,neutral,technical_only,neutral
+S68.SI,Singapore,2025-06-23,favourable,technical_only,unfavourable
+S68.SI,Singapore,2025-07-21,favourable,technical_only,favourable
+S68.SI,Singapore,2025-08-18,favourable,technical_only,favourable
+S68.SI,Singapore,2025-09-15,favourable,technical_only,favourable
+S68.SI,Singapore,2025-10-13,neutral,technical_only,favourable
+S68.SI,Singapore,2025-11-11,unfavourable,technical_only,favourable
+S68.SI,Singapore,2025-12-09,favourable,technical_only,unfavourable
+S63.SI,Singapore,2025-01-24,favourable,technical_only,favourable
+S63.SI,Singapore,2025-02-25,favourable,technical_only,favourable
+S63.SI,Singapore,2025-03-25,favourable,technical_only,favourable
+S63.SI,Singapore,2025-04-24,favourable,technical_only,favourable
+S63.SI,Singapore,2025-05-26,favourable,technical_only,favourable
+S63.SI,Singapore,2025-06-23,favourable,technical_only,favourable
+S63.SI,Singapore,2025-07-21,unfavourable,technical_only,favourable
+S63.SI,Singapore,2025-08-18,neutral,technical_only,neutral
+S63.SI,Singapore,2025-09-15,favourable,technical_only,neutral
+S63.SI,Singapore,2025-10-13,unfavourable,technical_only,neutral
+S63.SI,Singapore,2025-11-11,neutral,technical_only,unfavourable
+S63.SI,Singapore,2025-12-09,favourable,technical_only,neutral
+V03.SI,Singapore,2025-01-24,unfavourable,technical_only,favourable
+V03.SI,Singapore,2025-02-25,neutral,technical_only,unfavourable
+V03.SI,Singapore,2025-03-25,unfavourable,technical_only,unfavourable
+V03.SI,Singapore,2025-04-24,favourable,technical_only,unfavourable
+V03.SI,Singapore,2025-05-26,neutral,technical_only,unfavourable
+V03.SI,Singapore,2025-06-23,favourable,technical_only,neutral
+V03.SI,Singapore,2025-07-21,favourable,technical_only,favourable
+V03.SI,Singapore,2025-08-18,favourable,technical_only,favourable
+V03.SI,Singapore,2025-09-15,favourable,technical_only,neutral
+V03.SI,Singapore,2025-10-13,favourable,technical_only,favourable
+V03.SI,Singapore,2025-11-11,neutral,technical_only,favourable
+V03.SI,Singapore,2025-12-09,favourable,technical_only,favourable
+BHP.AX,Australia,2025-01-15,favourable,technical_only,neutral
+BHP.AX,Australia,2025-02-13,unfavourable,technical_only,neutral
+BHP.AX,Australia,2025-03-13,unfavourable,technical_only,unfavourable
+BHP.AX,Australia,2025-04-10,favourable,technical_only,unfavourable
+BHP.AX,Australia,2025-05-13,neutral,technical_only,neutral
+BHP.AX,Australia,2025-06-11,unfavourable,technical_only,favourable
+BHP.AX,Australia,2025-07-09,favourable,technical_only,neutral
+BHP.AX,Australia,2025-08-06,favourable,technical_only,neutral
+BHP.AX,Australia,2025-09-03,neutral,technical_only,favourable
+BHP.AX,Australia,2025-10-01,favourable,technical_only,favourable
+BHP.AX,Australia,2025-10-29,unfavourable,technical_only,favourable
+BHP.AX,Australia,2025-11-26,favourable,technical_only,unfavourable
+BHP.AX,Australia,2025-12-24,favourable,technical_only,favourable
+CBA.AX,Australia,2025-01-15,favourable,technical_only,unfavourable
+CBA.AX,Australia,2025-02-13,unfavourable,technical_only,favourable
+CBA.AX,Australia,2025-03-13,favourable,technical_only,unfavourable
+CBA.AX,Australia,2025-04-10,favourable,technical_only,favourable
+CBA.AX,Australia,2025-05-13,favourable,technical_only,favourable
+CBA.AX,Australia,2025-06-11,neutral,technical_only,favourable
+CBA.AX,Australia,2025-07-09,neutral,technical_only,neutral
+CBA.AX,Australia,2025-08-06,unfavourable,technical_only,favourable
+CBA.AX,Australia,2025-09-03,neutral,technical_only,unfavourable
+CBA.AX,Australia,2025-10-01,neutral,technical_only,favourable
+CBA.AX,Australia,2025-10-29,unfavourable,technical_only,favourable
+CBA.AX,Australia,2025-11-26,favourable,technical_only,unfavourable
+CBA.AX,Australia,2025-12-24,unfavourable,technical_only,unfavourable
+CSL.AX,Australia,2025-01-15,unfavourable,technical_only,unfavourable
+CSL.AX,Australia,2025-02-13,neutral,technical_only,unfavourable
+CSL.AX,Australia,2025-03-13,unfavourable,technical_only,unfavourable
+CSL.AX,Australia,2025-04-10,neutral,technical_only,unfavourable
+CSL.AX,Australia,2025-05-13,neutral,technical_only,unfavourable
+CSL.AX,Australia,2025-06-11,neutral,technical_only,unfavourable
+CSL.AX,Australia,2025-07-09,favourable,technical_only,favourable
+CSL.AX,Australia,2025-08-06,unfavourable,technical_only,favourable
+CSL.AX,Australia,2025-09-03,unfavourable,technical_only,unfavourable
+CSL.AX,Australia,2025-10-01,unfavourable,technical_only,unfavourable
+CSL.AX,Australia,2025-10-29,favourable,technical_only,unfavourable
+CSL.AX,Australia,2025-11-26,unfavourable,technical_only,neutral
+CSL.AX,Australia,2025-12-24,favourable,technical_only,unfavourable
+WES.AX,Australia,2025-01-15,favourable,technical_only,unfavourable
+WES.AX,Australia,2025-02-13,unfavourable,technical_only,favourable
+WES.AX,Australia,2025-03-13,favourable,technical_only,unfavourable
+WES.AX,Australia,2025-04-10,favourable,technical_only,neutral
+WES.AX,Australia,2025-05-13,favourable,technical_only,favourable
+WES.AX,Australia,2025-06-11,unfavourable,technical_only,favourable
+WES.AX,Australia,2025-07-09,favourable,technical_only,neutral
+WES.AX,Australia,2025-08-06,neutral,technical_only,favourable
+WES.AX,Australia,2025-09-03,favourable,technical_only,neutral
+WES.AX,Australia,2025-10-01,favourable,technical_only,neutral
+WES.AX,Australia,2025-10-29,unfavourable,technical_only,favourable
+WES.AX,Australia,2025-11-26,neutral,technical_only,unfavourable
+WES.AX,Australia,2025-12-24,favourable,technical_only,neutral
+WOW.AX,Australia,2025-01-15,neutral,technical_only,unfavourable
+WOW.AX,Australia,2025-02-13,unfavourable,technical_only,neutral
+WOW.AX,Australia,2025-03-13,favourable,technical_only,unfavourable
+WOW.AX,Australia,2025-04-10,neutral,technical_only,favourable
+WOW.AX,Australia,2025-05-13,neutral,technical_only,neutral
+WOW.AX,Australia,2025-06-11,unfavourable,technical_only,favourable
+WOW.AX,Australia,2025-07-09,favourable,technical_only,neutral
+WOW.AX,Australia,2025-08-06,unfavourable,technical_only,favourable
+WOW.AX,Australia,2025-09-03,unfavourable,technical_only,unfavourable
+WOW.AX,Australia,2025-10-01,favourable,technical_only,neutral
+WOW.AX,Australia,2025-10-29,favourable,technical_only,neutral
+WOW.AX,Australia,2025-11-26,favourable,technical_only,neutral
+WOW.AX,Australia,2025-12-24,favourable,technical_only,unfavourable
+TLS.AX,Australia,2025-01-15,unfavourable,technical_only,neutral
+TLS.AX,Australia,2025-02-13,favourable,technical_only,neutral
+TLS.AX,Australia,2025-03-13,favourable,technical_only,favourable
+TLS.AX,Australia,2025-04-10,neutral,technical_only,favourable
+TLS.AX,Australia,2025-05-13,favourable,technical_only,neutral
+TLS.AX,Australia,2025-06-11,neutral,technical_only,neutral
+TLS.AX,Australia,2025-07-09,neutral,technical_only,favourable
+TLS.AX,Australia,2025-08-06,neutral,technical_only,favourable
+TLS.AX,Australia,2025-09-03,neutral,technical_only,unfavourable
+TLS.AX,Australia,2025-10-01,neutral,technical_only,unfavourable
+TLS.AX,Australia,2025-10-29,neutral,technical_only,favourable
+TLS.AX,Australia,2025-11-26,neutral,technical_only,neutral
+TLS.AX,Australia,2025-12-24,neutral,technical_only,unfavourable
+GMG.AX,Australia,2025-01-15,neutral,technical_only,neutral
+GMG.AX,Australia,2025-02-13,unfavourable,technical_only,unfavourable
+GMG.AX,Australia,2025-03-13,unfavourable,technical_only,unfavourable
+GMG.AX,Australia,2025-04-10,favourable,technical_only,unfavourable
+GMG.AX,Australia,2025-05-13,favourable,technical_only,neutral
+GMG.AX,Australia,2025-06-11,neutral,technical_only,favourable
+GMG.AX,Australia,2025-07-09,favourable,technical_only,unfavourable
+GMG.AX,Australia,2025-08-06,unfavourable,technical_only,favourable
+GMG.AX,Australia,2025-09-03,favourable,technical_only,unfavourable
+GMG.AX,Australia,2025-10-01,neutral,technical_only,unfavourable
+GMG.AX,Australia,2025-10-29,unfavourable,technical_only,neutral
+GMG.AX,Australia,2025-11-26,favourable,technical_only,unfavourable
+GMG.AX,Australia,2025-12-24,neutral,technical_only,neutral
+TCL.AX,Australia,2025-01-15,unfavourable,technical_only,favourable
+TCL.AX,Australia,2025-02-13,unfavourable,technical_only,unfavourable
+TCL.AX,Australia,2025-03-13,favourable,technical_only,unfavourable
+TCL.AX,Australia,2025-04-10,neutral,technical_only,favourable
+TCL.AX,Australia,2025-05-13,favourable,technical_only,neutral
+TCL.AX,Australia,2025-06-11,unfavourable,technical_only,favourable
+TCL.AX,Australia,2025-07-09,favourable,technical_only,neutral
+TCL.AX,Australia,2025-08-06,favourable,technical_only,favourable
+TCL.AX,Australia,2025-09-03,unfavourable,technical_only,neutral
+TCL.AX,Australia,2025-10-01,favourable,technical_only,neutral
+TCL.AX,Australia,2025-10-29,favourable,technical_only,favourable
+TCL.AX,Australia,2025-11-26,unfavourable,technical_only,favourable
+TCL.AX,Australia,2025-12-24,unfavourable,technical_only,neutral
+STO.AX,Australia,2025-01-15,neutral,technical_only,neutral
+STO.AX,Australia,2025-02-13,unfavourable,technical_only,unfavourable
+STO.AX,Australia,2025-03-13,unfavourable,technical_only,unfavourable
+STO.AX,Australia,2025-04-10,favourable,technical_only,unfavourable
+STO.AX,Australia,2025-05-13,favourable,technical_only,neutral
+STO.AX,Australia,2025-06-11,favourable,technical_only,favourable
+STO.AX,Australia,2025-07-09,favourable,technical_only,favourable
+STO.AX,Australia,2025-08-06,neutral,technical_only,favourable
+STO.AX,Australia,2025-09-03,unfavourable,technical_only,favourable
+STO.AX,Australia,2025-10-01,unfavourable,technical_only,unfavourable
+STO.AX,Australia,2025-10-29,favourable,technical_only,unfavourable
+STO.AX,Australia,2025-11-26,unfavourable,technical_only,favourable
+STO.AX,Australia,2025-12-24,favourable,technical_only,unfavourable
+ORG.AX,Australia,2025-01-15,unfavourable,technical_only,favourable
+ORG.AX,Australia,2025-02-13,favourable,technical_only,unfavourable
+ORG.AX,Australia,2025-03-13,neutral,technical_only,unfavourable
+ORG.AX,Australia,2025-04-10,favourable,technical_only,unfavourable
+ORG.AX,Australia,2025-05-13,unfavourable,technical_only,favourable
+ORG.AX,Australia,2025-06-11,favourable,technical_only,neutral
+ORG.AX,Australia,2025-07-09,favourable,technical_only,favourable
+ORG.AX,Australia,2025-08-06,favourable,technical_only,favourable
+ORG.AX,Australia,2025-09-03,neutral,technical_only,favourable
+ORG.AX,Australia,2025-10-01,favourable,technical_only,neutral
+ORG.AX,Australia,2025-10-29,unfavourable,technical_only,favourable
+ORG.AX,Australia,2025-11-26,unfavourable,technical_only,unfavourable
+ORG.AX,Australia,2025-12-24,favourable,technical_only,unfavourable
+RELIANCE.NS,India,2025-01-20,unfavourable,historical_only,neutral
+RELIANCE.NS,India,2025-02-14,neutral,historical_only,unfavourable
+RELIANCE.NS,India,2025-03-18,favourable,historical_only,neutral
+RELIANCE.NS,India,2025-04-21,favourable,historical_only,neutral
+RELIANCE.NS,India,2025-05-20,neutral,historical_only,favourable
+RELIANCE.NS,India,2025-06-17,favourable,historical_only,favourable
+RELIANCE.NS,India,2025-07-15,unfavourable,historical_only,favourable
+RELIANCE.NS,India,2025-08-12,neutral,historical_only,neutral
+RELIANCE.NS,India,2025-09-11,neutral,historical_only,neutral
+RELIANCE.NS,India,2025-10-10,favourable,historical_only,neutral
+RELIANCE.NS,India,2025-11-11,favourable,historical_only,favourable
+RELIANCE.NS,India,2025-12-09,neutral,historical_only,favourable
+TCS.NS,India,2025-01-20,unfavourable,historical_only,neutral
+TCS.NS,India,2025-02-14,unfavourable,historical_only,neutral
+TCS.NS,India,2025-03-18,unfavourable,historical_only,unfavourable
+TCS.NS,India,2025-04-21,favourable,historical_only,unfavourable
+TCS.NS,India,2025-05-20,neutral,historical_only,neutral
+TCS.NS,India,2025-06-17,unfavourable,historical_only,neutral
+TCS.NS,India,2025-07-15,unfavourable,historical_only,unfavourable
+TCS.NS,India,2025-08-12,favourable,historical_only,unfavourable
+TCS.NS,India,2025-09-11,unfavourable,historical_only,unfavourable
+TCS.NS,India,2025-10-10,neutral,historical_only,unfavourable
+TCS.NS,India,2025-11-11,favourable,historical_only,unfavourable
+TCS.NS,India,2025-12-09,favourable,historical_only,neutral
+HDFCBANK.NS,India,2025-01-20,favourable,historical_only,neutral
+HDFCBANK.NS,India,2025-02-14,neutral,historical_only,neutral
+HDFCBANK.NS,India,2025-03-18,favourable,historical_only,neutral
+HDFCBANK.NS,India,2025-04-21,neutral,historical_only,favourable
+HDFCBANK.NS,India,2025-05-20,neutral,historical_only,favourable
+HDFCBANK.NS,India,2025-06-17,favourable,historical_only,favourable
+HDFCBANK.NS,India,2025-07-15,neutral,historical_only,favourable
+HDFCBANK.NS,India,2025-08-12,neutral,historical_only,favourable
+HDFCBANK.NS,India,2025-09-11,neutral,historical_only,neutral
+HDFCBANK.NS,India,2025-10-10,neutral,historical_only,neutral
+HDFCBANK.NS,India,2025-11-11,neutral,historical_only,neutral
+HDFCBANK.NS,India,2025-12-09,unfavourable,historical_only,neutral
+SUNPHARMA.NS,India,2025-01-20,unfavourable,historical_only,neutral
+SUNPHARMA.NS,India,2025-02-14,neutral,historical_only,neutral
+SUNPHARMA.NS,India,2025-03-18,favourable,historical_only,neutral
+SUNPHARMA.NS,India,2025-04-21,unfavourable,historical_only,neutral
+SUNPHARMA.NS,India,2025-05-20,unfavourable,historical_only,neutral
+SUNPHARMA.NS,India,2025-06-17,favourable,historical_only,neutral
+SUNPHARMA.NS,India,2025-07-15,unfavourable,historical_only,neutral
+SUNPHARMA.NS,India,2025-08-12,neutral,historical_only,neutral
+SUNPHARMA.NS,India,2025-09-11,favourable,historical_only,neutral
+SUNPHARMA.NS,India,2025-10-10,favourable,historical_only,neutral
+SUNPHARMA.NS,India,2025-11-11,favourable,historical_only,neutral
+SUNPHARMA.NS,India,2025-12-09,neutral,historical_only,favourable
+HINDUNILVR.NS,India,2025-01-20,neutral,historical_only,unfavourable
+HINDUNILVR.NS,India,2025-02-14,unfavourable,historical_only,neutral
+HINDUNILVR.NS,India,2025-03-18,favourable,historical_only,unfavourable
+HINDUNILVR.NS,India,2025-04-21,neutral,historical_only,neutral
+HINDUNILVR.NS,India,2025-05-20,neutral,historical_only,neutral
+HINDUNILVR.NS,India,2025-06-17,favourable,historical_only,neutral
+HINDUNILVR.NS,India,2025-07-15,neutral,historical_only,favourable
+HINDUNILVR.NS,India,2025-08-12,favourable,historical_only,neutral
+HINDUNILVR.NS,India,2025-09-11,unfavourable,historical_only,favourable
+HINDUNILVR.NS,India,2025-10-10,unfavourable,historical_only,neutral
+HINDUNILVR.NS,India,2025-11-11,unfavourable,historical_only,neutral
+HINDUNILVR.NS,India,2025-12-09,favourable,historical_only,neutral
+MARUTI.NS,India,2025-01-20,favourable,historical_only,neutral
+MARUTI.NS,India,2025-02-14,unfavourable,historical_only,favourable
+MARUTI.NS,India,2025-03-18,neutral,historical_only,neutral
+MARUTI.NS,India,2025-04-21,favourable,historical_only,neutral
+MARUTI.NS,India,2025-05-20,neutral,historical_only,neutral
+MARUTI.NS,India,2025-06-17,neutral,historical_only,neutral
+MARUTI.NS,India,2025-07-15,favourable,historical_only,neutral
+MARUTI.NS,India,2025-08-12,favourable,historical_only,neutral
+MARUTI.NS,India,2025-09-11,favourable,historical_only,favourable
+MARUTI.NS,India,2025-10-10,unfavourable,historical_only,favourable
+MARUTI.NS,India,2025-11-11,favourable,historical_only,favourable
+MARUTI.NS,India,2025-12-09,favourable,historical_only,favourable
+LT.NS,India,2025-01-20,unfavourable,historical_only,neutral
+LT.NS,India,2025-02-14,neutral,historical_only,unfavourable
+LT.NS,India,2025-03-18,favourable,historical_only,unfavourable
+LT.NS,India,2025-04-21,favourable,historical_only,neutral
+LT.NS,India,2025-05-20,favourable,historical_only,favourable
+LT.NS,India,2025-06-17,unfavourable,historical_only,neutral
+LT.NS,India,2025-07-15,favourable,historical_only,neutral
+LT.NS,India,2025-08-12,unfavourable,historical_only,neutral
+LT.NS,India,2025-09-11,favourable,historical_only,neutral
+LT.NS,India,2025-10-10,favourable,historical_only,favourable
+LT.NS,India,2025-11-11,neutral,historical_only,favourable
+LT.NS,India,2025-12-09,favourable,historical_only,favourable
+BHARTIARTL.NS,India,2025-01-20,favourable,historical_only,favourable
+BHARTIARTL.NS,India,2025-02-14,unfavourable,historical_only,favourable
+BHARTIARTL.NS,India,2025-03-18,favourable,historical_only,neutral
+BHARTIARTL.NS,India,2025-04-21,unfavourable,historical_only,favourable
+BHARTIARTL.NS,India,2025-05-20,favourable,historical_only,favourable
+BHARTIARTL.NS,India,2025-06-17,favourable,historical_only,favourable
+BHARTIARTL.NS,India,2025-07-15,unfavourable,historical_only,favourable
+BHARTIARTL.NS,India,2025-08-12,favourable,historical_only,favourable
+BHARTIARTL.NS,India,2025-09-11,neutral,historical_only,favourable
+BHARTIARTL.NS,India,2025-10-10,favourable,historical_only,neutral
+BHARTIARTL.NS,India,2025-11-11,favourable,historical_only,favourable
+BHARTIARTL.NS,India,2025-12-09,neutral,historical_only,favourable
+NTPC.NS,India,2025-01-20,unfavourable,historical_only,unfavourable
+NTPC.NS,India,2025-02-14,favourable,historical_only,unfavourable
+NTPC.NS,India,2025-03-18,favourable,historical_only,neutral
+NTPC.NS,India,2025-04-21,unfavourable,historical_only,neutral
+NTPC.NS,India,2025-05-20,unfavourable,historical_only,neutral
+NTPC.NS,India,2025-06-17,favourable,historical_only,neutral
+NTPC.NS,India,2025-07-15,neutral,historical_only,neutral
+NTPC.NS,India,2025-08-12,neutral,historical_only,neutral
+NTPC.NS,India,2025-09-11,favourable,historical_only,neutral
+NTPC.NS,India,2025-10-10,unfavourable,historical_only,neutral
+NTPC.NS,India,2025-11-11,unfavourable,historical_only,unfavourable
+NTPC.NS,India,2025-12-09,favourable,historical_only,unfavourable
+ULTRACEMCO.NS,India,2025-01-20,favourable,historical_only,neutral
+ULTRACEMCO.NS,India,2025-02-14,unfavourable,historical_only,neutral
+ULTRACEMCO.NS,India,2025-03-18,favourable,historical_only,unfavourable
+ULTRACEMCO.NS,India,2025-04-21,neutral,historical_only,favourable
+ULTRACEMCO.NS,India,2025-05-20,unfavourable,historical_only,neutral
+ULTRACEMCO.NS,India,2025-06-17,favourable,historical_only,neutral
+ULTRACEMCO.NS,India,2025-07-15,neutral,historical_only,favourable
+ULTRACEMCO.NS,India,2025-08-12,neutral,historical_only,neutral
+ULTRACEMCO.NS,India,2025-09-11,neutral,historical_only,favourable
+ULTRACEMCO.NS,India,2025-10-10,unfavourable,historical_only,neutral
+ULTRACEMCO.NS,India,2025-11-11,unfavourable,historical_only,neutral
+ULTRACEMCO.NS,India,2025-12-09,favourable,historical_only,neutral
+MSFT,United States,2025-01-27,unfavourable,historical_only,neutral
+MSFT,United States,2025-02-25,neutral,historical_only,neutral
+MSFT,United States,2025-03-25,unfavourable,historical_only,unfavourable
+MSFT,United States,2025-04-23,favourable,historical_only,unfavourable
+MSFT,United States,2025-05-21,favourable,historical_only,favourable
+MSFT,United States,2025-06-20,favourable,historical_only,favourable
+MSFT,United States,2025-07-21,neutral,historical_only,favourable
+MSFT,United States,2025-08-18,neutral,historical_only,favourable
+MSFT,United States,2025-09-16,neutral,historical_only,favourable
+MSFT,United States,2025-10-14,neutral,historical_only,favourable
+MSFT,United States,2025-11-11,unfavourable,historical_only,neutral
+MSFT,United States,2025-12-10,neutral,historical_only,neutral
+JPM,United States,2025-01-27,unfavourable,historical_only,favourable
+JPM,United States,2025-02-25,unfavourable,historical_only,favourable
+JPM,United States,2025-03-25,unfavourable,historical_only,favourable
+JPM,United States,2025-04-23,favourable,historical_only,neutral
+JPM,United States,2025-05-21,favourable,historical_only,favourable
+JPM,United States,2025-06-20,favourable,historical_only,favourable
+JPM,United States,2025-07-21,neutral,historical_only,favourable
+JPM,United States,2025-08-18,favourable,historical_only,favourable
+JPM,United States,2025-09-16,neutral,historical_only,favourable
+JPM,United States,2025-10-14,favourable,historical_only,favourable
+JPM,United States,2025-11-11,neutral,historical_only,favourable
+JPM,United States,2025-12-10,favourable,historical_only,favourable
+JNJ,United States,2025-01-27,favourable,historical_only,neutral
+JNJ,United States,2025-02-25,unfavourable,historical_only,favourable
+JNJ,United States,2025-03-25,unfavourable,historical_only,neutral
+JNJ,United States,2025-04-23,neutral,historical_only,neutral
+JNJ,United States,2025-05-21,neutral,historical_only,neutral
+JNJ,United States,2025-06-20,favourable,historical_only,neutral
+JNJ,United States,2025-07-21,favourable,historical_only,favourable
+JNJ,United States,2025-08-18,neutral,historical_only,favourable
+JNJ,United States,2025-09-16,favourable,historical_only,favourable
+JNJ,United States,2025-10-14,neutral,historical_only,favourable
+JNJ,United States,2025-11-11,favourable,historical_only,favourable
+JNJ,United States,2025-12-10,neutral,historical_only,favourable
+XOM,United States,2025-01-27,neutral,historical_only,neutral
+XOM,United States,2025-02-25,favourable,historical_only,neutral
+XOM,United States,2025-03-25,unfavourable,historical_only,favourable
+XOM,United States,2025-04-23,unfavourable,historical_only,neutral
+XOM,United States,2025-05-21,favourable,historical_only,unfavourable
+XOM,United States,2025-06-20,unfavourable,historical_only,neutral
+XOM,United States,2025-07-21,neutral,historical_only,neutral
+XOM,United States,2025-08-18,favourable,historical_only,neutral
+XOM,United States,2025-09-16,unfavourable,historical_only,neutral
+XOM,United States,2025-10-14,favourable,historical_only,neutral
+XOM,United States,2025-11-11,neutral,historical_only,favourable
+XOM,United States,2025-12-10,favourable,historical_only,favourable
+PG,United States,2025-01-27,neutral,historical_only,neutral
+PG,United States,2025-02-25,unfavourable,historical_only,neutral
+PG,United States,2025-03-25,favourable,historical_only,neutral
+PG,United States,2025-04-23,neutral,historical_only,neutral
+PG,United States,2025-05-21,unfavourable,historical_only,neutral
+PG,United States,2025-06-20,neutral,historical_only,neutral
+PG,United States,2025-07-21,neutral,historical_only,neutral
+PG,United States,2025-08-18,neutral,historical_only,neutral
+PG,United States,2025-09-16,unfavourable,historical_only,neutral
+PG,United States,2025-10-14,neutral,historical_only,neutral
+PG,United States,2025-11-11,unfavourable,historical_only,neutral
+PG,United States,2025-12-10,neutral,historical_only,unfavourable
+AMZN,United States,2025-01-27,unfavourable,historical_only,favourable
+AMZN,United States,2025-02-25,unfavourable,historical_only,neutral
+AMZN,United States,2025-03-25,unfavourable,historical_only,neutral
+AMZN,United States,2025-04-23,favourable,historical_only,unfavourable
+AMZN,United States,2025-05-21,favourable,historical_only,neutral
+AMZN,United States,2025-06-20,favourable,historical_only,neutral
+AMZN,United States,2025-07-21,neutral,historical_only,favourable
+AMZN,United States,2025-08-18,neutral,historical_only,favourable
+AMZN,United States,2025-09-16,unfavourable,historical_only,favourable
+AMZN,United States,2025-10-14,favourable,historical_only,neutral
+AMZN,United States,2025-11-11,unfavourable,historical_only,favourable
+AMZN,United States,2025-12-10,favourable,historical_only,neutral
+CAT,United States,2025-01-27,unfavourable,historical_only,favourable
+CAT,United States,2025-02-25,neutral,historical_only,unfavourable
+CAT,United States,2025-03-25,unfavourable,historical_only,neutral
+CAT,United States,2025-04-23,favourable,historical_only,unfavourable
+CAT,United States,2025-05-21,favourable,historical_only,neutral
+CAT,United States,2025-06-20,favourable,historical_only,neutral
+CAT,United States,2025-07-21,neutral,historical_only,favourable
+CAT,United States,2025-08-18,favourable,historical_only,favourable
+CAT,United States,2025-09-16,favourable,historical_only,favourable
+CAT,United States,2025-10-14,favourable,historical_only,favourable
+CAT,United States,2025-11-11,favourable,historical_only,favourable
+CAT,United States,2025-12-10,neutral,historical_only,favourable
+NEE,United States,2025-01-27,unfavourable,historical_only,neutral
+NEE,United States,2025-02-25,unfavourable,historical_only,neutral
+NEE,United States,2025-03-25,neutral,historical_only,neutral
+NEE,United States,2025-04-23,favourable,historical_only,unfavourable
+NEE,United States,2025-05-21,neutral,historical_only,neutral
+NEE,United States,2025-06-20,favourable,historical_only,neutral
+NEE,United States,2025-07-21,neutral,historical_only,favourable
+NEE,United States,2025-08-18,unfavourable,historical_only,neutral
+NEE,United States,2025-09-16,favourable,historical_only,neutral
+NEE,United States,2025-10-14,neutral,historical_only,favourable
+NEE,United States,2025-11-11,unfavourable,historical_only,favourable
+NEE,United States,2025-12-10,neutral,historical_only,favourable
+AMT,United States,2025-01-27,favourable,historical_only,neutral
+AMT,United States,2025-02-25,favourable,historical_only,neutral
+AMT,United States,2025-03-25,favourable,historical_only,favourable
+AMT,United States,2025-04-23,neutral,historical_only,favourable
+AMT,United States,2025-05-21,favourable,historical_only,favourable
+AMT,United States,2025-06-20,favourable,historical_only,favourable
+AMT,United States,2025-07-21,unfavourable,historical_only,favourable
+AMT,United States,2025-08-18,unfavourable,historical_only,neutral
+AMT,United States,2025-09-16,unfavourable,historical_only,unfavourable
+AMT,United States,2025-10-14,neutral,historical_only,unfavourable
+AMT,United States,2025-11-11,unfavourable,historical_only,neutral
+AMT,United States,2025-12-10,unfavourable,historical_only,unfavourable
+GOOGL,United States,2025-01-27,unfavourable,historical_only,favourable
+GOOGL,United States,2025-02-25,unfavourable,historical_only,neutral
+GOOGL,United States,2025-03-25,unfavourable,historical_only,neutral
+GOOGL,United States,2025-04-23,favourable,historical_only,unfavourable
+GOOGL,United States,2025-05-21,neutral,historical_only,neutral
+GOOGL,United States,2025-06-20,favourable,historical_only,neutral
+GOOGL,United States,2025-07-21,favourable,historical_only,favourable
+GOOGL,United States,2025-08-18,favourable,historical_only,favourable
+GOOGL,United States,2025-09-16,unfavourable,historical_only,favourable
+GOOGL,United States,2025-10-14,favourable,historical_only,favourable
+GOOGL,United States,2025-11-11,favourable,historical_only,favourable
+GOOGL,United States,2025-12-10,favourable,historical_only,favourable
+D05.SI,Singapore,2025-01-24,favourable,historical_only,favourable
+D05.SI,Singapore,2025-02-25,neutral,historical_only,favourable
+D05.SI,Singapore,2025-03-25,unfavourable,historical_only,favourable
+D05.SI,Singapore,2025-04-24,favourable,historical_only,neutral
+D05.SI,Singapore,2025-05-26,neutral,historical_only,favourable
+D05.SI,Singapore,2025-06-23,favourable,historical_only,neutral
+D05.SI,Singapore,2025-07-21,favourable,historical_only,favourable
+D05.SI,Singapore,2025-08-18,favourable,historical_only,favourable
+D05.SI,Singapore,2025-09-15,favourable,historical_only,favourable
+D05.SI,Singapore,2025-10-13,favourable,historical_only,favourable
+D05.SI,Singapore,2025-11-11,neutral,historical_only,favourable
+D05.SI,Singapore,2025-12-09,favourable,historical_only,favourable
+Z74.SI,Singapore,2025-01-24,favourable,historical_only,favourable
+Z74.SI,Singapore,2025-02-25,favourable,historical_only,favourable
+Z74.SI,Singapore,2025-03-25,favourable,historical_only,favourable
+Z74.SI,Singapore,2025-04-24,neutral,historical_only,favourable
+Z74.SI,Singapore,2025-05-26,neutral,historical_only,favourable
+Z74.SI,Singapore,2025-06-23,favourable,historical_only,favourable
+Z74.SI,Singapore,2025-07-21,neutral,historical_only,favourable
+Z74.SI,Singapore,2025-08-18,favourable,historical_only,favourable
+Z74.SI,Singapore,2025-09-15,neutral,historical_only,favourable
+Z74.SI,Singapore,2025-10-13,favourable,historical_only,favourable
+Z74.SI,Singapore,2025-11-11,neutral,historical_only,favourable
+Z74.SI,Singapore,2025-12-09,unfavourable,historical_only,favourable
+C6L.SI,Singapore,2025-01-24,favourable,historical_only,neutral
+C6L.SI,Singapore,2025-02-25,favourable,historical_only,favourable
+C6L.SI,Singapore,2025-03-25,unfavourable,historical_only,favourable
+C6L.SI,Singapore,2025-04-24,favourable,historical_only,neutral
+C6L.SI,Singapore,2025-05-26,unfavourable,historical_only,favourable
+C6L.SI,Singapore,2025-06-23,favourable,historical_only,neutral
+C6L.SI,Singapore,2025-07-21,unfavourable,historical_only,favourable
+C6L.SI,Singapore,2025-08-18,neutral,historical_only,neutral
+C6L.SI,Singapore,2025-09-15,neutral,historical_only,neutral
+C6L.SI,Singapore,2025-10-13,neutral,historical_only,neutral
+C6L.SI,Singapore,2025-11-11,unfavourable,historical_only,neutral
+C6L.SI,Singapore,2025-12-09,favourable,historical_only,neutral
+C38U.SI,Singapore,2025-01-24,favourable,historical_only,neutral
+C38U.SI,Singapore,2025-02-25,favourable,historical_only,neutral
+C38U.SI,Singapore,2025-03-25,neutral,historical_only,favourable
+C38U.SI,Singapore,2025-04-24,unfavourable,historical_only,favourable
+C38U.SI,Singapore,2025-05-26,favourable,historical_only,neutral
+C38U.SI,Singapore,2025-06-23,favourable,historical_only,favourable
+C38U.SI,Singapore,2025-07-21,neutral,historical_only,favourable
+C38U.SI,Singapore,2025-08-18,favourable,historical_only,favourable
+C38U.SI,Singapore,2025-09-15,neutral,historical_only,favourable
+C38U.SI,Singapore,2025-10-13,neutral,historical_only,favourable
+C38U.SI,Singapore,2025-11-11,neutral,historical_only,favourable
+C38U.SI,Singapore,2025-12-09,favourable,historical_only,favourable
+F34.SI,Singapore,2025-01-24,neutral,historical_only,neutral
+F34.SI,Singapore,2025-02-25,favourable,historical_only,neutral
+F34.SI,Singapore,2025-03-25,unfavourable,historical_only,neutral
+F34.SI,Singapore,2025-04-24,neutral,historical_only,neutral
+F34.SI,Singapore,2025-05-26,unfavourable,historical_only,neutral
+F34.SI,Singapore,2025-06-23,favourable,historical_only,neutral
+F34.SI,Singapore,2025-07-21,unfavourable,historical_only,neutral
+F34.SI,Singapore,2025-08-18,favourable,historical_only,neutral
+F34.SI,Singapore,2025-09-15,neutral,historical_only,neutral
+F34.SI,Singapore,2025-10-13,favourable,historical_only,neutral
+F34.SI,Singapore,2025-11-11,unfavourable,historical_only,favourable
+F34.SI,Singapore,2025-12-09,neutral,historical_only,neutral
+U96.SI,Singapore,2025-01-24,favourable,historical_only,favourable
+U96.SI,Singapore,2025-02-25,favourable,historical_only,favourable
+U96.SI,Singapore,2025-03-25,favourable,historical_only,favourable
+U96.SI,Singapore,2025-04-24,favourable,historical_only,favourable
+U96.SI,Singapore,2025-05-26,favourable,historical_only,favourable
+U96.SI,Singapore,2025-06-23,favourable,historical_only,favourable
+U96.SI,Singapore,2025-07-21,unfavourable,historical_only,favourable
+U96.SI,Singapore,2025-08-18,favourable,historical_only,neutral
+U96.SI,Singapore,2025-09-15,favourable,historical_only,neutral
+U96.SI,Singapore,2025-10-13,neutral,historical_only,neutral
+U96.SI,Singapore,2025-11-11,unfavourable,historical_only,favourable
+U96.SI,Singapore,2025-12-09,favourable,historical_only,neutral
+BN4.SI,Singapore,2025-01-24,neutral,historical_only,neutral
+BN4.SI,Singapore,2025-02-25,neutral,historical_only,neutral
+BN4.SI,Singapore,2025-03-25,unfavourable,historical_only,neutral
+BN4.SI,Singapore,2025-04-24,favourable,historical_only,neutral
+BN4.SI,Singapore,2025-05-26,favourable,historical_only,neutral
+BN4.SI,Singapore,2025-06-23,favourable,historical_only,favourable
+BN4.SI,Singapore,2025-07-21,favourable,historical_only,favourable
+BN4.SI,Singapore,2025-08-18,favourable,historical_only,favourable
+BN4.SI,Singapore,2025-09-15,favourable,historical_only,favourable
+BN4.SI,Singapore,2025-10-13,favourable,historical_only,favourable
+BN4.SI,Singapore,2025-11-11,neutral,historical_only,favourable
+BN4.SI,Singapore,2025-12-09,favourable,historical_only,favourable
+S68.SI,Singapore,2025-01-24,favourable,historical_only,favourable
+S68.SI,Singapore,2025-02-25,neutral,historical_only,favourable
+S68.SI,Singapore,2025-03-25,favourable,historical_only,favourable
+S68.SI,Singapore,2025-04-24,unfavourable,historical_only,favourable
+S68.SI,Singapore,2025-05-26,neutral,historical_only,favourable
+S68.SI,Singapore,2025-06-23,favourable,historical_only,favourable
+S68.SI,Singapore,2025-07-21,favourable,historical_only,favourable
+S68.SI,Singapore,2025-08-18,favourable,historical_only,favourable
+S68.SI,Singapore,2025-09-15,favourable,historical_only,favourable
+S68.SI,Singapore,2025-10-13,neutral,historical_only,favourable
+S68.SI,Singapore,2025-11-11,unfavourable,historical_only,favourable
+S68.SI,Singapore,2025-12-09,favourable,historical_only,favourable
+S63.SI,Singapore,2025-01-24,favourable,historical_only,favourable
+S63.SI,Singapore,2025-02-25,favourable,historical_only,favourable
+S63.SI,Singapore,2025-03-25,favourable,historical_only,favourable
+S63.SI,Singapore,2025-04-24,favourable,historical_only,favourable
+S63.SI,Singapore,2025-05-26,favourable,historical_only,favourable
+S63.SI,Singapore,2025-06-23,favourable,historical_only,favourable
+S63.SI,Singapore,2025-07-21,unfavourable,historical_only,favourable
+S63.SI,Singapore,2025-08-18,neutral,historical_only,favourable
+S63.SI,Singapore,2025-09-15,favourable,historical_only,favourable
+S63.SI,Singapore,2025-10-13,unfavourable,historical_only,favourable
+S63.SI,Singapore,2025-11-11,neutral,historical_only,favourable
+S63.SI,Singapore,2025-12-09,favourable,historical_only,favourable
+V03.SI,Singapore,2025-01-24,unfavourable,historical_only,unfavourable
+V03.SI,Singapore,2025-02-25,neutral,historical_only,unfavourable
+V03.SI,Singapore,2025-03-25,unfavourable,historical_only,unfavourable
+V03.SI,Singapore,2025-04-24,favourable,historical_only,unfavourable
+V03.SI,Singapore,2025-05-26,neutral,historical_only,unfavourable
+V03.SI,Singapore,2025-06-23,favourable,historical_only,unfavourable
+V03.SI,Singapore,2025-07-21,favourable,historical_only,neutral
+V03.SI,Singapore,2025-08-18,favourable,historical_only,neutral
+V03.SI,Singapore,2025-09-15,favourable,historical_only,favourable
+V03.SI,Singapore,2025-10-13,favourable,historical_only,favourable
+V03.SI,Singapore,2025-11-11,neutral,historical_only,favourable
+V03.SI,Singapore,2025-12-09,favourable,historical_only,favourable
+BHP.AX,Australia,2025-01-15,favourable,historical_only,unfavourable
+BHP.AX,Australia,2025-02-13,unfavourable,historical_only,neutral
+BHP.AX,Australia,2025-03-13,unfavourable,historical_only,neutral
+BHP.AX,Australia,2025-04-10,favourable,historical_only,unfavourable
+BHP.AX,Australia,2025-05-13,neutral,historical_only,neutral
+BHP.AX,Australia,2025-06-11,unfavourable,historical_only,neutral
+BHP.AX,Australia,2025-07-09,favourable,historical_only,neutral
+BHP.AX,Australia,2025-08-06,favourable,historical_only,neutral
+BHP.AX,Australia,2025-09-03,neutral,historical_only,favourable
+BHP.AX,Australia,2025-10-01,favourable,historical_only,neutral
+BHP.AX,Australia,2025-10-29,unfavourable,historical_only,favourable
+BHP.AX,Australia,2025-11-26,favourable,historical_only,neutral
+BHP.AX,Australia,2025-12-24,favourable,historical_only,favourable
+CBA.AX,Australia,2025-01-15,favourable,historical_only,favourable
+CBA.AX,Australia,2025-02-13,unfavourable,historical_only,favourable
+CBA.AX,Australia,2025-03-13,favourable,historical_only,neutral
+CBA.AX,Australia,2025-04-10,favourable,historical_only,favourable
+CBA.AX,Australia,2025-05-13,favourable,historical_only,favourable
+CBA.AX,Australia,2025-06-11,neutral,historical_only,favourable
+CBA.AX,Australia,2025-07-09,neutral,historical_only,favourable
+CBA.AX,Australia,2025-08-06,unfavourable,historical_only,favourable
+CBA.AX,Australia,2025-09-03,neutral,historical_only,neutral
+CBA.AX,Australia,2025-10-01,neutral,historical_only,neutral
+CBA.AX,Australia,2025-10-29,unfavourable,historical_only,neutral
+CBA.AX,Australia,2025-11-26,favourable,historical_only,unfavourable
+CBA.AX,Australia,2025-12-24,unfavourable,historical_only,neutral
+CSL.AX,Australia,2025-01-15,unfavourable,historical_only,neutral
+CSL.AX,Australia,2025-02-13,neutral,historical_only,unfavourable
+CSL.AX,Australia,2025-03-13,unfavourable,historical_only,unfavourable
+CSL.AX,Australia,2025-04-10,neutral,historical_only,unfavourable
+CSL.AX,Australia,2025-05-13,neutral,historical_only,unfavourable
+CSL.AX,Australia,2025-06-11,neutral,historical_only,neutral
+CSL.AX,Australia,2025-07-09,favourable,historical_only,neutral
+CSL.AX,Australia,2025-08-06,unfavourable,historical_only,neutral
+CSL.AX,Australia,2025-09-03,unfavourable,historical_only,unfavourable
+CSL.AX,Australia,2025-10-01,unfavourable,historical_only,unfavourable
+CSL.AX,Australia,2025-10-29,favourable,historical_only,unfavourable
+CSL.AX,Australia,2025-11-26,unfavourable,historical_only,unfavourable
+CSL.AX,Australia,2025-12-24,favourable,historical_only,unfavourable
+WES.AX,Australia,2025-01-15,favourable,historical_only,neutral
+WES.AX,Australia,2025-02-13,unfavourable,historical_only,favourable
+WES.AX,Australia,2025-03-13,favourable,historical_only,neutral
+WES.AX,Australia,2025-04-10,favourable,historical_only,neutral
+WES.AX,Australia,2025-05-13,favourable,historical_only,favourable
+WES.AX,Australia,2025-06-11,unfavourable,historical_only,favourable
+WES.AX,Australia,2025-07-09,favourable,historical_only,favourable
+WES.AX,Australia,2025-08-06,neutral,historical_only,favourable
+WES.AX,Australia,2025-09-03,favourable,historical_only,favourable
+WES.AX,Australia,2025-10-01,favourable,historical_only,favourable
+WES.AX,Australia,2025-10-29,unfavourable,historical_only,favourable
+WES.AX,Australia,2025-11-26,neutral,historical_only,neutral
+WES.AX,Australia,2025-12-24,favourable,historical_only,neutral
+WOW.AX,Australia,2025-01-15,neutral,historical_only,unfavourable
+WOW.AX,Australia,2025-02-13,unfavourable,historical_only,neutral
+WOW.AX,Australia,2025-03-13,favourable,historical_only,unfavourable
+WOW.AX,Australia,2025-04-10,neutral,historical_only,neutral
+WOW.AX,Australia,2025-05-13,neutral,historical_only,neutral
+WOW.AX,Australia,2025-06-11,unfavourable,historical_only,neutral
+WOW.AX,Australia,2025-07-09,favourable,historical_only,neutral
+WOW.AX,Australia,2025-08-06,unfavourable,historical_only,neutral
+WOW.AX,Australia,2025-09-03,unfavourable,historical_only,unfavourable
+WOW.AX,Australia,2025-10-01,favourable,historical_only,unfavourable
+WOW.AX,Australia,2025-10-29,favourable,historical_only,neutral
+WOW.AX,Australia,2025-11-26,favourable,historical_only,neutral
+WOW.AX,Australia,2025-12-24,favourable,historical_only,neutral
+TLS.AX,Australia,2025-01-15,unfavourable,historical_only,neutral
+TLS.AX,Australia,2025-02-13,favourable,historical_only,neutral
+TLS.AX,Australia,2025-03-13,favourable,historical_only,favourable
+TLS.AX,Australia,2025-04-10,neutral,historical_only,favourable
+TLS.AX,Australia,2025-05-13,favourable,historical_only,favourable
+TLS.AX,Australia,2025-06-11,neutral,historical_only,favourable
+TLS.AX,Australia,2025-07-09,neutral,historical_only,favourable
+TLS.AX,Australia,2025-08-06,neutral,historical_only,favourable
+TLS.AX,Australia,2025-09-03,neutral,historical_only,favourable
+TLS.AX,Australia,2025-10-01,neutral,historical_only,favourable
+TLS.AX,Australia,2025-10-29,neutral,historical_only,favourable
+TLS.AX,Australia,2025-11-26,neutral,historical_only,neutral
+TLS.AX,Australia,2025-12-24,neutral,historical_only,neutral
+GMG.AX,Australia,2025-01-15,neutral,historical_only,favourable
+GMG.AX,Australia,2025-02-13,unfavourable,historical_only,neutral
+GMG.AX,Australia,2025-03-13,unfavourable,historical_only,unfavourable
+GMG.AX,Australia,2025-04-10,favourable,historical_only,unfavourable
+GMG.AX,Australia,2025-05-13,favourable,historical_only,neutral
+GMG.AX,Australia,2025-06-11,neutral,historical_only,neutral
+GMG.AX,Australia,2025-07-09,favourable,historical_only,neutral
+GMG.AX,Australia,2025-08-06,unfavourable,historical_only,neutral
+GMG.AX,Australia,2025-09-03,favourable,historical_only,unfavourable
+GMG.AX,Australia,2025-10-01,neutral,historical_only,neutral
+GMG.AX,Australia,2025-10-29,unfavourable,historical_only,neutral
+GMG.AX,Australia,2025-11-26,favourable,historical_only,unfavourable
+GMG.AX,Australia,2025-12-24,neutral,historical_only,neutral
+TCL.AX,Australia,2025-01-15,unfavourable,historical_only,neutral
+TCL.AX,Australia,2025-02-13,unfavourable,historical_only,neutral
+TCL.AX,Australia,2025-03-13,favourable,historical_only,neutral
+TCL.AX,Australia,2025-04-10,neutral,historical_only,favourable
+TCL.AX,Australia,2025-05-13,favourable,historical_only,favourable
+TCL.AX,Australia,2025-06-11,unfavourable,historical_only,favourable
+TCL.AX,Australia,2025-07-09,favourable,historical_only,neutral
+TCL.AX,Australia,2025-08-06,favourable,historical_only,neutral
+TCL.AX,Australia,2025-09-03,unfavourable,historical_only,neutral
+TCL.AX,Australia,2025-10-01,favourable,historical_only,neutral
+TCL.AX,Australia,2025-10-29,favourable,historical_only,favourable
+TCL.AX,Australia,2025-11-26,unfavourable,historical_only,neutral
+TCL.AX,Australia,2025-12-24,unfavourable,historical_only,neutral
+STO.AX,Australia,2025-01-15,neutral,historical_only,neutral
+STO.AX,Australia,2025-02-13,unfavourable,historical_only,neutral
+STO.AX,Australia,2025-03-13,unfavourable,historical_only,unfavourable
+STO.AX,Australia,2025-04-10,favourable,historical_only,unfavourable
+STO.AX,Australia,2025-05-13,favourable,historical_only,neutral
+STO.AX,Australia,2025-06-11,favourable,historical_only,neutral
+STO.AX,Australia,2025-07-09,favourable,historical_only,favourable
+STO.AX,Australia,2025-08-06,neutral,historical_only,favourable
+STO.AX,Australia,2025-09-03,unfavourable,historical_only,favourable
+STO.AX,Australia,2025-10-01,unfavourable,historical_only,unfavourable
+STO.AX,Australia,2025-10-29,favourable,historical_only,unfavourable
+STO.AX,Australia,2025-11-26,unfavourable,historical_only,neutral
+STO.AX,Australia,2025-12-24,favourable,historical_only,unfavourable
+ORG.AX,Australia,2025-01-15,unfavourable,historical_only,favourable
+ORG.AX,Australia,2025-02-13,favourable,historical_only,neutral
+ORG.AX,Australia,2025-03-13,neutral,historical_only,neutral
+ORG.AX,Australia,2025-04-10,favourable,historical_only,neutral
+ORG.AX,Australia,2025-05-13,unfavourable,historical_only,favourable
+ORG.AX,Australia,2025-06-11,favourable,historical_only,neutral
+ORG.AX,Australia,2025-07-09,favourable,historical_only,favourable
+ORG.AX,Australia,2025-08-06,favourable,historical_only,favourable
+ORG.AX,Australia,2025-09-03,neutral,historical_only,favourable
+ORG.AX,Australia,2025-10-01,favourable,historical_only,favourable
+ORG.AX,Australia,2025-10-29,unfavourable,historical_only,favourable
+ORG.AX,Australia,2025-11-26,unfavourable,historical_only,neutral
+ORG.AX,Australia,2025-12-24,favourable,historical_only,neutral
+RELIANCE.NS,India,2025-01-20,unfavourable,equal_weight_price,neutral
+RELIANCE.NS,India,2025-02-14,neutral,equal_weight_price,unfavourable
+RELIANCE.NS,India,2025-03-18,favourable,equal_weight_price,neutral
+RELIANCE.NS,India,2025-04-21,favourable,equal_weight_price,neutral
+RELIANCE.NS,India,2025-05-20,neutral,equal_weight_price,favourable
+RELIANCE.NS,India,2025-06-17,favourable,equal_weight_price,favourable
+RELIANCE.NS,India,2025-07-15,unfavourable,equal_weight_price,neutral
+RELIANCE.NS,India,2025-08-12,neutral,equal_weight_price,unfavourable
+RELIANCE.NS,India,2025-09-11,neutral,equal_weight_price,neutral
+RELIANCE.NS,India,2025-10-10,favourable,equal_weight_price,neutral
+RELIANCE.NS,India,2025-11-11,favourable,equal_weight_price,favourable
+RELIANCE.NS,India,2025-12-09,neutral,equal_weight_price,neutral
+TCS.NS,India,2025-01-20,unfavourable,equal_weight_price,neutral
+TCS.NS,India,2025-02-14,unfavourable,equal_weight_price,unfavourable
+TCS.NS,India,2025-03-18,unfavourable,equal_weight_price,unfavourable
+TCS.NS,India,2025-04-21,favourable,equal_weight_price,unfavourable
+TCS.NS,India,2025-05-20,neutral,equal_weight_price,neutral
+TCS.NS,India,2025-06-17,unfavourable,equal_weight_price,neutral
+TCS.NS,India,2025-07-15,unfavourable,equal_weight_price,unfavourable
+TCS.NS,India,2025-08-12,favourable,equal_weight_price,unfavourable
+TCS.NS,India,2025-09-11,unfavourable,equal_weight_price,neutral
+TCS.NS,India,2025-10-10,neutral,equal_weight_price,unfavourable
+TCS.NS,India,2025-11-11,favourable,equal_weight_price,neutral
+TCS.NS,India,2025-12-09,favourable,equal_weight_price,neutral
+HDFCBANK.NS,India,2025-01-20,favourable,equal_weight_price,neutral
+HDFCBANK.NS,India,2025-02-14,neutral,equal_weight_price,favourable
+HDFCBANK.NS,India,2025-03-18,favourable,equal_weight_price,favourable
+HDFCBANK.NS,India,2025-04-21,neutral,equal_weight_price,favourable
+HDFCBANK.NS,India,2025-05-20,neutral,equal_weight_price,neutral
+HDFCBANK.NS,India,2025-06-17,favourable,equal_weight_price,neutral
+HDFCBANK.NS,India,2025-07-15,neutral,equal_weight_price,favourable
+HDFCBANK.NS,India,2025-08-12,neutral,equal_weight_price,neutral
+HDFCBANK.NS,India,2025-09-11,neutral,equal_weight_price,neutral
+HDFCBANK.NS,India,2025-10-10,neutral,equal_weight_price,favourable
+HDFCBANK.NS,India,2025-11-11,neutral,equal_weight_price,neutral
+HDFCBANK.NS,India,2025-12-09,unfavourable,equal_weight_price,neutral
+SUNPHARMA.NS,India,2025-01-20,unfavourable,equal_weight_price,neutral
+SUNPHARMA.NS,India,2025-02-14,neutral,equal_weight_price,unfavourable
+SUNPHARMA.NS,India,2025-03-18,favourable,equal_weight_price,neutral
+SUNPHARMA.NS,India,2025-04-21,unfavourable,equal_weight_price,neutral
+SUNPHARMA.NS,India,2025-05-20,unfavourable,equal_weight_price,unfavourable
+SUNPHARMA.NS,India,2025-06-17,favourable,equal_weight_price,neutral
+SUNPHARMA.NS,India,2025-07-15,unfavourable,equal_weight_price,neutral
+SUNPHARMA.NS,India,2025-08-12,neutral,equal_weight_price,unfavourable
+SUNPHARMA.NS,India,2025-09-11,favourable,equal_weight_price,neutral
+SUNPHARMA.NS,India,2025-10-10,favourable,equal_weight_price,neutral
+SUNPHARMA.NS,India,2025-11-11,favourable,equal_weight_price,favourable
+SUNPHARMA.NS,India,2025-12-09,neutral,equal_weight_price,neutral
+HINDUNILVR.NS,India,2025-01-20,neutral,equal_weight_price,unfavourable
+HINDUNILVR.NS,India,2025-02-14,unfavourable,equal_weight_price,unfavourable
+HINDUNILVR.NS,India,2025-03-18,favourable,equal_weight_price,unfavourable
+HINDUNILVR.NS,India,2025-04-21,neutral,equal_weight_price,neutral
+HINDUNILVR.NS,India,2025-05-20,neutral,equal_weight_price,neutral
+HINDUNILVR.NS,India,2025-06-17,favourable,equal_weight_price,unfavourable
+HINDUNILVR.NS,India,2025-07-15,neutral,equal_weight_price,favourable
+HINDUNILVR.NS,India,2025-08-12,favourable,equal_weight_price,neutral
+HINDUNILVR.NS,India,2025-09-11,unfavourable,equal_weight_price,neutral
+HINDUNILVR.NS,India,2025-10-10,unfavourable,equal_weight_price,neutral
+HINDUNILVR.NS,India,2025-11-11,unfavourable,equal_weight_price,neutral
+HINDUNILVR.NS,India,2025-12-09,favourable,equal_weight_price,unfavourable
+MARUTI.NS,India,2025-01-20,favourable,equal_weight_price,neutral
+MARUTI.NS,India,2025-02-14,unfavourable,equal_weight_price,favourable
+MARUTI.NS,India,2025-03-18,neutral,equal_weight_price,unfavourable
+MARUTI.NS,India,2025-04-21,favourable,equal_weight_price,neutral
+MARUTI.NS,India,2025-05-20,neutral,equal_weight_price,favourable
+MARUTI.NS,India,2025-06-17,neutral,equal_weight_price,favourable
+MARUTI.NS,India,2025-07-15,favourable,equal_weight_price,neutral
+MARUTI.NS,India,2025-08-12,favourable,equal_weight_price,favourable
+MARUTI.NS,India,2025-09-11,favourable,equal_weight_price,favourable
+MARUTI.NS,India,2025-10-10,unfavourable,equal_weight_price,favourable
+MARUTI.NS,India,2025-11-11,favourable,equal_weight_price,favourable
+MARUTI.NS,India,2025-12-09,favourable,equal_weight_price,favourable
+LT.NS,India,2025-01-20,unfavourable,equal_weight_price,neutral
+LT.NS,India,2025-02-14,neutral,equal_weight_price,unfavourable
+LT.NS,India,2025-03-18,favourable,equal_weight_price,unfavourable
+LT.NS,India,2025-04-21,favourable,equal_weight_price,unfavourable
+LT.NS,India,2025-05-20,favourable,equal_weight_price,favourable
+LT.NS,India,2025-06-17,unfavourable,equal_weight_price,favourable
+LT.NS,India,2025-07-15,favourable,equal_weight_price,neutral
+LT.NS,India,2025-08-12,unfavourable,equal_weight_price,favourable
+LT.NS,India,2025-09-11,favourable,equal_weight_price,neutral
+LT.NS,India,2025-10-10,favourable,equal_weight_price,favourable
+LT.NS,India,2025-11-11,neutral,equal_weight_price,favourable
+LT.NS,India,2025-12-09,favourable,equal_weight_price,neutral
+BHARTIARTL.NS,India,2025-01-20,favourable,equal_weight_price,favourable
+BHARTIARTL.NS,India,2025-02-14,unfavourable,equal_weight_price,favourable
+BHARTIARTL.NS,India,2025-03-18,favourable,equal_weight_price,favourable
+BHARTIARTL.NS,India,2025-04-21,unfavourable,equal_weight_price,favourable
+BHARTIARTL.NS,India,2025-05-20,favourable,equal_weight_price,neutral
+BHARTIARTL.NS,India,2025-06-17,favourable,equal_weight_price,favourable
+BHARTIARTL.NS,India,2025-07-15,unfavourable,equal_weight_price,favourable
+BHARTIARTL.NS,India,2025-08-12,favourable,equal_weight_price,neutral
+BHARTIARTL.NS,India,2025-09-11,neutral,equal_weight_price,favourable
+BHARTIARTL.NS,India,2025-10-10,favourable,equal_weight_price,favourable
+BHARTIARTL.NS,India,2025-11-11,favourable,equal_weight_price,favourable
+BHARTIARTL.NS,India,2025-12-09,neutral,equal_weight_price,neutral
+NTPC.NS,India,2025-01-20,unfavourable,equal_weight_price,neutral
+NTPC.NS,India,2025-02-14,favourable,equal_weight_price,unfavourable
+NTPC.NS,India,2025-03-18,favourable,equal_weight_price,neutral
+NTPC.NS,India,2025-04-21,unfavourable,equal_weight_price,neutral
+NTPC.NS,India,2025-05-20,unfavourable,equal_weight_price,unfavourable
+NTPC.NS,India,2025-06-17,favourable,equal_weight_price,unfavourable
+NTPC.NS,India,2025-07-15,neutral,equal_weight_price,neutral
+NTPC.NS,India,2025-08-12,neutral,equal_weight_price,neutral
+NTPC.NS,India,2025-09-11,favourable,equal_weight_price,unfavourable
+NTPC.NS,India,2025-10-10,unfavourable,equal_weight_price,neutral
+NTPC.NS,India,2025-11-11,unfavourable,equal_weight_price,unfavourable
+NTPC.NS,India,2025-12-09,favourable,equal_weight_price,unfavourable
+ULTRACEMCO.NS,India,2025-01-20,favourable,equal_weight_price,unfavourable
+ULTRACEMCO.NS,India,2025-02-14,unfavourable,equal_weight_price,neutral
+ULTRACEMCO.NS,India,2025-03-18,favourable,equal_weight_price,unfavourable
+ULTRACEMCO.NS,India,2025-04-21,neutral,equal_weight_price,favourable
+ULTRACEMCO.NS,India,2025-05-20,unfavourable,equal_weight_price,neutral
+ULTRACEMCO.NS,India,2025-06-17,favourable,equal_weight_price,neutral
+ULTRACEMCO.NS,India,2025-07-15,neutral,equal_weight_price,favourable
+ULTRACEMCO.NS,India,2025-08-12,neutral,equal_weight_price,favourable
+ULTRACEMCO.NS,India,2025-09-11,neutral,equal_weight_price,neutral
+ULTRACEMCO.NS,India,2025-10-10,unfavourable,equal_weight_price,neutral
+ULTRACEMCO.NS,India,2025-11-11,unfavourable,equal_weight_price,neutral
+ULTRACEMCO.NS,India,2025-12-09,favourable,equal_weight_price,unfavourable
+MSFT,United States,2025-01-27,unfavourable,equal_weight_price,favourable
+MSFT,United States,2025-02-25,neutral,equal_weight_price,unfavourable
+MSFT,United States,2025-03-25,unfavourable,equal_weight_price,neutral
+MSFT,United States,2025-04-23,favourable,equal_weight_price,unfavourable
+MSFT,United States,2025-05-21,favourable,equal_weight_price,favourable
+MSFT,United States,2025-06-20,favourable,equal_weight_price,favourable
+MSFT,United States,2025-07-21,neutral,equal_weight_price,favourable
+MSFT,United States,2025-08-18,neutral,equal_weight_price,favourable
+MSFT,United States,2025-09-16,neutral,equal_weight_price,favourable
+MSFT,United States,2025-10-14,neutral,equal_weight_price,neutral
+MSFT,United States,2025-11-11,unfavourable,equal_weight_price,neutral
+MSFT,United States,2025-12-10,neutral,equal_weight_price,neutral
+JPM,United States,2025-01-27,unfavourable,equal_weight_price,favourable
+JPM,United States,2025-02-25,unfavourable,equal_weight_price,favourable
+JPM,United States,2025-03-25,unfavourable,equal_weight_price,favourable
+JPM,United States,2025-04-23,favourable,equal_weight_price,favourable
+JPM,United States,2025-05-21,favourable,equal_weight_price,favourable
+JPM,United States,2025-06-20,favourable,equal_weight_price,favourable
+JPM,United States,2025-07-21,neutral,equal_weight_price,favourable
+JPM,United States,2025-08-18,favourable,equal_weight_price,neutral
+JPM,United States,2025-09-16,neutral,equal_weight_price,favourable
+JPM,United States,2025-10-14,favourable,equal_weight_price,favourable
+JPM,United States,2025-11-11,neutral,equal_weight_price,favourable
+JPM,United States,2025-12-10,favourable,equal_weight_price,favourable
+JNJ,United States,2025-01-27,favourable,equal_weight_price,favourable
+JNJ,United States,2025-02-25,unfavourable,equal_weight_price,favourable
+JNJ,United States,2025-03-25,unfavourable,equal_weight_price,neutral
+JNJ,United States,2025-04-23,neutral,equal_weight_price,neutral
+JNJ,United States,2025-05-21,neutral,equal_weight_price,neutral
+JNJ,United States,2025-06-20,favourable,equal_weight_price,unfavourable
+JNJ,United States,2025-07-21,favourable,equal_weight_price,favourable
+JNJ,United States,2025-08-18,neutral,equal_weight_price,favourable
+JNJ,United States,2025-09-16,favourable,equal_weight_price,neutral
+JNJ,United States,2025-10-14,neutral,equal_weight_price,favourable
+JNJ,United States,2025-11-11,favourable,equal_weight_price,favourable
+JNJ,United States,2025-12-10,neutral,equal_weight_price,favourable
+XOM,United States,2025-01-27,neutral,equal_weight_price,neutral
+XOM,United States,2025-02-25,favourable,equal_weight_price,neutral
+XOM,United States,2025-03-25,unfavourable,equal_weight_price,favourable
+XOM,United States,2025-04-23,unfavourable,equal_weight_price,unfavourable
+XOM,United States,2025-05-21,favourable,equal_weight_price,unfavourable
+XOM,United States,2025-06-20,unfavourable,equal_weight_price,favourable
+XOM,United States,2025-07-21,neutral,equal_weight_price,unfavourable
+XOM,United States,2025-08-18,favourable,equal_weight_price,unfavourable
+XOM,United States,2025-09-16,unfavourable,equal_weight_price,favourable
+XOM,United States,2025-10-14,favourable,equal_weight_price,neutral
+XOM,United States,2025-11-11,neutral,equal_weight_price,favourable
+XOM,United States,2025-12-10,favourable,equal_weight_price,favourable
+PG,United States,2025-01-27,neutral,equal_weight_price,favourable
+PG,United States,2025-02-25,unfavourable,equal_weight_price,favourable
+PG,United States,2025-03-25,favourable,equal_weight_price,unfavourable
+PG,United States,2025-04-23,neutral,equal_weight_price,neutral
+PG,United States,2025-05-21,unfavourable,equal_weight_price,neutral
+PG,United States,2025-06-20,neutral,equal_weight_price,unfavourable
+PG,United States,2025-07-21,neutral,equal_weight_price,unfavourable
+PG,United States,2025-08-18,neutral,equal_weight_price,neutral
+PG,United States,2025-09-16,unfavourable,equal_weight_price,neutral
+PG,United States,2025-10-14,neutral,equal_weight_price,unfavourable
+PG,United States,2025-11-11,unfavourable,equal_weight_price,unfavourable
+PG,United States,2025-12-10,neutral,equal_weight_price,unfavourable
+AMZN,United States,2025-01-27,unfavourable,equal_weight_price,favourable
+AMZN,United States,2025-02-25,unfavourable,equal_weight_price,neutral
+AMZN,United States,2025-03-25,unfavourable,equal_weight_price,neutral
+AMZN,United States,2025-04-23,favourable,equal_weight_price,unfavourable
+AMZN,United States,2025-05-21,favourable,equal_weight_price,favourable
+AMZN,United States,2025-06-20,favourable,equal_weight_price,neutral
+AMZN,United States,2025-07-21,neutral,equal_weight_price,favourable
+AMZN,United States,2025-08-18,neutral,equal_weight_price,favourable
+AMZN,United States,2025-09-16,unfavourable,equal_weight_price,favourable
+AMZN,United States,2025-10-14,favourable,equal_weight_price,neutral
+AMZN,United States,2025-11-11,unfavourable,equal_weight_price,favourable
+AMZN,United States,2025-12-10,favourable,equal_weight_price,neutral
+CAT,United States,2025-01-27,unfavourable,equal_weight_price,favourable
+CAT,United States,2025-02-25,neutral,equal_weight_price,unfavourable
+CAT,United States,2025-03-25,unfavourable,equal_weight_price,neutral
+CAT,United States,2025-04-23,favourable,equal_weight_price,unfavourable
+CAT,United States,2025-05-21,favourable,equal_weight_price,neutral
+CAT,United States,2025-06-20,favourable,equal_weight_price,neutral
+CAT,United States,2025-07-21,neutral,equal_weight_price,favourable
+CAT,United States,2025-08-18,favourable,equal_weight_price,neutral
+CAT,United States,2025-09-16,favourable,equal_weight_price,favourable
+CAT,United States,2025-10-14,favourable,equal_weight_price,favourable
+CAT,United States,2025-11-11,favourable,equal_weight_price,favourable
+CAT,United States,2025-12-10,neutral,equal_weight_price,favourable
+NEE,United States,2025-01-27,unfavourable,equal_weight_price,neutral
+NEE,United States,2025-02-25,unfavourable,equal_weight_price,neutral
+NEE,United States,2025-03-25,neutral,equal_weight_price,unfavourable
+NEE,United States,2025-04-23,favourable,equal_weight_price,unfavourable
+NEE,United States,2025-05-21,neutral,equal_weight_price,neutral
+NEE,United States,2025-06-20,favourable,equal_weight_price,neutral
+NEE,United States,2025-07-21,neutral,equal_weight_price,favourable
+NEE,United States,2025-08-18,unfavourable,equal_weight_price,favourable
+NEE,United States,2025-09-16,favourable,equal_weight_price,unfavourable
+NEE,United States,2025-10-14,neutral,equal_weight_price,favourable
+NEE,United States,2025-11-11,unfavourable,equal_weight_price,favourable
+NEE,United States,2025-12-10,neutral,equal_weight_price,neutral
+AMT,United States,2025-01-27,favourable,equal_weight_price,neutral
+AMT,United States,2025-02-25,favourable,equal_weight_price,favourable
+AMT,United States,2025-03-25,favourable,equal_weight_price,neutral
+AMT,United States,2025-04-23,neutral,equal_weight_price,neutral
+AMT,United States,2025-05-21,favourable,equal_weight_price,neutral
+AMT,United States,2025-06-20,favourable,equal_weight_price,favourable
+AMT,United States,2025-07-21,unfavourable,equal_weight_price,favourable
+AMT,United States,2025-08-18,unfavourable,equal_weight_price,unfavourable
+AMT,United States,2025-09-16,unfavourable,equal_weight_price,unfavourable
+AMT,United States,2025-10-14,neutral,equal_weight_price,unfavourable
+AMT,United States,2025-11-11,unfavourable,equal_weight_price,unfavourable
+AMT,United States,2025-12-10,unfavourable,equal_weight_price,neutral
+GOOGL,United States,2025-01-27,unfavourable,equal_weight_price,favourable
+GOOGL,United States,2025-02-25,unfavourable,equal_weight_price,unfavourable
+GOOGL,United States,2025-03-25,unfavourable,equal_weight_price,neutral
+GOOGL,United States,2025-04-23,favourable,equal_weight_price,neutral
+GOOGL,United States,2025-05-21,neutral,equal_weight_price,neutral
+GOOGL,United States,2025-06-20,favourable,equal_weight_price,unfavourable
+GOOGL,United States,2025-07-21,favourable,equal_weight_price,favourable
+GOOGL,United States,2025-08-18,favourable,equal_weight_price,favourable
+GOOGL,United States,2025-09-16,unfavourable,equal_weight_price,favourable
+GOOGL,United States,2025-10-14,favourable,equal_weight_price,favourable
+GOOGL,United States,2025-11-11,favourable,equal_weight_price,favourable
+GOOGL,United States,2025-12-10,favourable,equal_weight_price,favourable
+D05.SI,Singapore,2025-01-24,favourable,equal_weight_price,favourable
+D05.SI,Singapore,2025-02-25,neutral,equal_weight_price,favourable
+D05.SI,Singapore,2025-03-25,unfavourable,equal_weight_price,favourable
+D05.SI,Singapore,2025-04-24,favourable,equal_weight_price,favourable
+D05.SI,Singapore,2025-05-26,neutral,equal_weight_price,favourable
+D05.SI,Singapore,2025-06-23,favourable,equal_weight_price,neutral
+D05.SI,Singapore,2025-07-21,favourable,equal_weight_price,favourable
+D05.SI,Singapore,2025-08-18,favourable,equal_weight_price,favourable
+D05.SI,Singapore,2025-09-15,favourable,equal_weight_price,favourable
+D05.SI,Singapore,2025-10-13,favourable,equal_weight_price,favourable
+D05.SI,Singapore,2025-11-11,neutral,equal_weight_price,favourable
+D05.SI,Singapore,2025-12-09,favourable,equal_weight_price,favourable
+Z74.SI,Singapore,2025-01-24,favourable,equal_weight_price,favourable
+Z74.SI,Singapore,2025-02-25,favourable,equal_weight_price,favourable
+Z74.SI,Singapore,2025-03-25,favourable,equal_weight_price,favourable
+Z74.SI,Singapore,2025-04-24,neutral,equal_weight_price,favourable
+Z74.SI,Singapore,2025-05-26,neutral,equal_weight_price,favourable
+Z74.SI,Singapore,2025-06-23,favourable,equal_weight_price,favourable
+Z74.SI,Singapore,2025-07-21,neutral,equal_weight_price,favourable
+Z74.SI,Singapore,2025-08-18,favourable,equal_weight_price,favourable
+Z74.SI,Singapore,2025-09-15,neutral,equal_weight_price,favourable
+Z74.SI,Singapore,2025-10-13,favourable,equal_weight_price,neutral
+Z74.SI,Singapore,2025-11-11,neutral,equal_weight_price,favourable
+Z74.SI,Singapore,2025-12-09,unfavourable,equal_weight_price,favourable
+C6L.SI,Singapore,2025-01-24,favourable,equal_weight_price,neutral
+C6L.SI,Singapore,2025-02-25,favourable,equal_weight_price,favourable
+C6L.SI,Singapore,2025-03-25,unfavourable,equal_weight_price,favourable
+C6L.SI,Singapore,2025-04-24,favourable,equal_weight_price,favourable
+C6L.SI,Singapore,2025-05-26,unfavourable,equal_weight_price,favourable
+C6L.SI,Singapore,2025-06-23,favourable,equal_weight_price,neutral
+C6L.SI,Singapore,2025-07-21,unfavourable,equal_weight_price,favourable
+C6L.SI,Singapore,2025-08-18,neutral,equal_weight_price,neutral
+C6L.SI,Singapore,2025-09-15,neutral,equal_weight_price,neutral
+C6L.SI,Singapore,2025-10-13,neutral,equal_weight_price,favourable
+C6L.SI,Singapore,2025-11-11,unfavourable,equal_weight_price,favourable
+C6L.SI,Singapore,2025-12-09,favourable,equal_weight_price,unfavourable
+C38U.SI,Singapore,2025-01-24,favourable,equal_weight_price,unfavourable
+C38U.SI,Singapore,2025-02-25,favourable,equal_weight_price,neutral
+C38U.SI,Singapore,2025-03-25,neutral,equal_weight_price,favourable
+C38U.SI,Singapore,2025-04-24,unfavourable,equal_weight_price,favourable
+C38U.SI,Singapore,2025-05-26,favourable,equal_weight_price,neutral
+C38U.SI,Singapore,2025-06-23,favourable,equal_weight_price,favourable
+C38U.SI,Singapore,2025-07-21,neutral,equal_weight_price,favourable
+C38U.SI,Singapore,2025-08-18,favourable,equal_weight_price,favourable
+C38U.SI,Singapore,2025-09-15,neutral,equal_weight_price,favourable
+C38U.SI,Singapore,2025-10-13,neutral,equal_weight_price,favourable
+C38U.SI,Singapore,2025-11-11,neutral,equal_weight_price,neutral
+C38U.SI,Singapore,2025-12-09,favourable,equal_weight_price,neutral
+F34.SI,Singapore,2025-01-24,neutral,equal_weight_price,neutral
+F34.SI,Singapore,2025-02-25,favourable,equal_weight_price,neutral
+F34.SI,Singapore,2025-03-25,unfavourable,equal_weight_price,favourable
+F34.SI,Singapore,2025-04-24,neutral,equal_weight_price,unfavourable
+F34.SI,Singapore,2025-05-26,unfavourable,equal_weight_price,unfavourable
+F34.SI,Singapore,2025-06-23,favourable,equal_weight_price,unfavourable
+F34.SI,Singapore,2025-07-21,unfavourable,equal_weight_price,neutral
+F34.SI,Singapore,2025-08-18,favourable,equal_weight_price,unfavourable
+F34.SI,Singapore,2025-09-15,neutral,equal_weight_price,unfavourable
+F34.SI,Singapore,2025-10-13,favourable,equal_weight_price,neutral
+F34.SI,Singapore,2025-11-11,unfavourable,equal_weight_price,favourable
+F34.SI,Singapore,2025-12-09,neutral,equal_weight_price,neutral
+U96.SI,Singapore,2025-01-24,favourable,equal_weight_price,favourable
+U96.SI,Singapore,2025-02-25,favourable,equal_weight_price,favourable
+U96.SI,Singapore,2025-03-25,favourable,equal_weight_price,favourable
+U96.SI,Singapore,2025-04-24,favourable,equal_weight_price,favourable
+U96.SI,Singapore,2025-05-26,favourable,equal_weight_price,favourable
+U96.SI,Singapore,2025-06-23,favourable,equal_weight_price,favourable
+U96.SI,Singapore,2025-07-21,unfavourable,equal_weight_price,favourable
+U96.SI,Singapore,2025-08-18,favourable,equal_weight_price,unfavourable
+U96.SI,Singapore,2025-09-15,favourable,equal_weight_price,neutral
+U96.SI,Singapore,2025-10-13,neutral,equal_weight_price,favourable
+U96.SI,Singapore,2025-11-11,unfavourable,equal_weight_price,favourable
+U96.SI,Singapore,2025-12-09,favourable,equal_weight_price,unfavourable
+BN4.SI,Singapore,2025-01-24,neutral,equal_weight_price,neutral
+BN4.SI,Singapore,2025-02-25,neutral,equal_weight_price,neutral
+BN4.SI,Singapore,2025-03-25,unfavourable,equal_weight_price,favourable
+BN4.SI,Singapore,2025-04-24,favourable,equal_weight_price,neutral
+BN4.SI,Singapore,2025-05-26,favourable,equal_weight_price,favourable
+BN4.SI,Singapore,2025-06-23,favourable,equal_weight_price,favourable
+BN4.SI,Singapore,2025-07-21,favourable,equal_weight_price,favourable
+BN4.SI,Singapore,2025-08-18,favourable,equal_weight_price,favourable
+BN4.SI,Singapore,2025-09-15,favourable,equal_weight_price,favourable
+BN4.SI,Singapore,2025-10-13,favourable,equal_weight_price,favourable
+BN4.SI,Singapore,2025-11-11,neutral,equal_weight_price,favourable
+BN4.SI,Singapore,2025-12-09,favourable,equal_weight_price,favourable
+S68.SI,Singapore,2025-01-24,favourable,equal_weight_price,neutral
+S68.SI,Singapore,2025-02-25,neutral,equal_weight_price,favourable
+S68.SI,Singapore,2025-03-25,favourable,equal_weight_price,favourable
+S68.SI,Singapore,2025-04-24,unfavourable,equal_weight_price,favourable
+S68.SI,Singapore,2025-05-26,neutral,equal_weight_price,favourable
+S68.SI,Singapore,2025-06-23,favourable,equal_weight_price,neutral
+S68.SI,Singapore,2025-07-21,favourable,equal_weight_price,favourable
+S68.SI,Singapore,2025-08-18,favourable,equal_weight_price,favourable
+S68.SI,Singapore,2025-09-15,favourable,equal_weight_price,favourable
+S68.SI,Singapore,2025-10-13,neutral,equal_weight_price,favourable
+S68.SI,Singapore,2025-11-11,unfavourable,equal_weight_price,favourable
+S68.SI,Singapore,2025-12-09,favourable,equal_weight_price,neutral
+S63.SI,Singapore,2025-01-24,favourable,equal_weight_price,favourable
+S63.SI,Singapore,2025-02-25,favourable,equal_weight_price,favourable
+S63.SI,Singapore,2025-03-25,favourable,equal_weight_price,favourable
+S63.SI,Singapore,2025-04-24,favourable,equal_weight_price,favourable
+S63.SI,Singapore,2025-05-26,favourable,equal_weight_price,favourable
+S63.SI,Singapore,2025-06-23,favourable,equal_weight_price,favourable
+S63.SI,Singapore,2025-07-21,unfavourable,equal_weight_price,favourable
+S63.SI,Singapore,2025-08-18,neutral,equal_weight_price,neutral
+S63.SI,Singapore,2025-09-15,favourable,equal_weight_price,favourable
+S63.SI,Singapore,2025-10-13,unfavourable,equal_weight_price,favourable
+S63.SI,Singapore,2025-11-11,neutral,equal_weight_price,neutral
+S63.SI,Singapore,2025-12-09,favourable,equal_weight_price,neutral
+V03.SI,Singapore,2025-01-24,unfavourable,equal_weight_price,neutral
+V03.SI,Singapore,2025-02-25,neutral,equal_weight_price,unfavourable
+V03.SI,Singapore,2025-03-25,unfavourable,equal_weight_price,unfavourable
+V03.SI,Singapore,2025-04-24,favourable,equal_weight_price,unfavourable
+V03.SI,Singapore,2025-05-26,neutral,equal_weight_price,unfavourable
+V03.SI,Singapore,2025-06-23,favourable,equal_weight_price,neutral
+V03.SI,Singapore,2025-07-21,favourable,equal_weight_price,favourable
+V03.SI,Singapore,2025-08-18,favourable,equal_weight_price,favourable
+V03.SI,Singapore,2025-09-15,favourable,equal_weight_price,favourable
+V03.SI,Singapore,2025-10-13,favourable,equal_weight_price,favourable
+V03.SI,Singapore,2025-11-11,neutral,equal_weight_price,favourable
+V03.SI,Singapore,2025-12-09,favourable,equal_weight_price,favourable
+BHP.AX,Australia,2025-01-15,favourable,equal_weight_price,neutral
+BHP.AX,Australia,2025-02-13,unfavourable,equal_weight_price,neutral
+BHP.AX,Australia,2025-03-13,unfavourable,equal_weight_price,unfavourable
+BHP.AX,Australia,2025-04-10,favourable,equal_weight_price,unfavourable
+BHP.AX,Australia,2025-05-13,neutral,equal_weight_price,neutral
+BHP.AX,Australia,2025-06-11,unfavourable,equal_weight_price,neutral
+BHP.AX,Australia,2025-07-09,favourable,equal_weight_price,neutral
+BHP.AX,Australia,2025-08-06,favourable,equal_weight_price,neutral
+BHP.AX,Australia,2025-09-03,neutral,equal_weight_price,favourable
+BHP.AX,Australia,2025-10-01,favourable,equal_weight_price,favourable
+BHP.AX,Australia,2025-10-29,unfavourable,equal_weight_price,favourable
+BHP.AX,Australia,2025-11-26,favourable,equal_weight_price,neutral
+BHP.AX,Australia,2025-12-24,favourable,equal_weight_price,favourable
+CBA.AX,Australia,2025-01-15,favourable,equal_weight_price,neutral
+CBA.AX,Australia,2025-02-13,unfavourable,equal_weight_price,favourable
+CBA.AX,Australia,2025-03-13,favourable,equal_weight_price,neutral
+CBA.AX,Australia,2025-04-10,favourable,equal_weight_price,favourable
+CBA.AX,Australia,2025-05-13,favourable,equal_weight_price,favourable
+CBA.AX,Australia,2025-06-11,neutral,equal_weight_price,favourable
+CBA.AX,Australia,2025-07-09,neutral,equal_weight_price,favourable
+CBA.AX,Australia,2025-08-06,unfavourable,equal_weight_price,favourable
+CBA.AX,Australia,2025-09-03,neutral,equal_weight_price,neutral
+CBA.AX,Australia,2025-10-01,neutral,equal_weight_price,favourable
+CBA.AX,Australia,2025-10-29,unfavourable,equal_weight_price,favourable
+CBA.AX,Australia,2025-11-26,favourable,equal_weight_price,unfavourable
+CBA.AX,Australia,2025-12-24,unfavourable,equal_weight_price,neutral
+CSL.AX,Australia,2025-01-15,unfavourable,equal_weight_price,unfavourable
+CSL.AX,Australia,2025-02-13,neutral,equal_weight_price,unfavourable
+CSL.AX,Australia,2025-03-13,unfavourable,equal_weight_price,unfavourable
+CSL.AX,Australia,2025-04-10,neutral,equal_weight_price,unfavourable
+CSL.AX,Australia,2025-05-13,neutral,equal_weight_price,unfavourable
+CSL.AX,Australia,2025-06-11,neutral,equal_weight_price,unfavourable
+CSL.AX,Australia,2025-07-09,favourable,equal_weight_price,neutral
+CSL.AX,Australia,2025-08-06,unfavourable,equal_weight_price,favourable
+CSL.AX,Australia,2025-09-03,unfavourable,equal_weight_price,unfavourable
+CSL.AX,Australia,2025-10-01,unfavourable,equal_weight_price,unfavourable
+CSL.AX,Australia,2025-10-29,favourable,equal_weight_price,unfavourable
+CSL.AX,Australia,2025-11-26,unfavourable,equal_weight_price,unfavourable
+CSL.AX,Australia,2025-12-24,favourable,equal_weight_price,unfavourable
+WES.AX,Australia,2025-01-15,favourable,equal_weight_price,neutral
+WES.AX,Australia,2025-02-13,unfavourable,equal_weight_price,favourable
+WES.AX,Australia,2025-03-13,favourable,equal_weight_price,unfavourable
+WES.AX,Australia,2025-04-10,favourable,equal_weight_price,neutral
+WES.AX,Australia,2025-05-13,favourable,equal_weight_price,favourable
+WES.AX,Australia,2025-06-11,unfavourable,equal_weight_price,favourable
+WES.AX,Australia,2025-07-09,favourable,equal_weight_price,favourable
+WES.AX,Australia,2025-08-06,neutral,equal_weight_price,favourable
+WES.AX,Australia,2025-09-03,favourable,equal_weight_price,neutral
+WES.AX,Australia,2025-10-01,favourable,equal_weight_price,favourable
+WES.AX,Australia,2025-10-29,unfavourable,equal_weight_price,favourable
+WES.AX,Australia,2025-11-26,neutral,equal_weight_price,unfavourable
+WES.AX,Australia,2025-12-24,favourable,equal_weight_price,neutral
+WOW.AX,Australia,2025-01-15,neutral,equal_weight_price,unfavourable
+WOW.AX,Australia,2025-02-13,unfavourable,equal_weight_price,neutral
+WOW.AX,Australia,2025-03-13,favourable,equal_weight_price,unfavourable
+WOW.AX,Australia,2025-04-10,neutral,equal_weight_price,favourable
+WOW.AX,Australia,2025-05-13,neutral,equal_weight_price,neutral
+WOW.AX,Australia,2025-06-11,unfavourable,equal_weight_price,favourable
+WOW.AX,Australia,2025-07-09,favourable,equal_weight_price,neutral
+WOW.AX,Australia,2025-08-06,unfavourable,equal_weight_price,favourable
+WOW.AX,Australia,2025-09-03,unfavourable,equal_weight_price,unfavourable
+WOW.AX,Australia,2025-10-01,favourable,equal_weight_price,unfavourable
+WOW.AX,Australia,2025-10-29,favourable,equal_weight_price,neutral
+WOW.AX,Australia,2025-11-26,favourable,equal_weight_price,neutral
+WOW.AX,Australia,2025-12-24,favourable,equal_weight_price,neutral
+TLS.AX,Australia,2025-01-15,unfavourable,equal_weight_price,neutral
+TLS.AX,Australia,2025-02-13,favourable,equal_weight_price,neutral
+TLS.AX,Australia,2025-03-13,favourable,equal_weight_price,favourable
+TLS.AX,Australia,2025-04-10,neutral,equal_weight_price,favourable
+TLS.AX,Australia,2025-05-13,favourable,equal_weight_price,favourable
+TLS.AX,Australia,2025-06-11,neutral,equal_weight_price,favourable
+TLS.AX,Australia,2025-07-09,neutral,equal_weight_price,favourable
+TLS.AX,Australia,2025-08-06,neutral,equal_weight_price,favourable
+TLS.AX,Australia,2025-09-03,neutral,equal_weight_price,neutral
+TLS.AX,Australia,2025-10-01,neutral,equal_weight_price,neutral
+TLS.AX,Australia,2025-10-29,neutral,equal_weight_price,favourable
+TLS.AX,Australia,2025-11-26,neutral,equal_weight_price,neutral
+TLS.AX,Australia,2025-12-24,neutral,equal_weight_price,neutral
+GMG.AX,Australia,2025-01-15,neutral,equal_weight_price,neutral
+GMG.AX,Australia,2025-02-13,unfavourable,equal_weight_price,neutral
+GMG.AX,Australia,2025-03-13,unfavourable,equal_weight_price,unfavourable
+GMG.AX,Australia,2025-04-10,favourable,equal_weight_price,unfavourable
+GMG.AX,Australia,2025-05-13,favourable,equal_weight_price,neutral
+GMG.AX,Australia,2025-06-11,neutral,equal_weight_price,favourable
+GMG.AX,Australia,2025-07-09,favourable,equal_weight_price,neutral
+GMG.AX,Australia,2025-08-06,unfavourable,equal_weight_price,favourable
+GMG.AX,Australia,2025-09-03,favourable,equal_weight_price,unfavourable
+GMG.AX,Australia,2025-10-01,neutral,equal_weight_price,unfavourable
+GMG.AX,Australia,2025-10-29,unfavourable,equal_weight_price,neutral
+GMG.AX,Australia,2025-11-26,favourable,equal_weight_price,unfavourable
+GMG.AX,Australia,2025-12-24,neutral,equal_weight_price,neutral
+TCL.AX,Australia,2025-01-15,unfavourable,equal_weight_price,favourable
+TCL.AX,Australia,2025-02-13,unfavourable,equal_weight_price,neutral
+TCL.AX,Australia,2025-03-13,favourable,equal_weight_price,unfavourable
+TCL.AX,Australia,2025-04-10,neutral,equal_weight_price,favourable
+TCL.AX,Australia,2025-05-13,favourable,equal_weight_price,neutral
+TCL.AX,Australia,2025-06-11,unfavourable,equal_weight_price,favourable
+TCL.AX,Australia,2025-07-09,favourable,equal_weight_price,neutral
+TCL.AX,Australia,2025-08-06,favourable,equal_weight_price,favourable
+TCL.AX,Australia,2025-09-03,unfavourable,equal_weight_price,neutral
+TCL.AX,Australia,2025-10-01,favourable,equal_weight_price,neutral
+TCL.AX,Australia,2025-10-29,favourable,equal_weight_price,favourable
+TCL.AX,Australia,2025-11-26,unfavourable,equal_weight_price,favourable
+TCL.AX,Australia,2025-12-24,unfavourable,equal_weight_price,neutral
+STO.AX,Australia,2025-01-15,neutral,equal_weight_price,neutral
+STO.AX,Australia,2025-02-13,unfavourable,equal_weight_price,neutral
+STO.AX,Australia,2025-03-13,unfavourable,equal_weight_price,unfavourable
+STO.AX,Australia,2025-04-10,favourable,equal_weight_price,unfavourable
+STO.AX,Australia,2025-05-13,favourable,equal_weight_price,neutral
+STO.AX,Australia,2025-06-11,favourable,equal_weight_price,favourable
+STO.AX,Australia,2025-07-09,favourable,equal_weight_price,favourable
+STO.AX,Australia,2025-08-06,neutral,equal_weight_price,favourable
+STO.AX,Australia,2025-09-03,unfavourable,equal_weight_price,favourable
+STO.AX,Australia,2025-10-01,unfavourable,equal_weight_price,unfavourable
+STO.AX,Australia,2025-10-29,favourable,equal_weight_price,unfavourable
+STO.AX,Australia,2025-11-26,unfavourable,equal_weight_price,neutral
+STO.AX,Australia,2025-12-24,favourable,equal_weight_price,unfavourable
+ORG.AX,Australia,2025-01-15,unfavourable,equal_weight_price,favourable
+ORG.AX,Australia,2025-02-13,favourable,equal_weight_price,unfavourable
+ORG.AX,Australia,2025-03-13,neutral,equal_weight_price,neutral
+ORG.AX,Australia,2025-04-10,favourable,equal_weight_price,neutral
+ORG.AX,Australia,2025-05-13,unfavourable,equal_weight_price,favourable
+ORG.AX,Australia,2025-06-11,favourable,equal_weight_price,neutral
+ORG.AX,Australia,2025-07-09,favourable,equal_weight_price,favourable
+ORG.AX,Australia,2025-08-06,favourable,equal_weight_price,favourable
+ORG.AX,Australia,2025-09-03,neutral,equal_weight_price,favourable
+ORG.AX,Australia,2025-10-01,favourable,equal_weight_price,favourable
+ORG.AX,Australia,2025-10-29,unfavourable,equal_weight_price,favourable
+ORG.AX,Australia,2025-11-26,unfavourable,equal_weight_price,neutral
+ORG.AX,Australia,2025-12-24,favourable,equal_weight_price,unfavourable
+RELIANCE.NS,India,2025-01-20,unfavourable,majority_class,favourable
+RELIANCE.NS,India,2025-02-14,neutral,majority_class,favourable
+RELIANCE.NS,India,2025-03-18,favourable,majority_class,favourable
+RELIANCE.NS,India,2025-04-21,favourable,majority_class,favourable
+RELIANCE.NS,India,2025-05-20,neutral,majority_class,favourable
+RELIANCE.NS,India,2025-06-17,favourable,majority_class,favourable
+RELIANCE.NS,India,2025-07-15,unfavourable,majority_class,favourable
+RELIANCE.NS,India,2025-08-12,neutral,majority_class,favourable
+RELIANCE.NS,India,2025-09-11,neutral,majority_class,favourable
+RELIANCE.NS,India,2025-10-10,favourable,majority_class,favourable
+RELIANCE.NS,India,2025-11-11,favourable,majority_class,favourable
+RELIANCE.NS,India,2025-12-09,neutral,majority_class,favourable
+TCS.NS,India,2025-01-20,unfavourable,majority_class,favourable
+TCS.NS,India,2025-02-14,unfavourable,majority_class,favourable
+TCS.NS,India,2025-03-18,unfavourable,majority_class,favourable
+TCS.NS,India,2025-04-21,favourable,majority_class,favourable
+TCS.NS,India,2025-05-20,neutral,majority_class,favourable
+TCS.NS,India,2025-06-17,unfavourable,majority_class,favourable
+TCS.NS,India,2025-07-15,unfavourable,majority_class,favourable
+TCS.NS,India,2025-08-12,favourable,majority_class,favourable
+TCS.NS,India,2025-09-11,unfavourable,majority_class,favourable
+TCS.NS,India,2025-10-10,neutral,majority_class,favourable
+TCS.NS,India,2025-11-11,favourable,majority_class,favourable
+TCS.NS,India,2025-12-09,favourable,majority_class,favourable
+HDFCBANK.NS,India,2025-01-20,favourable,majority_class,favourable
+HDFCBANK.NS,India,2025-02-14,neutral,majority_class,favourable
+HDFCBANK.NS,India,2025-03-18,favourable,majority_class,favourable
+HDFCBANK.NS,India,2025-04-21,neutral,majority_class,favourable
+HDFCBANK.NS,India,2025-05-20,neutral,majority_class,favourable
+HDFCBANK.NS,India,2025-06-17,favourable,majority_class,favourable
+HDFCBANK.NS,India,2025-07-15,neutral,majority_class,favourable
+HDFCBANK.NS,India,2025-08-12,neutral,majority_class,favourable
+HDFCBANK.NS,India,2025-09-11,neutral,majority_class,favourable
+HDFCBANK.NS,India,2025-10-10,neutral,majority_class,favourable
+HDFCBANK.NS,India,2025-11-11,neutral,majority_class,favourable
+HDFCBANK.NS,India,2025-12-09,unfavourable,majority_class,favourable
+SUNPHARMA.NS,India,2025-01-20,unfavourable,majority_class,favourable
+SUNPHARMA.NS,India,2025-02-14,neutral,majority_class,favourable
+SUNPHARMA.NS,India,2025-03-18,favourable,majority_class,favourable
+SUNPHARMA.NS,India,2025-04-21,unfavourable,majority_class,favourable
+SUNPHARMA.NS,India,2025-05-20,unfavourable,majority_class,favourable
+SUNPHARMA.NS,India,2025-06-17,favourable,majority_class,favourable
+SUNPHARMA.NS,India,2025-07-15,unfavourable,majority_class,favourable
+SUNPHARMA.NS,India,2025-08-12,neutral,majority_class,favourable
+SUNPHARMA.NS,India,2025-09-11,favourable,majority_class,favourable
+SUNPHARMA.NS,India,2025-10-10,favourable,majority_class,favourable
+SUNPHARMA.NS,India,2025-11-11,favourable,majority_class,favourable
+SUNPHARMA.NS,India,2025-12-09,neutral,majority_class,favourable
+HINDUNILVR.NS,India,2025-01-20,neutral,majority_class,favourable
+HINDUNILVR.NS,India,2025-02-14,unfavourable,majority_class,favourable
+HINDUNILVR.NS,India,2025-03-18,favourable,majority_class,favourable
+HINDUNILVR.NS,India,2025-04-21,neutral,majority_class,favourable
+HINDUNILVR.NS,India,2025-05-20,neutral,majority_class,favourable
+HINDUNILVR.NS,India,2025-06-17,favourable,majority_class,favourable
+HINDUNILVR.NS,India,2025-07-15,neutral,majority_class,favourable
+HINDUNILVR.NS,India,2025-08-12,favourable,majority_class,favourable
+HINDUNILVR.NS,India,2025-09-11,unfavourable,majority_class,favourable
+HINDUNILVR.NS,India,2025-10-10,unfavourable,majority_class,favourable
+HINDUNILVR.NS,India,2025-11-11,unfavourable,majority_class,favourable
+HINDUNILVR.NS,India,2025-12-09,favourable,majority_class,favourable
+MARUTI.NS,India,2025-01-20,favourable,majority_class,favourable
+MARUTI.NS,India,2025-02-14,unfavourable,majority_class,favourable
+MARUTI.NS,India,2025-03-18,neutral,majority_class,favourable
+MARUTI.NS,India,2025-04-21,favourable,majority_class,favourable
+MARUTI.NS,India,2025-05-20,neutral,majority_class,favourable
+MARUTI.NS,India,2025-06-17,neutral,majority_class,favourable
+MARUTI.NS,India,2025-07-15,favourable,majority_class,favourable
+MARUTI.NS,India,2025-08-12,favourable,majority_class,favourable
+MARUTI.NS,India,2025-09-11,favourable,majority_class,favourable
+MARUTI.NS,India,2025-10-10,unfavourable,majority_class,favourable
+MARUTI.NS,India,2025-11-11,favourable,majority_class,favourable
+MARUTI.NS,India,2025-12-09,favourable,majority_class,favourable
+LT.NS,India,2025-01-20,unfavourable,majority_class,favourable
+LT.NS,India,2025-02-14,neutral,majority_class,favourable
+LT.NS,India,2025-03-18,favourable,majority_class,favourable
+LT.NS,India,2025-04-21,favourable,majority_class,favourable
+LT.NS,India,2025-05-20,favourable,majority_class,favourable
+LT.NS,India,2025-06-17,unfavourable,majority_class,favourable
+LT.NS,India,2025-07-15,favourable,majority_class,favourable
+LT.NS,India,2025-08-12,unfavourable,majority_class,favourable
+LT.NS,India,2025-09-11,favourable,majority_class,favourable
+LT.NS,India,2025-10-10,favourable,majority_class,favourable
+LT.NS,India,2025-11-11,neutral,majority_class,favourable
+LT.NS,India,2025-12-09,favourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-01-20,favourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-02-14,unfavourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-03-18,favourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-04-21,unfavourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-05-20,favourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-06-17,favourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-07-15,unfavourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-08-12,favourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-09-11,neutral,majority_class,favourable
+BHARTIARTL.NS,India,2025-10-10,favourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-11-11,favourable,majority_class,favourable
+BHARTIARTL.NS,India,2025-12-09,neutral,majority_class,favourable
+NTPC.NS,India,2025-01-20,unfavourable,majority_class,favourable
+NTPC.NS,India,2025-02-14,favourable,majority_class,favourable
+NTPC.NS,India,2025-03-18,favourable,majority_class,favourable
+NTPC.NS,India,2025-04-21,unfavourable,majority_class,favourable
+NTPC.NS,India,2025-05-20,unfavourable,majority_class,favourable
+NTPC.NS,India,2025-06-17,favourable,majority_class,favourable
+NTPC.NS,India,2025-07-15,neutral,majority_class,favourable
+NTPC.NS,India,2025-08-12,neutral,majority_class,favourable
+NTPC.NS,India,2025-09-11,favourable,majority_class,favourable
+NTPC.NS,India,2025-10-10,unfavourable,majority_class,favourable
+NTPC.NS,India,2025-11-11,unfavourable,majority_class,favourable
+NTPC.NS,India,2025-12-09,favourable,majority_class,favourable
+ULTRACEMCO.NS,India,2025-01-20,favourable,majority_class,favourable
+ULTRACEMCO.NS,India,2025-02-14,unfavourable,majority_class,favourable
+ULTRACEMCO.NS,India,2025-03-18,favourable,majority_class,favourable
+ULTRACEMCO.NS,India,2025-04-21,neutral,majority_class,favourable
+ULTRACEMCO.NS,India,2025-05-20,unfavourable,majority_class,favourable
+ULTRACEMCO.NS,India,2025-06-17,favourable,majority_class,favourable
+ULTRACEMCO.NS,India,2025-07-15,neutral,majority_class,favourable
+ULTRACEMCO.NS,India,2025-08-12,neutral,majority_class,favourable
+ULTRACEMCO.NS,India,2025-09-11,neutral,majority_class,favourable
+ULTRACEMCO.NS,India,2025-10-10,unfavourable,majority_class,favourable
+ULTRACEMCO.NS,India,2025-11-11,unfavourable,majority_class,favourable
+ULTRACEMCO.NS,India,2025-12-09,favourable,majority_class,favourable
+MSFT,United States,2025-01-27,unfavourable,majority_class,favourable
+MSFT,United States,2025-02-25,neutral,majority_class,favourable
+MSFT,United States,2025-03-25,unfavourable,majority_class,favourable
+MSFT,United States,2025-04-23,favourable,majority_class,favourable
+MSFT,United States,2025-05-21,favourable,majority_class,favourable
+MSFT,United States,2025-06-20,favourable,majority_class,favourable
+MSFT,United States,2025-07-21,neutral,majority_class,favourable
+MSFT,United States,2025-08-18,neutral,majority_class,favourable
+MSFT,United States,2025-09-16,neutral,majority_class,favourable
+MSFT,United States,2025-10-14,neutral,majority_class,favourable
+MSFT,United States,2025-11-11,unfavourable,majority_class,favourable
+MSFT,United States,2025-12-10,neutral,majority_class,favourable
+JPM,United States,2025-01-27,unfavourable,majority_class,favourable
+JPM,United States,2025-02-25,unfavourable,majority_class,favourable
+JPM,United States,2025-03-25,unfavourable,majority_class,favourable
+JPM,United States,2025-04-23,favourable,majority_class,favourable
+JPM,United States,2025-05-21,favourable,majority_class,favourable
+JPM,United States,2025-06-20,favourable,majority_class,favourable
+JPM,United States,2025-07-21,neutral,majority_class,favourable
+JPM,United States,2025-08-18,favourable,majority_class,favourable
+JPM,United States,2025-09-16,neutral,majority_class,favourable
+JPM,United States,2025-10-14,favourable,majority_class,favourable
+JPM,United States,2025-11-11,neutral,majority_class,favourable
+JPM,United States,2025-12-10,favourable,majority_class,favourable
+JNJ,United States,2025-01-27,favourable,majority_class,favourable
+JNJ,United States,2025-02-25,unfavourable,majority_class,favourable
+JNJ,United States,2025-03-25,unfavourable,majority_class,favourable
+JNJ,United States,2025-04-23,neutral,majority_class,favourable
+JNJ,United States,2025-05-21,neutral,majority_class,favourable
+JNJ,United States,2025-06-20,favourable,majority_class,favourable
+JNJ,United States,2025-07-21,favourable,majority_class,favourable
+JNJ,United States,2025-08-18,neutral,majority_class,favourable
+JNJ,United States,2025-09-16,favourable,majority_class,favourable
+JNJ,United States,2025-10-14,neutral,majority_class,favourable
+JNJ,United States,2025-11-11,favourable,majority_class,favourable
+JNJ,United States,2025-12-10,neutral,majority_class,favourable
+XOM,United States,2025-01-27,neutral,majority_class,favourable
+XOM,United States,2025-02-25,favourable,majority_class,favourable
+XOM,United States,2025-03-25,unfavourable,majority_class,favourable
+XOM,United States,2025-04-23,unfavourable,majority_class,favourable
+XOM,United States,2025-05-21,favourable,majority_class,favourable
+XOM,United States,2025-06-20,unfavourable,majority_class,favourable
+XOM,United States,2025-07-21,neutral,majority_class,favourable
+XOM,United States,2025-08-18,favourable,majority_class,favourable
+XOM,United States,2025-09-16,unfavourable,majority_class,favourable
+XOM,United States,2025-10-14,favourable,majority_class,favourable
+XOM,United States,2025-11-11,neutral,majority_class,favourable
+XOM,United States,2025-12-10,favourable,majority_class,favourable
+PG,United States,2025-01-27,neutral,majority_class,favourable
+PG,United States,2025-02-25,unfavourable,majority_class,favourable
+PG,United States,2025-03-25,favourable,majority_class,favourable
+PG,United States,2025-04-23,neutral,majority_class,favourable
+PG,United States,2025-05-21,unfavourable,majority_class,favourable
+PG,United States,2025-06-20,neutral,majority_class,favourable
+PG,United States,2025-07-21,neutral,majority_class,favourable
+PG,United States,2025-08-18,neutral,majority_class,favourable
+PG,United States,2025-09-16,unfavourable,majority_class,favourable
+PG,United States,2025-10-14,neutral,majority_class,favourable
+PG,United States,2025-11-11,unfavourable,majority_class,favourable
+PG,United States,2025-12-10,neutral,majority_class,favourable
+AMZN,United States,2025-01-27,unfavourable,majority_class,favourable
+AMZN,United States,2025-02-25,unfavourable,majority_class,favourable
+AMZN,United States,2025-03-25,unfavourable,majority_class,favourable
+AMZN,United States,2025-04-23,favourable,majority_class,favourable
+AMZN,United States,2025-05-21,favourable,majority_class,favourable
+AMZN,United States,2025-06-20,favourable,majority_class,favourable
+AMZN,United States,2025-07-21,neutral,majority_class,favourable
+AMZN,United States,2025-08-18,neutral,majority_class,favourable
+AMZN,United States,2025-09-16,unfavourable,majority_class,favourable
+AMZN,United States,2025-10-14,favourable,majority_class,favourable
+AMZN,United States,2025-11-11,unfavourable,majority_class,favourable
+AMZN,United States,2025-12-10,favourable,majority_class,favourable
+CAT,United States,2025-01-27,unfavourable,majority_class,favourable
+CAT,United States,2025-02-25,neutral,majority_class,favourable
+CAT,United States,2025-03-25,unfavourable,majority_class,favourable
+CAT,United States,2025-04-23,favourable,majority_class,favourable
+CAT,United States,2025-05-21,favourable,majority_class,favourable
+CAT,United States,2025-06-20,favourable,majority_class,favourable
+CAT,United States,2025-07-21,neutral,majority_class,favourable
+CAT,United States,2025-08-18,favourable,majority_class,favourable
+CAT,United States,2025-09-16,favourable,majority_class,favourable
+CAT,United States,2025-10-14,favourable,majority_class,favourable
+CAT,United States,2025-11-11,favourable,majority_class,favourable
+CAT,United States,2025-12-10,neutral,majority_class,favourable
+NEE,United States,2025-01-27,unfavourable,majority_class,favourable
+NEE,United States,2025-02-25,unfavourable,majority_class,favourable
+NEE,United States,2025-03-25,neutral,majority_class,favourable
+NEE,United States,2025-04-23,favourable,majority_class,favourable
+NEE,United States,2025-05-21,neutral,majority_class,favourable
+NEE,United States,2025-06-20,favourable,majority_class,favourable
+NEE,United States,2025-07-21,neutral,majority_class,favourable
+NEE,United States,2025-08-18,unfavourable,majority_class,favourable
+NEE,United States,2025-09-16,favourable,majority_class,favourable
+NEE,United States,2025-10-14,neutral,majority_class,favourable
+NEE,United States,2025-11-11,unfavourable,majority_class,favourable
+NEE,United States,2025-12-10,neutral,majority_class,favourable
+AMT,United States,2025-01-27,favourable,majority_class,favourable
+AMT,United States,2025-02-25,favourable,majority_class,favourable
+AMT,United States,2025-03-25,favourable,majority_class,favourable
+AMT,United States,2025-04-23,neutral,majority_class,favourable
+AMT,United States,2025-05-21,favourable,majority_class,favourable
+AMT,United States,2025-06-20,favourable,majority_class,favourable
+AMT,United States,2025-07-21,unfavourable,majority_class,favourable
+AMT,United States,2025-08-18,unfavourable,majority_class,favourable
+AMT,United States,2025-09-16,unfavourable,majority_class,favourable
+AMT,United States,2025-10-14,neutral,majority_class,favourable
+AMT,United States,2025-11-11,unfavourable,majority_class,favourable
+AMT,United States,2025-12-10,unfavourable,majority_class,favourable
+GOOGL,United States,2025-01-27,unfavourable,majority_class,favourable
+GOOGL,United States,2025-02-25,unfavourable,majority_class,favourable
+GOOGL,United States,2025-03-25,unfavourable,majority_class,favourable
+GOOGL,United States,2025-04-23,favourable,majority_class,favourable
+GOOGL,United States,2025-05-21,neutral,majority_class,favourable
+GOOGL,United States,2025-06-20,favourable,majority_class,favourable
+GOOGL,United States,2025-07-21,favourable,majority_class,favourable
+GOOGL,United States,2025-08-18,favourable,majority_class,favourable
+GOOGL,United States,2025-09-16,unfavourable,majority_class,favourable
+GOOGL,United States,2025-10-14,favourable,majority_class,favourable
+GOOGL,United States,2025-11-11,favourable,majority_class,favourable
+GOOGL,United States,2025-12-10,favourable,majority_class,favourable
+D05.SI,Singapore,2025-01-24,favourable,majority_class,favourable
+D05.SI,Singapore,2025-02-25,neutral,majority_class,favourable
+D05.SI,Singapore,2025-03-25,unfavourable,majority_class,favourable
+D05.SI,Singapore,2025-04-24,favourable,majority_class,favourable
+D05.SI,Singapore,2025-05-26,neutral,majority_class,favourable
+D05.SI,Singapore,2025-06-23,favourable,majority_class,favourable
+D05.SI,Singapore,2025-07-21,favourable,majority_class,favourable
+D05.SI,Singapore,2025-08-18,favourable,majority_class,favourable
+D05.SI,Singapore,2025-09-15,favourable,majority_class,favourable
+D05.SI,Singapore,2025-10-13,favourable,majority_class,favourable
+D05.SI,Singapore,2025-11-11,neutral,majority_class,favourable
+D05.SI,Singapore,2025-12-09,favourable,majority_class,favourable
+Z74.SI,Singapore,2025-01-24,favourable,majority_class,favourable
+Z74.SI,Singapore,2025-02-25,favourable,majority_class,favourable
+Z74.SI,Singapore,2025-03-25,favourable,majority_class,favourable
+Z74.SI,Singapore,2025-04-24,neutral,majority_class,favourable
+Z74.SI,Singapore,2025-05-26,neutral,majority_class,favourable
+Z74.SI,Singapore,2025-06-23,favourable,majority_class,favourable
+Z74.SI,Singapore,2025-07-21,neutral,majority_class,favourable
+Z74.SI,Singapore,2025-08-18,favourable,majority_class,favourable
+Z74.SI,Singapore,2025-09-15,neutral,majority_class,favourable
+Z74.SI,Singapore,2025-10-13,favourable,majority_class,favourable
+Z74.SI,Singapore,2025-11-11,neutral,majority_class,favourable
+Z74.SI,Singapore,2025-12-09,unfavourable,majority_class,favourable
+C6L.SI,Singapore,2025-01-24,favourable,majority_class,favourable
+C6L.SI,Singapore,2025-02-25,favourable,majority_class,favourable
+C6L.SI,Singapore,2025-03-25,unfavourable,majority_class,favourable
+C6L.SI,Singapore,2025-04-24,favourable,majority_class,favourable
+C6L.SI,Singapore,2025-05-26,unfavourable,majority_class,favourable
+C6L.SI,Singapore,2025-06-23,favourable,majority_class,favourable
+C6L.SI,Singapore,2025-07-21,unfavourable,majority_class,favourable
+C6L.SI,Singapore,2025-08-18,neutral,majority_class,favourable
+C6L.SI,Singapore,2025-09-15,neutral,majority_class,favourable
+C6L.SI,Singapore,2025-10-13,neutral,majority_class,favourable
+C6L.SI,Singapore,2025-11-11,unfavourable,majority_class,favourable
+C6L.SI,Singapore,2025-12-09,favourable,majority_class,favourable
+C38U.SI,Singapore,2025-01-24,favourable,majority_class,favourable
+C38U.SI,Singapore,2025-02-25,favourable,majority_class,favourable
+C38U.SI,Singapore,2025-03-25,neutral,majority_class,favourable
+C38U.SI,Singapore,2025-04-24,unfavourable,majority_class,favourable
+C38U.SI,Singapore,2025-05-26,favourable,majority_class,favourable
+C38U.SI,Singapore,2025-06-23,favourable,majority_class,favourable
+C38U.SI,Singapore,2025-07-21,neutral,majority_class,favourable
+C38U.SI,Singapore,2025-08-18,favourable,majority_class,favourable
+C38U.SI,Singapore,2025-09-15,neutral,majority_class,favourable
+C38U.SI,Singapore,2025-10-13,neutral,majority_class,favourable
+C38U.SI,Singapore,2025-11-11,neutral,majority_class,favourable
+C38U.SI,Singapore,2025-12-09,favourable,majority_class,favourable
+F34.SI,Singapore,2025-01-24,neutral,majority_class,favourable
+F34.SI,Singapore,2025-02-25,favourable,majority_class,favourable
+F34.SI,Singapore,2025-03-25,unfavourable,majority_class,favourable
+F34.SI,Singapore,2025-04-24,neutral,majority_class,favourable
+F34.SI,Singapore,2025-05-26,unfavourable,majority_class,favourable
+F34.SI,Singapore,2025-06-23,favourable,majority_class,favourable
+F34.SI,Singapore,2025-07-21,unfavourable,majority_class,favourable
+F34.SI,Singapore,2025-08-18,favourable,majority_class,favourable
+F34.SI,Singapore,2025-09-15,neutral,majority_class,favourable
+F34.SI,Singapore,2025-10-13,favourable,majority_class,favourable
+F34.SI,Singapore,2025-11-11,unfavourable,majority_class,favourable
+F34.SI,Singapore,2025-12-09,neutral,majority_class,favourable
+U96.SI,Singapore,2025-01-24,favourable,majority_class,favourable
+U96.SI,Singapore,2025-02-25,favourable,majority_class,favourable
+U96.SI,Singapore,2025-03-25,favourable,majority_class,favourable
+U96.SI,Singapore,2025-04-24,favourable,majority_class,favourable
+U96.SI,Singapore,2025-05-26,favourable,majority_class,favourable
+U96.SI,Singapore,2025-06-23,favourable,majority_class,favourable
+U96.SI,Singapore,2025-07-21,unfavourable,majority_class,favourable
+U96.SI,Singapore,2025-08-18,favourable,majority_class,favourable
+U96.SI,Singapore,2025-09-15,favourable,majority_class,favourable
+U96.SI,Singapore,2025-10-13,neutral,majority_class,favourable
+U96.SI,Singapore,2025-11-11,unfavourable,majority_class,favourable
+U96.SI,Singapore,2025-12-09,favourable,majority_class,favourable
+BN4.SI,Singapore,2025-01-24,neutral,majority_class,favourable
+BN4.SI,Singapore,2025-02-25,neutral,majority_class,favourable
+BN4.SI,Singapore,2025-03-25,unfavourable,majority_class,favourable
+BN4.SI,Singapore,2025-04-24,favourable,majority_class,favourable
+BN4.SI,Singapore,2025-05-26,favourable,majority_class,favourable
+BN4.SI,Singapore,2025-06-23,favourable,majority_class,favourable
+BN4.SI,Singapore,2025-07-21,favourable,majority_class,favourable
+BN4.SI,Singapore,2025-08-18,favourable,majority_class,favourable
+BN4.SI,Singapore,2025-09-15,favourable,majority_class,favourable
+BN4.SI,Singapore,2025-10-13,favourable,majority_class,favourable
+BN4.SI,Singapore,2025-11-11,neutral,majority_class,favourable
+BN4.SI,Singapore,2025-12-09,favourable,majority_class,favourable
+S68.SI,Singapore,2025-01-24,favourable,majority_class,favourable
+S68.SI,Singapore,2025-02-25,neutral,majority_class,favourable
+S68.SI,Singapore,2025-03-25,favourable,majority_class,favourable
+S68.SI,Singapore,2025-04-24,unfavourable,majority_class,favourable
+S68.SI,Singapore,2025-05-26,neutral,majority_class,favourable
+S68.SI,Singapore,2025-06-23,favourable,majority_class,favourable
+S68.SI,Singapore,2025-07-21,favourable,majority_class,favourable
+S68.SI,Singapore,2025-08-18,favourable,majority_class,favourable
+S68.SI,Singapore,2025-09-15,favourable,majority_class,favourable
+S68.SI,Singapore,2025-10-13,neutral,majority_class,favourable
+S68.SI,Singapore,2025-11-11,unfavourable,majority_class,favourable
+S68.SI,Singapore,2025-12-09,favourable,majority_class,favourable
+S63.SI,Singapore,2025-01-24,favourable,majority_class,favourable
+S63.SI,Singapore,2025-02-25,favourable,majority_class,favourable
+S63.SI,Singapore,2025-03-25,favourable,majority_class,favourable
+S63.SI,Singapore,2025-04-24,favourable,majority_class,favourable
+S63.SI,Singapore,2025-05-26,favourable,majority_class,favourable
+S63.SI,Singapore,2025-06-23,favourable,majority_class,favourable
+S63.SI,Singapore,2025-07-21,unfavourable,majority_class,favourable
+S63.SI,Singapore,2025-08-18,neutral,majority_class,favourable
+S63.SI,Singapore,2025-09-15,favourable,majority_class,favourable
+S63.SI,Singapore,2025-10-13,unfavourable,majority_class,favourable
+S63.SI,Singapore,2025-11-11,neutral,majority_class,favourable
+S63.SI,Singapore,2025-12-09,favourable,majority_class,favourable
+V03.SI,Singapore,2025-01-24,unfavourable,majority_class,favourable
+V03.SI,Singapore,2025-02-25,neutral,majority_class,favourable
+V03.SI,Singapore,2025-03-25,unfavourable,majority_class,favourable
+V03.SI,Singapore,2025-04-24,favourable,majority_class,favourable
+V03.SI,Singapore,2025-05-26,neutral,majority_class,favourable
+V03.SI,Singapore,2025-06-23,favourable,majority_class,favourable
+V03.SI,Singapore,2025-07-21,favourable,majority_class,favourable
+V03.SI,Singapore,2025-08-18,favourable,majority_class,favourable
+V03.SI,Singapore,2025-09-15,favourable,majority_class,favourable
+V03.SI,Singapore,2025-10-13,favourable,majority_class,favourable
+V03.SI,Singapore,2025-11-11,neutral,majority_class,favourable
+V03.SI,Singapore,2025-12-09,favourable,majority_class,favourable
+BHP.AX,Australia,2025-01-15,favourable,majority_class,favourable
+BHP.AX,Australia,2025-02-13,unfavourable,majority_class,favourable
+BHP.AX,Australia,2025-03-13,unfavourable,majority_class,favourable
+BHP.AX,Australia,2025-04-10,favourable,majority_class,favourable
+BHP.AX,Australia,2025-05-13,neutral,majority_class,favourable
+BHP.AX,Australia,2025-06-11,unfavourable,majority_class,favourable
+BHP.AX,Australia,2025-07-09,favourable,majority_class,favourable
+BHP.AX,Australia,2025-08-06,favourable,majority_class,favourable
+BHP.AX,Australia,2025-09-03,neutral,majority_class,favourable
+BHP.AX,Australia,2025-10-01,favourable,majority_class,favourable
+BHP.AX,Australia,2025-10-29,unfavourable,majority_class,favourable
+BHP.AX,Australia,2025-11-26,favourable,majority_class,favourable
+BHP.AX,Australia,2025-12-24,favourable,majority_class,favourable
+CBA.AX,Australia,2025-01-15,favourable,majority_class,favourable
+CBA.AX,Australia,2025-02-13,unfavourable,majority_class,favourable
+CBA.AX,Australia,2025-03-13,favourable,majority_class,favourable
+CBA.AX,Australia,2025-04-10,favourable,majority_class,favourable
+CBA.AX,Australia,2025-05-13,favourable,majority_class,favourable
+CBA.AX,Australia,2025-06-11,neutral,majority_class,favourable
+CBA.AX,Australia,2025-07-09,neutral,majority_class,favourable
+CBA.AX,Australia,2025-08-06,unfavourable,majority_class,favourable
+CBA.AX,Australia,2025-09-03,neutral,majority_class,favourable
+CBA.AX,Australia,2025-10-01,neutral,majority_class,favourable
+CBA.AX,Australia,2025-10-29,unfavourable,majority_class,favourable
+CBA.AX,Australia,2025-11-26,favourable,majority_class,favourable
+CBA.AX,Australia,2025-12-24,unfavourable,majority_class,favourable
+CSL.AX,Australia,2025-01-15,unfavourable,majority_class,favourable
+CSL.AX,Australia,2025-02-13,neutral,majority_class,favourable
+CSL.AX,Australia,2025-03-13,unfavourable,majority_class,favourable
+CSL.AX,Australia,2025-04-10,neutral,majority_class,favourable
+CSL.AX,Australia,2025-05-13,neutral,majority_class,favourable
+CSL.AX,Australia,2025-06-11,neutral,majority_class,favourable
+CSL.AX,Australia,2025-07-09,favourable,majority_class,favourable
+CSL.AX,Australia,2025-08-06,unfavourable,majority_class,favourable
+CSL.AX,Australia,2025-09-03,unfavourable,majority_class,favourable
+CSL.AX,Australia,2025-10-01,unfavourable,majority_class,favourable
+CSL.AX,Australia,2025-10-29,favourable,majority_class,favourable
+CSL.AX,Australia,2025-11-26,unfavourable,majority_class,favourable
+CSL.AX,Australia,2025-12-24,favourable,majority_class,favourable
+WES.AX,Australia,2025-01-15,favourable,majority_class,favourable
+WES.AX,Australia,2025-02-13,unfavourable,majority_class,favourable
+WES.AX,Australia,2025-03-13,favourable,majority_class,favourable
+WES.AX,Australia,2025-04-10,favourable,majority_class,favourable
+WES.AX,Australia,2025-05-13,favourable,majority_class,favourable
+WES.AX,Australia,2025-06-11,unfavourable,majority_class,favourable
+WES.AX,Australia,2025-07-09,favourable,majority_class,favourable
+WES.AX,Australia,2025-08-06,neutral,majority_class,favourable
+WES.AX,Australia,2025-09-03,favourable,majority_class,favourable
+WES.AX,Australia,2025-10-01,favourable,majority_class,favourable
+WES.AX,Australia,2025-10-29,unfavourable,majority_class,favourable
+WES.AX,Australia,2025-11-26,neutral,majority_class,favourable
+WES.AX,Australia,2025-12-24,favourable,majority_class,favourable
+WOW.AX,Australia,2025-01-15,neutral,majority_class,favourable
+WOW.AX,Australia,2025-02-13,unfavourable,majority_class,favourable
+WOW.AX,Australia,2025-03-13,favourable,majority_class,favourable
+WOW.AX,Australia,2025-04-10,neutral,majority_class,favourable
+WOW.AX,Australia,2025-05-13,neutral,majority_class,favourable
+WOW.AX,Australia,2025-06-11,unfavourable,majority_class,favourable
+WOW.AX,Australia,2025-07-09,favourable,majority_class,favourable
+WOW.AX,Australia,2025-08-06,unfavourable,majority_class,favourable
+WOW.AX,Australia,2025-09-03,unfavourable,majority_class,favourable
+WOW.AX,Australia,2025-10-01,favourable,majority_class,favourable
+WOW.AX,Australia,2025-10-29,favourable,majority_class,favourable
+WOW.AX,Australia,2025-11-26,favourable,majority_class,favourable
+WOW.AX,Australia,2025-12-24,favourable,majority_class,favourable
+TLS.AX,Australia,2025-01-15,unfavourable,majority_class,favourable
+TLS.AX,Australia,2025-02-13,favourable,majority_class,favourable
+TLS.AX,Australia,2025-03-13,favourable,majority_class,favourable
+TLS.AX,Australia,2025-04-10,neutral,majority_class,favourable
+TLS.AX,Australia,2025-05-13,favourable,majority_class,favourable
+TLS.AX,Australia,2025-06-11,neutral,majority_class,favourable
+TLS.AX,Australia,2025-07-09,neutral,majority_class,favourable
+TLS.AX,Australia,2025-08-06,neutral,majority_class,favourable
+TLS.AX,Australia,2025-09-03,neutral,majority_class,favourable
+TLS.AX,Australia,2025-10-01,neutral,majority_class,favourable
+TLS.AX,Australia,2025-10-29,neutral,majority_class,favourable
+TLS.AX,Australia,2025-11-26,neutral,majority_class,favourable
+TLS.AX,Australia,2025-12-24,neutral,majority_class,favourable
+GMG.AX,Australia,2025-01-15,neutral,majority_class,favourable
+GMG.AX,Australia,2025-02-13,unfavourable,majority_class,favourable
+GMG.AX,Australia,2025-03-13,unfavourable,majority_class,favourable
+GMG.AX,Australia,2025-04-10,favourable,majority_class,favourable
+GMG.AX,Australia,2025-05-13,favourable,majority_class,favourable
+GMG.AX,Australia,2025-06-11,neutral,majority_class,favourable
+GMG.AX,Australia,2025-07-09,favourable,majority_class,favourable
+GMG.AX,Australia,2025-08-06,unfavourable,majority_class,favourable
+GMG.AX,Australia,2025-09-03,favourable,majority_class,favourable
+GMG.AX,Australia,2025-10-01,neutral,majority_class,favourable
+GMG.AX,Australia,2025-10-29,unfavourable,majority_class,favourable
+GMG.AX,Australia,2025-11-26,favourable,majority_class,favourable
+GMG.AX,Australia,2025-12-24,neutral,majority_class,favourable
+TCL.AX,Australia,2025-01-15,unfavourable,majority_class,favourable
+TCL.AX,Australia,2025-02-13,unfavourable,majority_class,favourable
+TCL.AX,Australia,2025-03-13,favourable,majority_class,favourable
+TCL.AX,Australia,2025-04-10,neutral,majority_class,favourable
+TCL.AX,Australia,2025-05-13,favourable,majority_class,favourable
+TCL.AX,Australia,2025-06-11,unfavourable,majority_class,favourable
+TCL.AX,Australia,2025-07-09,favourable,majority_class,favourable
+TCL.AX,Australia,2025-08-06,favourable,majority_class,favourable
+TCL.AX,Australia,2025-09-03,unfavourable,majority_class,favourable
+TCL.AX,Australia,2025-10-01,favourable,majority_class,favourable
+TCL.AX,Australia,2025-10-29,favourable,majority_class,favourable
+TCL.AX,Australia,2025-11-26,unfavourable,majority_class,favourable
+TCL.AX,Australia,2025-12-24,unfavourable,majority_class,favourable
+STO.AX,Australia,2025-01-15,neutral,majority_class,favourable
+STO.AX,Australia,2025-02-13,unfavourable,majority_class,favourable
+STO.AX,Australia,2025-03-13,unfavourable,majority_class,favourable
+STO.AX,Australia,2025-04-10,favourable,majority_class,favourable
+STO.AX,Australia,2025-05-13,favourable,majority_class,favourable
+STO.AX,Australia,2025-06-11,favourable,majority_class,favourable
+STO.AX,Australia,2025-07-09,favourable,majority_class,favourable
+STO.AX,Australia,2025-08-06,neutral,majority_class,favourable
+STO.AX,Australia,2025-09-03,unfavourable,majority_class,favourable
+STO.AX,Australia,2025-10-01,unfavourable,majority_class,favourable
+STO.AX,Australia,2025-10-29,favourable,majority_class,favourable
+STO.AX,Australia,2025-11-26,unfavourable,majority_class,favourable
+STO.AX,Australia,2025-12-24,favourable,majority_class,favourable
+ORG.AX,Australia,2025-01-15,unfavourable,majority_class,favourable
+ORG.AX,Australia,2025-02-13,favourable,majority_class,favourable
+ORG.AX,Australia,2025-03-13,neutral,majority_class,favourable
+ORG.AX,Australia,2025-04-10,favourable,majority_class,favourable
+ORG.AX,Australia,2025-05-13,unfavourable,majority_class,favourable
+ORG.AX,Australia,2025-06-11,favourable,majority_class,favourable
+ORG.AX,Australia,2025-07-09,favourable,majority_class,favourable
+ORG.AX,Australia,2025-08-06,favourable,majority_class,favourable
+ORG.AX,Australia,2025-09-03,neutral,majority_class,favourable
+ORG.AX,Australia,2025-10-01,favourable,majority_class,favourable
+ORG.AX,Australia,2025-10-29,unfavourable,majority_class,favourable
+ORG.AX,Australia,2025-11-26,unfavourable,majority_class,favourable
+ORG.AX,Australia,2025-12-24,favourable,majority_class,favourable
+RELIANCE.NS,India,2025-01-20,unfavourable,logistic_regression,neutral
+RELIANCE.NS,India,2025-02-14,neutral,logistic_regression,unfavourable
+RELIANCE.NS,India,2025-03-18,favourable,logistic_regression,neutral
+RELIANCE.NS,India,2025-04-21,favourable,logistic_regression,unfavourable
+RELIANCE.NS,India,2025-05-20,neutral,logistic_regression,unfavourable
+RELIANCE.NS,India,2025-06-17,favourable,logistic_regression,neutral
+RELIANCE.NS,India,2025-07-15,unfavourable,logistic_regression,neutral
+RELIANCE.NS,India,2025-08-12,neutral,logistic_regression,neutral
+RELIANCE.NS,India,2025-09-11,neutral,logistic_regression,neutral
+RELIANCE.NS,India,2025-10-10,favourable,logistic_regression,neutral
+RELIANCE.NS,India,2025-11-11,favourable,logistic_regression,neutral
+RELIANCE.NS,India,2025-12-09,neutral,logistic_regression,neutral
+TCS.NS,India,2025-01-20,unfavourable,logistic_regression,neutral
+TCS.NS,India,2025-02-14,unfavourable,logistic_regression,neutral
+TCS.NS,India,2025-03-18,unfavourable,logistic_regression,favourable
+TCS.NS,India,2025-04-21,favourable,logistic_regression,favourable
+TCS.NS,India,2025-05-20,neutral,logistic_regression,unfavourable
+TCS.NS,India,2025-06-17,unfavourable,logistic_regression,neutral
+TCS.NS,India,2025-07-15,unfavourable,logistic_regression,favourable
+TCS.NS,India,2025-08-12,favourable,logistic_regression,favourable
+TCS.NS,India,2025-09-11,unfavourable,logistic_regression,neutral
+TCS.NS,India,2025-10-10,neutral,logistic_regression,favourable
+TCS.NS,India,2025-11-11,favourable,logistic_regression,neutral
+TCS.NS,India,2025-12-09,favourable,logistic_regression,neutral
+HDFCBANK.NS,India,2025-01-20,favourable,logistic_regression,neutral
+HDFCBANK.NS,India,2025-02-14,neutral,logistic_regression,neutral
+HDFCBANK.NS,India,2025-03-18,favourable,logistic_regression,neutral
+HDFCBANK.NS,India,2025-04-21,neutral,logistic_regression,neutral
+HDFCBANK.NS,India,2025-05-20,neutral,logistic_regression,neutral
+HDFCBANK.NS,India,2025-06-17,favourable,logistic_regression,neutral
+HDFCBANK.NS,India,2025-07-15,neutral,logistic_regression,neutral
+HDFCBANK.NS,India,2025-08-12,neutral,logistic_regression,neutral
+HDFCBANK.NS,India,2025-09-11,neutral,logistic_regression,neutral
+HDFCBANK.NS,India,2025-10-10,neutral,logistic_regression,neutral
+HDFCBANK.NS,India,2025-11-11,neutral,logistic_regression,neutral
+HDFCBANK.NS,India,2025-12-09,unfavourable,logistic_regression,neutral
+SUNPHARMA.NS,India,2025-01-20,unfavourable,logistic_regression,unfavourable
+SUNPHARMA.NS,India,2025-02-14,neutral,logistic_regression,neutral
+SUNPHARMA.NS,India,2025-03-18,favourable,logistic_regression,neutral
+SUNPHARMA.NS,India,2025-04-21,unfavourable,logistic_regression,unfavourable
+SUNPHARMA.NS,India,2025-05-20,unfavourable,logistic_regression,unfavourable
+SUNPHARMA.NS,India,2025-06-17,favourable,logistic_regression,neutral
+SUNPHARMA.NS,India,2025-07-15,unfavourable,logistic_regression,neutral
+SUNPHARMA.NS,India,2025-08-12,neutral,logistic_regression,unfavourable
+SUNPHARMA.NS,India,2025-09-11,favourable,logistic_regression,neutral
+SUNPHARMA.NS,India,2025-10-10,favourable,logistic_regression,neutral
+SUNPHARMA.NS,India,2025-11-11,favourable,logistic_regression,neutral
+SUNPHARMA.NS,India,2025-12-09,neutral,logistic_regression,neutral
+HINDUNILVR.NS,India,2025-01-20,neutral,logistic_regression,neutral
+HINDUNILVR.NS,India,2025-02-14,unfavourable,logistic_regression,unfavourable
+HINDUNILVR.NS,India,2025-03-18,favourable,logistic_regression,neutral
+HINDUNILVR.NS,India,2025-04-21,neutral,logistic_regression,neutral
+HINDUNILVR.NS,India,2025-05-20,neutral,logistic_regression,neutral
+HINDUNILVR.NS,India,2025-06-17,favourable,logistic_regression,neutral
+HINDUNILVR.NS,India,2025-07-15,neutral,logistic_regression,neutral
+HINDUNILVR.NS,India,2025-08-12,favourable,logistic_regression,unfavourable
+HINDUNILVR.NS,India,2025-09-11,unfavourable,logistic_regression,neutral
+HINDUNILVR.NS,India,2025-10-10,unfavourable,logistic_regression,neutral
+HINDUNILVR.NS,India,2025-11-11,unfavourable,logistic_regression,neutral
+HINDUNILVR.NS,India,2025-12-09,favourable,logistic_regression,neutral
+MARUTI.NS,India,2025-01-20,favourable,logistic_regression,unfavourable
+MARUTI.NS,India,2025-02-14,unfavourable,logistic_regression,unfavourable
+MARUTI.NS,India,2025-03-18,neutral,logistic_regression,neutral
+MARUTI.NS,India,2025-04-21,favourable,logistic_regression,neutral
+MARUTI.NS,India,2025-05-20,neutral,logistic_regression,unfavourable
+MARUTI.NS,India,2025-06-17,neutral,logistic_regression,neutral
+MARUTI.NS,India,2025-07-15,favourable,logistic_regression,neutral
+MARUTI.NS,India,2025-08-12,favourable,logistic_regression,favourable
+MARUTI.NS,India,2025-09-11,favourable,logistic_regression,unfavourable
+MARUTI.NS,India,2025-10-10,unfavourable,logistic_regression,neutral
+MARUTI.NS,India,2025-11-11,favourable,logistic_regression,neutral
+MARUTI.NS,India,2025-12-09,favourable,logistic_regression,neutral
+LT.NS,India,2025-01-20,unfavourable,logistic_regression,favourable
+LT.NS,India,2025-02-14,neutral,logistic_regression,favourable
+LT.NS,India,2025-03-18,favourable,logistic_regression,neutral
+LT.NS,India,2025-04-21,favourable,logistic_regression,unfavourable
+LT.NS,India,2025-05-20,favourable,logistic_regression,neutral
+LT.NS,India,2025-06-17,unfavourable,logistic_regression,unfavourable
+LT.NS,India,2025-07-15,favourable,logistic_regression,neutral
+LT.NS,India,2025-08-12,unfavourable,logistic_regression,neutral
+LT.NS,India,2025-09-11,favourable,logistic_regression,neutral
+LT.NS,India,2025-10-10,favourable,logistic_regression,neutral
+LT.NS,India,2025-11-11,neutral,logistic_regression,unfavourable
+LT.NS,India,2025-12-09,favourable,logistic_regression,neutral
+BHARTIARTL.NS,India,2025-01-20,favourable,logistic_regression,neutral
+BHARTIARTL.NS,India,2025-02-14,unfavourable,logistic_regression,neutral
+BHARTIARTL.NS,India,2025-03-18,favourable,logistic_regression,neutral
+BHARTIARTL.NS,India,2025-04-21,unfavourable,logistic_regression,neutral
+BHARTIARTL.NS,India,2025-05-20,favourable,logistic_regression,unfavourable
+BHARTIARTL.NS,India,2025-06-17,favourable,logistic_regression,neutral
+BHARTIARTL.NS,India,2025-07-15,unfavourable,logistic_regression,unfavourable
+BHARTIARTL.NS,India,2025-08-12,favourable,logistic_regression,neutral
+BHARTIARTL.NS,India,2025-09-11,neutral,logistic_regression,neutral
+BHARTIARTL.NS,India,2025-10-10,favourable,logistic_regression,neutral
+BHARTIARTL.NS,India,2025-11-11,favourable,logistic_regression,unfavourable
+BHARTIARTL.NS,India,2025-12-09,neutral,logistic_regression,neutral
+NTPC.NS,India,2025-01-20,unfavourable,logistic_regression,favourable
+NTPC.NS,India,2025-02-14,favourable,logistic_regression,unfavourable
+NTPC.NS,India,2025-03-18,favourable,logistic_regression,unfavourable
+NTPC.NS,India,2025-04-21,unfavourable,logistic_regression,unfavourable
+NTPC.NS,India,2025-05-20,unfavourable,logistic_regression,favourable
+NTPC.NS,India,2025-06-17,favourable,logistic_regression,favourable
+NTPC.NS,India,2025-07-15,neutral,logistic_regression,unfavourable
+NTPC.NS,India,2025-08-12,neutral,logistic_regression,unfavourable
+NTPC.NS,India,2025-09-11,favourable,logistic_regression,favourable
+NTPC.NS,India,2025-10-10,unfavourable,logistic_regression,unfavourable
+NTPC.NS,India,2025-11-11,unfavourable,logistic_regression,favourable
+NTPC.NS,India,2025-12-09,favourable,logistic_regression,favourable
+ULTRACEMCO.NS,India,2025-01-20,favourable,logistic_regression,unfavourable
+ULTRACEMCO.NS,India,2025-02-14,unfavourable,logistic_regression,neutral
+ULTRACEMCO.NS,India,2025-03-18,favourable,logistic_regression,favourable
+ULTRACEMCO.NS,India,2025-04-21,neutral,logistic_regression,unfavourable
+ULTRACEMCO.NS,India,2025-05-20,unfavourable,logistic_regression,unfavourable
+ULTRACEMCO.NS,India,2025-06-17,favourable,logistic_regression,neutral
+ULTRACEMCO.NS,India,2025-07-15,neutral,logistic_regression,unfavourable
+ULTRACEMCO.NS,India,2025-08-12,neutral,logistic_regression,neutral
+ULTRACEMCO.NS,India,2025-09-11,neutral,logistic_regression,neutral
+ULTRACEMCO.NS,India,2025-10-10,unfavourable,logistic_regression,neutral
+ULTRACEMCO.NS,India,2025-11-11,unfavourable,logistic_regression,neutral
+ULTRACEMCO.NS,India,2025-12-09,favourable,logistic_regression,neutral
+MSFT,United States,2025-01-27,unfavourable,logistic_regression,neutral
+MSFT,United States,2025-02-25,neutral,logistic_regression,favourable
+MSFT,United States,2025-03-25,unfavourable,logistic_regression,favourable
+MSFT,United States,2025-04-23,favourable,logistic_regression,unfavourable
+MSFT,United States,2025-05-21,favourable,logistic_regression,unfavourable
+MSFT,United States,2025-06-20,favourable,logistic_regression,neutral
+MSFT,United States,2025-07-21,neutral,logistic_regression,neutral
+MSFT,United States,2025-08-18,neutral,logistic_regression,unfavourable
+MSFT,United States,2025-09-16,neutral,logistic_regression,neutral
+MSFT,United States,2025-10-14,neutral,logistic_regression,neutral
+MSFT,United States,2025-11-11,unfavourable,logistic_regression,unfavourable
+MSFT,United States,2025-12-10,neutral,logistic_regression,favourable
+JPM,United States,2025-01-27,unfavourable,logistic_regression,neutral
+JPM,United States,2025-02-25,unfavourable,logistic_regression,unfavourable
+JPM,United States,2025-03-25,unfavourable,logistic_regression,neutral
+JPM,United States,2025-04-23,favourable,logistic_regression,favourable
+JPM,United States,2025-05-21,favourable,logistic_regression,unfavourable
+JPM,United States,2025-06-20,favourable,logistic_regression,neutral
+JPM,United States,2025-07-21,neutral,logistic_regression,neutral
+JPM,United States,2025-08-18,favourable,logistic_regression,neutral
+JPM,United States,2025-09-16,neutral,logistic_regression,neutral
+JPM,United States,2025-10-14,favourable,logistic_regression,unfavourable
+JPM,United States,2025-11-11,neutral,logistic_regression,neutral
+JPM,United States,2025-12-10,favourable,logistic_regression,favourable
+JNJ,United States,2025-01-27,favourable,logistic_regression,neutral
+JNJ,United States,2025-02-25,unfavourable,logistic_regression,neutral
+JNJ,United States,2025-03-25,unfavourable,logistic_regression,neutral
+JNJ,United States,2025-04-23,neutral,logistic_regression,favourable
+JNJ,United States,2025-05-21,neutral,logistic_regression,neutral
+JNJ,United States,2025-06-20,favourable,logistic_regression,unfavourable
+JNJ,United States,2025-07-21,favourable,logistic_regression,neutral
+JNJ,United States,2025-08-18,neutral,logistic_regression,neutral
+JNJ,United States,2025-09-16,favourable,logistic_regression,neutral
+JNJ,United States,2025-10-14,neutral,logistic_regression,neutral
+JNJ,United States,2025-11-11,favourable,logistic_regression,neutral
+JNJ,United States,2025-12-10,neutral,logistic_regression,neutral
+XOM,United States,2025-01-27,neutral,logistic_regression,neutral
+XOM,United States,2025-02-25,favourable,logistic_regression,unfavourable
+XOM,United States,2025-03-25,unfavourable,logistic_regression,neutral
+XOM,United States,2025-04-23,unfavourable,logistic_regression,favourable
+XOM,United States,2025-05-21,favourable,logistic_regression,favourable
+XOM,United States,2025-06-20,unfavourable,logistic_regression,unfavourable
+XOM,United States,2025-07-21,neutral,logistic_regression,unfavourable
+XOM,United States,2025-08-18,favourable,logistic_regression,neutral
+XOM,United States,2025-09-16,unfavourable,logistic_regression,unfavourable
+XOM,United States,2025-10-14,favourable,logistic_regression,unfavourable
+XOM,United States,2025-11-11,neutral,logistic_regression,neutral
+XOM,United States,2025-12-10,favourable,logistic_regression,neutral
+PG,United States,2025-01-27,neutral,logistic_regression,neutral
+PG,United States,2025-02-25,unfavourable,logistic_regression,neutral
+PG,United States,2025-03-25,favourable,logistic_regression,neutral
+PG,United States,2025-04-23,neutral,logistic_regression,neutral
+PG,United States,2025-05-21,unfavourable,logistic_regression,neutral
+PG,United States,2025-06-20,neutral,logistic_regression,neutral
+PG,United States,2025-07-21,neutral,logistic_regression,neutral
+PG,United States,2025-08-18,neutral,logistic_regression,neutral
+PG,United States,2025-09-16,unfavourable,logistic_regression,neutral
+PG,United States,2025-10-14,neutral,logistic_regression,neutral
+PG,United States,2025-11-11,unfavourable,logistic_regression,neutral
+PG,United States,2025-12-10,neutral,logistic_regression,neutral
+AMZN,United States,2025-01-27,unfavourable,logistic_regression,favourable
+AMZN,United States,2025-02-25,unfavourable,logistic_regression,unfavourable
+AMZN,United States,2025-03-25,unfavourable,logistic_regression,favourable
+AMZN,United States,2025-04-23,favourable,logistic_regression,favourable
+AMZN,United States,2025-05-21,favourable,logistic_regression,unfavourable
+AMZN,United States,2025-06-20,favourable,logistic_regression,unfavourable
+AMZN,United States,2025-07-21,neutral,logistic_regression,neutral
+AMZN,United States,2025-08-18,neutral,logistic_regression,favourable
+AMZN,United States,2025-09-16,unfavourable,logistic_regression,unfavourable
+AMZN,United States,2025-10-14,favourable,logistic_regression,unfavourable
+AMZN,United States,2025-11-11,unfavourable,logistic_regression,unfavourable
+AMZN,United States,2025-12-10,favourable,logistic_regression,favourable
+CAT,United States,2025-01-27,unfavourable,logistic_regression,favourable
+CAT,United States,2025-02-25,neutral,logistic_regression,favourable
+CAT,United States,2025-03-25,unfavourable,logistic_regression,favourable
+CAT,United States,2025-04-23,favourable,logistic_regression,favourable
+CAT,United States,2025-05-21,favourable,logistic_regression,unfavourable
+CAT,United States,2025-06-20,favourable,logistic_regression,unfavourable
+CAT,United States,2025-07-21,neutral,logistic_regression,neutral
+CAT,United States,2025-08-18,favourable,logistic_regression,unfavourable
+CAT,United States,2025-09-16,favourable,logistic_regression,neutral
+CAT,United States,2025-10-14,favourable,logistic_regression,unfavourable
+CAT,United States,2025-11-11,favourable,logistic_regression,unfavourable
+CAT,United States,2025-12-10,neutral,logistic_regression,neutral
+NEE,United States,2025-01-27,unfavourable,logistic_regression,favourable
+NEE,United States,2025-02-25,unfavourable,logistic_regression,favourable
+NEE,United States,2025-03-25,neutral,logistic_regression,unfavourable
+NEE,United States,2025-04-23,favourable,logistic_regression,favourable
+NEE,United States,2025-05-21,neutral,logistic_regression,favourable
+NEE,United States,2025-06-20,favourable,logistic_regression,unfavourable
+NEE,United States,2025-07-21,neutral,logistic_regression,unfavourable
+NEE,United States,2025-08-18,unfavourable,logistic_regression,favourable
+NEE,United States,2025-09-16,favourable,logistic_regression,favourable
+NEE,United States,2025-10-14,neutral,logistic_regression,unfavourable
+NEE,United States,2025-11-11,unfavourable,logistic_regression,unfavourable
+NEE,United States,2025-12-10,neutral,logistic_regression,favourable
+AMT,United States,2025-01-27,favourable,logistic_regression,favourable
+AMT,United States,2025-02-25,favourable,logistic_regression,unfavourable
+AMT,United States,2025-03-25,favourable,logistic_regression,unfavourable
+AMT,United States,2025-04-23,neutral,logistic_regression,favourable
+AMT,United States,2025-05-21,favourable,logistic_regression,favourable
+AMT,United States,2025-06-20,favourable,logistic_regression,neutral
+AMT,United States,2025-07-21,unfavourable,logistic_regression,unfavourable
+AMT,United States,2025-08-18,unfavourable,logistic_regression,favourable
+AMT,United States,2025-09-16,unfavourable,logistic_regression,favourable
+AMT,United States,2025-10-14,neutral,logistic_regression,favourable
+AMT,United States,2025-11-11,unfavourable,logistic_regression,neutral
+AMT,United States,2025-12-10,unfavourable,logistic_regression,favourable
+GOOGL,United States,2025-01-27,unfavourable,logistic_regression,favourable
+GOOGL,United States,2025-02-25,unfavourable,logistic_regression,favourable
+GOOGL,United States,2025-03-25,unfavourable,logistic_regression,favourable
+GOOGL,United States,2025-04-23,favourable,logistic_regression,favourable
+GOOGL,United States,2025-05-21,neutral,logistic_regression,unfavourable
+GOOGL,United States,2025-06-20,favourable,logistic_regression,unfavourable
+GOOGL,United States,2025-07-21,favourable,logistic_regression,favourable
+GOOGL,United States,2025-08-18,favourable,logistic_regression,unfavourable
+GOOGL,United States,2025-09-16,unfavourable,logistic_regression,unfavourable
+GOOGL,United States,2025-10-14,favourable,logistic_regression,unfavourable
+GOOGL,United States,2025-11-11,favourable,logistic_regression,neutral
+GOOGL,United States,2025-12-10,favourable,logistic_regression,unfavourable
+D05.SI,Singapore,2025-01-24,favourable,logistic_regression,neutral
+D05.SI,Singapore,2025-02-25,neutral,logistic_regression,neutral
+D05.SI,Singapore,2025-03-25,unfavourable,logistic_regression,neutral
+D05.SI,Singapore,2025-04-24,favourable,logistic_regression,favourable
+D05.SI,Singapore,2025-05-26,neutral,logistic_regression,neutral
+D05.SI,Singapore,2025-06-23,favourable,logistic_regression,neutral
+D05.SI,Singapore,2025-07-21,favourable,logistic_regression,neutral
+D05.SI,Singapore,2025-08-18,favourable,logistic_regression,neutral
+D05.SI,Singapore,2025-09-15,favourable,logistic_regression,neutral
+D05.SI,Singapore,2025-10-13,favourable,logistic_regression,neutral
+D05.SI,Singapore,2025-11-11,neutral,logistic_regression,neutral
+D05.SI,Singapore,2025-12-09,favourable,logistic_regression,neutral
+Z74.SI,Singapore,2025-01-24,favourable,logistic_regression,neutral
+Z74.SI,Singapore,2025-02-25,favourable,logistic_regression,unfavourable
+Z74.SI,Singapore,2025-03-25,favourable,logistic_regression,neutral
+Z74.SI,Singapore,2025-04-24,neutral,logistic_regression,neutral
+Z74.SI,Singapore,2025-05-26,neutral,logistic_regression,unfavourable
+Z74.SI,Singapore,2025-06-23,favourable,logistic_regression,neutral
+Z74.SI,Singapore,2025-07-21,neutral,logistic_regression,neutral
+Z74.SI,Singapore,2025-08-18,favourable,logistic_regression,neutral
+Z74.SI,Singapore,2025-09-15,neutral,logistic_regression,neutral
+Z74.SI,Singapore,2025-10-13,favourable,logistic_regression,neutral
+Z74.SI,Singapore,2025-11-11,neutral,logistic_regression,neutral
+Z74.SI,Singapore,2025-12-09,unfavourable,logistic_regression,unfavourable
+C6L.SI,Singapore,2025-01-24,favourable,logistic_regression,neutral
+C6L.SI,Singapore,2025-02-25,favourable,logistic_regression,neutral
+C6L.SI,Singapore,2025-03-25,unfavourable,logistic_regression,neutral
+C6L.SI,Singapore,2025-04-24,favourable,logistic_regression,neutral
+C6L.SI,Singapore,2025-05-26,unfavourable,logistic_regression,neutral
+C6L.SI,Singapore,2025-06-23,favourable,logistic_regression,neutral
+C6L.SI,Singapore,2025-07-21,unfavourable,logistic_regression,neutral
+C6L.SI,Singapore,2025-08-18,neutral,logistic_regression,neutral
+C6L.SI,Singapore,2025-09-15,neutral,logistic_regression,neutral
+C6L.SI,Singapore,2025-10-13,neutral,logistic_regression,neutral
+C6L.SI,Singapore,2025-11-11,unfavourable,logistic_regression,neutral
+C6L.SI,Singapore,2025-12-09,favourable,logistic_regression,neutral
+C38U.SI,Singapore,2025-01-24,favourable,logistic_regression,neutral
+C38U.SI,Singapore,2025-02-25,favourable,logistic_regression,neutral
+C38U.SI,Singapore,2025-03-25,neutral,logistic_regression,unfavourable
+C38U.SI,Singapore,2025-04-24,unfavourable,logistic_regression,neutral
+C38U.SI,Singapore,2025-05-26,favourable,logistic_regression,neutral
+C38U.SI,Singapore,2025-06-23,favourable,logistic_regression,neutral
+C38U.SI,Singapore,2025-07-21,neutral,logistic_regression,neutral
+C38U.SI,Singapore,2025-08-18,favourable,logistic_regression,neutral
+C38U.SI,Singapore,2025-09-15,neutral,logistic_regression,neutral
+C38U.SI,Singapore,2025-10-13,neutral,logistic_regression,neutral
+C38U.SI,Singapore,2025-11-11,neutral,logistic_regression,neutral
+C38U.SI,Singapore,2025-12-09,favourable,logistic_regression,neutral
+F34.SI,Singapore,2025-01-24,neutral,logistic_regression,neutral
+F34.SI,Singapore,2025-02-25,favourable,logistic_regression,unfavourable
+F34.SI,Singapore,2025-03-25,unfavourable,logistic_regression,neutral
+F34.SI,Singapore,2025-04-24,neutral,logistic_regression,favourable
+F34.SI,Singapore,2025-05-26,unfavourable,logistic_regression,neutral
+F34.SI,Singapore,2025-06-23,favourable,logistic_regression,neutral
+F34.SI,Singapore,2025-07-21,unfavourable,logistic_regression,neutral
+F34.SI,Singapore,2025-08-18,favourable,logistic_regression,favourable
+F34.SI,Singapore,2025-09-15,neutral,logistic_regression,neutral
+F34.SI,Singapore,2025-10-13,favourable,logistic_regression,neutral
+F34.SI,Singapore,2025-11-11,unfavourable,logistic_regression,neutral
+F34.SI,Singapore,2025-12-09,neutral,logistic_regression,unfavourable
+U96.SI,Singapore,2025-01-24,favourable,logistic_regression,neutral
+U96.SI,Singapore,2025-02-25,favourable,logistic_regression,neutral
+U96.SI,Singapore,2025-03-25,favourable,logistic_regression,unfavourable
+U96.SI,Singapore,2025-04-24,favourable,logistic_regression,favourable
+U96.SI,Singapore,2025-05-26,favourable,logistic_regression,neutral
+U96.SI,Singapore,2025-06-23,favourable,logistic_regression,neutral
+U96.SI,Singapore,2025-07-21,unfavourable,logistic_regression,neutral
+U96.SI,Singapore,2025-08-18,favourable,logistic_regression,unfavourable
+U96.SI,Singapore,2025-09-15,favourable,logistic_regression,neutral
+U96.SI,Singapore,2025-10-13,neutral,logistic_regression,unfavourable
+U96.SI,Singapore,2025-11-11,unfavourable,logistic_regression,unfavourable
+U96.SI,Singapore,2025-12-09,favourable,logistic_regression,favourable
+BN4.SI,Singapore,2025-01-24,neutral,logistic_regression,neutral
+BN4.SI,Singapore,2025-02-25,neutral,logistic_regression,neutral
+BN4.SI,Singapore,2025-03-25,unfavourable,logistic_regression,neutral
+BN4.SI,Singapore,2025-04-24,favourable,logistic_regression,favourable
+BN4.SI,Singapore,2025-05-26,favourable,logistic_regression,neutral
+BN4.SI,Singapore,2025-06-23,favourable,logistic_regression,unfavourable
+BN4.SI,Singapore,2025-07-21,favourable,logistic_regression,neutral
+BN4.SI,Singapore,2025-08-18,favourable,logistic_regression,neutral
+BN4.SI,Singapore,2025-09-15,favourable,logistic_regression,neutral
+BN4.SI,Singapore,2025-10-13,favourable,logistic_regression,neutral
+BN4.SI,Singapore,2025-11-11,neutral,logistic_regression,neutral
+BN4.SI,Singapore,2025-12-09,favourable,logistic_regression,neutral
+S68.SI,Singapore,2025-01-24,favourable,logistic_regression,neutral
+S68.SI,Singapore,2025-02-25,neutral,logistic_regression,unfavourable
+S68.SI,Singapore,2025-03-25,favourable,logistic_regression,neutral
+S68.SI,Singapore,2025-04-24,unfavourable,logistic_regression,neutral
+S68.SI,Singapore,2025-05-26,neutral,logistic_regression,neutral
+S68.SI,Singapore,2025-06-23,favourable,logistic_regression,neutral
+S68.SI,Singapore,2025-07-21,favourable,logistic_regression,neutral
+S68.SI,Singapore,2025-08-18,favourable,logistic_regression,neutral
+S68.SI,Singapore,2025-09-15,favourable,logistic_regression,neutral
+S68.SI,Singapore,2025-10-13,neutral,logistic_regression,neutral
+S68.SI,Singapore,2025-11-11,unfavourable,logistic_regression,neutral
+S68.SI,Singapore,2025-12-09,favourable,logistic_regression,neutral
+S63.SI,Singapore,2025-01-24,favourable,logistic_regression,neutral
+S63.SI,Singapore,2025-02-25,favourable,logistic_regression,neutral
+S63.SI,Singapore,2025-03-25,favourable,logistic_regression,neutral
+S63.SI,Singapore,2025-04-24,favourable,logistic_regression,neutral
+S63.SI,Singapore,2025-05-26,favourable,logistic_regression,neutral
+S63.SI,Singapore,2025-06-23,favourable,logistic_regression,neutral
+S63.SI,Singapore,2025-07-21,unfavourable,logistic_regression,neutral
+S63.SI,Singapore,2025-08-18,neutral,logistic_regression,unfavourable
+S63.SI,Singapore,2025-09-15,favourable,logistic_regression,neutral
+S63.SI,Singapore,2025-10-13,unfavourable,logistic_regression,unfavourable
+S63.SI,Singapore,2025-11-11,neutral,logistic_regression,unfavourable
+S63.SI,Singapore,2025-12-09,favourable,logistic_regression,neutral
+V03.SI,Singapore,2025-01-24,unfavourable,logistic_regression,neutral
+V03.SI,Singapore,2025-02-25,neutral,logistic_regression,neutral
+V03.SI,Singapore,2025-03-25,unfavourable,logistic_regression,neutral
+V03.SI,Singapore,2025-04-24,favourable,logistic_regression,favourable
+V03.SI,Singapore,2025-05-26,neutral,logistic_regression,neutral
+V03.SI,Singapore,2025-06-23,favourable,logistic_regression,unfavourable
+V03.SI,Singapore,2025-07-21,favourable,logistic_regression,neutral
+V03.SI,Singapore,2025-08-18,favourable,logistic_regression,neutral
+V03.SI,Singapore,2025-09-15,favourable,logistic_regression,neutral
+V03.SI,Singapore,2025-10-13,favourable,logistic_regression,neutral
+V03.SI,Singapore,2025-11-11,neutral,logistic_regression,neutral
+V03.SI,Singapore,2025-12-09,favourable,logistic_regression,neutral
+BHP.AX,Australia,2025-01-15,favourable,logistic_regression,neutral
+BHP.AX,Australia,2025-02-13,unfavourable,logistic_regression,neutral
+BHP.AX,Australia,2025-03-13,unfavourable,logistic_regression,unfavourable
+BHP.AX,Australia,2025-04-10,favourable,logistic_regression,unfavourable
+BHP.AX,Australia,2025-05-13,neutral,logistic_regression,neutral
+BHP.AX,Australia,2025-06-11,unfavourable,logistic_regression,neutral
+BHP.AX,Australia,2025-07-09,favourable,logistic_regression,neutral
+BHP.AX,Australia,2025-08-06,favourable,logistic_regression,unfavourable
+BHP.AX,Australia,2025-09-03,neutral,logistic_regression,neutral
+BHP.AX,Australia,2025-10-01,favourable,logistic_regression,neutral
+BHP.AX,Australia,2025-10-29,unfavourable,logistic_regression,neutral
+BHP.AX,Australia,2025-11-26,favourable,logistic_regression,neutral
+BHP.AX,Australia,2025-12-24,favourable,logistic_regression,neutral
+CBA.AX,Australia,2025-01-15,favourable,logistic_regression,neutral
+CBA.AX,Australia,2025-02-13,unfavourable,logistic_regression,neutral
+CBA.AX,Australia,2025-03-13,favourable,logistic_regression,unfavourable
+CBA.AX,Australia,2025-04-10,favourable,logistic_regression,neutral
+CBA.AX,Australia,2025-05-13,favourable,logistic_regression,unfavourable
+CBA.AX,Australia,2025-06-11,neutral,logistic_regression,neutral
+CBA.AX,Australia,2025-07-09,neutral,logistic_regression,neutral
+CBA.AX,Australia,2025-08-06,unfavourable,logistic_regression,neutral
+CBA.AX,Australia,2025-09-03,neutral,logistic_regression,neutral
+CBA.AX,Australia,2025-10-01,neutral,logistic_regression,neutral
+CBA.AX,Australia,2025-10-29,unfavourable,logistic_regression,neutral
+CBA.AX,Australia,2025-11-26,favourable,logistic_regression,favourable
+CBA.AX,Australia,2025-12-24,unfavourable,logistic_regression,neutral
+CSL.AX,Australia,2025-01-15,unfavourable,logistic_regression,neutral
+CSL.AX,Australia,2025-02-13,neutral,logistic_regression,unfavourable
+CSL.AX,Australia,2025-03-13,unfavourable,logistic_regression,neutral
+CSL.AX,Australia,2025-04-10,neutral,logistic_regression,unfavourable
+CSL.AX,Australia,2025-05-13,neutral,logistic_regression,unfavourable
+CSL.AX,Australia,2025-06-11,neutral,logistic_regression,neutral
+CSL.AX,Australia,2025-07-09,favourable,logistic_regression,neutral
+CSL.AX,Australia,2025-08-06,unfavourable,logistic_regression,unfavourable
+CSL.AX,Australia,2025-09-03,unfavourable,logistic_regression,favourable
+CSL.AX,Australia,2025-10-01,unfavourable,logistic_regression,favourable
+CSL.AX,Australia,2025-10-29,favourable,logistic_regression,unfavourable
+CSL.AX,Australia,2025-11-26,unfavourable,logistic_regression,neutral
+CSL.AX,Australia,2025-12-24,favourable,logistic_regression,favourable
+WES.AX,Australia,2025-01-15,favourable,logistic_regression,neutral
+WES.AX,Australia,2025-02-13,unfavourable,logistic_regression,neutral
+WES.AX,Australia,2025-03-13,favourable,logistic_regression,unfavourable
+WES.AX,Australia,2025-04-10,favourable,logistic_regression,neutral
+WES.AX,Australia,2025-05-13,favourable,logistic_regression,neutral
+WES.AX,Australia,2025-06-11,unfavourable,logistic_regression,neutral
+WES.AX,Australia,2025-07-09,favourable,logistic_regression,neutral
+WES.AX,Australia,2025-08-06,neutral,logistic_regression,neutral
+WES.AX,Australia,2025-09-03,favourable,logistic_regression,unfavourable
+WES.AX,Australia,2025-10-01,favourable,logistic_regression,neutral
+WES.AX,Australia,2025-10-29,unfavourable,logistic_regression,neutral
+WES.AX,Australia,2025-11-26,neutral,logistic_regression,favourable
+WES.AX,Australia,2025-12-24,favourable,logistic_regression,neutral
+WOW.AX,Australia,2025-01-15,neutral,logistic_regression,neutral
+WOW.AX,Australia,2025-02-13,unfavourable,logistic_regression,neutral
+WOW.AX,Australia,2025-03-13,favourable,logistic_regression,favourable
+WOW.AX,Australia,2025-04-10,neutral,logistic_regression,neutral
+WOW.AX,Australia,2025-05-13,neutral,logistic_regression,neutral
+WOW.AX,Australia,2025-06-11,unfavourable,logistic_regression,neutral
+WOW.AX,Australia,2025-07-09,favourable,logistic_regression,neutral
+WOW.AX,Australia,2025-08-06,unfavourable,logistic_regression,neutral
+WOW.AX,Australia,2025-09-03,unfavourable,logistic_regression,unfavourable
+WOW.AX,Australia,2025-10-01,favourable,logistic_regression,neutral
+WOW.AX,Australia,2025-10-29,favourable,logistic_regression,neutral
+WOW.AX,Australia,2025-11-26,favourable,logistic_regression,neutral
+WOW.AX,Australia,2025-12-24,favourable,logistic_regression,neutral
+TLS.AX,Australia,2025-01-15,unfavourable,logistic_regression,neutral
+TLS.AX,Australia,2025-02-13,favourable,logistic_regression,neutral
+TLS.AX,Australia,2025-03-13,favourable,logistic_regression,neutral
+TLS.AX,Australia,2025-04-10,neutral,logistic_regression,neutral
+TLS.AX,Australia,2025-05-13,favourable,logistic_regression,neutral
+TLS.AX,Australia,2025-06-11,neutral,logistic_regression,neutral
+TLS.AX,Australia,2025-07-09,neutral,logistic_regression,neutral
+TLS.AX,Australia,2025-08-06,neutral,logistic_regression,neutral
+TLS.AX,Australia,2025-09-03,neutral,logistic_regression,neutral
+TLS.AX,Australia,2025-10-01,neutral,logistic_regression,neutral
+TLS.AX,Australia,2025-10-29,neutral,logistic_regression,neutral
+TLS.AX,Australia,2025-11-26,neutral,logistic_regression,neutral
+TLS.AX,Australia,2025-12-24,neutral,logistic_regression,neutral
+GMG.AX,Australia,2025-01-15,neutral,logistic_regression,favourable
+GMG.AX,Australia,2025-02-13,unfavourable,logistic_regression,neutral
+GMG.AX,Australia,2025-03-13,unfavourable,logistic_regression,favourable
+GMG.AX,Australia,2025-04-10,favourable,logistic_regression,unfavourable
+GMG.AX,Australia,2025-05-13,favourable,logistic_regression,unfavourable
+GMG.AX,Australia,2025-06-11,neutral,logistic_regression,unfavourable
+GMG.AX,Australia,2025-07-09,favourable,logistic_regression,favourable
+GMG.AX,Australia,2025-08-06,unfavourable,logistic_regression,favourable
+GMG.AX,Australia,2025-09-03,favourable,logistic_regression,unfavourable
+GMG.AX,Australia,2025-10-01,neutral,logistic_regression,unfavourable
+GMG.AX,Australia,2025-10-29,unfavourable,logistic_regression,unfavourable
+GMG.AX,Australia,2025-11-26,favourable,logistic_regression,favourable
+GMG.AX,Australia,2025-12-24,neutral,logistic_regression,favourable
+TCL.AX,Australia,2025-01-15,unfavourable,logistic_regression,neutral
+TCL.AX,Australia,2025-02-13,unfavourable,logistic_regression,neutral
+TCL.AX,Australia,2025-03-13,favourable,logistic_regression,neutral
+TCL.AX,Australia,2025-04-10,neutral,logistic_regression,neutral
+TCL.AX,Australia,2025-05-13,favourable,logistic_regression,neutral
+TCL.AX,Australia,2025-06-11,unfavourable,logistic_regression,neutral
+TCL.AX,Australia,2025-07-09,favourable,logistic_regression,neutral
+TCL.AX,Australia,2025-08-06,favourable,logistic_regression,neutral
+TCL.AX,Australia,2025-09-03,unfavourable,logistic_regression,neutral
+TCL.AX,Australia,2025-10-01,favourable,logistic_regression,neutral
+TCL.AX,Australia,2025-10-29,favourable,logistic_regression,neutral
+TCL.AX,Australia,2025-11-26,unfavourable,logistic_regression,neutral
+TCL.AX,Australia,2025-12-24,unfavourable,logistic_regression,neutral
+STO.AX,Australia,2025-01-15,neutral,logistic_regression,neutral
+STO.AX,Australia,2025-02-13,unfavourable,logistic_regression,neutral
+STO.AX,Australia,2025-03-13,unfavourable,logistic_regression,favourable
+STO.AX,Australia,2025-04-10,favourable,logistic_regression,unfavourable
+STO.AX,Australia,2025-05-13,favourable,logistic_regression,unfavourable
+STO.AX,Australia,2025-06-11,favourable,logistic_regression,unfavourable
+STO.AX,Australia,2025-07-09,favourable,logistic_regression,neutral
+STO.AX,Australia,2025-08-06,neutral,logistic_regression,neutral
+STO.AX,Australia,2025-09-03,unfavourable,logistic_regression,neutral
+STO.AX,Australia,2025-10-01,unfavourable,logistic_regression,favourable
+STO.AX,Australia,2025-10-29,favourable,logistic_regression,neutral
+STO.AX,Australia,2025-11-26,unfavourable,logistic_regression,unfavourable
+STO.AX,Australia,2025-12-24,favourable,logistic_regression,favourable
+ORG.AX,Australia,2025-01-15,unfavourable,logistic_regression,neutral
+ORG.AX,Australia,2025-02-13,favourable,logistic_regression,favourable
+ORG.AX,Australia,2025-03-13,neutral,logistic_regression,unfavourable
+ORG.AX,Australia,2025-04-10,favourable,logistic_regression,unfavourable
+ORG.AX,Australia,2025-05-13,unfavourable,logistic_regression,neutral
+ORG.AX,Australia,2025-06-11,favourable,logistic_regression,neutral
+ORG.AX,Australia,2025-07-09,favourable,logistic_regression,neutral
+ORG.AX,Australia,2025-08-06,favourable,logistic_regression,unfavourable
+ORG.AX,Australia,2025-09-03,neutral,logistic_regression,neutral
+ORG.AX,Australia,2025-10-01,favourable,logistic_regression,neutral
+ORG.AX,Australia,2025-10-29,unfavourable,logistic_regression,neutral
+ORG.AX,Australia,2025-11-26,unfavourable,logistic_regression,unfavourable
+ORG.AX,Australia,2025-12-24,favourable,logistic_regression,neutral
+RELIANCE.NS,India,2025-01-20,unfavourable,random_forest,neutral
+RELIANCE.NS,India,2025-02-14,neutral,random_forest,favourable
+RELIANCE.NS,India,2025-03-18,favourable,random_forest,favourable
+RELIANCE.NS,India,2025-04-21,favourable,random_forest,unfavourable
+RELIANCE.NS,India,2025-05-20,neutral,random_forest,unfavourable
+RELIANCE.NS,India,2025-06-17,favourable,random_forest,unfavourable
+RELIANCE.NS,India,2025-07-15,unfavourable,random_forest,neutral
+RELIANCE.NS,India,2025-08-12,neutral,random_forest,favourable
+RELIANCE.NS,India,2025-09-11,neutral,random_forest,favourable
+RELIANCE.NS,India,2025-10-10,favourable,random_forest,favourable
+RELIANCE.NS,India,2025-11-11,favourable,random_forest,unfavourable
+RELIANCE.NS,India,2025-12-09,neutral,random_forest,neutral
+TCS.NS,India,2025-01-20,unfavourable,random_forest,neutral
+TCS.NS,India,2025-02-14,unfavourable,random_forest,unfavourable
+TCS.NS,India,2025-03-18,unfavourable,random_forest,favourable
+TCS.NS,India,2025-04-21,favourable,random_forest,favourable
+TCS.NS,India,2025-05-20,neutral,random_forest,unfavourable
+TCS.NS,India,2025-06-17,unfavourable,random_forest,favourable
+TCS.NS,India,2025-07-15,unfavourable,random_forest,favourable
+TCS.NS,India,2025-08-12,favourable,random_forest,favourable
+TCS.NS,India,2025-09-11,unfavourable,random_forest,favourable
+TCS.NS,India,2025-10-10,neutral,random_forest,favourable
+TCS.NS,India,2025-11-11,favourable,random_forest,favourable
+TCS.NS,India,2025-12-09,favourable,random_forest,unfavourable
+HDFCBANK.NS,India,2025-01-20,favourable,random_forest,favourable
+HDFCBANK.NS,India,2025-02-14,neutral,random_forest,neutral
+HDFCBANK.NS,India,2025-03-18,favourable,random_forest,neutral
+HDFCBANK.NS,India,2025-04-21,neutral,random_forest,neutral
+HDFCBANK.NS,India,2025-05-20,neutral,random_forest,neutral
+HDFCBANK.NS,India,2025-06-17,favourable,random_forest,neutral
+HDFCBANK.NS,India,2025-07-15,neutral,random_forest,neutral
+HDFCBANK.NS,India,2025-08-12,neutral,random_forest,neutral
+HDFCBANK.NS,India,2025-09-11,neutral,random_forest,neutral
+HDFCBANK.NS,India,2025-10-10,neutral,random_forest,neutral
+HDFCBANK.NS,India,2025-11-11,neutral,random_forest,neutral
+HDFCBANK.NS,India,2025-12-09,unfavourable,random_forest,neutral
+SUNPHARMA.NS,India,2025-01-20,unfavourable,random_forest,neutral
+SUNPHARMA.NS,India,2025-02-14,neutral,random_forest,neutral
+SUNPHARMA.NS,India,2025-03-18,favourable,random_forest,neutral
+SUNPHARMA.NS,India,2025-04-21,unfavourable,random_forest,neutral
+SUNPHARMA.NS,India,2025-05-20,unfavourable,random_forest,unfavourable
+SUNPHARMA.NS,India,2025-06-17,favourable,random_forest,neutral
+SUNPHARMA.NS,India,2025-07-15,unfavourable,random_forest,neutral
+SUNPHARMA.NS,India,2025-08-12,neutral,random_forest,favourable
+SUNPHARMA.NS,India,2025-09-11,favourable,random_forest,favourable
+SUNPHARMA.NS,India,2025-10-10,favourable,random_forest,neutral
+SUNPHARMA.NS,India,2025-11-11,favourable,random_forest,neutral
+SUNPHARMA.NS,India,2025-12-09,neutral,random_forest,neutral
+HINDUNILVR.NS,India,2025-01-20,neutral,random_forest,favourable
+HINDUNILVR.NS,India,2025-02-14,unfavourable,random_forest,favourable
+HINDUNILVR.NS,India,2025-03-18,favourable,random_forest,favourable
+HINDUNILVR.NS,India,2025-04-21,neutral,random_forest,unfavourable
+HINDUNILVR.NS,India,2025-05-20,neutral,random_forest,unfavourable
+HINDUNILVR.NS,India,2025-06-17,favourable,random_forest,favourable
+HINDUNILVR.NS,India,2025-07-15,neutral,random_forest,unfavourable
+HINDUNILVR.NS,India,2025-08-12,favourable,random_forest,unfavourable
+HINDUNILVR.NS,India,2025-09-11,unfavourable,random_forest,unfavourable
+HINDUNILVR.NS,India,2025-10-10,unfavourable,random_forest,favourable
+HINDUNILVR.NS,India,2025-11-11,unfavourable,random_forest,favourable
+HINDUNILVR.NS,India,2025-12-09,favourable,random_forest,favourable
+MARUTI.NS,India,2025-01-20,favourable,random_forest,unfavourable
+MARUTI.NS,India,2025-02-14,unfavourable,random_forest,unfavourable
+MARUTI.NS,India,2025-03-18,neutral,random_forest,unfavourable
+MARUTI.NS,India,2025-04-21,favourable,random_forest,favourable
+MARUTI.NS,India,2025-05-20,neutral,random_forest,unfavourable
+MARUTI.NS,India,2025-06-17,neutral,random_forest,neutral
+MARUTI.NS,India,2025-07-15,favourable,random_forest,neutral
+MARUTI.NS,India,2025-08-12,favourable,random_forest,neutral
+MARUTI.NS,India,2025-09-11,favourable,random_forest,unfavourable
+MARUTI.NS,India,2025-10-10,unfavourable,random_forest,unfavourable
+MARUTI.NS,India,2025-11-11,favourable,random_forest,favourable
+MARUTI.NS,India,2025-12-09,favourable,random_forest,neutral
+LT.NS,India,2025-01-20,unfavourable,random_forest,neutral
+LT.NS,India,2025-02-14,neutral,random_forest,favourable
+LT.NS,India,2025-03-18,favourable,random_forest,favourable
+LT.NS,India,2025-04-21,favourable,random_forest,favourable
+LT.NS,India,2025-05-20,favourable,random_forest,unfavourable
+LT.NS,India,2025-06-17,unfavourable,random_forest,unfavourable
+LT.NS,India,2025-07-15,favourable,random_forest,favourable
+LT.NS,India,2025-08-12,unfavourable,random_forest,neutral
+LT.NS,India,2025-09-11,favourable,random_forest,favourable
+LT.NS,India,2025-10-10,favourable,random_forest,neutral
+LT.NS,India,2025-11-11,neutral,random_forest,neutral
+LT.NS,India,2025-12-09,favourable,random_forest,neutral
+BHARTIARTL.NS,India,2025-01-20,favourable,random_forest,neutral
+BHARTIARTL.NS,India,2025-02-14,unfavourable,random_forest,neutral
+BHARTIARTL.NS,India,2025-03-18,favourable,random_forest,neutral
+BHARTIARTL.NS,India,2025-04-21,unfavourable,random_forest,neutral
+BHARTIARTL.NS,India,2025-05-20,favourable,random_forest,unfavourable
+BHARTIARTL.NS,India,2025-06-17,favourable,random_forest,neutral
+BHARTIARTL.NS,India,2025-07-15,unfavourable,random_forest,unfavourable
+BHARTIARTL.NS,India,2025-08-12,favourable,random_forest,unfavourable
+BHARTIARTL.NS,India,2025-09-11,neutral,random_forest,neutral
+BHARTIARTL.NS,India,2025-10-10,favourable,random_forest,neutral
+BHARTIARTL.NS,India,2025-11-11,favourable,random_forest,unfavourable
+BHARTIARTL.NS,India,2025-12-09,neutral,random_forest,neutral
+NTPC.NS,India,2025-01-20,unfavourable,random_forest,favourable
+NTPC.NS,India,2025-02-14,favourable,random_forest,favourable
+NTPC.NS,India,2025-03-18,favourable,random_forest,unfavourable
+NTPC.NS,India,2025-04-21,unfavourable,random_forest,unfavourable
+NTPC.NS,India,2025-05-20,unfavourable,random_forest,favourable
+NTPC.NS,India,2025-06-17,favourable,random_forest,favourable
+NTPC.NS,India,2025-07-15,neutral,random_forest,neutral
+NTPC.NS,India,2025-08-12,neutral,random_forest,favourable
+NTPC.NS,India,2025-09-11,favourable,random_forest,favourable
+NTPC.NS,India,2025-10-10,unfavourable,random_forest,neutral
+NTPC.NS,India,2025-11-11,unfavourable,random_forest,favourable
+NTPC.NS,India,2025-12-09,favourable,random_forest,favourable
+ULTRACEMCO.NS,India,2025-01-20,favourable,random_forest,unfavourable
+ULTRACEMCO.NS,India,2025-02-14,unfavourable,random_forest,neutral
+ULTRACEMCO.NS,India,2025-03-18,favourable,random_forest,favourable
+ULTRACEMCO.NS,India,2025-04-21,neutral,random_forest,unfavourable
+ULTRACEMCO.NS,India,2025-05-20,unfavourable,random_forest,neutral
+ULTRACEMCO.NS,India,2025-06-17,favourable,random_forest,neutral
+ULTRACEMCO.NS,India,2025-07-15,neutral,random_forest,unfavourable
+ULTRACEMCO.NS,India,2025-08-12,neutral,random_forest,neutral
+ULTRACEMCO.NS,India,2025-09-11,neutral,random_forest,neutral
+ULTRACEMCO.NS,India,2025-10-10,unfavourable,random_forest,neutral
+ULTRACEMCO.NS,India,2025-11-11,unfavourable,random_forest,neutral
+ULTRACEMCO.NS,India,2025-12-09,favourable,random_forest,neutral
+MSFT,United States,2025-01-27,unfavourable,random_forest,neutral
+MSFT,United States,2025-02-25,neutral,random_forest,neutral
+MSFT,United States,2025-03-25,unfavourable,random_forest,favourable
+MSFT,United States,2025-04-23,favourable,random_forest,favourable
+MSFT,United States,2025-05-21,favourable,random_forest,unfavourable
+MSFT,United States,2025-06-20,favourable,random_forest,unfavourable
+MSFT,United States,2025-07-21,neutral,random_forest,unfavourable
+MSFT,United States,2025-08-18,neutral,random_forest,neutral
+MSFT,United States,2025-09-16,neutral,random_forest,neutral
+MSFT,United States,2025-10-14,neutral,random_forest,neutral
+MSFT,United States,2025-11-11,unfavourable,random_forest,favourable
+MSFT,United States,2025-12-10,neutral,random_forest,favourable
+JPM,United States,2025-01-27,unfavourable,random_forest,unfavourable
+JPM,United States,2025-02-25,unfavourable,random_forest,unfavourable
+JPM,United States,2025-03-25,unfavourable,random_forest,favourable
+JPM,United States,2025-04-23,favourable,random_forest,favourable
+JPM,United States,2025-05-21,favourable,random_forest,unfavourable
+JPM,United States,2025-06-20,favourable,random_forest,unfavourable
+JPM,United States,2025-07-21,neutral,random_forest,unfavourable
+JPM,United States,2025-08-18,favourable,random_forest,favourable
+JPM,United States,2025-09-16,neutral,random_forest,unfavourable
+JPM,United States,2025-10-14,favourable,random_forest,favourable
+JPM,United States,2025-11-11,neutral,random_forest,favourable
+JPM,United States,2025-12-10,favourable,random_forest,neutral
+JNJ,United States,2025-01-27,favourable,random_forest,neutral
+JNJ,United States,2025-02-25,unfavourable,random_forest,neutral
+JNJ,United States,2025-03-25,unfavourable,random_forest,neutral
+JNJ,United States,2025-04-23,neutral,random_forest,neutral
+JNJ,United States,2025-05-21,neutral,random_forest,neutral
+JNJ,United States,2025-06-20,favourable,random_forest,neutral
+JNJ,United States,2025-07-21,favourable,random_forest,neutral
+JNJ,United States,2025-08-18,neutral,random_forest,unfavourable
+JNJ,United States,2025-09-16,favourable,random_forest,neutral
+JNJ,United States,2025-10-14,neutral,random_forest,neutral
+JNJ,United States,2025-11-11,favourable,random_forest,neutral
+JNJ,United States,2025-12-10,neutral,random_forest,neutral
+XOM,United States,2025-01-27,neutral,random_forest,neutral
+XOM,United States,2025-02-25,favourable,random_forest,neutral
+XOM,United States,2025-03-25,unfavourable,random_forest,neutral
+XOM,United States,2025-04-23,unfavourable,random_forest,favourable
+XOM,United States,2025-05-21,favourable,random_forest,favourable
+XOM,United States,2025-06-20,unfavourable,random_forest,neutral
+XOM,United States,2025-07-21,neutral,random_forest,unfavourable
+XOM,United States,2025-08-18,favourable,random_forest,favourable
+XOM,United States,2025-09-16,unfavourable,random_forest,neutral
+XOM,United States,2025-10-14,favourable,random_forest,favourable
+XOM,United States,2025-11-11,neutral,random_forest,neutral
+XOM,United States,2025-12-10,favourable,random_forest,neutral
+PG,United States,2025-01-27,neutral,random_forest,neutral
+PG,United States,2025-02-25,unfavourable,random_forest,neutral
+PG,United States,2025-03-25,favourable,random_forest,unfavourable
+PG,United States,2025-04-23,neutral,random_forest,neutral
+PG,United States,2025-05-21,unfavourable,random_forest,neutral
+PG,United States,2025-06-20,neutral,random_forest,neutral
+PG,United States,2025-07-21,neutral,random_forest,neutral
+PG,United States,2025-08-18,neutral,random_forest,neutral
+PG,United States,2025-09-16,unfavourable,random_forest,neutral
+PG,United States,2025-10-14,neutral,random_forest,favourable
+PG,United States,2025-11-11,unfavourable,random_forest,favourable
+PG,United States,2025-12-10,neutral,random_forest,favourable
+AMZN,United States,2025-01-27,unfavourable,random_forest,unfavourable
+AMZN,United States,2025-02-25,unfavourable,random_forest,unfavourable
+AMZN,United States,2025-03-25,unfavourable,random_forest,favourable
+AMZN,United States,2025-04-23,favourable,random_forest,favourable
+AMZN,United States,2025-05-21,favourable,random_forest,unfavourable
+AMZN,United States,2025-06-20,favourable,random_forest,unfavourable
+AMZN,United States,2025-07-21,neutral,random_forest,unfavourable
+AMZN,United States,2025-08-18,neutral,random_forest,favourable
+AMZN,United States,2025-09-16,unfavourable,random_forest,unfavourable
+AMZN,United States,2025-10-14,favourable,random_forest,favourable
+AMZN,United States,2025-11-11,unfavourable,random_forest,unfavourable
+AMZN,United States,2025-12-10,favourable,random_forest,favourable
+CAT,United States,2025-01-27,unfavourable,random_forest,neutral
+CAT,United States,2025-02-25,neutral,random_forest,favourable
+CAT,United States,2025-03-25,unfavourable,random_forest,favourable
+CAT,United States,2025-04-23,favourable,random_forest,favourable
+CAT,United States,2025-05-21,favourable,random_forest,unfavourable
+CAT,United States,2025-06-20,favourable,random_forest,unfavourable
+CAT,United States,2025-07-21,neutral,random_forest,unfavourable
+CAT,United States,2025-08-18,favourable,random_forest,unfavourable
+CAT,United States,2025-09-16,favourable,random_forest,favourable
+CAT,United States,2025-10-14,favourable,random_forest,neutral
+CAT,United States,2025-11-11,favourable,random_forest,unfavourable
+CAT,United States,2025-12-10,neutral,random_forest,unfavourable
+NEE,United States,2025-01-27,unfavourable,random_forest,favourable
+NEE,United States,2025-02-25,unfavourable,random_forest,favourable
+NEE,United States,2025-03-25,neutral,random_forest,unfavourable
+NEE,United States,2025-04-23,favourable,random_forest,favourable
+NEE,United States,2025-05-21,neutral,random_forest,unfavourable
+NEE,United States,2025-06-20,favourable,random_forest,unfavourable
+NEE,United States,2025-07-21,neutral,random_forest,unfavourable
+NEE,United States,2025-08-18,unfavourable,random_forest,favourable
+NEE,United States,2025-09-16,favourable,random_forest,favourable
+NEE,United States,2025-10-14,neutral,random_forest,unfavourable
+NEE,United States,2025-11-11,unfavourable,random_forest,unfavourable
+NEE,United States,2025-12-10,neutral,random_forest,unfavourable
+AMT,United States,2025-01-27,favourable,random_forest,favourable
+AMT,United States,2025-02-25,favourable,random_forest,unfavourable
+AMT,United States,2025-03-25,favourable,random_forest,unfavourable
+AMT,United States,2025-04-23,neutral,random_forest,favourable
+AMT,United States,2025-05-21,favourable,random_forest,favourable
+AMT,United States,2025-06-20,favourable,random_forest,neutral
+AMT,United States,2025-07-21,unfavourable,random_forest,neutral
+AMT,United States,2025-08-18,unfavourable,random_forest,favourable
+AMT,United States,2025-09-16,unfavourable,random_forest,favourable
+AMT,United States,2025-10-14,neutral,random_forest,favourable
+AMT,United States,2025-11-11,unfavourable,random_forest,favourable
+AMT,United States,2025-12-10,unfavourable,random_forest,favourable
+GOOGL,United States,2025-01-27,unfavourable,random_forest,unfavourable
+GOOGL,United States,2025-02-25,unfavourable,random_forest,unfavourable
+GOOGL,United States,2025-03-25,unfavourable,random_forest,favourable
+GOOGL,United States,2025-04-23,favourable,random_forest,favourable
+GOOGL,United States,2025-05-21,neutral,random_forest,unfavourable
+GOOGL,United States,2025-06-20,favourable,random_forest,unfavourable
+GOOGL,United States,2025-07-21,favourable,random_forest,unfavourable
+GOOGL,United States,2025-08-18,favourable,random_forest,unfavourable
+GOOGL,United States,2025-09-16,unfavourable,random_forest,unfavourable
+GOOGL,United States,2025-10-14,favourable,random_forest,unfavourable
+GOOGL,United States,2025-11-11,favourable,random_forest,unfavourable
+GOOGL,United States,2025-12-10,favourable,random_forest,unfavourable
+D05.SI,Singapore,2025-01-24,favourable,random_forest,neutral
+D05.SI,Singapore,2025-02-25,neutral,random_forest,neutral
+D05.SI,Singapore,2025-03-25,unfavourable,random_forest,neutral
+D05.SI,Singapore,2025-04-24,favourable,random_forest,favourable
+D05.SI,Singapore,2025-05-26,neutral,random_forest,neutral
+D05.SI,Singapore,2025-06-23,favourable,random_forest,neutral
+D05.SI,Singapore,2025-07-21,favourable,random_forest,neutral
+D05.SI,Singapore,2025-08-18,favourable,random_forest,unfavourable
+D05.SI,Singapore,2025-09-15,favourable,random_forest,neutral
+D05.SI,Singapore,2025-10-13,favourable,random_forest,neutral
+D05.SI,Singapore,2025-11-11,neutral,random_forest,neutral
+D05.SI,Singapore,2025-12-09,favourable,random_forest,neutral
+Z74.SI,Singapore,2025-01-24,favourable,random_forest,neutral
+Z74.SI,Singapore,2025-02-25,favourable,random_forest,neutral
+Z74.SI,Singapore,2025-03-25,favourable,random_forest,neutral
+Z74.SI,Singapore,2025-04-24,neutral,random_forest,unfavourable
+Z74.SI,Singapore,2025-05-26,neutral,random_forest,neutral
+Z74.SI,Singapore,2025-06-23,favourable,random_forest,neutral
+Z74.SI,Singapore,2025-07-21,neutral,random_forest,neutral
+Z74.SI,Singapore,2025-08-18,favourable,random_forest,neutral
+Z74.SI,Singapore,2025-09-15,neutral,random_forest,neutral
+Z74.SI,Singapore,2025-10-13,favourable,random_forest,neutral
+Z74.SI,Singapore,2025-11-11,neutral,random_forest,neutral
+Z74.SI,Singapore,2025-12-09,unfavourable,random_forest,neutral
+C6L.SI,Singapore,2025-01-24,favourable,random_forest,neutral
+C6L.SI,Singapore,2025-02-25,favourable,random_forest,neutral
+C6L.SI,Singapore,2025-03-25,unfavourable,random_forest,neutral
+C6L.SI,Singapore,2025-04-24,favourable,random_forest,favourable
+C6L.SI,Singapore,2025-05-26,unfavourable,random_forest,neutral
+C6L.SI,Singapore,2025-06-23,favourable,random_forest,neutral
+C6L.SI,Singapore,2025-07-21,unfavourable,random_forest,neutral
+C6L.SI,Singapore,2025-08-18,neutral,random_forest,neutral
+C6L.SI,Singapore,2025-09-15,neutral,random_forest,neutral
+C6L.SI,Singapore,2025-10-13,neutral,random_forest,neutral
+C6L.SI,Singapore,2025-11-11,unfavourable,random_forest,neutral
+C6L.SI,Singapore,2025-12-09,favourable,random_forest,neutral
+C38U.SI,Singapore,2025-01-24,favourable,random_forest,neutral
+C38U.SI,Singapore,2025-02-25,favourable,random_forest,neutral
+C38U.SI,Singapore,2025-03-25,neutral,random_forest,neutral
+C38U.SI,Singapore,2025-04-24,unfavourable,random_forest,neutral
+C38U.SI,Singapore,2025-05-26,favourable,random_forest,neutral
+C38U.SI,Singapore,2025-06-23,favourable,random_forest,neutral
+C38U.SI,Singapore,2025-07-21,neutral,random_forest,neutral
+C38U.SI,Singapore,2025-08-18,favourable,random_forest,neutral
+C38U.SI,Singapore,2025-09-15,neutral,random_forest,neutral
+C38U.SI,Singapore,2025-10-13,neutral,random_forest,neutral
+C38U.SI,Singapore,2025-11-11,neutral,random_forest,neutral
+C38U.SI,Singapore,2025-12-09,favourable,random_forest,neutral
+F34.SI,Singapore,2025-01-24,neutral,random_forest,neutral
+F34.SI,Singapore,2025-02-25,favourable,random_forest,unfavourable
+F34.SI,Singapore,2025-03-25,unfavourable,random_forest,neutral
+F34.SI,Singapore,2025-04-24,neutral,random_forest,favourable
+F34.SI,Singapore,2025-05-26,unfavourable,random_forest,neutral
+F34.SI,Singapore,2025-06-23,favourable,random_forest,unfavourable
+F34.SI,Singapore,2025-07-21,unfavourable,random_forest,neutral
+F34.SI,Singapore,2025-08-18,favourable,random_forest,favourable
+F34.SI,Singapore,2025-09-15,neutral,random_forest,neutral
+F34.SI,Singapore,2025-10-13,favourable,random_forest,neutral
+F34.SI,Singapore,2025-11-11,unfavourable,random_forest,neutral
+F34.SI,Singapore,2025-12-09,neutral,random_forest,unfavourable
+U96.SI,Singapore,2025-01-24,favourable,random_forest,neutral
+U96.SI,Singapore,2025-02-25,favourable,random_forest,neutral
+U96.SI,Singapore,2025-03-25,favourable,random_forest,unfavourable
+U96.SI,Singapore,2025-04-24,favourable,random_forest,unfavourable
+U96.SI,Singapore,2025-05-26,favourable,random_forest,unfavourable
+U96.SI,Singapore,2025-06-23,favourable,random_forest,neutral
+U96.SI,Singapore,2025-07-21,unfavourable,random_forest,unfavourable
+U96.SI,Singapore,2025-08-18,favourable,random_forest,favourable
+U96.SI,Singapore,2025-09-15,favourable,random_forest,favourable
+U96.SI,Singapore,2025-10-13,neutral,random_forest,neutral
+U96.SI,Singapore,2025-11-11,unfavourable,random_forest,neutral
+U96.SI,Singapore,2025-12-09,favourable,random_forest,favourable
+BN4.SI,Singapore,2025-01-24,neutral,random_forest,neutral
+BN4.SI,Singapore,2025-02-25,neutral,random_forest,neutral
+BN4.SI,Singapore,2025-03-25,unfavourable,random_forest,neutral
+BN4.SI,Singapore,2025-04-24,favourable,random_forest,favourable
+BN4.SI,Singapore,2025-05-26,favourable,random_forest,neutral
+BN4.SI,Singapore,2025-06-23,favourable,random_forest,unfavourable
+BN4.SI,Singapore,2025-07-21,favourable,random_forest,unfavourable
+BN4.SI,Singapore,2025-08-18,favourable,random_forest,unfavourable
+BN4.SI,Singapore,2025-09-15,favourable,random_forest,neutral
+BN4.SI,Singapore,2025-10-13,favourable,random_forest,neutral
+BN4.SI,Singapore,2025-11-11,neutral,random_forest,unfavourable
+BN4.SI,Singapore,2025-12-09,favourable,random_forest,neutral
+S68.SI,Singapore,2025-01-24,favourable,random_forest,neutral
+S68.SI,Singapore,2025-02-25,neutral,random_forest,neutral
+S68.SI,Singapore,2025-03-25,favourable,random_forest,neutral
+S68.SI,Singapore,2025-04-24,unfavourable,random_forest,neutral
+S68.SI,Singapore,2025-05-26,neutral,random_forest,unfavourable
+S68.SI,Singapore,2025-06-23,favourable,random_forest,neutral
+S68.SI,Singapore,2025-07-21,favourable,random_forest,unfavourable
+S68.SI,Singapore,2025-08-18,favourable,random_forest,neutral
+S68.SI,Singapore,2025-09-15,favourable,random_forest,neutral
+S68.SI,Singapore,2025-10-13,neutral,random_forest,neutral
+S68.SI,Singapore,2025-11-11,unfavourable,random_forest,neutral
+S68.SI,Singapore,2025-12-09,favourable,random_forest,neutral
+S63.SI,Singapore,2025-01-24,favourable,random_forest,neutral
+S63.SI,Singapore,2025-02-25,favourable,random_forest,neutral
+S63.SI,Singapore,2025-03-25,favourable,random_forest,neutral
+S63.SI,Singapore,2025-04-24,favourable,random_forest,neutral
+S63.SI,Singapore,2025-05-26,favourable,random_forest,unfavourable
+S63.SI,Singapore,2025-06-23,favourable,random_forest,unfavourable
+S63.SI,Singapore,2025-07-21,unfavourable,random_forest,unfavourable
+S63.SI,Singapore,2025-08-18,neutral,random_forest,unfavourable
+S63.SI,Singapore,2025-09-15,favourable,random_forest,neutral
+S63.SI,Singapore,2025-10-13,unfavourable,random_forest,neutral
+S63.SI,Singapore,2025-11-11,neutral,random_forest,unfavourable
+S63.SI,Singapore,2025-12-09,favourable,random_forest,neutral
+V03.SI,Singapore,2025-01-24,unfavourable,random_forest,favourable
+V03.SI,Singapore,2025-02-25,neutral,random_forest,favourable
+V03.SI,Singapore,2025-03-25,unfavourable,random_forest,favourable
+V03.SI,Singapore,2025-04-24,favourable,random_forest,favourable
+V03.SI,Singapore,2025-05-26,neutral,random_forest,favourable
+V03.SI,Singapore,2025-06-23,favourable,random_forest,unfavourable
+V03.SI,Singapore,2025-07-21,favourable,random_forest,unfavourable
+V03.SI,Singapore,2025-08-18,favourable,random_forest,unfavourable
+V03.SI,Singapore,2025-09-15,favourable,random_forest,unfavourable
+V03.SI,Singapore,2025-10-13,favourable,random_forest,unfavourable
+V03.SI,Singapore,2025-11-11,neutral,random_forest,neutral
+V03.SI,Singapore,2025-12-09,favourable,random_forest,neutral
+BHP.AX,Australia,2025-01-15,favourable,random_forest,favourable
+BHP.AX,Australia,2025-02-13,unfavourable,random_forest,neutral
+BHP.AX,Australia,2025-03-13,unfavourable,random_forest,favourable
+BHP.AX,Australia,2025-04-10,favourable,random_forest,favourable
+BHP.AX,Australia,2025-05-13,neutral,random_forest,neutral
+BHP.AX,Australia,2025-06-11,unfavourable,random_forest,neutral
+BHP.AX,Australia,2025-07-09,favourable,random_forest,favourable
+BHP.AX,Australia,2025-08-06,favourable,random_forest,unfavourable
+BHP.AX,Australia,2025-09-03,neutral,random_forest,unfavourable
+BHP.AX,Australia,2025-10-01,favourable,random_forest,neutral
+BHP.AX,Australia,2025-10-29,unfavourable,random_forest,neutral
+BHP.AX,Australia,2025-11-26,favourable,random_forest,favourable
+BHP.AX,Australia,2025-12-24,favourable,random_forest,unfavourable
+CBA.AX,Australia,2025-01-15,favourable,random_forest,neutral
+CBA.AX,Australia,2025-02-13,unfavourable,random_forest,neutral
+CBA.AX,Australia,2025-03-13,favourable,random_forest,unfavourable
+CBA.AX,Australia,2025-04-10,favourable,random_forest,neutral
+CBA.AX,Australia,2025-05-13,favourable,random_forest,unfavourable
+CBA.AX,Australia,2025-06-11,neutral,random_forest,unfavourable
+CBA.AX,Australia,2025-07-09,neutral,random_forest,neutral
+CBA.AX,Australia,2025-08-06,unfavourable,random_forest,neutral
+CBA.AX,Australia,2025-09-03,neutral,random_forest,neutral
+CBA.AX,Australia,2025-10-01,neutral,random_forest,neutral
+CBA.AX,Australia,2025-10-29,unfavourable,random_forest,neutral
+CBA.AX,Australia,2025-11-26,favourable,random_forest,favourable
+CBA.AX,Australia,2025-12-24,unfavourable,random_forest,neutral
+CSL.AX,Australia,2025-01-15,unfavourable,random_forest,neutral
+CSL.AX,Australia,2025-02-13,neutral,random_forest,favourable
+CSL.AX,Australia,2025-03-13,unfavourable,random_forest,favourable
+CSL.AX,Australia,2025-04-10,neutral,random_forest,favourable
+CSL.AX,Australia,2025-05-13,neutral,random_forest,favourable
+CSL.AX,Australia,2025-06-11,neutral,random_forest,favourable
+CSL.AX,Australia,2025-07-09,favourable,random_forest,favourable
+CSL.AX,Australia,2025-08-06,unfavourable,random_forest,unfavourable
+CSL.AX,Australia,2025-09-03,unfavourable,random_forest,favourable
+CSL.AX,Australia,2025-10-01,unfavourable,random_forest,favourable
+CSL.AX,Australia,2025-10-29,favourable,random_forest,favourable
+CSL.AX,Australia,2025-11-26,unfavourable,random_forest,favourable
+CSL.AX,Australia,2025-12-24,favourable,random_forest,favourable
+WES.AX,Australia,2025-01-15,favourable,random_forest,neutral
+WES.AX,Australia,2025-02-13,unfavourable,random_forest,neutral
+WES.AX,Australia,2025-03-13,favourable,random_forest,unfavourable
+WES.AX,Australia,2025-04-10,favourable,random_forest,neutral
+WES.AX,Australia,2025-05-13,favourable,random_forest,unfavourable
+WES.AX,Australia,2025-06-11,unfavourable,random_forest,unfavourable
+WES.AX,Australia,2025-07-09,favourable,random_forest,neutral
+WES.AX,Australia,2025-08-06,neutral,random_forest,neutral
+WES.AX,Australia,2025-09-03,favourable,random_forest,neutral
+WES.AX,Australia,2025-10-01,favourable,random_forest,neutral
+WES.AX,Australia,2025-10-29,unfavourable,random_forest,neutral
+WES.AX,Australia,2025-11-26,neutral,random_forest,favourable
+WES.AX,Australia,2025-12-24,favourable,random_forest,neutral
+WOW.AX,Australia,2025-01-15,neutral,random_forest,favourable
+WOW.AX,Australia,2025-02-13,unfavourable,random_forest,favourable
+WOW.AX,Australia,2025-03-13,favourable,random_forest,favourable
+WOW.AX,Australia,2025-04-10,neutral,random_forest,unfavourable
+WOW.AX,Australia,2025-05-13,neutral,random_forest,unfavourable
+WOW.AX,Australia,2025-06-11,unfavourable,random_forest,neutral
+WOW.AX,Australia,2025-07-09,favourable,random_forest,favourable
+WOW.AX,Australia,2025-08-06,unfavourable,random_forest,neutral
+WOW.AX,Australia,2025-09-03,unfavourable,random_forest,favourable
+WOW.AX,Australia,2025-10-01,favourable,random_forest,favourable
+WOW.AX,Australia,2025-10-29,favourable,random_forest,favourable
+WOW.AX,Australia,2025-11-26,favourable,random_forest,unfavourable
+WOW.AX,Australia,2025-12-24,favourable,random_forest,unfavourable
+TLS.AX,Australia,2025-01-15,unfavourable,random_forest,neutral
+TLS.AX,Australia,2025-02-13,favourable,random_forest,neutral
+TLS.AX,Australia,2025-03-13,favourable,random_forest,neutral
+TLS.AX,Australia,2025-04-10,neutral,random_forest,neutral
+TLS.AX,Australia,2025-05-13,favourable,random_forest,neutral
+TLS.AX,Australia,2025-06-11,neutral,random_forest,neutral
+TLS.AX,Australia,2025-07-09,neutral,random_forest,neutral
+TLS.AX,Australia,2025-08-06,neutral,random_forest,neutral
+TLS.AX,Australia,2025-09-03,neutral,random_forest,neutral
+TLS.AX,Australia,2025-10-01,neutral,random_forest,neutral
+TLS.AX,Australia,2025-10-29,neutral,random_forest,neutral
+TLS.AX,Australia,2025-11-26,neutral,random_forest,neutral
+TLS.AX,Australia,2025-12-24,neutral,random_forest,neutral
+GMG.AX,Australia,2025-01-15,neutral,random_forest,neutral
+GMG.AX,Australia,2025-02-13,unfavourable,random_forest,favourable
+GMG.AX,Australia,2025-03-13,unfavourable,random_forest,favourable
+GMG.AX,Australia,2025-04-10,favourable,random_forest,favourable
+GMG.AX,Australia,2025-05-13,favourable,random_forest,unfavourable
+GMG.AX,Australia,2025-06-11,neutral,random_forest,unfavourable
+GMG.AX,Australia,2025-07-09,favourable,random_forest,favourable
+GMG.AX,Australia,2025-08-06,unfavourable,random_forest,neutral
+GMG.AX,Australia,2025-09-03,favourable,random_forest,unfavourable
+GMG.AX,Australia,2025-10-01,neutral,random_forest,favourable
+GMG.AX,Australia,2025-10-29,unfavourable,random_forest,favourable
+GMG.AX,Australia,2025-11-26,favourable,random_forest,favourable
+GMG.AX,Australia,2025-12-24,neutral,random_forest,favourable
+TCL.AX,Australia,2025-01-15,unfavourable,random_forest,neutral
+TCL.AX,Australia,2025-02-13,unfavourable,random_forest,neutral
+TCL.AX,Australia,2025-03-13,favourable,random_forest,unfavourable
+TCL.AX,Australia,2025-04-10,neutral,random_forest,neutral
+TCL.AX,Australia,2025-05-13,favourable,random_forest,neutral
+TCL.AX,Australia,2025-06-11,unfavourable,random_forest,neutral
+TCL.AX,Australia,2025-07-09,favourable,random_forest,neutral
+TCL.AX,Australia,2025-08-06,favourable,random_forest,neutral
+TCL.AX,Australia,2025-09-03,unfavourable,random_forest,neutral
+TCL.AX,Australia,2025-10-01,favourable,random_forest,neutral
+TCL.AX,Australia,2025-10-29,favourable,random_forest,neutral
+TCL.AX,Australia,2025-11-26,unfavourable,random_forest,neutral
+TCL.AX,Australia,2025-12-24,unfavourable,random_forest,neutral
+STO.AX,Australia,2025-01-15,neutral,random_forest,neutral
+STO.AX,Australia,2025-02-13,unfavourable,random_forest,neutral
+STO.AX,Australia,2025-03-13,unfavourable,random_forest,favourable
+STO.AX,Australia,2025-04-10,favourable,random_forest,favourable
+STO.AX,Australia,2025-05-13,favourable,random_forest,favourable
+STO.AX,Australia,2025-06-11,favourable,random_forest,unfavourable
+STO.AX,Australia,2025-07-09,favourable,random_forest,unfavourable
+STO.AX,Australia,2025-08-06,neutral,random_forest,neutral
+STO.AX,Australia,2025-09-03,unfavourable,random_forest,neutral
+STO.AX,Australia,2025-10-01,unfavourable,random_forest,favourable
+STO.AX,Australia,2025-10-29,favourable,random_forest,favourable
+STO.AX,Australia,2025-11-26,unfavourable,random_forest,favourable
+STO.AX,Australia,2025-12-24,favourable,random_forest,favourable
+ORG.AX,Australia,2025-01-15,unfavourable,random_forest,neutral
+ORG.AX,Australia,2025-02-13,favourable,random_forest,unfavourable
+ORG.AX,Australia,2025-03-13,neutral,random_forest,unfavourable
+ORG.AX,Australia,2025-04-10,favourable,random_forest,unfavourable
+ORG.AX,Australia,2025-05-13,unfavourable,random_forest,neutral
+ORG.AX,Australia,2025-06-11,favourable,random_forest,neutral
+ORG.AX,Australia,2025-07-09,favourable,random_forest,neutral
+ORG.AX,Australia,2025-08-06,favourable,random_forest,unfavourable
+ORG.AX,Australia,2025-09-03,neutral,random_forest,unfavourable
+ORG.AX,Australia,2025-10-01,favourable,random_forest,neutral
+ORG.AX,Australia,2025-10-29,unfavourable,random_forest,neutral
+ORG.AX,Australia,2025-11-26,unfavourable,random_forest,unfavourable
+ORG.AX,Australia,2025-12-24,favourable,random_forest,neutral

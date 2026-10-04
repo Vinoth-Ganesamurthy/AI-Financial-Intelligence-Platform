@@ -1,0 +1,13 @@
+market,split,observations,eligible,complete_targets,excluded
+India,train,380,370,380,10
+India,validation,120,110,120,10
+India,test,120,120,120,0
+United States,train,380,370,380,10
+United States,validation,130,120,130,10
+United States,test,120,120,120,0
+Singapore,train,380,370,380,10
+Singapore,validation,130,120,130,10
+Singapore,test,120,120,120,0
+Australia,train,380,370,380,10
+Australia,validation,130,120,130,10
+Australia,test,130,130,130,0

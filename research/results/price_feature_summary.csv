@@ -1,0 +1,13 @@
+market,split,observations,eligible,technical_available,minimum_history_rows
+India,train,380,370,380,492
+India,validation,120,110,120,490
+India,test,120,120,120,491
+United States,train,380,370,380,502
+United States,validation,130,120,130,501
+United States,test,120,120,120,501
+Singapore,train,380,370,380,501
+Singapore,validation,130,120,130,500
+Singapore,test,120,120,120,499
+Australia,train,380,370,380,504
+Australia,validation,130,120,130,504
+Australia,test,130,130,130,506

@@ -980,6 +980,7 @@ def _fetch_yahoo_direct_fundamental_data(
         "debt_to_equity": _safe_ratio(
             latest_debt,
             latest_equity,
+            as_percentage=True,
         ),
         "free_cash_flow": _number(
             converted_free_cash_flow

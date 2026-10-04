@@ -279,14 +279,14 @@ def score_fundamental_analysis(analysis):
         analysis.get("forward_pe")
     )
     if forward_pe is not None:
-        if 0 < forward_pe <= 25:
+        if forward_pe <= 0:
+            metric_scores["forward_pe"] = -1.0
+        elif forward_pe <= 25:
             metric_scores["forward_pe"] = 1.0
         elif forward_pe <= 40:
             metric_scores["forward_pe"] = 0.25
-        elif forward_pe > 40:
-            metric_scores["forward_pe"] = -0.5
         else:
-            metric_scores["forward_pe"] = -1.0
+            metric_scores["forward_pe"] = -0.5
 
     debt_to_equity = _safe_number(
         analysis.get("debt_to_equity")
@@ -335,7 +335,6 @@ def score_fundamental_analysis(analysis):
         ),
         "metric_scores": metric_scores,
     }
-
 
 def score_sector_macro_analysis(analysis):
     if not analysis:

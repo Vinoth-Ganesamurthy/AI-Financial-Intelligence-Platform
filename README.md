@@ -17,7 +17,7 @@
   <img src="https://img.shields.io/badge/Next.js-16.3.1-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js" />
   <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/scikit--learn-ML-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/tests-26_passed-22C55E?style=flat-square&logo=pytest&logoColor=white" alt="26 tests passed" />
+  <img src="https://img.shields.io/badge/tests-121_passed-22C55E?style=flat-square&logo=pytest&logoColor=white" alt="121 tests passed" />
   <img src="https://img.shields.io/badge/license-MIT-FACC15?style=flat-square" alt="MIT License" />
 </p>
 
@@ -42,6 +42,40 @@
 
 > [!NOTE]
 > The project uses Render's free hosting tier. A sleeping backend may need approximately 50 seconds to start on the first request.
+
+---
+
+## Historical Research Results
+
+A completed historical study evaluates price-based equity classification
+across 40 selected companies in India, the United States, Singapore, and
+Australia, with separate US fundamental and macroeconomic extensions.
+
+Models were trained on 2021-2023 data, compared on 2024 validation data,
+and evaluated on a frozen 2025 holdout.
+
+| Experiment | Holdout observations | Main finding |
+|---|---:|---|
+| Four-market price study | 490 | Random forest macro-F1: **0.3156**, versus **0.2079** for majority prediction; historical rules scored **0.3201** |
+| US fundamentals extension | 120 | Random forest macro-F1 increased from **0.3448** to **0.3591**, but the approximate improvement interval included zero |
+| US macro extension | 120 | Adding macro reduced random-forest macro-F1 to **0.3326**; no clear incremental improvement |
+
+Performance varied by market. The pooled random forest fell below the
+majority baseline on Singapore macro-F1. Classification results do not
+establish trading profitability.
+
+**Scope:** The study does not validate the complete five-module production
+Intelligence Score. Historical sentiment and non-US fundamental/macro
+extensions were deferred.
+
+- [Research report](research/RESEARCH_REPORT.md)
+- [Reproduction instructions](research/REPRODUCIBILITY.md)
+- [Frozen evaluation protocol](research/FINAL_EVALUATION_PROTOCOL.md)
+- [Scope amendment](research/SCOPE_AMENDMENT.md)
+- [Saved holdout results](research/results/final_holdout/)
+- [Uncertainty analysis](research/results/holdout_analysis/)
+
+![Paired holdout comparisons](research/figures/holdout_comparison_intervals.png)
 
 ---
 
