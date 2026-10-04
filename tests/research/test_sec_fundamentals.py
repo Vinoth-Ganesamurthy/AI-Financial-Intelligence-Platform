@@ -184,7 +184,7 @@ def test_amt_uses_total_revenue_not_contract_revenue():
 
     assert result["total_revenue"] == 11144200000
     assert result["provenance"]["total_revenue"]["tag"] == "Revenues"
-    
+
 def test_consolidated_profit_fallback_preserves_roe_definition():
     facts = payload({
         "Revenues": [

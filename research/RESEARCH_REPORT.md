@@ -1,8 +1,8 @@
 # Cross-Market Equity Classification Using Price Indicators, with US Fundamental and Macroeconomic Extensions
 
-**Author:** Vinoth Ganesamurthy  
-**Report date:** 3 October 2026  
-**Status:** Completed empirical experiments; technical research report  
+**Author:** Vinoth Ganesamurthy<br>
+**Report date:** 3 October 2026<br>
+**Status:** Completed empirical experiments; technical research report<br>
 **Repository:** https://github.com/Vinoth-Ganesamurthy/AI-Financial-Intelligence-Platform
 
 ## Abstract

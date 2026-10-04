@@ -143,7 +143,7 @@ def test_non_positive_forward_pe_is_unfavourable(
     "src.analysis.intelligence.intelligence_engine."
     "fetch_market_data"
 )
-    
+
 def test_complete_financial_intelligence(
     mock_market_data,
     mock_historical,

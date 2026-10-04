@@ -320,7 +320,7 @@ def _fetch_finnhub_fundamental_data(
         metrics.get("revenuePerShareTTM"),
         shares_outstanding,
     )
-    
+
     free_cash_flow = _per_share_to_total(
         metrics.get("freeCashFlowPerShareTTM"),
         shares_outstanding,

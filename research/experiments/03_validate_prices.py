@@ -132,7 +132,7 @@ def validate_symbol(
         "status": "FAIL",
         "issues": "",
         "warnings": "",
-    } 
+    }
 
     matching_manifest = manifest[
         manifest["symbol"].eq(symbol)
